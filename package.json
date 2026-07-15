@@ -1,0 +1,21 @@
+{
+  "name": "gogo-live-teacher-support-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "axios": "^1.0.0",
+    "express": "^5.0.0",
+    "express-rate-limit": "^7.0.0",
+    "helmet": "^8.0.0",
+    "sharp": "^0.34.0"
+  }
+}
