@@ -4,6 +4,7 @@ import rateLimit from "express-rate-limit";
 import axios from "axios";
 import sharp from "sharp";
 import { createClient } from "@supabase/supabase-js";
+import ws from "ws";
 import { randomUUID, createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
@@ -35,7 +36,10 @@ const MAX_MEDIA_BYTES = Number(process.env.JETT_MAX_MEDIA_BYTES || 15 * 1024 * 1
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY,
-  { auth: { persistSession: false, autoRefreshToken: false } }
+  {
+    auth: { persistSession: false, autoRefreshToken: false },
+    realtime: { transport: ws }
+  }
 );
 
 const registry = JSON.parse(
