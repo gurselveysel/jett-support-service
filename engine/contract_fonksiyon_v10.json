@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "title": "Jett Öğretmen Çözümü — Fonksiyon Grafiği ve Tam Sayı Sayma",
+    "subject": "Matematik",
+    "topic": "Fonksiyon Grafiği Yorumlama",
+    "character": {
+      "name": "Mahir Hoca",
+      "pen_color": "#1E56C8"
+    }
+  },
+  "academic_contract": {
+    "given": "[a, b] aralığında tanımlı f (artan) ve g (azalan) fonksiyonlarının grafikleri; f ≤ g için 4, f > g için 5 farklı tam sayı vardır.",
+    "asked": "a ve b tam sayı olduğuna göre a + b kaçtır?",
+    "primary_outcome": "Grafikten eşitsizlik bölgelerini okuyarak aralıklardaki tam sayıları sayar ve uç noktaları belirler.",
+    "prerequisites": [
+      "Artan ve azalan iki fonksiyon en fazla bir noktada kesişir; eşitlik yalnız kesişimde sağlanır.",
+      "[m, n] aralığındaki tam sayı adedi n - m + 1'dir."
+    ]
+  },
+  "canonical_solution": {
+    "steps": [
+      {
+        "step_no": 1,
+        "action": "Kesişimi bul",
+        "reason": "Eşitlik yalnız x = 1'de."
+      },
+      {
+        "step_no": 2,
+        "action": "Sol tarafı say",
+        "reason": "x ≤ 1: a'dan 1'e 4 tam sayı → a = -2."
+      },
+      {
+        "step_no": 3,
+        "action": "Sağ tarafı say",
+        "reason": "x > 1: 2'den b'ye 5 tam sayı → b = 6."
+      },
+      {
+        "step_no": 4,
+        "action": "Kontrol",
+        "reason": "b - a + 1 = 9 = 4 + 5, tutarlı."
+      },
+      {
+        "step_no": 5,
+        "action": "Sonuç",
+        "reason": "a + b = -2 + 6 = 4."
+      }
+    ],
+    "final_answer": {
+      "value": "C",
+      "display": "C) 4"
+    }
+  },
+  "scenes": [
+    {
+      "id": "verilen",
+      "caption": "Verilen: f ≤ g için 4, f > g için 5 farklı tam sayı. İstenen: a + b.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "underline",
+          "anchor": {
+            "x": 0.595,
+            "y": 0.474,
+            "w": 0.135,
+            "h": 0.02
+          }
+        },
+        {
+          "space": "photo",
+          "type": "underline",
+          "anchor": {
+            "x": 0.595,
+            "y": 0.503,
+            "w": 0.135,
+            "h": 0.02
+          }
+        }
+      ]
+    },
+    {
+      "id": "kesisim",
+      "caption": "f artan, g azalan → eşitlik yalnız kesişimde: x = 1.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "ellipse",
+          "color": "#c0392b",
+          "anchor": {
+            "x": 0.505,
+            "y": 0.328,
+            "w": 0.062,
+            "h": 0.038
+          }
+        },
+        {
+          "space": "photo",
+          "type": "text",
+          "color": "#c0392b",
+          "near": {
+            "x": 0.72,
+            "y": 0.235
+          },
+          "text": "kesişim\nx = 1"
+        },
+        {
+          "space": "photo",
+          "type": "arrow",
+          "color": "#c0392b",
+          "from": {
+            "x": 0.685,
+            "y": 0.268
+          },
+          "to": {
+            "x": 0.555,
+            "y": 0.335
+          }
+        }
+      ]
+    },
+    {
+      "id": "bolgeler",
+      "caption": "Sol tarafta f ≤ g, sağ tarafta f > g.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "near": {
+            "x": 0.17,
+            "y": 0.295
+          },
+          "text": "sol taraf:\nf ≤ g"
+        },
+        {
+          "space": "photo",
+          "type": "text",
+          "near": {
+            "x": 0.86,
+            "y": 0.295
+          },
+          "text": "sağ taraf:\nf > g"
+        }
+      ]
+    },
+    {
+      "id": "sol-sayim",
+      "caption": "x ≤ 1 (kesişim dahil): a'dan 1'e 4 tam sayı → a = -2.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "near": {
+            "x": 0.26,
+            "y": 0.695
+          },
+          "text": "f ≤ g → x ≤ 1 (1 dahil)\na, ..., 1 → 4 tam sayı\n1 - a + 1 = 4"
+        },
+        {
+          "space": "photo",
+          "type": "text",
+          "boxed": true,
+          "near": {
+            "x": 0.24,
+            "y": 0.795
+          },
+          "text": "a = -2"
+        }
+      ]
+    },
+    {
+      "id": "sag-sayim",
+      "caption": "x > 1: 2'den b'ye 5 tam sayı → b = 6.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "near": {
+            "x": 0.74,
+            "y": 0.695
+          },
+          "text": "f > g → x > 1\n2, 3, ..., b → 5 tam sayı\nb - 1 = 5"
+        },
+        {
+          "space": "photo",
+          "type": "text",
+          "boxed": true,
+          "near": {
+            "x": 0.76,
+            "y": 0.795
+          },
+          "text": "b = 6"
+        }
+      ]
+    },
+    {
+      "id": "kontrol",
+      "caption": "Küçük kontrol: [a, b] içinde b - a + 1 = 9 = 4 + 5 tam sayı — tutarlı.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "near": {
+            "x": 0.5,
+            "y": 0.715
+          },
+          "text": "kontrol:\nb - a + 1 = 9\n9 = 4 + 5"
+        },
+        {
+          "space": "photo",
+          "type": "check",
+          "anchor": {
+            "x": 0.485,
+            "y": 0.785,
+            "w": 0.035,
+            "h": 0.022
+          }
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "caption": "Sonuç: a + b = -2 + 6 = 4 → Cevap C.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "emphasis": true,
+          "boxed": true,
+          "near": {
+            "x": 0.5,
+            "y": 0.86
+          },
+          "text": "a + b = -2 + 6 = 4"
+        },
+        {
+          "space": "photo",
+          "type": "answer-circle",
+          "anchor": {
+            "x": 0.458,
+            "y": 0.606,
+            "w": 0.084,
+            "h": 0.03
+          }
+        }
+      ]
+    }
+  ]
+}
