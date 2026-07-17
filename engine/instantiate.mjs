@@ -3,13 +3,14 @@
 // The ONLY per-question inputs are the contract JSON and the photo — every
 // coordinate, duration and layout decision is derived at runtime by the engine.
 // --audio additionally synthesizes each scene caption to an embedded MP3 track
-// (espeak-ng tr + ffmpeg required). At runtime the engine still prefers the
-// device's own Turkish speech voice; the embedded track is the fallback that
-// guarantees narration on devices with no TTS voice at all.
+// via tts.mjs (ElevenLabs when ELEVENLABS_API_KEY is set and reachable, else
+// MBROLA/espeak locally). At runtime the engine still prefers the device's own
+// Turkish speech voice; the embedded track is the fallback that guarantees
+// narration on devices with no TTS voice at all.
 import { readFileSync, writeFileSync, rmSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { synthesizeCaptionMp3 } from './tts.mjs';
 
 const args = process.argv.slice(2);
 const withAudio = args.includes('--audio');
@@ -32,17 +33,16 @@ put('/*__CONTRACT_JSON__*/ null', JSON.stringify(contract));
 put('__IMAGE_DATA_URI__', dataUri);
 
 if (withAudio){
+  const providers = new Set();
   const tracks = contract.scenes.map((scene, i) => {
-    const wav = join(tmpdir(), `jett_narr_${process.pid}_${i}.wav`);
     const mp3 = join(tmpdir(), `jett_narr_${process.pid}_${i}.mp3`);
-    execFileSync('espeak-ng', ['-v', 'tr', '-s', '150', '-p', '45', '-w', wav, scene.caption]);
-    execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', wav, '-ac', '1', '-ar', '24000', '-b:a', '40k', mp3]);
+    providers.add(synthesizeCaptionMp3(scene.caption, mp3));
     const b64 = readFileSync(mp3).toString('base64');
-    rmSync(wav, { force: true }); rmSync(mp3, { force: true });
+    rmSync(mp3, { force: true });
     return 'data:audio/mpeg;base64,' + b64;
   });
   put('/*__AUDIO_JSON__*/ null', JSON.stringify(tracks));
-  console.log(`audio: ${tracks.length} sahne parçası gömüldü`);
+  console.log(`audio: ${tracks.length} sahne parçası gömüldü (ses: ${[...providers].join(', ')})`);
 }
 
 writeFileSync(outPath, html, 'utf8');

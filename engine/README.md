@@ -11,6 +11,12 @@
 
 Test: `node check_v12.mjs <ders.html> <panel|nopanel>` — deterministik speechSynthesis stub'ı altında 55+ assert.
 
+## Seslendirme (tts.mjs) ve MP4 çıktı (render_video.mjs)
+
+- `tts.mjs` sağlayıcı zinciri: **ElevenLabs** (`ELEVENLABS_API_KEY` ortam değişkeni + `api.elevenlabs.io` ağ erişimi gerekir; ses `ELEVEN_VOICE_ID` ile seçilir, varsayılan sakin/pedagojik kadın ses, model `eleven_multilingual_v2`) → **MBROLA tr2/tr1** (insan-difon; espeak fonem çıktısındaki eksik alofonlar `L/→L, l/→l, &→@, D→d` çevrimiyle veritabanına uydurulur — ünsüz düşmesi yaşanmaz) → espeak `tr`. API anahtarı yalnızca ortamdan okunur, depoya asla yazılmaz.
+- Konuşma metni `speechNormalizeTr` ile "öğretmen ağzına" çevrilir: `f ≤ g` → "f küçük eşit g", `m(B)` → "B açısı", `|AC|` → "AC uzunluğu", `XY₂` → "XY iki", roma rakamları vb. Alt yazı ekranda olduğu gibi kalır.
+- `node render_video.mjs <ders.html> <cikti.mp4> [fps=24]` — motorun kendi `render(t)`'inden kare kare deterministik yakalama; video saati canlı oynatıcıyla aynı kurala uyar (sahne sınırında anlatım bitene kadar bekler), karaoke vurgusu ve 🔊 gösterge videoda da işler; sahne sesleri `adelay`+`amix` ile mikslenip 1280×720 H.264/AAC olarak yazılır. Gereksinimler: Playwright Chromium, ffmpeg, espeak-ng (+mbrola-tr1/tr2) veya ElevenLabs erişimi.
+
 ---
 
 # (v9 mimari dokümantasyonu — hâlâ geçerli temel)
