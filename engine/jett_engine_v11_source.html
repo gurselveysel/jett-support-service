@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jett Öğretmen Çözümü</title>
+<style>
+  :root{
+    --ink:#1f2937;
+    --pen:#2F6BFF;            /* overwritten at boot from contract character profile */
+    --pen-soft: rgba(47,107,255,.10);
+    --paper:#fffdf8;
+    --line:#e3ddca;
+    --warn:#c0392b;
+    --ok:#1f9d55;
+    --warn-soft:#f0b429;
+    --ok-soft:#35d187;
+    --stage-max:clamp(320px, 62vw, 1040px);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;background:#11151c;font-family:Arial,Helvetica,sans-serif;color:var(--ink);}
+  #app{display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px 10px 22px;min-height:100%;}
+  h1{color:#e7ecf7;font-size:15px;font-weight:600;margin:2px 0 0;text-align:center;}
+  .subtitle{color:#93a3c2;font-size:12px;margin:-6px 0 4px;text-align:center;}
+
+  .stage-wrap{width:100%;max-width:var(--stage-max);background:#0c0f14;border-radius:14px;padding:12px;box-shadow:0 10px 30px rgba(0,0,0,.35);}
+  .stage-frame{position:relative;width:100%;background:radial-gradient(120% 140% at 50% 50%, #171d29 0%, #0c0f14 60%, #07090d 100%);border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+  .stage-frame.mode-169{aspect-ratio:16/9;}
+  .stage-frame.mode-916{aspect-ratio:9/16;max-width:clamp(280px, 46vw, 480px);margin:0 auto;}
+  #masterSvg{width:100%;height:100%;display:block;}
+
+  .caption-bar{position:absolute;left:0;right:0;bottom:0;background:rgba(15,18,26,.72);color:#fff;font-size:13px;line-height:1.4;padding:8px 12px;min-height:18px;display:flex;align-items:center;backdrop-filter:blur(2px);}
+  .caption-bar.force-hidden{display:none;}
+
+  #errorOverlay{position:absolute;inset:0;background:#fff;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;z-index:20;}
+  #errorOverlay.show{display:flex;}
+  #errorOverlay .box{max-width:380px;}
+  #errorOverlay h2{color:var(--warn);font-size:16px;margin:0 0 8px;}
+  #errorOverlay p{font-size:13px;color:#555;margin:0;white-space:pre-line;}
+
+  .controls{width:100%;max-width:var(--stage-max);background:#171b24;border-radius:12px;padding:10px 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:#e7ecf7;}
+  .btn{border:none;border-radius:8px;background:#2a3040;color:#e7ecf7;font-size:13px;font-weight:600;padding:12px 14px;min-height:44px;white-space:nowrap;cursor:pointer;display:inline-flex;align-items:center;gap:7px;}
+  .btn:hover{background:#343c50;}
+  .btn.primary{background:var(--pen);color:#fff;}
+  .btn.primary:hover{filter:brightness(.92);}
+  .btn:disabled{opacity:.4;cursor:not-allowed;}
+  .btn.active{outline:2px solid var(--pen);}
+  .btn:focus-visible, #seek:focus-visible, input[type="checkbox"]:focus-visible{outline:2px solid #7fa8ff;outline-offset:2px;}
+  .btn .icon{width:16px;height:16px;fill:currentColor;flex-shrink:0;}
+  .seek-wrap{flex:1 1 220px;display:flex;align-items:center;gap:8px;min-width:160px;}
+  .seek-track-wrap{position:relative;flex:1;height:32px;display:flex;align-items:center;}
+  .seek-base,.seek-fill{position:absolute;left:0;top:50%;height:6px;transform:translateY(-50%);border-radius:3px;pointer-events:none;}
+  .seek-base{width:100%;background:rgba(255,255,255,.18);z-index:0;}
+  .seek-fill{width:0%;background:var(--pen);z-index:1;}
+  .seek-ticks{position:absolute;left:0;right:0;top:50%;height:10px;transform:translateY(-50%);z-index:2;pointer-events:none;}
+  .seek-ticks .tick{position:absolute;top:0;width:2px;height:10px;margin-left:-1px;background:rgba(255,255,255,.55);border-radius:1px;}
+  #seek{position:relative;z-index:3;flex:1;height:32px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;}
+  #seek::-webkit-slider-runnable-track{background:transparent;height:6px;}
+  #seek::-moz-range-track{background:transparent;height:6px;border:none;}
+  #seek::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;margin-top:-7px;border-radius:50%;background:#fff;border:3px solid var(--pen);box-shadow:0 1px 3px rgba(0,0,0,.4);cursor:pointer;}
+  #seek::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--pen);box-shadow:0 1px 3px rgba(0,0,0,.4);cursor:pointer;}
+  .time-label{font-size:12px;color:#9aa7c2;min-width:76px;text-align:right;font-variant-numeric:tabular-nums;}
+  .mode-toggle{display:flex;flex-wrap:wrap;gap:6px;}
+
+  .mini-controls{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;gap:12px;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(17,21,28,.92);backdrop-filter:blur(6px);
+    transform:translateY(100%);transition:transform .2s ease;box-shadow:0 -4px 16px rgba(0,0,0,.35);}
+  .mini-controls.show{transform:translateY(0);}
+  .mini-controls .btn{padding:10px;min-height:40px;min-width:40px;justify-content:center;}
+  .mini-progress{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.18);overflow:hidden;}
+  .mini-progress-fill{height:100%;background:var(--pen);width:0%;}
+
+  .teacher-gate{width:100%;max-width:var(--stage-max);background:#171b24;border:1px solid #262c3a;border-radius:12px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;}
+  .teacher-gate .left{display:flex;align-items:center;gap:10px;font-size:13px;color:#c7d0e6;flex-wrap:wrap;row-gap:8px;}
+  .check-hit{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-14px -14px -14px 0;cursor:pointer;}
+  .teacher-gate input[type="checkbox"]{width:22px;height:22px;accent-color:var(--pen);}
+  .teacher-gate .status{font-size:12px;font-weight:700;}
+  .teacher-gate .status.pending{color:var(--warn-soft);}
+  .teacher-gate .status.ready{color:var(--ok-soft);}
+  .send-result{font-size:12px;color:var(--ok-soft);font-weight:700;display:none;align-items:center;gap:4px;}
+
+  footer{color:#5b6580;font-size:11px;margin-top:2px;text-align:center;}
+</style>
+</head>
+<body>
+<div id="app">
+  <h1>Öğretmen Kontrollü Çözüm Animasyonu</h1>
+  <div class="subtitle" id="subtitle"></div>
+
+  <div class="stage-wrap">
+    <div class="stage-frame mode-169" id="stageFrame">
+      <svg id="masterSvg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="clipDiagramGuard"><rect id="clipRect" x="0" y="0" width="1000" height="1000"/></clipPath>
+          <linearGradient id="penBodyGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#4a5568"></stop>
+            <stop offset="45%" stop-color="#1f2530"></stop>
+            <stop offset="100%" stop-color="#0c0f14"></stop>
+          </linearGradient>
+        </defs>
+        <rect id="paperRect" x="0" y="0" width="1000" height="1000" fill="var(--paper)"></rect>
+        <!-- LOCKED SOURCE IMAGE — inserted at boot, never redrawn/altered -->
+        <g id="imageHost"></g>
+        <g id="onImageLayer" clip-path="url(#clipDiagramGuard)"></g>
+        <g id="panelLayer"></g>
+      </svg>
+
+      <div class="caption-bar" id="captionBar"></div>
+      <div id="errorOverlay">
+        <div class="box">
+          <h2>İç Kontrol: Ders Yayınlanamadı</h2>
+          <p id="errorMsg"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn primary" id="playBtn" aria-label="Oynat">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z"></path></svg><span>Oynat</span>
+    </button>
+    <button class="btn" id="pauseBtn" aria-label="Duraklat">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14"></rect><rect x="14" y="5" width="4" height="14"></rect></svg><span>Duraklat</span>
+    </button>
+    <button class="btn" id="restartBtn" aria-label="Baştan">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V1L7 6l5 5V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"></path></svg><span>Baştan</span>
+    </button>
+    <div class="seek-wrap">
+      <div class="seek-track-wrap" id="seekTrackWrap">
+        <div class="seek-base"></div>
+        <div class="seek-fill" id="seekFill"></div>
+        <div class="seek-ticks" id="seekTicks"></div>
+        <input type="range" id="seek" min="0" max="1" step="0.1" value="0" aria-label="Zaman çubuğu">
+      </div>
+      <span class="time-label" id="timeLabel">—</span>
+    </div>
+    <div class="mode-toggle" role="group" aria-label="Görüntü modu">
+      <button class="btn active" id="mode169Btn" aria-pressed="true">16:9</button>
+      <button class="btn" id="mode916Btn" aria-pressed="false">9:16</button>
+      <button class="btn" id="captionToggleBtn">Alt yazı: Açık</button>
+      <button class="btn active" id="narrationToggleBtn">Anlatım: Açık</button>
+    </div>
+  </div>
+
+  <div class="mini-controls" id="miniControls" aria-hidden="true">
+    <button class="btn primary" id="miniPlayPauseBtn" aria-label="Oynat/Duraklat">
+      <svg class="icon" id="miniIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z"></path></svg>
+    </button>
+    <div class="mini-progress"><div class="mini-progress-fill" id="miniProgressFill"></div></div>
+    <span class="time-label" id="miniTimeLabel">—</span>
+  </div>
+
+  <div class="teacher-gate">
+    <div class="left">
+      <span class="check-hit"><input type="checkbox" id="teacherApprove"></span>
+      <label for="teacherApprove">Öğretmen olarak çözümü inceledim, onaylıyorum.</label>
+    </div>
+    <div class="left">
+      <span class="status pending" id="gateStatus">Onay bekleniyor — animasyon en az bir kez sonuna kadar izlenmeli.</span>
+      <button class="btn primary" id="sendBtn" disabled>Öğrenciye Gönder</button>
+      <span class="send-result" id="sendResult">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> Gönderildi
+      </span>
+    </div>
+  </div>
+
+  <footer id="footerLine">Jett Öğretmen Çözümü · tek dosya, çevrimdışı çalışır</footer>
+</div>
+
+<!-- opentype.js — inlined at build time so glyph outlines are generated AT RUNTIME from the contract -->
+<script>__OPENTYPE_JS__</script>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ================================================================
+     EMBEDDED ASSETS (filled by build_engine.mjs / instantiate.mjs)
+  ================================================================ */
+  const FONT_LATIN_B64 = "__FONT_LATIN_B64__";
+  const FONT_EXT_B64   = "__FONT_EXT_B64__";
+  const IMAGE_DATA_URI = "__IMAGE_DATA_URI__";
+  const CONTRACT = /*__CONTRACT_JSON__*/ null;
+
+  /* ================================================================
+     ENGINE POLICY (content-independent physics of the "hand" — these
+     are NOT per-question values; every per-question number below is
+     DERIVED from the contract + image at runtime)
+  ================================================================ */
+  const CFG = {
+    SVG_W: 1000,              // fixed logical canvas width; height derives from image + panel
+    WRITE_SPEED: 250,         // handwriting speed, glyph-advance units/sec (calibrated on v8's approved rhythm)
+    SHAPE_SPEED: 160,         // shape tracing speed, path-length units/sec
+    SHAPE_MIN_DUR: 0.55,      // even a tiny tick takes this long to draw
+    TEXT_MIN_DUR: 0.8,
+    READ_PAUSE_PER_CHAR: 0.055, // post-block comprehension pause (the 'teacher talks' beat), clamped below
+    READ_PAUSE_MAX: 3.6,
+    ITEM_GAP: 0.3,            // hand-lift + travel time between consecutive strokes in a scene
+    SPACE_SWITCH_GAP: 0.45,   // barrier gap when the pen travels photo<->panel
+    SCENE_GAP: 0.6,
+    START_DELAY: 2.2,        // viewer reads the question before the first ink lands
+    DUR_MIN: 20, DUR_MAX: 75, // total-duration clamp; schedule is scaled uniformly into range
+    PANEL_FS: 34, PANEL_LINE_H: 48, PANEL_MARGIN_X: 34, PANEL_PAD_TOP: 55, PANEL_PAD_BOTTOM: 100, /* bottom pad clears the caption overlay */
+    PANEL_PARA_GAP: 8,
+    PHOTO_FS_TRY: [30, 26, 22],   // photo-space text sizes tried against available blank space
+    PHOTO_FS_TRY_EMPH: [42, 36, 30], // emphasized blocks (final answers) try larger first
+    FINAL_FS: 42, FINAL_BOX_H: 90, FINAL_GAP_TOP: 26,
+    CELL: 25,                 // safe-zone analysis grid cell, in SVG units
+    BLANK_MAX_INK: 0.02,      // fraction of dark pixels a cell may contain and still count as blank
+    INK_SAMPLES: 24,          // arc-length samples per stroke for the curvature time-map
+    CURVE_SLOWDOWN: 1.8,      // extra time weight applied at a stroke's tightest curvature
+  };
+
+  /* ================================================================
+     UTILS
+  ================================================================ */
+  function clamp01(x){ return Math.max(0, Math.min(1, x)); }
+  function easeInOutCubic(p){ return p < 0.5 ? 4*p*p*p : 1 - Math.pow(-2*p + 2, 3) / 2; }
+  function seedFromString(str){
+    let h = 2166136261;
+    for (let i = 0; i < str.length; i++){ h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return h >>> 0;
+  }
+  function mulberry32(seed){
+    let a = seed;
+    return function(){
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function b64ToBuf(b64){
+    const bin = atob(b64);
+    const buf = new ArrayBuffer(bin.length);
+    const view = new Uint8Array(buf);
+    for (let i = 0; i < bin.length; i++) view[i] = bin.charCodeAt(i);
+    return buf;
+  }
+  const SVGNS = "http://www.w3.org/2000/svg";
+  function svgEl(tag, attrs){
+    const el = document.createElementNS(SVGNS, tag);
+    for (const k in attrs) el.setAttribute(k, attrs[k]);
+    return el;
+  }
+
+  /* ================================================================
+     ERROR SURFACE — every failed gate lands here, animation never
+     starts in a silently-degraded state.
+  ================================================================ */
+  function showError(lines){
+    document.getElementById("errorMsg").textContent =
+      (Array.isArray(lines) ? lines : [lines]).join("\n") + "\n\nDers güvenli şekilde durduruldu — insan incelemesi gerekiyor.";
+    document.getElementById("errorOverlay").classList.add("show");
+    document.getElementById("playBtn").disabled = true;
+    document.getElementById("seek").disabled = true;
+  }
+
+  /* ================================================================
+     MODULE a — ContractGate: refuse to animate an incomplete contract.
+  ================================================================ */
+  function validateContract(c){
+    const errs = [];
+    if (!c || typeof c !== "object") return ["Sözleşme (contract) hiç yüklenmemiş."];
+    const need = (cond, msg) => { if (!cond) errs.push(msg); };
+    need(c.meta && c.meta.title, "meta.title eksik");
+    need(c.meta && c.meta.subject, "meta.subject eksik");
+    need(c.meta && c.meta.topic, "meta.topic eksik");
+    need(c.academic_contract && c.academic_contract.given, "academic_contract.given eksik");
+    need(c.academic_contract && c.academic_contract.asked, "academic_contract.asked eksik");
+    need(c.canonical_solution && Array.isArray(c.canonical_solution.steps) && c.canonical_solution.steps.length > 0, "canonical_solution.steps eksik/boş");
+    need(c.canonical_solution && c.canonical_solution.final_answer && c.canonical_solution.final_answer.value, "canonical_solution.final_answer eksik");
+    need(Array.isArray(c.scenes) && c.scenes.length >= 3, "scenes eksik (en az 3 sahne gerekli)");
+    (c.scenes || []).forEach((s, i) => {
+      need(s.caption, `scenes[${i}].caption eksik`);
+      need(Array.isArray(s.items) && s.items.length > 0, `scenes[${i}].items eksik/boş`);
+      (s.items || []).forEach((it, j) => {
+        const tag = `scenes[${i}].items[${j}]`;
+        need(it.space === "photo" || it.space === "panel", `${tag}.space 'photo'|'panel' olmalı`);
+        need(it.type, `${tag}.type eksik`);
+        if (it.type === "text" || it.type === "final-box") need(typeof it.text === "string" && it.text.length > 0, `${tag}.text eksik`);
+        if (it.space === "photo" && it.type !== "text"){
+          if (it.type === "arrow") need(it.from && it.to, `${tag} arrow için from/to eksik`);
+          else need(it.anchor, `${tag}.anchor eksik`);
+        }
+        if (it.space === "photo" && it.type === "text") need(it.near, `${tag}.near eksik (foto metni için yaklaşık konum)`);
+      });
+    });
+    return errs;
+  }
+
+  /* ================================================================
+     MODULE c — HandwritingEngine (runtime port of the build-time
+     glyph pipeline: tokenizer, kerning, delta glyph, timing).
+  ================================================================ */
+  let latinFont = null, extFont = null, UPM = 1000;
+  const uncoveredChars = new Set();
+
+  function fontForChar(ch){
+    if (latinFont.charToGlyph(ch).index !== 0) return latinFont;
+    if (extFont.charToGlyph(ch).index !== 0) return extFont;
+    return null;
+  }
+  // hand-authored δ glyph (script subsets ship no Greek), in output space
+  function deltaPath(ox, oy, fs){
+    const p = (x, y) => `${(ox + x * fs).toFixed(2)},${(oy + y * fs).toFixed(2)}`;
+    return `M ${p(0.34, -0.06)} C ${p(0.10, -0.10)} ${p(0.02, -0.24)} ${p(0.10, -0.34)} ` +
+           `C ${p(0.18, -0.44)} ${p(0.36, -0.42)} ${p(0.34, -0.30)} ` +
+           `C ${p(0.32, -0.20)} ${p(0.14, -0.18)} ${p(0.12, -0.28)} ` +
+           `C ${p(0.10, -0.40)} ${p(0.26, -0.52)} ${p(0.40, -0.50)}`;
+  }
+  const DELTA_ADVANCE = 480;
+  // hand-authored math symbols missing from the script subsets — drawn as real pen strokes
+  function lePath(ox, oy, fs, flip){
+    const p = (x, y) => `${(ox + x * fs).toFixed(2)},${(oy + y * fs).toFixed(2)}`;
+    return flip
+      ? `M ${p(0.08,-0.46)} L ${p(0.42,-0.28)} L ${p(0.08,-0.10)} M ${p(0.08,0.02)} L ${p(0.44,0.02)}`
+      : `M ${p(0.42,-0.46)} L ${p(0.08,-0.28)} L ${p(0.42,-0.10)} M ${p(0.06,0.02)} L ${p(0.42,0.02)}`;
+  }
+  function arrowGlyphPath(ox, oy, fs){
+    const p = (x, y) => `${(ox + x * fs).toFixed(2)},${(oy + y * fs).toFixed(2)}`;
+    return `M ${p(0.06,-0.24)} L ${p(0.62,-0.24)} M ${p(0.47,-0.38)} L ${p(0.64,-0.24)} L ${p(0.47,-0.10)}`;
+  }
+  function sqrtGlyphPath(ox, oy, fs){
+    const p = (x, y) => `${(ox + x * fs).toFixed(2)},${(oy + y * fs).toFixed(2)}`;
+    return `M ${p(0.02,-0.28)} L ${p(0.14,-0.30)} L ${p(0.26,-0.02)} L ${p(0.42,-0.62)} L ${p(0.52,-0.62)}`;
+  }
+  function triGlyphPath(ox, oy, fs){
+    const p = (x, y) => `${(ox + x * fs).toFixed(2)},${(oy + y * fs).toFixed(2)}`;
+    return `M ${p(0.26,-0.52)} L ${p(0.02,-0.02)} L ${p(0.50,-0.02)} L ${p(0.27,-0.50)}`;
+  }
+  const SYM_ADVANCE = { le: 560, ge: 560, arrow: 740, sqrt: 560, tri: 580 };
+  const SYM_PATHS = {
+    le: (ox, oy, fs) => lePath(ox, oy, fs, false),
+    ge: (ox, oy, fs) => lePath(ox, oy, fs, true),
+    arrow: arrowGlyphPath, sqrt: sqrtGlyphPath, tri: triGlyphPath
+  };
+  function roundPathData(d){
+    return d.replace(/-?\d+\.\d+/g, (m) => {
+      const r = Math.round(parseFloat(m) * 10) / 10;
+      return (Object.is(r, -0) ? 0 : r).toString();
+    });
+  }
+  function tokenize(text){
+    const tokens = [];
+    for (const ch of text){
+      if (ch === " "){ tokens.push({ kind: "space" }); continue; }
+      if (ch === "δ"){ tokens.push({ kind: "delta" }); continue; }
+      if (ch === "⁺"){ tokens.push({ kind: "super", ch: "+" }); continue; }
+      if (ch === "⁻"){ tokens.push({ kind: "super", ch: "-" }); continue; }
+      if (ch >= "₀" && ch <= "₉"){ tokens.push({ kind: "sub", ch: String(ch.charCodeAt(0) - 0x2080) }); continue; }
+      if (ch === "≤"){ tokens.push({ kind: "sym", sym: "le" }); continue; }
+      if (ch === "≥"){ tokens.push({ kind: "sym", sym: "ge" }); continue; }
+      if (ch === "→" || ch === "⇒"){ tokens.push({ kind: "sym", sym: "arrow" }); continue; }
+      if (ch === "√"){ tokens.push({ kind: "sym", sym: "sqrt" }); continue; }
+      if (ch === "Δ"){ tokens.push({ kind: "sym", sym: "tri" }); continue; }
+      const font = fontForChar(ch);
+      if (!font){ uncoveredChars.add(ch); continue; }
+      tokens.push({ kind: "char", ch, font });
+    }
+    return tokens;
+  }
+  // lay one line out from (x,y); real kerning between same-font neighbors
+  function layoutLine(tokens, x, y, fontSize){
+    let cursor = x;
+    const glyphs = [];
+    let prevGlyph = null, prevFont = null;
+    for (const tok of tokens){
+      cursor = Math.round(cursor * 1000) / 1000; // guards opentype.js's float-noise NaN edge case
+      if (tok.kind === "space"){
+        const adv = 260 * (fontSize / UPM);
+        cursor += adv;
+        glyphs.push({ d: null, isSpace: true, isPunct: false, advancePx: adv });
+        prevGlyph = null; prevFont = null;
+        continue;
+      }
+      if (tok.kind === "delta"){
+        const d = deltaPath(cursor, y, fontSize);
+        const adv = DELTA_ADVANCE * (fontSize / UPM);
+        glyphs.push({ d, isSpace: false, isPunct: false, advancePx: adv });
+        cursor += adv;
+        prevGlyph = null; prevFont = null;
+        continue;
+      }
+      if (tok.kind === "sym"){
+        const d = SYM_PATHS[tok.sym](cursor, y, fontSize);
+        const adv = SYM_ADVANCE[tok.sym] * (fontSize / UPM);
+        glyphs.push({ d, isSpace: false, isPunct: false, advancePx: adv });
+        cursor += adv;
+        prevGlyph = null; prevFont = null;
+        continue;
+      }
+      if (tok.kind === "super" || tok.kind === "sub"){
+        const g = latinFont.charToGlyph(tok.ch);
+        const subFs = fontSize * 0.62;
+        const yOff = tok.kind === "super" ? -fontSize * 0.34 : fontSize * 0.10;
+        const path = g.getPath(cursor, y + yOff, subFs);
+        const adv = g.advanceWidth * (subFs / UPM) * 1.05;
+        glyphs.push({ d: roundPathData(path.toPathData(2)), isSpace: false, isPunct: false, advancePx: adv });
+        cursor += adv;
+        prevGlyph = null; prevFont = null;
+        continue;
+      }
+      const g = tok.font.charToGlyph(tok.ch);
+      if (prevGlyph && prevFont === tok.font){
+        let kern = 0;
+        try { kern = tok.font.getKerningValue(prevGlyph, g) || 0; } catch(e){ kern = 0; }
+        cursor += kern * (fontSize / UPM);
+        cursor = Math.round(cursor * 1000) / 1000;
+      }
+      const path = g.getPath(cursor, y, fontSize);
+      const adv = g.advanceWidth * (fontSize / UPM);
+      glyphs.push({ d: roundPathData(path.toPathData(2)), isSpace: false, isPunct: /[.,;:()]/.test(tok.ch), advancePx: adv });
+      prevGlyph = g; prevFont = tok.font;
+      cursor += adv;
+    }
+    return glyphs;
+  }
+  function measureAdvance(text, fontSize){
+    // width without generating paths (fast, used by the wrapper) — kerning applied
+    let cursor = 0;
+    let prevGlyph = null, prevFont = null;
+    for (const tok of tokenize(text)){
+      if (tok.kind === "space"){ cursor += 260 * (fontSize / UPM); prevGlyph = null; continue; }
+      if (tok.kind === "delta"){ cursor += DELTA_ADVANCE * (fontSize / UPM); prevGlyph = null; continue; }
+      if (tok.kind === "sym"){ cursor += SYM_ADVANCE[tok.sym] * (fontSize / UPM); prevGlyph = null; continue; }
+      if (tok.kind === "super" || tok.kind === "sub"){
+        cursor += latinFont.charToGlyph(tok.ch).advanceWidth * (fontSize * 0.62 / UPM) * 1.05;
+        prevGlyph = null; continue;
+      }
+      const g = tok.font.charToGlyph(tok.ch);
+      if (prevGlyph && prevFont === tok.font){
+        try { cursor += (tok.font.getKerningValue(prevGlyph, g) || 0) * (fontSize / UPM); } catch(e){}
+      }
+      cursor += g.advanceWidth * (fontSize / UPM);
+      prevGlyph = g; prevFont = tok.font;
+    }
+    return cursor;
+  }
+  // spread a [start,end] window across glyphs by advance weight (+pauses at spaces/punct.)
+  function timeGlyphs(glyphs, lineStart, lineEnd){
+    const weights = glyphs.map(g => g.advancePx + (g.isSpace ? 55 : 0) + (g.isPunct ? 30 : 0));
+    const total = weights.reduce((a, b) => a + b, 0) || 1;
+    const duration = lineEnd - lineStart;
+    let acc = 0;
+    return glyphs.map((g, i) => {
+      const t0 = lineStart + (acc / total) * duration;
+      acc += weights[i];
+      const t1 = lineStart + (acc / total) * duration;
+      // stroke may never spill past this glyph's own slot — the one-hand invariant
+      // holds down to the single-glyph level (next stroke starts only after this one).
+      const strokeEnd = Math.max(t0 + (t1 - t0) * 0.72, Math.min(t0 + 0.02, t1 - 0.002));
+      return { ...g, start: t0, end: strokeEnd, fillStart: strokeEnd, fillEnd: t1 };
+    });
+  }
+  function glyphGroupMarkup(id, x, y, fontSize, glyphsTimed, rnd, color){
+    const ink = color || "var(--pen)";
+    const rot = ((rnd() - 0.5) * 2.2).toFixed(2);
+    const baseW = Math.max(1.6, fontSize * 0.075);
+    const g = svgEl("g", { id, class: "hw-line", transform: `rotate(${rot} ${x} ${y})` });
+    for (const gl of glyphsTimed){
+      if (gl.isSpace || !gl.d) continue;
+      const w = (baseW * (0.85 + rnd() * 0.3)).toFixed(2);
+      const p = svgEl("path", {
+        class: "ann-draw glyph",
+        "data-start": gl.start.toFixed(3), "data-end": gl.end.toFixed(3),
+        "data-fill-start": gl.fillStart.toFixed(3), "data-fill-end": gl.fillEnd.toFixed(3),
+        d: gl.d, fill: ink, "fill-opacity": "0",
+        stroke: ink, "stroke-width": w,
+        "stroke-linecap": "round", "stroke-linejoin": "round", opacity: "0"
+      });
+      g.appendChild(p);
+    }
+    return g;
+  }
+
+  /* ================================================================
+     MODULE b — SafeZoneMap: runtime ink-density analysis of the photo.
+     No hand-measured pixel coordinates anywhere.
+  ================================================================ */
+  function buildSafeZoneMap(imgEl, imgW, imgH, svgImgH){
+    const scale = Math.min(1, 800 / imgW);
+    const cw = Math.round(imgW * scale), ch = Math.round(imgH * scale);
+    const cv = document.createElement("canvas");
+    cv.width = cw; cv.height = ch;
+    const ctx = cv.getContext("2d", { willReadFrequently: true });
+    ctx.drawImage(imgEl, 0, 0, cw, ch);
+    const data = ctx.getImageData(0, 0, cw, ch).data;
+
+    // adaptive paper threshold: the photo's own median luminance defines "paper"
+    const lums = new Uint8Array(cw * ch);
+    for (let i = 0; i < cw * ch; i++){
+      const o = i * 4;
+      lums[i] = (data[o] * 0.299 + data[o+1] * 0.587 + data[o+2] * 0.114) | 0;
+    }
+    const hist = new Uint32Array(256);
+    for (let i = 0; i < lums.length; i++) hist[lums[i]]++;
+    let cum = 0, median = 128;
+    for (let v = 0; v < 256; v++){ cum += hist[v]; if (cum >= lums.length / 2){ median = v; break; } }
+    const darkThr = median * 0.82;
+
+    // grid in SVG units (image occupies 1000 x svgImgH)
+    const cellSvg = CFG.CELL;
+    const gw = Math.ceil(CFG.SVG_W / cellSvg), gh = Math.ceil(svgImgH / cellSvg);
+    const ink = new Float32Array(gw * gh);
+    const pxPerSvgX = cw / CFG.SVG_W, pxPerSvgY = ch / svgImgH;
+    for (let gy = 0; gy < gh; gy++){
+      for (let gx = 0; gx < gw; gx++){
+        const x0 = Math.floor(gx * cellSvg * pxPerSvgX), x1 = Math.min(cw, Math.floor((gx+1) * cellSvg * pxPerSvgX));
+        const y0 = Math.floor(gy * cellSvg * pxPerSvgY), y1 = Math.min(ch, Math.floor((gy+1) * cellSvg * pxPerSvgY));
+        let dark = 0, tot = 0;
+        for (let y = y0; y < y1; y += 2){
+          for (let x = x0; x < x1; x += 2){
+            tot++;
+            if (lums[y * cw + x] < darkThr) dark++;
+          }
+        }
+        ink[gy * gw + gx] = tot ? dark / tot : 1;
+      }
+    }
+    function cellBlank(gx, gy){
+      if (gx < 0 || gy < 0 || gx >= gw || gy >= gh) return false;
+      return ink[gy * gw + gx] <= CFG.BLANK_MAX_INK;
+    }
+    // nearest all-blank rect of (w x h) SVG units around (cx, cy); spiral ring search
+    function findBlankRect(cx, cy, w, h){
+      const needX = Math.ceil(w / cellSvg), needY = Math.ceil(h / cellSvg);
+      const cgx = Math.round(cx / cellSvg - needX / 2), cgy = Math.round(cy / cellSvg - needY / 2);
+      const maxR = Math.max(gw, gh);
+      for (let r = 0; r <= maxR; r++){
+        for (let dy = -r; dy <= r; dy++){
+          for (let dx = -r; dx <= r; dx++){
+            if (Math.max(Math.abs(dx), Math.abs(dy)) !== r) continue; // ring only
+            const gx = cgx + dx, gy = cgy + dy;
+            let ok = true;
+            for (let yy = 0; ok && yy < needY; yy++)
+              for (let xx = 0; ok && xx < needX; xx++)
+                if (!cellBlank(gx + xx, gy + yy)) ok = false;
+            if (ok) return { x: gx * cellSvg, y: gy * cellSvg, w: needX * cellSvg, h: needY * cellSvg,
+                             dist: Math.hypot(gx * cellSvg + w/2 - cx, gy * cellSvg + h/2 - cy) };
+          }
+        }
+        if (r > (Math.max(w, h) / cellSvg) + 14) break; // don't wander across the whole page
+      }
+      return null;
+    }
+    // mark a region as taken so later placements can't steal it — printed ink AND
+    // our own already-planned handwriting both count as occupied space.
+    function occupy(rect){
+      const gx0 = Math.max(0, Math.floor(rect.x / cellSvg)), gy0 = Math.max(0, Math.floor(rect.y / cellSvg));
+      const gx1 = Math.min(gw - 1, Math.ceil((rect.x + rect.w) / cellSvg)), gy1 = Math.min(gh - 1, Math.ceil((rect.y + rect.h) / cellSvg));
+      for (let gy = gy0; gy <= gy1; gy++)
+        for (let gx = gx0; gx <= gx1; gx++)
+          ink[gy * gw + gx] = 1;
+    }
+    return { findBlankRect, occupy };
+  }
+
+  /* ================================================================
+     MODULE d+g — Compiler: contract scenes -> concrete drawables.
+     Panel wrapping via real glyph advances; photo geometry from
+     normalized anchors + safe-zone queries. All numbers derived.
+  ================================================================ */
+  function compileScenes(contract, zone, svgImgH){
+    const items = [];   // {space, kind:'shape'|'phototext'|'paneltext'|'finalbox', el-spec..., cost}
+    const sceneMeta = [];
+    const placedRects = []; // every runtime-placed handwriting block, for the overlap self-check
+    let panelUsed = false;
+    const usableW = CFG.SVG_W - 2 * CFG.PANEL_MARGIN_X;
+    let panelY = CFG.PANEL_PAD_TOP;
+    const A = (a) => ({ x: a.x * CFG.SVG_W, y: a.y * svgImgH, w: (a.w || 0) * CFG.SVG_W, h: (a.h || 0) * svgImgH });
+
+    contract.scenes.forEach((scene, si) => {
+      const sceneItems = [];
+      scene.items.forEach((it, ii) => {
+        const idBase = `s${si}i${ii}`;
+        if (it.space === "photo" && it.type !== "text"){
+          const spec = { space: "photo", kind: "shape", id: idBase, type: it.type, color: it.color || null };
+          if (it.type === "arrow"){
+            const f = { x: it.from.x * CFG.SVG_W, y: it.from.y * svgImgH };
+            const t = { x: it.to.x * CFG.SVG_W, y: it.to.y * svgImgH };
+            const mx = (f.x + t.x) / 2 + (t.y - f.y) * 0.18, my = (f.y + t.y) / 2 - (t.x - f.x) * 0.18;
+            spec.d = `M ${f.x.toFixed(1)},${f.y.toFixed(1)} Q ${mx.toFixed(1)},${my.toFixed(1)} ${t.x.toFixed(1)},${t.y.toFixed(1)}`;
+            spec.len = Math.hypot(t.x - f.x, t.y - f.y) * 1.1;
+          } else {
+            const a = A(it.anchor);
+            if (it.type === "box"){
+              spec.rect = a; spec.len = 2 * (a.w + a.h);
+            } else if (it.type === "ellipse" || it.type === "answer-circle"){
+              const grow = it.type === "answer-circle" ? 1.12 : 1.0;
+              spec.ellipse = { cx: a.x + a.w/2, cy: a.y + a.h/2, rx: Math.max(12, a.w/2 * grow), ry: Math.max(10, a.h/2 * grow) };
+              spec.len = Math.PI * (3*(spec.ellipse.rx + spec.ellipse.ry) - Math.sqrt((3*spec.ellipse.rx + spec.ellipse.ry) * (spec.ellipse.rx + 3*spec.ellipse.ry)));
+            } else if (it.type === "check"){
+              const w = Math.max(30, a.w), h = Math.max(24, a.h);
+              spec.d = `M ${a.x.toFixed(1)},${(a.y + h*0.5).toFixed(1)} L ${(a.x + w*0.36).toFixed(1)},${(a.y + h).toFixed(1)} L ${(a.x + w).toFixed(1)},${a.y.toFixed(1)}`;
+              spec.len = w * 1.8; spec.color = spec.color || "var(--ok)"; spec.sw = 7;
+            } else if (it.type === "underline"){
+              // teacher's emphasis stroke under a printed phrase — gentle bow, drawn along the anchor's bottom edge
+              const uy = a.y + a.h + 5;
+              spec.d = `M ${a.x.toFixed(1)},${uy.toFixed(1)} Q ${(a.x + a.w*0.5).toFixed(1)},${(uy + 5).toFixed(1)} ${(a.x + a.w).toFixed(1)},${(uy - 1).toFixed(1)}`;
+              spec.len = a.w * 1.05; spec.sw = 4;
+            } else if (it.type === "badge"){
+              // verified-badge: circle + inner check, placed in a runtime-found blank pocket
+              const need = { w: Math.max(a.w, 96), h: Math.max(a.h, 84) };
+              const r = zone.findBlankRect(a.x + a.w/2, a.y + a.h/2, need.w, need.h);
+              const c = r ? { cx: r.x + r.w/2, cy: r.y + r.h/2 } : { cx: a.x + a.w/2, cy: a.y + a.h/2 };
+              spec.badge = { cx: c.cx, cy: c.cy, rx: need.w/2 - 6, ry: need.h/2 - 6 };
+              spec.len = 330;
+              const occ = { x: c.cx - need.w/2, y: c.cy - need.h/2, w: need.w, h: need.h };
+              zone.occupy(occ);
+              placedRects.push({ id: idBase, ...occ });
+            }
+          }
+          spec.dur = Math.max(CFG.SHAPE_MIN_DUR, (spec.len || 120) / CFG.SHAPE_SPEED);
+          sceneItems.push(spec);
+          return;
+        }
+        if (it.space === "photo" && it.type === "text"){
+          const linesTxt = it.text.split("\n");
+          const tryList = it.emphasis ? CFG.PHOTO_FS_TRY_EMPH : CFG.PHOTO_FS_TRY;
+          const pad = it.boxed ? 14 : 0; // a boxed block needs breathing room for its frame
+          let fs = null, rect = null;
+          for (const tryFs of tryList){
+            const wNeed = Math.max(...linesTxt.map(L => measureAdvance(L, tryFs))) + tryFs * 0.6 + 2 * pad;
+            const hNeed = linesTxt.length * tryFs * 1.25 + tryFs * 0.4 + 2 * pad;
+            const near = { x: it.near.x * CFG.SVG_W, y: it.near.y * svgImgH };
+            const r = zone.findBlankRect(near.x, near.y, wNeed, hNeed);
+            if (r){ fs = tryFs; rect = r; break; }
+          }
+          if (!rect){
+            // graceful, quality-preserving degradation: content moves to the notebook panel
+            it = { space: "panel", type: "text", text: it.text.replace(/\n/g, " ") };
+          } else {
+            const totalAdv = linesTxt.reduce((s, L) => s + measureAdvance(L, fs), 0);
+            const spec = { space: "photo", kind: "phototext", id: idBase, fs, rect, linesTxt, pad,
+                           color: it.color || null,
+                           dur: Math.max(CFG.TEXT_MIN_DUR, totalAdv / CFG.WRITE_SPEED),
+                           readPause: Math.min(CFG.READ_PAUSE_MAX, it.text.length * CFG.READ_PAUSE_PER_CHAR) };
+            if (it.boxed){
+              // frame drawn right after the words land, sized to the real written extent
+              const bw = Math.max(...linesTxt.map(L => measureAdvance(L, fs))) + fs * 0.7;
+              const bh = linesTxt.length * fs * 1.25 + fs * 0.35;
+              spec.boxRect = { x: rect.x + pad - fs * 0.2, y: rect.y + pad - fs * 0.1, w: bw, h: bh };
+              spec.boxDur = Math.max(CFG.SHAPE_MIN_DUR, 2 * (bw + bh) / CFG.SHAPE_SPEED);
+              spec.dur += spec.boxDur;
+            }
+            zone.occupy(rect);
+            placedRects.push({ id: idBase, x: rect.x, y: rect.y, w: rect.w, h: rect.h });
+            sceneItems.push(spec);
+            return;
+          }
+        }
+        if (it.space === "panel" && it.type === "text"){
+          // greedy word-wrap with real advances
+          const words = it.text.split(" ");
+          const lines = [];
+          let cur = "";
+          for (const w of words){
+            const cand = cur ? cur + " " + w : w;
+            if (measureAdvance(cand, CFG.PANEL_FS) <= usableW) cur = cand;
+            else { if (cur) lines.push(cur); cur = w; }
+          }
+          if (cur) lines.push(cur);
+          const baselines = lines.map((L, li) => ({ text: L, y: panelY + li * CFG.PANEL_LINE_H }));
+          panelY += lines.length * CFG.PANEL_LINE_H + CFG.PANEL_PARA_GAP;
+          const totalAdv = lines.reduce((s, L) => s + measureAdvance(L, CFG.PANEL_FS), 0);
+          panelUsed = true;
+          sceneItems.push({ space: "panel", kind: "paneltext", id: idBase, baselines,
+                            dur: Math.max(CFG.TEXT_MIN_DUR, totalAdv / CFG.WRITE_SPEED),
+                            readPause: Math.min(CFG.READ_PAUSE_MAX, it.text.length * CFG.READ_PAUSE_PER_CHAR) });
+          return;
+        }
+        if (it.space === "panel" && it.type === "final-box"){
+          panelUsed = true;
+          panelY += CFG.FINAL_GAP_TOP;
+          const adv = measureAdvance(it.text, CFG.FINAL_FS);
+          const boxW = Math.min(usableW, adv + 60);
+          sceneItems.push({ space: "panel", kind: "finalbox", id: idBase, text: it.text,
+                            box: { x: CFG.PANEL_MARGIN_X, y: panelY, w: boxW, h: CFG.FINAL_BOX_H },
+                            baselineY: panelY + CFG.FINAL_BOX_H * 0.63,
+                            dur: Math.max(1.6, adv / CFG.WRITE_SPEED) });
+          panelY += CFG.FINAL_BOX_H;
+          return;
+        }
+      });
+      sceneMeta.push({ caption: scene.caption, items: sceneItems });
+      items.push(...sceneItems);
+    });
+    // panel exists only when the photo genuinely lacked room — a real teacher
+    // solves on the page. Bottom pad scales with total content height (the caption
+    // bar is a fixed-pixel overlay, so taller SVG => more SVG-units covered).
+    const panelH = panelUsed
+      ? panelY + Math.max(CFG.PANEL_PAD_BOTTOM, Math.round(0.13 * (svgImgH + panelY)))
+      : 0;
+    return { items, sceneMeta, panelH, panelUsed, placedRects };
+  }
+
+  /* ================================================================
+     MODULE e — TimingEngine. ONE-HAND INVARIANT, BY CONSTRUCTION:
+     a teacher has one hand, so no two strokes are EVER drawn at the
+     same time. Every item starts strictly after the previous one ends —
+     a short travel gap inside a scene, a longer "teacher talks" pause
+     (the previous block's readPause) between scenes, and a slightly
+     bigger gap when the hand travels between the photo and the panel.
+  ================================================================ */
+  function scheduleItems(sceneMeta){
+    let maxEnd = 0, lastSpace = null, prev = null;
+    sceneMeta.forEach((scene, si) => {
+      scene.items.forEach(item => {
+        let start;
+        if (lastSpace === null) start = CFG.START_DELAY;
+        else if (item.space !== lastSpace) start = maxEnd + CFG.SPACE_SWITCH_GAP;
+        else if (prev && prev.sceneIdx === si) start = prev.end + CFG.ITEM_GAP; // sequential: hand lifts, moves, writes next
+        else start = maxEnd + CFG.SCENE_GAP;
+        item.start = start;
+        item.end = start + item.dur;
+        item.sceneIdx = si;
+        maxEnd = Math.max(maxEnd, item.end + (item.readPause || 0));
+        lastSpace = item.space;
+        prev = item;
+      });
+    });
+    let total = maxEnd + 0.8; // settle beat before the player stops
+    // uniform time-scale into the [DUR_MIN, DUR_MAX] band — pacing character is preserved
+    let k = 1;
+    if (total > CFG.DUR_MAX) k = CFG.DUR_MAX / total;
+    if (total < CFG.DUR_MIN) k = CFG.DUR_MIN / total;
+    if (k !== 1){
+      sceneMeta.forEach(s => s.items.forEach(it => { it.start *= k; it.end *= k; it.dur *= k; if (it.readPause) it.readPause *= k; }));
+      total *= k;
+    }
+    sceneMeta.forEach(s => {
+      s.tStart = Math.min(...s.items.map(i => i.start));
+      s.tEnd = Math.max(...s.items.map(i => i.end));
+    });
+    return Math.round(total * 10) / 10;
+  }
+  // the assert pass (SelfCheck consumes this): NO pair of items may share a
+  // time window — one hand writes one thing at a time, anywhere on the page.
+  function timingInvariantViolations(items){
+    const bad = [];
+    for (let i = 0; i < items.length; i++)
+      for (let j = i + 1; j < items.length; j++){
+        const a = items[i], b = items[j];
+        if (a.start < b.end - 0.001 && b.start < a.end - 0.001)
+          bad.push(`${a.id}(${a.start.toFixed(1)}-${a.end.toFixed(1)}) × ${b.id}(${b.start.toFixed(1)}-${b.end.toFixed(1)})`);
+      }
+    return bad;
+  }
+
+  /* ================================================================
+     MODULE — DOM builder: turn compiled+timed items into SVG children.
+  ================================================================ */
+  function jitterNumbers(d, rnd, amount){
+    return d.replace(/-?\d+(?:\.\d+)?/g, (numStr) => {
+      const n = parseFloat(numStr);
+      return (n + (rnd() - 0.5) * 2 * amount).toFixed(2);
+    });
+  }
+  // single clean pass, like a confident teacher's stroke: the shape itself gets a
+  // subtle deterministic hand-wobble (tiny rotation / coordinate jitter), no second
+  // scribble layer on top.
+  function sketchifyShape(el, rnd){
+    const tag = el.tagName.toLowerCase();
+    const wob = 1.6;
+    if (tag === "rect"){
+      const x = parseFloat(el.getAttribute("x")), y = parseFloat(el.getAttribute("y"));
+      const w = parseFloat(el.getAttribute("width")), h = parseFloat(el.getAttribute("height"));
+      el.setAttribute("transform", `rotate(${((rnd()-0.5)*1.1).toFixed(2)} ${x+w/2} ${y+h/2})`);
+    } else if (tag === "ellipse"){
+      const cx = parseFloat(el.getAttribute("cx")), cy = parseFloat(el.getAttribute("cy"));
+      el.setAttribute("rx", Math.max(3, parseFloat(el.getAttribute("rx")) + (rnd()-0.5)*wob).toFixed(1));
+      el.setAttribute("ry", Math.max(3, parseFloat(el.getAttribute("ry")) + (rnd()-0.5)*wob).toFixed(1));
+      el.setAttribute("transform", `rotate(${((rnd()-0.5)*2.4).toFixed(2)} ${cx} ${cy})`);
+    } else if (tag === "path"){
+      el.setAttribute("d", jitterNumbers(el.getAttribute("d"), rnd, wob));
+    }
+  }
+
+  function buildDom(sceneMeta, svgImgH, panelH){
+    const onImage = document.getElementById("onImageLayer");
+    const panel = document.getElementById("panelLayer");
+    panel.setAttribute("transform", `translate(0,${svgImgH})`);
+    const ruleG = svgEl("g", { id: "ruleLines" });
+    if (panelH > 0){ // panel chrome only when the notebook fallback is actually in use
+      panel.appendChild(svgEl("line", { x1: 0, y1: 0, x2: CFG.SVG_W, y2: 0, stroke: "var(--line)", "stroke-width": 3 }));
+      panel.appendChild(ruleG);
+    }
+
+    let finalBoxGroup = null;
+    let glyphCount = 0;
+
+    sceneMeta.forEach(scene => {
+      scene.items.forEach(item => {
+        const rnd = mulberry32(seedFromString(item.id));
+        if (item.kind === "shape"){
+          let el = null;
+          const common = { id: item.id, class: "ann-draw sketchy",
+                           "data-start": item.start.toFixed(3), "data-end": item.end.toFixed(3),
+                           fill: "none", stroke: item.color || "var(--pen)",
+                           "stroke-width": item.sw || (item.type === "answer-circle" ? 5 : item.type === "box" ? 3 : item.badge ? 4 : 3),
+                           opacity: "0" };
+          if (item.rect){
+            el = svgEl("rect", { ...common, x: item.rect.x.toFixed(1), y: item.rect.y.toFixed(1),
+                                 width: item.rect.w.toFixed(1), height: item.rect.h.toFixed(1), rx: 10 });
+          } else if (item.ellipse){
+            el = svgEl("ellipse", { ...common, cx: item.ellipse.cx.toFixed(1), cy: item.ellipse.cy.toFixed(1),
+                                    rx: item.ellipse.rx.toFixed(1), ry: item.ellipse.ry.toFixed(1) });
+          } else if (item.badge){
+            const b = item.badge;
+            const mid = item.start + item.dur * 0.62;
+            el = svgEl("ellipse", { ...common, "data-end": mid.toFixed(3),
+                                    cx: b.cx.toFixed(1), cy: b.cy.toFixed(1), rx: b.rx.toFixed(1), ry: b.ry.toFixed(1) });
+            const chk = svgEl("path", { class: "ann-draw sketchy",
+              "data-start": (mid + 0.12).toFixed(3), "data-end": item.end.toFixed(3),
+              d: `M ${(b.cx - b.rx*0.55).toFixed(1)},${(b.cy + b.ry*0.05).toFixed(1)} L ${(b.cx - b.rx*0.15).toFixed(1)},${(b.cy + b.ry*0.5).toFixed(1)} L ${(b.cx + b.rx*0.65).toFixed(1)},${(b.cy - b.ry*0.75).toFixed(1)}`,
+              fill: "none", stroke: "var(--ok)", "stroke-width": 8,
+              "stroke-linecap": "round", "stroke-linejoin": "round", opacity: "0" });
+            onImage.appendChild(el);
+            onImage.appendChild(chk);
+            el = null;
+          } else if (item.d){
+            el = svgEl("path", { ...common, d: item.d, "stroke-linecap": "round", "stroke-linejoin": "round" });
+          }
+          if (el) onImage.appendChild(el);
+        }
+        if (item.kind === "phototext"){
+          const advs = item.linesTxt.map(L => measureAdvance(L, item.fs));
+          const totalAdv = advs.reduce((a, b) => a + b, 0) || 1;
+          const writeDur = item.dur - (item.boxDur || 0);
+          let t = item.start;
+          item.linesTxt.forEach((L, li) => {
+            const winDur = writeDur * (advs[li] / totalAdv);
+            const bx = item.rect.x + (item.pad || 0) + item.fs * 0.3;
+            const by = item.rect.y + (item.pad || 0) + item.fs * 0.9 + li * item.fs * 1.25;
+            const glyphs = timeGlyphs(layoutLine(tokenize(L), bx, by, item.fs), t, t + winDur);
+            const grp = glyphGroupMarkup(`${item.id}L${li}`, bx, by, item.fs, glyphs, rnd, item.color);
+            glyphCount += grp.childNodes.length;
+            onImage.appendChild(grp);
+            t += winDur;
+          });
+          if (item.boxRect){
+            onImage.appendChild(svgEl("rect", {
+              id: `${item.id}BOX`, class: "ann-draw sketchy",
+              "data-start": t.toFixed(3), "data-end": item.end.toFixed(3),
+              x: item.boxRect.x.toFixed(1), y: item.boxRect.y.toFixed(1),
+              width: item.boxRect.w.toFixed(1), height: item.boxRect.h.toFixed(1), rx: 8,
+              fill: "none", stroke: item.color || "var(--pen)", "stroke-width": 3, opacity: "0"
+            }));
+          }
+        }
+        if (item.kind === "paneltext"){
+          const advs = item.baselines.map(b => measureAdvance(b.text, CFG.PANEL_FS));
+          const totalAdv = advs.reduce((a, b) => a + b, 0) || 1;
+          let t = item.start;
+          item.baselines.forEach((b, li) => {
+            const winDur = item.dur * (advs[li] / totalAdv);
+            const glyphs = timeGlyphs(layoutLine(tokenize(b.text), CFG.PANEL_MARGIN_X, b.y, CFG.PANEL_FS), t, t + winDur);
+            const grp = glyphGroupMarkup(`${item.id}L${li}`, CFG.PANEL_MARGIN_X, b.y, CFG.PANEL_FS, glyphs, rnd);
+            glyphCount += grp.childNodes.length;
+            panel.appendChild(grp);
+            // ruled paper line under this real baseline
+            ruleG.appendChild(svgEl("line", { x1: 20, x2: CFG.SVG_W - 20, y1: b.y + 12, y2: b.y + 12,
+                                              stroke: "#efe8d0", "stroke-width": 2 }));
+            t += winDur;
+          });
+        }
+        if (item.kind === "finalbox"){
+          finalBoxGroup = svgEl("g", { id: "finalBoxGroup",
+            "data-start": item.start.toFixed(3), "data-end": (item.start + 0.5).toFixed(3), opacity: "0" });
+          finalBoxGroup.appendChild(svgEl("rect", { x: item.box.x, y: item.box.y, width: item.box.w, height: item.box.h,
+            rx: 14, fill: "var(--pen-soft)", stroke: "var(--pen)", "stroke-width": 3 }));
+          const bx = item.box.x + 20;
+          const glyphs = timeGlyphs(layoutLine(tokenize(item.text), bx, item.baselineY, CFG.FINAL_FS), item.start + 0.55, item.end);
+          const grp = glyphGroupMarkup(`${item.id}T`, bx, item.baselineY, CFG.FINAL_FS, glyphs, rnd);
+          glyphCount += grp.childNodes.length;
+          finalBoxGroup.appendChild(grp);
+          panel.appendChild(finalBoxGroup);
+        }
+      });
+    });
+    return { finalBoxGroup, glyphCount };
+  }
+
+  /* ================================================================
+     MODULE f — Ink renderer. No pen-cursor graphic: like a real
+     whiteboard solution video, the ink itself flows onto the page
+     (stroke reveal + pressure taper + fill crossfade) and nothing else.
+  ================================================================ */
+  let svgDrawAnn = [];
+  const drawLengths = new Map();
+  const baseStrokeWidths = new Map();
+  let finalBox = null;
+  let DURATION = 0;
+  let SCENES = [];
+
+  /* ----------------------------------------------------------------
+     InkPhysics — curvature-aware time->arc-length remap. A real hand
+     slows through the tight part of a curve and speeds up on straight
+     runs; easeInOutCubic alone only slows the start/end of a stroke.
+     Built ONCE per drawable (pure geometry, no PRNG => deterministic).
+  ---------------------------------------------------------------- */
+  const inkMaps = new Map(); // el -> { timeAtSample: number[], arcAtSample: number[] }
+
+  function buildInkMap(el, len){
+    if (!len || len <= 0 || typeof el.getPointAtLength !== "function") return null;
+    const N = CFG.INK_SAMPLES;
+    let pts;
+    try {
+      pts = [];
+      for (let i = 0; i <= N; i++) pts.push(el.getPointAtLength((i / N) * len));
+    } catch(e){ return null; }
+    const angles = [];
+    for (let i = 0; i <= N; i++){
+      const a = pts[Math.max(0, i - 1)], b = pts[Math.min(N, i + 1)];
+      angles.push(Math.atan2(b.y - a.y, b.x - a.x));
+    }
+    const segLens = [], segCurv = [];
+    for (let i = 0; i < N; i++){
+      const ds = Math.hypot(pts[i + 1].x - pts[i].x, pts[i + 1].y - pts[i].y) || (len / N);
+      let dth = Math.abs(angles[i + 1] - angles[i]);
+      if (dth > Math.PI) dth = 2 * Math.PI - dth;
+      segLens.push(ds);
+      segCurv.push(dth / Math.max(ds, 0.0001));
+    }
+    const maxCurv = Math.max(...segCurv, 1e-6);
+    const weights = segCurv.map((c, i) => segLens[i] * (1 + CFG.CURVE_SLOWDOWN * (c / maxCurv)));
+    const totalW = weights.reduce((a, b) => a + b, 0) || 1;
+    const timeAtSample = new Float32Array(N + 1);
+    const arcAtSample = new Float32Array(N + 1);
+    let cumW = 0, cumS = 0;
+    for (let i = 0; i < N; i++){
+      cumW += weights[i];
+      cumS += segLens[i];
+      timeAtSample[i + 1] = cumW / totalW;
+      arcAtSample[i + 1] = cumS / len;
+    }
+    return { timeAtSample, arcAtSample };
+  }
+  // given an eased time-fraction in [0,1], returns the arc-length fraction to
+  // reveal — head/tail easing (from easeInOutCubic) stays intact, curvature
+  // slowdown is layered on top via this lookup.
+  function inkRemap(el, tFrac){
+    if (tFrac <= 0) return 0;
+    if (tFrac >= 1) return 1;
+    const map = inkMaps.get(el);
+    if (!map) return tFrac; // no map (degenerate/unsupported geometry) => plain ease
+    const { timeAtSample, arcAtSample } = map;
+    const N = timeAtSample.length - 1;
+    let i = 0;
+    while (i < N && timeAtSample[i + 1] < tFrac) i++;
+    const t0 = timeAtSample[i], t1 = timeAtSample[Math.min(i + 1, N)];
+    const s0 = arcAtSample[i], s1 = arcAtSample[Math.min(i + 1, N)];
+    const localT = (t1 - t0) > 1e-9 ? (tFrac - t0) / (t1 - t0) : 0;
+    return s0 + (s1 - s0) * localT;
+  }
+
+  function initDrawables(){
+    svgDrawAnn = Array.from(document.querySelectorAll(".ann-draw"));
+    let inkMapsBuilt = 0;
+    svgDrawAnn.forEach(el => {
+      if (el.classList.contains("sketchy")){
+        const rnd = mulberry32(seedFromString(el.id || el.getAttribute("d") || "shape"));
+        sketchifyShape(el, rnd);
+      }
+      let len = 0;
+      try { len = el.getTotalLength ? el.getTotalLength() : 0; } catch(e){ len = 0; }
+      drawLengths.set(el, len);
+      el.style.strokeDasharray = len;
+      el.style.strokeDashoffset = len;
+      if (el.classList.contains("glyph")){
+        baseStrokeWidths.set(el, parseFloat(el.getAttribute("stroke-width")) || 2);
+      }
+      const map = buildInkMap(el, len);
+      if (map){
+        inkMaps.set(el, map);
+        inkMapsBuilt++;
+        if (!window.__inkMapSample){ // test hook: one representative curvature map, plain arrays
+          window.__inkMapSample = { timeAtSample: Array.from(map.timeAtSample), arcAtSample: Array.from(map.arcAtSample) };
+        }
+      }
+    });
+    window.__inkMapsBuilt = inkMapsBuilt; // test hook
+  }
+  function pressureTaper(p){ return 0.55 + 0.45 * Math.sin(Math.PI * p); }
+
+  function render(t){
+    t = Math.max(0, Math.min(DURATION, t));
+
+    svgDrawAnn.forEach(el => {
+      const s = parseFloat(el.dataset.start), e = parseFloat(el.dataset.end);
+      const raw = clamp01((t - s) / Math.max(0.001, e - s));
+      const p = inkRemap(el, easeInOutCubic(raw));
+      const len = drawLengths.get(el) || 0;
+      el.style.opacity = raw > 0 ? 1 : 0;
+      el.style.strokeDashoffset = len * (1 - p);
+      const baseW = baseStrokeWidths.get(el);
+      if (baseW !== undefined){
+        el.style.strokeWidth = raw > 0 ? (baseW * pressureTaper(raw)).toFixed(2) : baseW;
+      }
+      if (el.dataset.fillStart !== undefined){
+        const fs = parseFloat(el.dataset.fillStart), fe = parseFloat(el.dataset.fillEnd);
+        el.style.fillOpacity = clamp01((t - fs) / Math.max(0.001, fe - fs));
+      }
+    });
+
+    if (finalBox){
+      const s = parseFloat(finalBox.dataset.start), e = parseFloat(finalBox.dataset.end);
+      const p = clamp01((t - s) / Math.max(0.001, e - s));
+      finalBox.style.opacity = p > 0 ? Math.min(1, p * 2) : 0;
+    }
+
+    const scene = SCENES.filter(s => t >= s.tStart).pop() || SCENES[0];
+    const bar = document.getElementById("captionBar");
+    if (!bar.classList.contains("force-hidden")) bar.textContent = scene ? scene.caption : "";
+
+    if (scene && playing && narrationOn){
+      const sceneIdx = SCENES.indexOf(scene);
+      if (sceneIdx !== lastSpokenSceneIdx){ lastSpokenSceneIdx = sceneIdx; speakCaption(scene.caption); }
+    }
+
+    seekEl.value = t.toFixed(1);
+    const label = t.toFixed(1) + " / " + DURATION.toFixed(1) + " s";
+    timeLabel.textContent = label;
+    const pct = (t / DURATION * 100) + "%";
+    document.getElementById("seekFill").style.width = pct;
+    document.getElementById("miniProgressFill").style.width = pct;
+    document.getElementById("miniTimeLabel").textContent = label;
+  }
+
+  /* ================================================================
+     PLAYBACK + SHELL (v8, unchanged behavior)
+  ================================================================ */
+  let currentTime = 0, playing = false, rafId = null, lastFrameAt = null, hasCompletedOnce = false;
+
+  /* ----------------------------------------------------------------
+     Narration — optional scene-synced speechSynthesis readout. Zero
+     bytes shipped (browser built-in API); silently disables itself
+     when unsupported or no voice is present. Never blocks playback.
+  ---------------------------------------------------------------- */
+  const ttsAvailable = (typeof window.speechSynthesis !== "undefined") && (typeof window.SpeechSynthesisUtterance !== "undefined");
+  let narrationOn = ttsAvailable;
+  let trVoice = null;
+  let lastSpokenSceneIdx = -1;
+  function pickTrVoice(){
+    if (!ttsAvailable) return null;
+    try {
+      const voices = window.speechSynthesis.getVoices() || [];
+      return voices.find(v => /^tr([-_]|$)/i.test(v.lang)) || voices[0] || null;
+    } catch(e){ return null; }
+  }
+  function cancelSpeech(){
+    if (!ttsAvailable) return;
+    try { window.speechSynthesis.cancel(); } catch(e){ /* narration is best-effort */ }
+  }
+  function speakCaption(text){
+    if (!ttsAvailable || !narrationOn || !text) return;
+    try {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      if (trVoice) u.voice = trVoice;
+      u.lang = trVoice ? trVoice.lang : "tr-TR";
+      window.speechSynthesis.speak(u);
+    } catch(e){ /* a speech failure must never affect playback */ }
+  }
+
+  function frame(now){
+    if (!playing) return;
+    if (lastFrameAt === null) lastFrameAt = now;
+    const dt = (now - lastFrameAt) / 1000;
+    lastFrameAt = now;
+    currentTime += dt;
+    if (currentTime >= DURATION){
+      currentTime = DURATION;
+      render(currentTime);
+      pause();
+      if (!hasCompletedOnce){ hasCompletedOnce = true; updateGate(); }
+      window.dispatchEvent(new CustomEvent("animation-complete", {detail:{duration: DURATION}}));
+      return;
+    }
+    render(currentTime);
+    rafId = requestAnimationFrame(frame);
+  }
+  function play(){ if (playing) return; playing = true; lastFrameAt = null; rafId = requestAnimationFrame(frame); updateMiniIcon(); }
+  function pause(){ playing = false; if (rafId) cancelAnimationFrame(rafId); rafId = null; updateMiniIcon(); cancelSpeech(); }
+  function restart(){ cancelSpeech(); lastSpokenSceneIdx = -1; currentTime = 0; render(0); play(); }
+
+  const seekEl = document.getElementById("seek");
+  const timeLabel = document.getElementById("timeLabel");
+  document.getElementById("playBtn").addEventListener("click", play);
+  document.getElementById("pauseBtn").addEventListener("click", pause);
+  document.getElementById("restartBtn").addEventListener("click", restart);
+  seekEl.addEventListener("input", (e) => { pause(); currentTime = parseFloat(e.target.value); render(currentTime); });
+
+  const stageFrame = document.getElementById("stageFrame");
+  const mode169Btn = document.getElementById("mode169Btn");
+  const mode916Btn = document.getElementById("mode916Btn");
+  let userChoseMode = false;
+  function setMode(mode){
+    const is169 = mode === "169";
+    stageFrame.classList.toggle("mode-169", is169);
+    stageFrame.classList.toggle("mode-916", !is169);
+    mode169Btn.classList.toggle("active", is169);
+    mode916Btn.classList.toggle("active", !is169);
+    mode169Btn.setAttribute("aria-pressed", String(is169));
+    mode916Btn.setAttribute("aria-pressed", String(!is169));
+  }
+  function autoPickMode(){ return (window.innerWidth / window.innerHeight) < 0.9 ? "916" : "169"; }
+  mode169Btn.addEventListener("click", () => { userChoseMode = true; setMode("169"); });
+  mode916Btn.addEventListener("click", () => { userChoseMode = true; setMode("916"); });
+  let resizeTimer = null;
+  window.addEventListener("resize", () => {
+    if (userChoseMode) return;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => setMode(autoPickMode()), 150);
+  });
+  window.addEventListener("orientationchange", () => { if (!userChoseMode) setMode(autoPickMode()); });
+
+  const miniControls = document.getElementById("miniControls");
+  const miniIcon = document.getElementById("miniIcon");
+  const ICON_PLAY = '<path d="M8 5l12 7-12 7z"></path>';
+  const ICON_PAUSE = '<rect x="6" y="5" width="4" height="14"></rect><rect x="14" y="5" width="4" height="14"></rect>';
+  function updateMiniIcon(){ miniIcon.innerHTML = playing ? ICON_PAUSE : ICON_PLAY; }
+  new IntersectionObserver(([entry]) => {
+    miniControls.classList.toggle("show", !entry.isIntersecting);
+  }, {threshold: 0}).observe(document.querySelector(".controls"));
+  document.getElementById("miniPlayPauseBtn").addEventListener("click", () => { playing ? pause() : play(); updateMiniIcon(); });
+
+  let captionsOn = true;
+  document.getElementById("captionToggleBtn").addEventListener("click", (e) => {
+    captionsOn = !captionsOn;
+    document.getElementById("captionBar").classList.toggle("force-hidden", !captionsOn);
+    e.target.textContent = "Alt yazı: " + (captionsOn ? "Açık" : "Kapalı");
+  });
+
+  const narrationBtn = document.getElementById("narrationToggleBtn");
+  if (!ttsAvailable){
+    narrationBtn.textContent = "Anlatım: Yok";
+    narrationBtn.classList.remove("active");
+    narrationBtn.disabled = true;
+  } else {
+    trVoice = pickTrVoice();
+    if (typeof window.speechSynthesis.addEventListener === "function"){
+      window.speechSynthesis.addEventListener("voiceschanged", () => { trVoice = pickTrVoice(); });
+    }
+    narrationBtn.addEventListener("click", (e) => {
+      narrationOn = !narrationOn;
+      e.target.textContent = "Anlatım: " + (narrationOn ? "Açık" : "Kapalı");
+      narrationBtn.classList.toggle("active", narrationOn);
+      if (!narrationOn) cancelSpeech();
+    });
+  }
+
+  const approveBox = document.getElementById("teacherApprove");
+  const sendBtn = document.getElementById("sendBtn");
+  const gateStatus = document.getElementById("gateStatus");
+  function updateGate(){
+    const ready = hasCompletedOnce && approveBox.checked;
+    sendBtn.disabled = !ready;
+    gateStatus.textContent = ready ? "Onaylandı — gönderime hazır."
+      : (!hasCompletedOnce ? "Onay bekleniyor — animasyon en az bir kez sonuna kadar izlenmeli."
+                           : "Onay bekleniyor — lütfen kutuyu işaretleyin.");
+    gateStatus.classList.toggle("ready", ready);
+    gateStatus.classList.toggle("pending", !ready);
+  }
+  approveBox.addEventListener("change", updateGate);
+  window.addEventListener("animation-complete", updateGate);
+  sendBtn.addEventListener("click", () => {
+    if (sendBtn.disabled) return;
+    document.getElementById("sendResult").style.display = "inline-flex";
+    sendBtn.disabled = true; sendBtn.textContent = "Gönderildi";
+  });
+
+  function buildSeekTicks(){
+    const ticksEl = document.getElementById("seekTicks");
+    ticksEl.innerHTML = "";
+    const bounds = Array.from(new Set(SCENES.map(s => s.tStart).concat([DURATION])));
+    bounds.forEach(tSec => {
+      if (tSec <= 0) return;
+      const tick = document.createElement("div");
+      tick.className = "tick";
+      tick.style.left = (tSec / DURATION * 100) + "%";
+      ticksEl.appendChild(tick);
+    });
+  }
+
+  /* ================================================================
+     BOOT — the full derive-everything pipeline, then SelfCheck.
+  ================================================================ */
+  async function boot(){
+    try {
+      // 1) contract gate
+      const cErrs = validateContract(CONTRACT);
+      if (cErrs.length){ showError(["Sözleşme doğrulanamadı:"].concat(cErrs.slice(0, 6))); return; }
+
+      // 2) fonts
+      if (typeof opentype === "undefined"){ showError("Gömülü opentype.js yüklenemedi."); return; }
+      try {
+        latinFont = opentype.parse(b64ToBuf(FONT_LATIN_B64));
+        extFont = opentype.parse(b64ToBuf(FONT_EXT_B64));
+        UPM = latinFont.unitsPerEm;
+      } catch(e){ showError("Gömülü el yazısı fontu çözümlenemedi: " + e.message); return; }
+
+      // 3) image → dimensions
+      const img = new Image();
+      const loaded = new Promise((res, rej) => { img.onload = res; img.onerror = () => rej(new Error("görsel çözümlenemedi")); });
+      img.src = IMAGE_DATA_URI;
+      try { await loaded; } catch(e){ showError("Kaynak görsel yüklenemedi."); return; }
+      const svgImgH = Math.round(CFG.SVG_W * img.naturalHeight / img.naturalWidth);
+
+      // 4) safe-zone map from the actual pixels
+      const zone = buildSafeZoneMap(img, img.naturalWidth, img.naturalHeight, svgImgH);
+
+      // 5) compile scenes (geometry + panel layout, all derived)
+      const { sceneMeta, items, panelH, panelUsed, placedRects } = compileScenes(CONTRACT, zone, svgImgH);
+      window.__placedRects = placedRects; // test hook: runtime-placed handwriting blocks
+      window.__panelUsed = panelUsed;
+
+      // 6) schedule (invariant by construction) + total duration
+      DURATION = scheduleItems(sceneMeta);
+      SCENES = sceneMeta;
+
+      // 7) build the SVG scene
+      const totalH = svgImgH + panelH;
+      const svg = document.getElementById("masterSvg");
+      svg.setAttribute("viewBox", `0 0 ${CFG.SVG_W} ${totalH}`);
+      document.getElementById("paperRect").setAttribute("height", totalH);
+      const clip = document.getElementById("clipRect");
+      clip.setAttribute("width", CFG.SVG_W); clip.setAttribute("height", svgImgH);
+      const imgEl = svgEl("image", { x: 0, y: 0, width: CFG.SVG_W, height: svgImgH, preserveAspectRatio: "none" });
+      imgEl.setAttributeNS("http://www.w3.org/1999/xlink", "href", IMAGE_DATA_URI);
+      imgEl.setAttribute("href", IMAGE_DATA_URI);
+      document.getElementById("imageHost").appendChild(imgEl);
+      const { finalBoxGroup, glyphCount } = buildDom(sceneMeta, svgImgH, panelH);
+      finalBox = finalBoxGroup;
+
+      // theming + labels from the contract
+      if (CONTRACT.meta.character && CONTRACT.meta.character.pen_color){
+        document.documentElement.style.setProperty("--pen", CONTRACT.meta.character.pen_color);
+        const c = CONTRACT.meta.character.pen_color;
+        document.documentElement.style.setProperty("--pen-soft", c + "1A");
+      }
+      document.title = CONTRACT.meta.title;
+      document.getElementById("subtitle").textContent = CONTRACT.meta.subject + " · " + CONTRACT.meta.topic;
+      document.getElementById("footerLine").textContent =
+        (CONTRACT.meta.character ? CONTRACT.meta.character.name + " · " : "") +
+        "süre " + DURATION.toFixed(1) + " sn · tek dosya, çevrimdışı çalışır";
+
+      // 8) SelfCheck — refuse to play a degraded lesson
+      const violations = timingInvariantViolations(items);
+      const checks = [];
+      if (violations.length) checks.push("Zamanlama değişmezi ihlali: " + violations[0]);
+      if (uncoveredChars.size) checks.push("Font kapsamayan karakter(ler): " + Array.from(uncoveredChars).join(" "));
+      if (!(DURATION >= CFG.DUR_MIN - 0.01 && DURATION <= CFG.DUR_MAX + 0.01)) checks.push("Süre bant dışı: " + DURATION);
+      if (checks.length){ showError(["Öz-doğrulama başarısız:"].concat(checks)); return; }
+
+      // 9) drawable init needs a rendered layout — defer one frame
+      await new Promise(r => requestAnimationFrame(r));
+      initDrawables();
+      if (document.querySelectorAll(".glyph").length === 0){ showError("Hiç el yazısı glifi üretilemedi."); return; }
+
+      // 10) shell init — every displayed number is derived
+      seekEl.max = DURATION.toFixed(1);
+      setMode(autoPickMode());
+      buildSeekTicks();
+      render(0);
+      updateGate();
+      window.__engineReady = true; // test hook
+    } catch(e){
+      showError("Beklenmeyen motor hatası: " + e.message);
+    }
+  }
+  boot();
+})();
+</script>
+</body>
+</html>
