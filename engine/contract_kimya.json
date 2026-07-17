@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Jett Öğretmen Çözümü — Elektronegatiflik ve Kısmi Yük",
+    "subject": "Kimya",
+    "topic": "Elektronegatiflik ve Kısmi Yük İlişkisi",
+    "character": { "name": "Bora Hoca", "pen_color": "#2F6BFF" }
+  },
+  "academic_contract": {
+    "given": "XY₂ ve ZX₂ moleküllerinde kısmi negatif ve pozitif yükler tabloda belirtilmiştir.",
+    "asked": "I (periyot numaraları aynıysa yarıçapı en büyük Z'dir), II (elektronegatifliği en yüksek Y'dir), III (ZY₃'te kısmen negatif yüklü atom Y'dir) yargılarından hangileri doğrudur?",
+    "primary_outcome": "Molekül içindeki kısmi yük dağılımından hareketle atomların elektronegatiflik sırasını belirler ve periyodik özelliklerle ilişkilendirir.",
+    "prerequisites": [
+      "Elektronegatifliği yüksek atom ortak elektron çiftini kendine daha çok çeker ve kısmi negatif (δ-) yük kazanır.",
+      "Aynı periyotta soldan sağa gidildikçe elektronegatiflik artar, atom yarıçapı azalır."
+    ]
+  },
+  "canonical_solution": {
+    "steps": [
+      { "step_no": 1, "action": "XY₂ molekülünü incele", "reason": "X:δ+, Y:δ- => Y, X'ten daha elektronegatif." },
+      { "step_no": 2, "action": "ZX₂ molekülünü incele", "reason": "Z:δ+, X:δ- => X, Z'den daha elektronegatif." },
+      { "step_no": 3, "action": "Karşılaştırmaları birleştir", "reason": "Y>X ve X>Z => Y>X>Z." },
+      { "step_no": 4, "action": "I. yargıyı değerlendir", "reason": "EN'i en düşük Z => yarıçapı en büyük Z. Doğru." },
+      { "step_no": 5, "action": "II. yargıyı değerlendir", "reason": "Sıralamada en yüksek EN, Y'ye ait. Doğru." },
+      { "step_no": 6, "action": "III. yargıyı değerlendir", "reason": "Y>Z => ZY₃'te δ- = Y. Doğru." }
+    ],
+    "final_answer": { "value": "E", "display": "E) I, II ve III" }
+  },
+  "scenes": [
+    {
+      "id": "orient",
+      "caption": "Verilen: XY₂ ve ZX₂'de kısmi yükler işaretli. İstenen: I, II, III yargılarının doğruluğu.",
+      "items": [
+        { "space": "photo", "type": "box", "anchor": { "x": 0.355, "y": 0.2052, "w": 0.44, "h": 0.2144 } }
+      ]
+    },
+    {
+      "id": "bridge",
+      "caption": "Hatırlatma: EN yüksek atom ortak elektron çiftini kendine çeker → δ⁻ olur.",
+      "items": [
+        { "space": "panel", "type": "text", "text": "Hatırla: EN yüksek atom ortak elektron çiftini çeker => δ⁻ olur." }
+      ]
+    },
+    {
+      "id": "xy2",
+      "caption": "XY₂: X δ⁺ (merkez), Y δ⁻ (uçlar) → Y daha elektronegatif.",
+      "items": [
+        { "space": "photo", "type": "ellipse", "color": "#c0392b", "anchor": { "x": 0.431, "y": 0.2690, "w": 0.068, "h": 0.0444 } },
+        { "space": "photo", "type": "ellipse", "color": "#1f6bd6", "anchor": { "x": 0.386, "y": 0.3419, "w": 0.060, "h": 0.0407 } },
+        { "space": "photo", "type": "arrow", "color": "#1f6bd6", "from": { "x": 0.445, "y": 0.3050 }, "to": { "x": 0.418, "y": 0.3531 } },
+        { "space": "panel", "type": "text", "text": "XY₂: X δ⁺ (merkez), Y δ⁻ (uçlar) => Y, X'ten daha elektronegatif." }
+      ]
+    },
+    {
+      "id": "zx2",
+      "caption": "ZX₂: Z δ⁺ (merkez), X δ⁻ (uçlar) → X daha elektronegatif.",
+      "items": [
+        { "space": "photo", "type": "ellipse", "color": "#c0392b", "anchor": { "x": 0.664, "y": 0.2690, "w": 0.068, "h": 0.0444 } },
+        { "space": "photo", "type": "ellipse", "color": "#1f6bd6", "anchor": { "x": 0.733, "y": 0.3419, "w": 0.060, "h": 0.0407 } },
+        { "space": "photo", "type": "arrow", "color": "#1f6bd6", "from": { "x": 0.715, "y": 0.3050 }, "to": { "x": 0.758, "y": 0.3531 } },
+        { "space": "panel", "type": "text", "text": "ZX₂: Z δ⁺ (merkez), X δ⁻ (uçlar) => X, Z'den daha elektronegatif." }
+      ]
+    },
+    {
+      "id": "chain",
+      "caption": "Zincirleme: Y > X ve X > Z ⇒ Y > X > Z.",
+      "items": [
+        { "space": "panel", "type": "text", "text": "Birleştir: Y > X ve X > Z => zincirleme sıralama kurulur." },
+        { "space": "photo", "type": "text", "near": { "x": 0.88, "y": 0.314 }, "text": "Y >\nX > Z" }
+      ]
+    },
+    {
+      "id": "periyot",
+      "caption": "Aynı periyotta EN arttıkça yarıçap azalır.",
+      "items": [
+        { "space": "panel", "type": "text", "text": "Aynı periyotta EN artar, yarıçap azalır; EN'i en düşük Z'nin yarıçapı en büyük." }
+      ]
+    },
+    {
+      "id": "yargi1",
+      "caption": "I. yargı: EN'i en düşük olan Z, yarıçapı en büyük olandır → doğru.",
+      "items": [
+        { "space": "photo", "type": "check", "anchor": { "x": 0.078, "y": 0.5138, "w": 0.044, "h": 0.0333 } },
+        { "space": "panel", "type": "text", "text": "I doğru: EN(Z) en düşük => yarıçapı en büyük Z'dir." }
+      ]
+    },
+    {
+      "id": "yargi2",
+      "caption": "II. yargı: EN'i en yüksek olan Y'dir → doğru.",
+      "items": [
+        { "space": "photo", "type": "check", "anchor": { "x": 0.078, "y": 0.6109, "w": 0.044, "h": 0.0333 } },
+        { "space": "panel", "type": "text", "text": "II doğru: sıralamada en üstte Y var => EN'i en yüksek Y'dir." }
+      ]
+    },
+    {
+      "id": "yargi3",
+      "caption": "III. yargı: Y > Z olduğundan ZY₃'te δ⁻ = Y → doğru.",
+      "items": [
+        { "space": "photo", "type": "check", "anchor": { "x": 0.078, "y": 0.6654, "w": 0.044, "h": 0.0333 } },
+        { "space": "panel", "type": "text", "text": "III doğru: Y > Z => ZY₃'te ortak çifti Y çeker => δ⁻ = Y." }
+      ]
+    },
+    {
+      "id": "verify",
+      "caption": "Bağımsız kontrol: Sıralamayı tersten okuyalım — Z < X < Y; hiçbir yargıyla çelişmiyor, sonuç tutarlı.",
+      "items": [
+        { "space": "photo", "type": "badge", "anchor": { "x": 0.87, "y": 0.357, "w": 0.08, "h": 0.0628 } },
+        { "space": "panel", "type": "text", "text": "Bağımsız kontrol: tersten okunursa Z < X < Y — çelişki yok, tutarlı." }
+      ]
+    },
+    {
+      "id": "final",
+      "caption": "Sonuç: I, II ve III yargılarının tümü doğru → Cevap E.",
+      "items": [
+        { "space": "photo", "type": "answer-circle", "anchor": { "x": 0.578, "y": 0.8308, "w": 0.21, "h": 0.0592 } },
+        { "space": "panel", "type": "final-box", "text": "Cevap: E) I, II ve III" }
+      ]
+    }
+  ]
+}

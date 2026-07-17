@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "Jett Öğretmen Çözümü — Üçgenin İç Açıları",
+    "subject": "Matematik",
+    "topic": "Üçgende İç Açılar Toplamı",
+    "character": { "name": "Çizge Hoca", "pen_color": "#7C3AED" }
+  },
+  "academic_contract": {
+    "given": "ABC üçgeninde m(A) = 70 derece, m(B) = 50 derece.",
+    "asked": "m(C) kaç derecedir?",
+    "primary_outcome": "Üçgenin iç açıları toplamının 180 derece olduğunu kullanarak bilinmeyen açıyı hesaplar.",
+    "prerequisites": [ "Bir üçgenin iç açılarının ölçüleri toplamı 180 derecedir." ]
+  },
+  "canonical_solution": {
+    "steps": [
+      { "step_no": 1, "action": "Verilen açıları belirle", "reason": "m(A) = 70, m(B) = 50." },
+      { "step_no": 2, "action": "İç açılar toplamını kur", "reason": "m(A) + m(B) + m(C) = 180." },
+      { "step_no": 3, "action": "m(C)'yi çöz", "reason": "m(C) = 180 - 120 = 60." },
+      { "step_no": 4, "action": "Sağlama yap", "reason": "70 + 50 + 60 = 180. Tutarlı." }
+    ],
+    "final_answer": { "value": "C", "display": "C) 60" }
+  },
+  "scenes": [
+    {
+      "id": "orient",
+      "caption": "Verilen: ABC üçgeninde iki iç açı. İstenen: üçüncü açı m(C).",
+      "items": [
+        { "space": "photo", "type": "box", "anchor": { "x": 0.21, "y": 0.25, "w": 0.48, "h": 0.53 } }
+      ]
+    },
+    {
+      "id": "bridge",
+      "caption": "Hatırlatma: Üçgenin iç açılarının toplamı her zaman 180 derecedir.",
+      "items": [
+        { "space": "panel", "type": "text", "text": "Hatırla: üçgenin iç açıları toplamı 180 derecedir." }
+      ]
+    },
+    {
+      "id": "mark",
+      "caption": "Verilen iki açıyı işaretleyelim: 70 ve 50 derece.",
+      "items": [
+        { "space": "photo", "type": "ellipse", "color": "#c0392b", "anchor": { "x": 0.290, "y": 0.650, "w": 0.062, "h": 0.048 } },
+        { "space": "photo", "type": "ellipse", "color": "#c0392b", "anchor": { "x": 0.567, "y": 0.650, "w": 0.062, "h": 0.048 } },
+        { "space": "photo", "type": "ellipse", "color": "#1f6bd6", "anchor": { "x": 0.494, "y": 0.365, "w": 0.042, "h": 0.048 } },
+        { "space": "panel", "type": "text", "text": "Verilen: m(A) = 70 ve m(B) = 50. Aranan: m(C) = ?" }
+      ]
+    },
+    {
+      "id": "compute",
+      "caption": "m(C) = 180 - (70 + 50) = 60 derece.",
+      "items": [
+        { "space": "panel", "type": "text", "text": "m(A) + m(B) + m(C) = 180 => m(C) = 180 - (70 + 50) = 180 - 120 = 60." },
+        { "space": "photo", "type": "text", "near": { "x": 0.85, "y": 0.40 }, "text": "70 + 50 = 120\n180 - 120 = 60" }
+      ]
+    },
+    {
+      "id": "verify",
+      "caption": "Bağımsız kontrol: 70 + 50 + 60 = 180 — toplam sağlanıyor.",
+      "items": [
+        { "space": "photo", "type": "badge", "anchor": { "x": 0.84, "y": 0.60, "w": 0.09, "h": 0.12 } },
+        { "space": "panel", "type": "text", "text": "Kontrol: 70 + 50 + 60 = 180 — üç açının toplamı sağlanıyor, tutarlı." }
+      ]
+    },
+    {
+      "id": "final",
+      "caption": "Sonuç: m(C) = 60 derece → Cevap C.",
+      "items": [
+        { "space": "photo", "type": "answer-circle", "anchor": { "x": 0.425, "y": 0.878, "w": 0.13, "h": 0.048 } },
+        { "space": "panel", "type": "final-box", "text": "Cevap: C) 60 derece" }
+      ]
+    }
+  ]
+}
