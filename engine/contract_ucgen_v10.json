@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "title": "Jett Öğretmen Çözümü — Sinüs Teoremi ile |AC|",
+    "subject": "Matematik",
+    "topic": "Üçgende Sinüs Teoremi",
+    "character": {
+      "name": "Mahir Hoca",
+      "pen_color": "#1E56C8"
+    }
+  },
+  "academic_contract": {
+    "given": "ABC üçgeninde m(B) = 60°, m(DAC) = 10°, m(C) = 10°, |BD| = 2 birim (D, BC üzerinde).",
+    "asked": "|AC| uzunluğu kaç birimdir?",
+    "primary_outcome": "Açıları ayrıştırıp ikizkenarlık ve sinüs teoremiyle bilinmeyen kenarı hesaplar.",
+    "prerequisites": [
+      "Üçgenin iç açıları toplamı 180 derecedir.",
+      "Sinüs teoremi: a/sinA = b/sinB.",
+      "Taban açıları eşit olan üçgen ikizkenardır."
+    ]
+  },
+  "canonical_solution": {
+    "steps": [
+      {
+        "step_no": 1,
+        "action": "Açıları ayır",
+        "reason": "m(A) = 180 - 60 - 10 = 110° → m(BAD) = 100°, m(DAC) = 10°."
+      },
+      {
+        "step_no": 2,
+        "action": "İkizkenarı gör",
+        "reason": "ΔACD'de 10° = 10° → AD = DC."
+      },
+      {
+        "step_no": 3,
+        "action": "ΔABD'de sinüs teoremi",
+        "reason": "AD/sin60 = 2/sin100 → AD = 2·sin60/sin100."
+      },
+      {
+        "step_no": 4,
+        "action": "ΔACD'de sinüs teoremi",
+        "reason": "AC = 2·AD·cos10."
+      },
+      {
+        "step_no": 5,
+        "action": "Sadeleştir",
+        "reason": "sin100 = cos10 → AC = 4·sin60 = 2√3."
+      }
+    ],
+    "final_answer": {
+      "value": "2√3",
+      "display": "AC = 2√3"
+    }
+  },
+  "scenes": [
+    {
+      "id": "verilen",
+      "caption": "İstenen: |AC|. Verilen: m(B) = 60°, m(DAC) = 10°, m(C) = 10°, |BD| = 2.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "underline",
+          "anchor": {
+            "x": 0.015,
+            "y": 0.055,
+            "w": 0.27,
+            "h": 0.055
+          }
+        }
+      ]
+    },
+    {
+      "id": "acilar",
+      "caption": "Önce açıları ayır: m(A) = 110° → m(BAD) = 100°, m(DAC) = 10°.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "ellipse",
+          "color": "#c0392b",
+          "anchor": {
+            "x": 0.4,
+            "y": 0.125,
+            "w": 0.072,
+            "h": 0.085
+          }
+        },
+        {
+          "space": "photo",
+          "type": "ellipse",
+          "color": "#c0392b",
+          "anchor": {
+            "x": 0.822,
+            "y": 0.485,
+            "w": 0.072,
+            "h": 0.085
+          }
+        },
+        {
+          "space": "photo",
+          "type": "text",
+          "color": "#c0392b",
+          "near": {
+            "x": 0.4,
+            "y": 0.3
+          },
+          "text": "100°"
+        }
+      ]
+    },
+    {
+      "id": "ikizkenar",
+      "caption": "ΔACD'de taban açıları 10° = 10° → ikizkenar: AD = DC.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "near": {
+            "x": 0.8,
+            "y": 0.16
+          },
+          "text": "10° + 10° → ikizkenar"
+        },
+        {
+          "space": "photo",
+          "type": "text",
+          "boxed": true,
+          "near": {
+            "x": 0.8,
+            "y": 0.3
+          },
+          "text": "AD = DC"
+        }
+      ]
+    },
+    {
+      "id": "abd",
+      "caption": "ΔABD'de sinüs teoremi: AD/sin60 = 2/sin100.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "near": {
+            "x": 0.16,
+            "y": 0.78
+          },
+          "text": "ΔABD sinüs teoremi:\nAD/sin60 = 2/sin100\nAD = 2·sin60/sin100"
+        }
+      ]
+    },
+    {
+      "id": "acd",
+      "caption": "ΔACD'de: AC/sin160 = AD/sin10 → AC = 2·AD·cos10.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "near": {
+            "x": 0.48,
+            "y": 0.78
+          },
+          "text": "ΔACD:\nAC/sin160 = AD/sin10\nAC = 2·AD·cos10"
+        }
+      ]
+    },
+    {
+      "id": "kontrol",
+      "caption": "sin100 = cos10 sadeleşir: AC = 4·sin60 = 2√3.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "near": {
+            "x": 0.82,
+            "y": 0.78
+          },
+          "text": "sin100 = cos10\nAC = 4·sin60 = 2√3"
+        },
+        {
+          "space": "photo",
+          "type": "check",
+          "anchor": {
+            "x": 0.945,
+            "y": 0.86,
+            "w": 0.03,
+            "h": 0.045
+          }
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "caption": "Sonuç: |AC| = 2√3 birim.",
+      "items": [
+        {
+          "space": "photo",
+          "type": "text",
+          "emphasis": true,
+          "boxed": true,
+          "near": {
+            "x": 0.14,
+            "y": 0.17
+          },
+          "text": "AC = 2√3"
+        }
+      ]
+    }
+  ]
+}

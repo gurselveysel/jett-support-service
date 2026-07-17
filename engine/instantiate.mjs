@@ -14,7 +14,7 @@ const contract = JSON.parse(readFileSync(contractPath, 'utf8')); // fail fast on
 const mime = imagePath.toLowerCase().endsWith('.png') ? 'image/png' : 'image/jpeg';
 const dataUri = `data:${mime};base64,` + readFileSync(imagePath).toString('base64');
 
-let html = readFileSync('jett_engine_v9_template.html', 'utf8');
+let html = readFileSync('jett_engine_v10_template.html', 'utf8');
 const put = (slot, content) => {
   if (!html.includes(slot)) throw new Error('slot not found: ' + slot);
   html = html.split(slot).join(content);
