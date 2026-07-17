@@ -1,4 +1,19 @@
-# Jett Jenerik El Yazısı Ders Motoru (v9)
+# Jett Jenerik El Yazısı Ders Motoru (v12)
+
+## v12'de eklenenler (v10/v11 üzerine)
+
+- **v11 — InkPhysics**: vuruş başına eğrilik-farkındalıklı zaman haritası (kıvrımda yavaşlar, düzlükte hızlanır) + sahne-senkron sesli anlatım (speechSynthesis).
+- **v12 — CameraEngine**: kamera o an yazılan bölgeye pan/zoom yapar (sahne içi aynı-uzay koşusu başına odak, `cameraAt(t)` saf/deterministik, `Kamera: Açık/Kapalı` düğmesi).
+- **v12 — Anlatım denetleyicisi**: jest kilidi (iOS/Android), tr-ses zorunluluğu, sessiz-motor tespiti ve dürüst durum etiketleri (`TR ses yok` / `Ses bulunamadı`), 🔊 canlı gösterge, sahne sınırında anlatım bitene kadar üst-sınırlı bekleme, karaoke alt yazı (kelime vurgusu).
+- **v12 — Gömülü ses fallback'i**: `instantiate.mjs ... --audio` sahne caption'larını espeak-ng (tr) + ffmpeg ile MP3'e çevirip dosyaya gömer. Çalışma zamanında cihazın kendi Türkçe sesi TERCİH edilir; hiç ses yoksa gömülü parça devreye girer — anlatım her cihazda garanti.
+- **v12 — Kelime ritmi + mürekkep yoğunlaşması**: kelime-başı konumlanma duraksaması, noktalama nefesi, uzun kelime ortasında hızlanma; kalemin yavaşladığı yerde çizgi hafifçe kalınlaşır (`pool(1)=1` — bitmiş harflerin dinlenme kalınlığı tekdüze).
+- **v12 — render erken-çıkışı**: değişmeyen vuruşlara stil yazılmaz (kare başı yüzlerce yazım → 1-3), mobil performans.
+
+Test: `node check_v12.mjs <ders.html> <panel|nopanel>` — deterministik speechSynthesis stub'ı altında 55+ assert.
+
+---
+
+# (v9 mimari dokümantasyonu — hâlâ geçerli temel)
 
 "Girdi değişir, çıktı kalitesi değişmez" ilkesiyle tasarlanmış, soru-bağımsız
 öğretmen-çözüm animasyon motoru. Tek self-contained HTML üretir; internetsiz çalışır.
