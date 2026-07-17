@@ -36,7 +36,9 @@ if (withAudio){
   const providers = new Set();
   const tracks = contract.scenes.map((scene, i) => {
     const mp3 = join(tmpdir(), `jett_narr_${process.pid}_${i}.mp3`);
-    providers.add(synthesizeCaptionMp3(scene.caption, mp3));
+    providers.add(synthesizeCaptionMp3(scene.caption, mp3, {
+      elevenText: scene.elevenText, stability: scene.stability, style: scene.style, speed: scene.speed
+    }));
     const b64 = readFileSync(mp3).toString('base64');
     rmSync(mp3, { force: true });
     return 'data:audio/mpeg;base64,' + b64;

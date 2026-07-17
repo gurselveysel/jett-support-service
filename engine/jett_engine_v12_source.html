@@ -734,7 +734,8 @@
           return;
         }
       });
-      sceneMeta.push({ caption: scene.caption, items: sceneItems });
+      sceneMeta.push({ caption: scene.caption, items: sceneItems,
+        elevenText: scene.elevenText, stability: scene.stability, style: scene.style, speed: scene.speed });
       items.push(...sceneItems);
     });
     // panel exists only when the photo genuinely lacked room — a real teacher
@@ -1716,7 +1717,8 @@
       // 6) schedule (invariant by construction) + total duration
       DURATION = scheduleItems(sceneMeta);
       SCENES = sceneMeta;
-      window.__sceneBounds = SCENES.map(s => ({ tStart: s.tStart, tEnd: s.tEnd, caption: s.caption })); // test hook
+      window.__sceneBounds = SCENES.map(s => ({ tStart: s.tStart, tEnd: s.tEnd, caption: s.caption,
+        elevenText: s.elevenText, stability: s.stability, style: s.style, speed: s.speed })); // test hook
 
       // 7) build the SVG scene
       const totalH = svgImgH + panelH;

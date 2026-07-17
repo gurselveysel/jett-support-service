@@ -39,7 +39,9 @@ const scenes = await page.evaluate(() => window.__sceneBounds);
 const audio = [];
 for (let i = 0; i < scenes.length; i++){
   const mp3 = path.join(work, `scene_${i}.mp3`);
-  const provider = synthesizeCaptionMp3(scenes[i].caption, mp3);
+  const provider = synthesizeCaptionMp3(scenes[i].caption, mp3, {
+    elevenText: scenes[i].elevenText, stability: scenes[i].stability, style: scenes[i].style, speed: scenes[i].speed
+  });
   const dur = parseFloat(execFileSync('ffprobe',
     ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp3]).toString());
   audio.push({ mp3, dur });

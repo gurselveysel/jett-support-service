@@ -1,9 +1,13 @@
 // Narration TTS provider chain — best available wins:
-//   1. ElevenLabs (needs ELEVENLABS_API_KEY env + network egress to
+//   1. ElevenLabs eleven_v3 (needs ELEVENLABS_API_KEY env + network egress to
 //      api.elevenlabs.io; voice via ELEVEN_VOICE_ID, default a calm
-//      pedagogical female preset; eleven_multilingual_v2 speaks Turkish)
+//      pedagogical female preset). v3 has no SSML break tags — pacing/emotion
+//      come from bracketed audio tags ([pause], [thoughtful], …) and
+//      punctuation in the TEXT itself, plus per-call stability/style/speed.
+//      similarity_boost is not supported by v3 and is omitted.
 //   2. espeak-ng + MBROLA mb-tr2 / mb-tr1 (human diphone voices — far more
-//      natural than raw espeak; apt: mbrola mbrola-tr1 mbrola-tr2)
+//      natural than raw espeak; apt: mbrola mbrola-tr1 mbrola-tr2). This path
+//      never sees audio tags — it only ever speaks the plain on-screen caption.
 //   3. espeak-ng tr (formant synth — last resort, robotic)
 // API keys are read from the environment ONLY — never stored in this repo.
 import { execFileSync } from 'node:child_process';
@@ -50,18 +54,33 @@ function mbrolaNormalizeTr(text){
     .replace(/ğ/gi, 'g');
 }
 
-export function synthesizeCaptionMp3(text, mp3Path){
+// opts (all optional, ElevenLabs-only — ignored by the local fallback path):
+//   elevenText — v3 audio-tag/punctuation-rich narration text to actually
+//     speak; falls back to the plain caption when absent (old callers/contracts
+//     keep working unchanged). The on-screen caption/karaoke text is NEVER
+//     touched by this — only what gets sent to ElevenLabs differs.
+//   stability, style, speed — per-scene voice_settings/speed override. Lower
+//     stability (~0.3-0.4, "Creative/Natural") makes the voice more responsive
+//     to audio tags and emotional shifts; higher stability is flatter/more
+//     monotone. Defaults picked for calm-but-expressive pedagogical narration.
+export function synthesizeCaptionMp3(text, mp3Path, opts = {}){
   text = speechNormalizeTr(text);
   if (process.env.ELEVENLABS_API_KEY && !elevenBroken){
     try {
       const voice = process.env.ELEVEN_VOICE_ID || ELEVEN_DEFAULT_VOICE;
+      const elevenText = opts.elevenText ? speechNormalizeTr(opts.elevenText) : text;
       execFileSync('curl', ['-sS', '--fail', '--max-time', '90',
         '-H', 'xi-api-key: ' + process.env.ELEVENLABS_API_KEY,
         '-H', 'Content-Type: application/json',
         '-d', JSON.stringify({
-          text,
-          model_id: 'eleven_multilingual_v2',
-          voice_settings: { stability: 0.55, similarity_boost: 0.75 }
+          text: elevenText,
+          model_id: 'eleven_v3',
+          voice_settings: {
+            stability: opts.stability ?? 0.35,
+            style: opts.style ?? 0.15,
+            use_speaker_boost: true,
+            speed: opts.speed ?? 1.0
+          }
         }),
         '-o', mp3Path,
         `https://api.elevenlabs.io/v1/text-to-speech/${voice}?output_format=mp3_22050_32`]);
