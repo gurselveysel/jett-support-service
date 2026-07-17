@@ -1,0 +1,135 @@
+// usage: node check_v11.mjs <lesson.html> <nopanel|panel>
+import pkg from '/opt/node22/lib/node_modules/playwright/index.js';
+const { chromium } = pkg;
+import path from 'node:path';
+const file = process.argv[2];
+const expectPanel = process.argv[3] === 'panel';
+const filePath = 'file://' + path.resolve(file);
+const errors = [];
+const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+
+let pass = true;
+const assert = (cond, label) => { console.log((cond ? 'PASS' : 'FAIL') + ' — ' + label); if (!cond) pass = false; };
+
+for (const vp of [{w:320,h:568},{w:375,h:812},{w:1440,h:900}]) {
+  const page = await browser.newPage({ viewport: { width: vp.w, height: vp.h } });
+  page.on('console', msg => { if (msg.type() === 'error') errors.push(`[${vp.w}] ` + msg.text()); });
+  page.on('pageerror', exc => errors.push(`[${vp.w}] ` + String(exc)));
+  await page.goto(filePath);
+  await page.waitForTimeout(1000);
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
+  const mode = await page.$eval('#stageFrame', el => el.className.includes('mode-916') ? '916' : '169');
+  assert(!overflow, `${vp.w}x${vp.h} yatay taşma yok`);
+  assert(vp.w < 900 ? mode === '916' : mode === '169', `${vp.w}x${vp.h} otomatik mod (${mode})`);
+  await page.close();
+}
+
+const page = await browser.newPage({ viewport: { width: 1200, height: 1700 } });
+page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
+page.on('pageerror', exc => errors.push(String(exc)));
+await page.goto(filePath);
+await page.waitForTimeout(1200);
+
+assert(await page.evaluate(() => window.__engineReady === true), 'motor hazır (__engineReady)');
+assert(!(await page.$eval('#errorOverlay', el => el.classList.contains('show'))), 'hata ekranı kapalı (SelfCheck PASS)');
+assert(await page.evaluate(() => document.getElementById('penTip') === null), 'kalem imleci grafiği YOK');
+const glyphs = await page.$$eval('.glyph', els => els.length);
+assert(glyphs > 80, `glif sayısı > 80 (${glyphs})`);
+const DUR = parseFloat(await page.$eval('#seek', el => el.max));
+assert(DUR >= 20 && DUR <= 75, `süre bant içinde (${DUR}s)`);
+
+const panelUsed = await page.evaluate(() => window.__panelUsed);
+assert(panelUsed === expectPanel, `panel kullanımı beklendiği gibi (${panelUsed})`);
+if (!expectPanel) {
+  const vb = await page.$eval('#masterSvg', el => el.getAttribute('viewBox'));
+  const imgH = await page.$eval('#clipRect', el => parseFloat(el.getAttribute('height')));
+  assert(parseFloat(vb.split(' ')[3]) === imgH, `viewBox = yalnız görsel yüksekliği (${vb})`);
+}
+
+// ONE-HAND PROOF at DOM level: no two drawn strokes may share a time window.
+// (data-start/data-end are the pen-stroke windows; glyph fill crossfade is ink
+// settling, not a second hand, so it is intentionally out of scope.)
+const seqViol = await page.evaluate(() => {
+  const els = Array.from(document.querySelectorAll('.ann-draw')).map(el => ({
+    s: parseFloat(el.dataset.start), e: parseFloat(el.dataset.end)
+  })).sort((a, b) => a.s - b.s);
+  let v = 0;
+  for (let i = 0; i < els.length; i++)
+    for (let j = i + 1; j < els.length; j++){
+      if (els[j].s >= els[i].e - 0.004) break; // sorted by start: nothing later can overlap i
+      v++;
+    }
+  return v;
+});
+assert(seqViol === 0, `tek-el değişmezi: hiçbir iki vuruş aynı anda çizilmiyor (ihlal: ${seqViol})`);
+
+// runtime-placed handwriting blocks must never overlap each other
+const rects = await page.evaluate(() => window.__placedRects || []);
+let overlaps = 0;
+for (let i = 0; i < rects.length; i++)
+  for (let j = i + 1; j < rects.length; j++){
+    const a = rects[i], b = rects[j];
+    if (a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h) overlaps++;
+  }
+assert(overlaps === 0, `yerleştirilen bloklar çakışmıyor (${rects.length} blok)`);
+
+// --- v11: InkPhysics — curvature-aware time maps built for the strokes ---
+const inkMapsBuilt = await page.evaluate(() => window.__inkMapsBuilt || 0);
+assert(inkMapsBuilt > 0, `InkPhysics: eğrilik haritası üretildi (${inkMapsBuilt} vuruş)`);
+const inkSampleNonUniform = await page.evaluate(() => {
+  const s = window.__inkMapSample;
+  if (!s || !s.timeAtSample || s.timeAtSample.length < 3) return false;
+  const N = s.timeAtSample.length - 1;
+  // uniform (no curvature effect) would have timeAtSample[i] === arcAtSample[i] for all i
+  let maxDiff = 0;
+  for (let i = 0; i <= N; i++) maxDiff = Math.max(maxDiff, Math.abs(s.timeAtSample[i] - s.arcAtSample[i]));
+  return maxDiff > 0.01;
+});
+assert(inkSampleNonUniform, 'InkPhysics: örnek haritada eğrilik yavaşlaması ölçülebilir (zaman != yay-uzunluğu)');
+
+// --- v11: Narration — button present, toggles, and gracefully degrades ---
+const narrationLabel0 = await page.$eval('#narrationToggleBtn', el => el.textContent.trim());
+assert(/^Anlatım: (Açık|Kapalı|Yok)$/.test(narrationLabel0), `anlatım düğmesi mevcut ("${narrationLabel0}")`);
+if (narrationLabel0 !== 'Anlatım: Yok') {
+  await page.click('#narrationToggleBtn');
+  const narrationLabel1 = await page.$eval('#narrationToggleBtn', el => el.textContent.trim());
+  assert(narrationLabel1 !== narrationLabel0, `anlatım düğmesi tıklayınca etiket değişiyor (${narrationLabel0} -> ${narrationLabel1})`);
+  await page.click('#narrationToggleBtn'); // restore default (on) for the playback assertions below
+}
+
+await page.evaluate(() => { window.__completed = false; window.addEventListener('animation-complete', () => window.__completed = true); });
+await page.$eval('#seek', (el, v) => { el.value = v; el.dispatchEvent(new Event('input')); }, DUR - 0.5);
+await page.click('#playBtn');
+await page.waitForTimeout(1200);
+assert(await page.evaluate(() => window.__completed), 'animation-complete tetiklendi');
+await page.check('#teacherApprove');
+await page.waitForTimeout(100);
+assert(!(await page.$eval('#sendBtn', el => el.disabled)), 'öğretmen onayıyla Gönder aktif');
+
+await page.close();
+
+// --- v11: Narration degrades gracefully when speechSynthesis is unavailable ---
+const noTtsCtx = await browser.newContext();
+await noTtsCtx.addInitScript(() => {
+  delete window.speechSynthesis;
+  delete window.SpeechSynthesisUtterance;
+});
+const noTtsPage = await noTtsCtx.newPage();
+noTtsPage.on('console', msg => { if (msg.type() === 'error') errors.push('[no-tts] ' + msg.text()); });
+noTtsPage.on('pageerror', exc => errors.push('[no-tts] ' + String(exc)));
+await noTtsPage.goto(filePath);
+await noTtsPage.waitForTimeout(1200);
+assert(await noTtsPage.evaluate(() => window.__engineReady === true), 'speechSynthesis yokken motor yine de hazır');
+const narrationLabelNoTts = await noTtsPage.$eval('#narrationToggleBtn', el => el.textContent.trim());
+const narrationDisabledNoTts = await noTtsPage.$eval('#narrationToggleBtn', el => el.disabled);
+assert(narrationLabelNoTts === 'Anlatım: Yok', `speechSynthesis yokken düğme "Anlatım: Yok" (${narrationLabelNoTts})`);
+assert(narrationDisabledNoTts === true, 'speechSynthesis yokken düğme devre dışı');
+await noTtsPage.close();
+await noTtsCtx.close();
+
+await browser.close();
+console.log('TOTAL console errors:', errors.length);
+errors.slice(0, 6).forEach(e => console.log(' -', e));
+assert(errors.length === 0, 'konsol hatası yok');
+console.log(pass ? '\n== ALL PASS ==' : '\n== FAILURES ==');
+process.exit(pass ? 0 : 1);
