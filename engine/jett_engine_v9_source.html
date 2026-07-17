@@ -316,6 +316,18 @@
            `C ${p(0.10, -0.40)} ${p(0.26, -0.52)} ${p(0.40, -0.50)}`;
   }
   const DELTA_ADVANCE = 480;
+  // hand-authored math symbols missing from the script subsets — drawn as real pen strokes
+  function lePath(ox, oy, fs, flip){
+    const p = (x, y) => `${(ox + x * fs).toFixed(2)},${(oy + y * fs).toFixed(2)}`;
+    return flip
+      ? `M ${p(0.08,-0.46)} L ${p(0.42,-0.28)} L ${p(0.08,-0.10)} M ${p(0.08,0.02)} L ${p(0.44,0.02)}`
+      : `M ${p(0.42,-0.46)} L ${p(0.08,-0.28)} L ${p(0.42,-0.10)} M ${p(0.06,0.02)} L ${p(0.42,0.02)}`;
+  }
+  function arrowGlyphPath(ox, oy, fs){
+    const p = (x, y) => `${(ox + x * fs).toFixed(2)},${(oy + y * fs).toFixed(2)}`;
+    return `M ${p(0.06,-0.24)} L ${p(0.62,-0.24)} M ${p(0.47,-0.38)} L ${p(0.64,-0.24)} L ${p(0.47,-0.10)}`;
+  }
+  const SYM_ADVANCE = { le: 560, ge: 560, arrow: 740 };
   function roundPathData(d){
     return d.replace(/-?\d+\.\d+/g, (m) => {
       const r = Math.round(parseFloat(m) * 10) / 10;
@@ -330,6 +342,9 @@
       if (ch === "⁺"){ tokens.push({ kind: "super", ch: "+" }); continue; }
       if (ch === "⁻"){ tokens.push({ kind: "super", ch: "-" }); continue; }
       if (ch >= "₀" && ch <= "₉"){ tokens.push({ kind: "sub", ch: String(ch.charCodeAt(0) - 0x2080) }); continue; }
+      if (ch === "≤"){ tokens.push({ kind: "sym", sym: "le" }); continue; }
+      if (ch === "≥"){ tokens.push({ kind: "sym", sym: "ge" }); continue; }
+      if (ch === "→" || ch === "⇒"){ tokens.push({ kind: "sym", sym: "arrow" }); continue; }
       const font = fontForChar(ch);
       if (!font){ uncoveredChars.add(ch); continue; }
       tokens.push({ kind: "char", ch, font });
@@ -353,6 +368,14 @@
       if (tok.kind === "delta"){
         const d = deltaPath(cursor, y, fontSize);
         const adv = DELTA_ADVANCE * (fontSize / UPM);
+        glyphs.push({ d, isSpace: false, isPunct: false, advancePx: adv });
+        cursor += adv;
+        prevGlyph = null; prevFont = null;
+        continue;
+      }
+      if (tok.kind === "sym"){
+        const d = tok.sym === "arrow" ? arrowGlyphPath(cursor, y, fontSize) : lePath(cursor, y, fontSize, tok.sym === "ge");
+        const adv = SYM_ADVANCE[tok.sym] * (fontSize / UPM);
         glyphs.push({ d, isSpace: false, isPunct: false, advancePx: adv });
         cursor += adv;
         prevGlyph = null; prevFont = null;
@@ -391,6 +414,7 @@
     for (const tok of tokenize(text)){
       if (tok.kind === "space"){ cursor += 260 * (fontSize / UPM); prevGlyph = null; continue; }
       if (tok.kind === "delta"){ cursor += DELTA_ADVANCE * (fontSize / UPM); prevGlyph = null; continue; }
+      if (tok.kind === "sym"){ cursor += SYM_ADVANCE[tok.sym] * (fontSize / UPM); prevGlyph = null; continue; }
       if (tok.kind === "super" || tok.kind === "sub"){
         cursor += latinFont.charToGlyph(tok.ch).advanceWidth * (fontSize * 0.62 / UPM) * 1.05;
         prevGlyph = null; continue;

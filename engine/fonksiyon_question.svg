@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <rect x="0" y="0" width="1000" height="1000" fill="#fdfdf8"/>
+
+  <text x="40" y="58" font-family="Arial" font-size="27" font-weight="bold" fill="#b03030">10.</text>
+  <text x="95" y="58" font-family="Arial" font-size="26" fill="#1d1d1d">Dik koordinat düzleminde [a, b] aralığında tanımlanmış f ve g</text>
+  <text x="95" y="96" font-family="Arial" font-size="26" fill="#1d1d1d">fonksiyonlarının grafiği aşağıda verilmiştir.</text>
+
+  <!-- axes -->
+  <line x1="160" y1="520" x2="915" y2="520" stroke="#1d1d1d" stroke-width="2.5"/>
+  <path d="M 915,520 l -12,-6 l 0,12 z" fill="#1d1d1d"/>
+  <text x="928" y="528" font-family="Arial" font-size="24" fill="#1d1d1d">x</text>
+  <line x1="470" y1="150" x2="470" y2="700" stroke="#1d1d1d" stroke-width="2.5"/>
+  <path d="M 470,150 l -6,12 l 12,0 z" fill="#1d1d1d"/>
+  <text x="480" y="145" font-family="Arial" font-size="24" fill="#1d1d1d">y</text>
+  <text x="442" y="548" font-family="Arial" font-size="24" fill="#1d1d1d">O</text>
+  <line x1="505" y1="514" x2="505" y2="526" stroke="#1d1d1d" stroke-width="2.5"/>
+  <text x="498" y="556" font-family="Arial" font-size="24" fill="#1d1d1d">1</text>
+
+  <!-- dashed guides at a and b -->
+  <line x1="280" y1="235" x2="280" y2="690" stroke="#777" stroke-width="2" stroke-dasharray="7,7"/>
+  <line x1="760" y1="225" x2="760" y2="690" stroke="#777" stroke-width="2" stroke-dasharray="7,7"/>
+  <text x="266" y="548" font-family="Arial" font-size="24" fill="#1d1d1d">a</text>
+  <text x="752" y="548" font-family="Arial" font-size="24" fill="#1d1d1d">b</text>
+
+  <!-- f: increasing sigmoid (magenta) -->
+  <path d="M 280,690 C 400,682 458,636 505,500 C 550,368 615,232 760,225" fill="none" stroke="#b03060" stroke-width="3.5"/>
+  <circle cx="280" cy="690" r="6" fill="#b03060"/>
+  <circle cx="760" cy="225" r="6" fill="#b03060"/>
+  <text x="778" y="222" font-family="Arial" font-size="24" fill="#1d1d1d">f(x)</text>
+
+  <!-- g: decreasing sigmoid (blue) -->
+  <path d="M 280,235 C 400,243 458,364 505,500 C 548,624 630,682 760,690" fill="none" stroke="#2471a3" stroke-width="3.5"/>
+  <circle cx="280" cy="235" r="6" fill="#2471a3"/>
+  <circle cx="760" cy="690" r="6" fill="#2471a3"/>
+  <text x="778" y="700" font-family="Arial" font-size="24" fill="#1d1d1d">g(x)</text>
+
+  <!-- bullets -->
+  <text x="100" y="785" font-family="Arial" font-size="25" fill="#1d1d1d">•  f(x) ≤ g(x) koşulunu sağlayan 4 farklı tam sayı değeri vardır.</text>
+  <text x="100" y="825" font-family="Arial" font-size="25" fill="#1d1d1d">•  f(x) &gt; g(x) koşulunu sağlayan 5 farklı tam sayı değeri vardır.</text>
+
+  <text x="100" y="885" font-family="Arial" font-size="26" font-weight="bold" fill="#1d1d1d">a ve b tam sayı olduğuna göre, a + b toplamı kaçtır?</text>
+
+  <!-- options -->
+  <text x="100" y="948" font-family="Arial" font-size="26" fill="#1d1d1d">A) 2</text>
+  <text x="280" y="948" font-family="Arial" font-size="26" fill="#1d1d1d">B) 3</text>
+  <text x="460" y="948" font-family="Arial" font-size="26" fill="#1d1d1d">C) 4</text>
+  <text x="640" y="948" font-family="Arial" font-size="26" fill="#1d1d1d">D) 5</text>
+  <text x="820" y="948" font-family="Arial" font-size="26" fill="#1d1d1d">E) 6</text>
+</svg>

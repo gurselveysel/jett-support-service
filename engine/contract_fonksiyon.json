@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Jett Öğretmen Çözümü — Fonksiyon Grafiği ve Tam Sayı Sayma",
+    "subject": "Matematik",
+    "topic": "Fonksiyon Grafiği Yorumlama ve Aralıkta Tam Sayı Sayma",
+    "character": { "name": "Mahir Hoca", "pen_color": "#3949AB" }
+  },
+  "academic_contract": {
+    "given": "[a, b] aralığında tanımlı f (artan) ve g (azalan) fonksiyonlarının grafikleri; f(x) ≤ g(x) koşulunu sağlayan 4, f(x) > g(x) koşulunu sağlayan 5 farklı tam sayı vardır.",
+    "asked": "a ve b tam sayı olduğuna göre a + b toplamı kaçtır?",
+    "primary_outcome": "Grafikten eşitsizlik bölgelerini okuyarak aralıklardaki tam sayıları sayar ve bilinmeyen uç noktaları belirler.",
+    "prerequisites": [
+      "Artan ve azalan iki fonksiyonun grafiği en fazla bir noktada kesişir; eşitlik yalnız kesişim noktasında sağlanır.",
+      "[m, n] tam sayı aralığındaki tam sayı adedi n - m + 1'dir."
+    ]
+  },
+  "canonical_solution": {
+    "steps": [
+      { "step_no": 1, "action": "Kesişimi bul", "reason": "f artan, g azalan → eşitlik yalnız x = 1'de." },
+      { "step_no": 2, "action": "Sol tarafı say", "reason": "f ≤ g bölgesi x ≤ 1 (kesişim dahil): a'dan 1'e 4 tam sayı → 1 - a + 1 = 4 → a = -2." },
+      { "step_no": 3, "action": "Sağ tarafı say", "reason": "f > g bölgesi x > 1: 2'den b'ye 5 tam sayı → b - 1 = 5 → b = 6." },
+      { "step_no": 4, "action": "Bağımsız kontrol", "reason": "[a, b] içinde b - a + 1 = 9 = 4 + 5 tam sayı — tutarlı." },
+      { "step_no": 5, "action": "Sonucu yaz", "reason": "a + b = -2 + 6 = 4." }
+    ],
+    "final_answer": { "value": "C", "display": "C) 4" }
+  },
+  "scenes": [
+    {
+      "id": "orient",
+      "caption": "Verilen: [a, b] aralığında f ve g'nin grafiği. İstenen: a + b toplamı.",
+      "items": [
+        { "space": "photo", "type": "box", "anchor": { "x": 0.15, "y": 0.13, "w": 0.78, "h": 0.58 } }
+      ]
+    },
+    {
+      "id": "kesisim",
+      "caption": "Önce kritik nokta: f artan, g azalan — eşitlik yalnız kesişimde, x = 1'de.",
+      "items": [
+        { "space": "photo", "type": "ellipse", "color": "#c0392b", "anchor": { "x": 0.467, "y": 0.462, "w": 0.076, "h": 0.076 } },
+        { "space": "photo", "type": "text", "near": { "x": 0.63, "y": 0.20 }, "text": "kesişim\nx = 1" },
+        { "space": "photo", "type": "arrow", "color": "#c0392b", "from": { "x": 0.615, "y": 0.27 }, "to": { "x": 0.527, "y": 0.455 } },
+        { "space": "panel", "type": "text", "text": "f artan, g azalan → eşitlik yalnız x = 1'de olur (kesişim noktası)." }
+      ]
+    },
+    {
+      "id": "sol",
+      "caption": "Sol taraf: x ≤ 1 bölgesinde f ≤ g — kesişim dahil.",
+      "items": [
+        { "space": "photo", "type": "text", "near": { "x": 0.13, "y": 0.34 }, "text": "sol taraf:\nf ≤ g" },
+        { "space": "panel", "type": "text", "text": "f(x) ≤ g(x) → x ≤ 1 bölgesi (kesişim dahil): a'dan 1'e kadar 4 tam sayı." }
+      ]
+    },
+    {
+      "id": "a-hesap",
+      "caption": "a'dan 1'e 4 tam sayı: 1 - a + 1 = 4 → a = -2.",
+      "items": [
+        { "space": "panel", "type": "text", "text": "1 - a + 1 = 4 → 2 - a = 4 → a = -2 (sayılar: -2, -1, 0, 1)." }
+      ]
+    },
+    {
+      "id": "sag",
+      "caption": "Sağ taraf: x > 1 bölgesinde f > g.",
+      "items": [
+        { "space": "photo", "type": "text", "near": { "x": 0.89, "y": 0.34 }, "text": "sağ taraf:\nf > g" },
+        { "space": "panel", "type": "text", "text": "f(x) > g(x) → x > 1 bölgesi: 2'den b'ye kadar 5 tam sayı." }
+      ]
+    },
+    {
+      "id": "b-hesap",
+      "caption": "2'den b'ye 5 tam sayı: b - 1 = 5 → b = 6.",
+      "items": [
+        { "space": "panel", "type": "text", "text": "b - 1 = 5 → b = 6 (sayılar: 2, 3, 4, 5, 6)." }
+      ]
+    },
+    {
+      "id": "verify",
+      "caption": "Küçük kontrol: [a, b] içinde b - a + 1 = 9 = 4 + 5 tam sayı — tutarlı.",
+      "items": [
+        { "space": "photo", "type": "badge", "anchor": { "x": 0.85, "y": 0.60, "w": 0.09, "h": 0.10 } },
+        { "space": "panel", "type": "text", "text": "Küçük kontrol: b - a + 1 = 6 + 2 + 1 = 9 = 4 + 5 — sayım tutarlı." }
+      ]
+    },
+    {
+      "id": "final",
+      "caption": "Sonuç: a + b = -2 + 6 = 4 → Cevap C.",
+      "items": [
+        { "space": "photo", "type": "answer-circle", "anchor": { "x": 0.448, "y": 0.921, "w": 0.078, "h": 0.038 } },
+        { "space": "panel", "type": "final-box", "text": "Cevap: C) a + b = -2 + 6 = 4" }
+      ]
+    }
+  ]
+}
