@@ -46,6 +46,23 @@ if (!expectPanel) {
   assert(parseFloat(vb.split(' ')[3]) === imgH, `viewBox = yalnız görsel yüksekliği (${vb})`);
 }
 
+// ONE-HAND PROOF at DOM level: no two drawn strokes may share a time window.
+// (data-start/data-end are the pen-stroke windows; glyph fill crossfade is ink
+// settling, not a second hand, so it is intentionally out of scope.)
+const seqViol = await page.evaluate(() => {
+  const els = Array.from(document.querySelectorAll('.ann-draw')).map(el => ({
+    s: parseFloat(el.dataset.start), e: parseFloat(el.dataset.end)
+  })).sort((a, b) => a.s - b.s);
+  let v = 0;
+  for (let i = 0; i < els.length; i++)
+    for (let j = i + 1; j < els.length; j++){
+      if (els[j].s >= els[i].e - 0.004) break; // sorted by start: nothing later can overlap i
+      v++;
+    }
+  return v;
+});
+assert(seqViol === 0, `tek-el değişmezi: hiçbir iki vuruş aynı anda çizilmiyor (ihlal: ${seqViol})`);
+
 // runtime-placed handwriting blocks must never overlap each other
 const rects = await page.evaluate(() => window.__placedRects || []);
 let overlaps = 0;
