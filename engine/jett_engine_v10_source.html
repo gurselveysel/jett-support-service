@@ -195,7 +195,7 @@
     TEXT_MIN_DUR: 0.8,
     READ_PAUSE_PER_CHAR: 0.055, // post-block comprehension pause (the 'teacher talks' beat), clamped below
     READ_PAUSE_MAX: 3.6,
-    SAME_SPACE_STAGGER: 0.4,  // fraction of an item's tail the next same-space item may overlap
+    ITEM_GAP: 0.3,            // hand-lift + travel time between consecutive strokes in a scene
     SPACE_SWITCH_GAP: 0.45,   // barrier gap when the pen travels photo<->panel
     SCENE_GAP: 0.6,
     START_DELAY: 2.2,        // viewer reads the question before the first ink lands
@@ -445,8 +445,10 @@
       const t0 = lineStart + (acc / total) * duration;
       acc += weights[i];
       const t1 = lineStart + (acc / total) * duration;
-      const strokeEnd = t0 + (t1 - t0) * 0.72;
-      return { ...g, start: t0, end: Math.max(t0 + 0.02, strokeEnd), fillStart: strokeEnd, fillEnd: t1 };
+      // stroke may never spill past this glyph's own slot — the one-hand invariant
+      // holds down to the single-glyph level (next stroke starts only after this one).
+      const strokeEnd = Math.max(t0 + (t1 - t0) * 0.72, Math.min(t0 + 0.02, t1 - 0.002));
+      return { ...g, start: t0, end: strokeEnd, fillStart: strokeEnd, fillEnd: t1 };
     });
   }
   function glyphGroupMarkup(id, x, y, fontSize, glyphsTimed, rnd, color){
@@ -692,10 +694,12 @@
   }
 
   /* ================================================================
-     MODULE e — TimingEngine. INVARIANT BY CONSTRUCTION: a photo-space
-     window and a panel-space window can never overlap, because every
-     space switch inserts a hard barrier at max(all previous ends).
-     Within the same space, gentle stagger keeps a natural hand flow.
+     MODULE e — TimingEngine. ONE-HAND INVARIANT, BY CONSTRUCTION:
+     a teacher has one hand, so no two strokes are EVER drawn at the
+     same time. Every item starts strictly after the previous one ends —
+     a short travel gap inside a scene, a longer "teacher talks" pause
+     (the previous block's readPause) between scenes, and a slightly
+     bigger gap when the hand travels between the photo and the panel.
   ================================================================ */
   function scheduleItems(sceneMeta){
     let maxEnd = 0, lastSpace = null, prev = null;
@@ -704,7 +708,7 @@
         let start;
         if (lastSpace === null) start = CFG.START_DELAY;
         else if (item.space !== lastSpace) start = maxEnd + CFG.SPACE_SWITCH_GAP;
-        else if (prev && prev.sceneIdx === si) start = Math.max(prev.start + 0.15, prev.end - prev.dur * CFG.SAME_SPACE_STAGGER);
+        else if (prev && prev.sceneIdx === si) start = prev.end + CFG.ITEM_GAP; // sequential: hand lifts, moves, writes next
         else start = maxEnd + CFG.SCENE_GAP;
         item.start = start;
         item.end = start + item.dur;
@@ -729,14 +733,16 @@
     });
     return Math.round(total * 10) / 10;
   }
-  // the assert pass (SelfCheck consumes this): scan EVERY photo/panel pair
+  // the assert pass (SelfCheck consumes this): NO pair of items may share a
+  // time window — one hand writes one thing at a time, anywhere on the page.
   function timingInvariantViolations(items){
     const bad = [];
-    const photo = items.filter(i => i.space === "photo");
-    const panel = items.filter(i => i.space === "panel");
-    for (const a of photo) for (const b of panel)
-      if (a.start < b.end && b.start < a.end)
-        bad.push(`${a.id}(photo ${a.start.toFixed(1)}-${a.end.toFixed(1)}) × ${b.id}(panel ${b.start.toFixed(1)}-${b.end.toFixed(1)})`);
+    for (let i = 0; i < items.length; i++)
+      for (let j = i + 1; j < items.length; j++){
+        const a = items[i], b = items[j];
+        if (a.start < b.end - 0.001 && b.start < a.end - 0.001)
+          bad.push(`${a.id}(${a.start.toFixed(1)}-${a.end.toFixed(1)}) × ${b.id}(${b.start.toFixed(1)}-${b.end.toFixed(1)})`);
+      }
     return bad;
   }
 
@@ -800,10 +806,11 @@
                                     rx: item.ellipse.rx.toFixed(1), ry: item.ellipse.ry.toFixed(1) });
           } else if (item.badge){
             const b = item.badge;
-            el = svgEl("ellipse", { ...common, cx: b.cx.toFixed(1), cy: b.cy.toFixed(1), rx: b.rx.toFixed(1), ry: b.ry.toFixed(1) });
             const mid = item.start + item.dur * 0.62;
+            el = svgEl("ellipse", { ...common, "data-end": mid.toFixed(3),
+                                    cx: b.cx.toFixed(1), cy: b.cy.toFixed(1), rx: b.rx.toFixed(1), ry: b.ry.toFixed(1) });
             const chk = svgEl("path", { class: "ann-draw sketchy",
-              "data-start": mid.toFixed(3), "data-end": item.end.toFixed(3),
+              "data-start": (mid + 0.12).toFixed(3), "data-end": item.end.toFixed(3),
               d: `M ${(b.cx - b.rx*0.55).toFixed(1)},${(b.cy + b.ry*0.05).toFixed(1)} L ${(b.cx - b.rx*0.15).toFixed(1)},${(b.cy + b.ry*0.5).toFixed(1)} L ${(b.cx + b.rx*0.65).toFixed(1)},${(b.cy - b.ry*0.75).toFixed(1)}`,
               fill: "none", stroke: "var(--ok)", "stroke-width": 8,
               "stroke-linecap": "round", "stroke-linejoin": "round", opacity: "0" });
@@ -858,11 +865,11 @@
         }
         if (item.kind === "finalbox"){
           finalBoxGroup = svgEl("g", { id: "finalBoxGroup",
-            "data-start": item.start.toFixed(3), "data-end": (item.start + 0.9).toFixed(3), opacity: "0" });
+            "data-start": item.start.toFixed(3), "data-end": (item.start + 0.5).toFixed(3), opacity: "0" });
           finalBoxGroup.appendChild(svgEl("rect", { x: item.box.x, y: item.box.y, width: item.box.w, height: item.box.h,
             rx: 14, fill: "var(--pen-soft)", stroke: "var(--pen)", "stroke-width": 3 }));
           const bx = item.box.x + 20;
-          const glyphs = timeGlyphs(layoutLine(tokenize(item.text), bx, item.baselineY, CFG.FINAL_FS), item.start + 0.25, item.end);
+          const glyphs = timeGlyphs(layoutLine(tokenize(item.text), bx, item.baselineY, CFG.FINAL_FS), item.start + 0.55, item.end);
           const grp = glyphGroupMarkup(`${item.id}T`, bx, item.baselineY, CFG.FINAL_FS, glyphs, rnd);
           glyphCount += grp.childNodes.length;
           finalBoxGroup.appendChild(grp);
