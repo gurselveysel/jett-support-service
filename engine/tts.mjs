@@ -54,6 +54,61 @@ function mbrolaNormalizeTr(text){
     .replace(/ğ/gi, 'g');
 }
 
+// v13: timestamped synthesis. Uses the /with-timestamps variant so callers
+// learn the REAL speech window (first/last spoken char, tags/leading silence
+// excluded) — karaoke can then highlight inside the actual speech instead of
+// linearly across the whole file. Returns { provider, s0, s1 } where s0/s1
+// are seconds (null on the local fallback path or if alignment is missing).
+export function synthesizeCaptionMp3Timed(text, mp3Path, opts = {}){
+  if (process.env.ELEVENLABS_API_KEY && !elevenBroken){
+    try {
+      const voice = process.env.ELEVEN_VOICE_ID || ELEVEN_DEFAULT_VOICE;
+      const elevenText = speechNormalizeTr(opts.elevenText || text);
+      const raw = execFileSync('curl', ['-sS', '--fail', '--max-time', '120',
+        '-H', 'xi-api-key: ' + process.env.ELEVENLABS_API_KEY,
+        '-H', 'Content-Type: application/json',
+        '-d', JSON.stringify({
+          text: elevenText,
+          model_id: 'eleven_v3',
+          voice_settings: {
+            stability: opts.stability ?? 0.35,
+            style: opts.style ?? 0.15,
+            use_speaker_boost: true,
+            speed: opts.speed ?? 1.0
+          }
+        }),
+        `https://api.elevenlabs.io/v1/text-to-speech/${voice}/with-timestamps?output_format=mp3_22050_32`],
+        { maxBuffer: 64 * 1024 * 1024 }).toString();
+      const res = JSON.parse(raw);
+      if (!res.audio_base64) throw new Error('audio_base64 yok');
+      writeFileSync(mp3Path, Buffer.from(res.audio_base64, 'base64'));
+      if (statSync(mp3Path).size < 1000) throw new Error('boş/kısa yanıt');
+      let s0 = null, s1 = null;
+      const al = res.alignment;
+      if (al && Array.isArray(al.characters)){
+        let inTag = false;
+        for (let i = 0; i < al.characters.length; i++){
+          const ch = al.characters[i];
+          if (ch === '[') inTag = true;
+          else if (ch === ']') inTag = false;
+          else if (!inTag && /\S/.test(ch)){
+            if (s0 === null) s0 = al.character_start_times_seconds[i];
+            s1 = al.character_end_times_seconds[i];
+          }
+        }
+      }
+      return { provider: 'elevenlabs', s0, s1 };
+    } catch (e){
+      elevenBroken = true;
+      rmSync(mp3Path, { force: true });
+      console.warn('ElevenLabs (timestamps) kullanılamadı (' + (e.message || '').split('\n')[0] + ') — yerel sese düşülüyor.');
+    }
+  }
+  // local fallback: same audio the plain path would produce, no timing info
+  const provider = synthesizeCaptionMp3(text, mp3Path, opts);
+  return { provider, s0: null, s1: null };
+}
+
 // opts (all optional, ElevenLabs-only — ignored by the local fallback path):
 //   elevenText — v3 audio-tag/punctuation-rich narration text to actually
 //     speak; falls back to the plain caption when absent (old callers/contracts

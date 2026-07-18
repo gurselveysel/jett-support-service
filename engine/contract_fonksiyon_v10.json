@@ -55,7 +55,6 @@
       "id": "verilen",
       "caption": "Verilen: f ≤ g için 4, f > g için 5 farklı tam sayı. İstenen: a + b.",
       "elevenText": "[warmly] Bakalım... f küçük eşit g'de dört, f büyük g'de beş tam sayı var... istenen, a artı b.",
-      "stability": 0.42, "style": 0.1, "speed": 1.0,
       "items": [
         {
           "space": "photo",
@@ -83,7 +82,6 @@
       "id": "kesisim",
       "caption": "f artan, g azalan → eşitlik yalnız kesişimde: x = 1.",
       "elevenText": "[thoughtful] f artan, g ise azalan bir fonksiyon. İki eğri birbirini yalnızca tek bir noktada keser... işte tam burada, x eşittir bir.",
-      "stability": 0.32, "style": 0.2, "speed": 0.95,
       "items": [
         {
           "space": "photo",
@@ -125,7 +123,6 @@
       "id": "bolgeler",
       "caption": "Sol tarafta f ≤ g, sağ tarafta f > g.",
       "elevenText": "Kesişimin solunda f küçük eşit g... sağında ise f büyük g oluyor.",
-      "stability": 0.4, "style": 0.1, "speed": 1.0,
       "items": [
         {
           "space": "photo",
@@ -151,7 +148,6 @@
       "id": "sol-sayim",
       "caption": "x ≤ 1 (kesişim dahil): a'dan 1'e 4 tam sayı → a = -2.",
       "elevenText": "[curious] Sol tarafı sayalım: a'dan bire kadar, bir de dahil, tam dört tam sayı olmalı. [pause] O halde a, eksi iki çıkar.",
-      "stability": 0.3, "style": 0.2, "speed": 1.0,
       "items": [
         {
           "space": "photo",
@@ -178,7 +174,6 @@
       "id": "sag-sayim",
       "caption": "x > 1: 2'den b'ye 5 tam sayı → b = 6.",
       "elevenText": "Şimdi sağ tarafa geçelim: ikiden b'ye kadar beş tam sayı olmalı. [pause] Bu da bize b eşittir altı sonucunu verir.",
-      "stability": 0.3, "style": 0.2, "speed": 1.0,
       "items": [
         {
           "space": "photo",
@@ -205,7 +200,6 @@
       "id": "kontrol",
       "caption": "Küçük kontrol: [a, b] içinde b - a + 1 = 9 = 4 + 5 tam sayı — tutarlı.",
       "elevenText": "[thoughtful] Kontrol yapalım: a'dan b'ye toplam dokuz tam sayı olmalı, çünkü dört artı beş dokuz eder. Gerçekten tutarlı.",
-      "stability": 0.38, "style": 0.12, "speed": 0.98,
       "items": [
         {
           "space": "photo",
@@ -232,7 +226,6 @@
       "id": "final",
       "caption": "Sonuç: a + b = -2 + 6 = 4 → Cevap C.",
       "elevenText": "[warmly] Sonuç olarak, a artı b... eksi iki artı altı, yani dört ediyor. Doğru cevabımız C şıkkı.",
-      "stability": 0.4, "style": 0.15, "speed": 0.95,
       "items": [
         {
           "space": "photo",

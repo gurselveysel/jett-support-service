@@ -320,6 +320,11 @@
   // Used as a FALLBACK when the device has no Turkish speech voice — narration
   // then works on every device, at the cost of a synthetic (espeak) voice.
   const AUDIO_TRACKS = /*__AUDIO_JSON__*/ null;
+  // v13: per-scene narration metadata {dur, s0, s1} — real duration + speech
+  // window measured at generation time (with-timestamps). null on older files.
+  const AUDIO_META = /*__AUDIO_META_JSON__*/ null;
+  window.__audioMeta = AUDIO_META;     // test/render hook
+  window.__audioTrackData = AUDIO_TRACKS; // render_video reuses the EXACT embedded audio (no re-synthesis)
 
   /* ================================================================
      ENGINE POLICY (content-independent physics of the "hand" — these
@@ -339,6 +344,7 @@
     SCENE_GAP: 0.6,
     START_DELAY: 2.2,        // viewer reads the question before the first ink lands
     DUR_MIN: 20, DUR_MAX: 75, // total-duration clamp; schedule is scaled uniformly into range
+    DUR_MAX_NARR: 150,        // wider cap when REAL narration durations drive the schedule (v13)
     PANEL_FS: 34, PANEL_LINE_H: 48, PANEL_MARGIN_X: 34, PANEL_PAD_TOP: 55, PANEL_PAD_BOTTOM: 100, /* bottom pad clears the caption overlay */
     PANEL_PARA_GAP: 8,
     PHOTO_FS_TRY: [30, 26, 22],   // photo-space text sizes tried against available blank space
@@ -895,7 +901,8 @@
         }
       });
       sceneMeta.push({ caption: scene.caption, items: sceneItems,
-        elevenText: scene.elevenText, stability: scene.stability, style: scene.style, speed: scene.speed });
+        elevenText: scene.elevenText, stability: scene.stability, style: scene.style, speed: scene.speed,
+        narrDur: scene._narrDur, role: scene.role });
       items.push(...sceneItems);
     });
     // panel exists only when the photo genuinely lacked room — a real teacher
@@ -931,11 +938,38 @@
         lastSpace = item.space;
         prev = item;
       });
+      // v13 narration-aware window: when the REAL narration length is known
+      // (measured at generation, scene._narrDur), the scene's ink timeline is
+      // stretched uniformly around its own start so writing paces WITH the
+      // voice — no more frozen-frame boundary holds, and audio can never
+      // spill into the next scene. Pure per-scene time scaling: the one-hand
+      // invariant is untouched by construction, later scenes shift naturally
+      // because they chain off maxEnd.
+      if (scene.narrDur && scene.items.length){
+        const s0 = scene.items[0].start;
+        const need = scene.narrDur + 0.35;           // breath before the scene flips
+        const have = maxEnd - s0;
+        if (have < need){
+          const k = need / Math.max(0.001, have);
+          scene.items.forEach(it => {
+            it.start = s0 + (it.start - s0) * k;
+            it.end = s0 + (it.end - s0) * k;
+            it.dur *= k;
+            if (it.readPause) it.readPause *= k;
+          });
+          maxEnd = Math.max(...scene.items.map(it => it.end + (it.readPause || 0)));
+        }
+      }
     });
     let total = maxEnd + 0.8; // settle beat before the player stops
-    // uniform time-scale into the [DUR_MIN, DUR_MAX] band — pacing character is preserved
+    // uniform time-scale into the duration band — pacing character is preserved.
+    // Narration-driven lessons get a wider cap: real speech length is honest
+    // content, compressing it back under DUR_MAX would recreate the overflow.
+    const narrDriven = sceneMeta.some(s => s.narrDur);
+    window.__narrDriven = narrDriven; // SelfCheck + test hook
+    const durMax = narrDriven ? CFG.DUR_MAX_NARR : CFG.DUR_MAX;
     let k = 1;
-    if (total > CFG.DUR_MAX) k = CFG.DUR_MAX / total;
+    if (total > durMax) k = durMax / total; // SelfCheck flags broken narration fit visibly
     if (total < CFG.DUR_MIN) k = CFG.DUR_MIN / total;
     if (k !== 1){
       sceneMeta.forEach(s => s.items.forEach(it => { it.start *= k; it.end *= k; it.dur *= k; if (it.readPause) it.readPause *= k; }));
@@ -1586,14 +1620,22 @@
         utterSpeaking = true;
         utterStartAt = performance.now();
         showSpeakIndicator(true);
+        // v13: highlight inside the REAL speech window (generation-measured
+        // first/last spoken char) instead of linearly across the whole file —
+        // leading/trailing silence no longer advances the karaoke.
+        const meta = (Array.isArray(AUDIO_META) && AUDIO_META[sceneIdx]) || null;
+        const hasWin = meta && meta.s0 !== null && meta.s1 !== null && meta.s1 > meta.s0;
         const tick = () => {
           if (tok !== audioToken) return;
           const d = narrAudio.duration;
           if (d && isFinite(d) && spans.length){
-            const idx = Math.min(spans.length - 1, Math.floor(narrAudio.currentTime / d * spans.length));
+            const p = hasWin
+              ? (narrAudio.currentTime - meta.s0) / (meta.s1 - meta.s0)
+              : narrAudio.currentTime / d;
+            const idx = p < 0 ? -1 : Math.min(spans.length - 1, Math.floor(p * spans.length));
             spans.forEach((sp, i) => {
               sp.classList.toggle("speaking", i === idx);
-              sp.classList.toggle("spoken", i < idx);
+              sp.classList.toggle("spoken", idx >= 0 && i < idx);
             });
           }
           if (!narrAudio.ended && !narrAudio.paused) requestAnimationFrame(tick);
@@ -1981,7 +2023,8 @@
       DURATION = scheduleItems(sceneMeta);
       SCENES = sceneMeta;
       window.__sceneBounds = SCENES.map(s => ({ tStart: s.tStart, tEnd: s.tEnd, caption: s.caption,
-        elevenText: s.elevenText, stability: s.stability, style: s.style, speed: s.speed })); // test hook
+        elevenText: s.elevenText, stability: s.stability, style: s.style, speed: s.speed,
+        narrDur: s.narrDur, role: s.role })); // test hook
 
       // 7) build the SVG scene
       const totalH = svgImgH + panelH;
@@ -2027,7 +2070,18 @@
       const checks = [];
       if (violations.length) checks.push("Zamanlama değişmezi ihlali: " + violations[0]);
       if (uncoveredChars.size) checks.push("Font kapsamayan karakter(ler): " + Array.from(uncoveredChars).join(" "));
-      if (!(DURATION >= CFG.DUR_MIN - 0.01 && DURATION <= CFG.DUR_MAX + 0.01)) checks.push("Süre bant dışı: " + DURATION);
+      const durCap = window.__narrDriven ? CFG.DUR_MAX_NARR : CFG.DUR_MAX;
+      if (!(DURATION >= CFG.DUR_MIN - 0.01 && DURATION <= durCap + 0.01)) checks.push("Süre bant dışı: " + DURATION);
+      // narration-fit: every scene window must hold its own measured narration —
+      // a lesson whose voice can't fit is refused, never silently truncated
+      if (window.__narrDriven){
+        SCENES.forEach((s, i) => {
+          if (!s.narrDur) return;
+          const win = (SCENES[i + 1] ? SCENES[i + 1].tStart : DURATION) - s.tStart;
+          if (win + 0.05 < s.narrDur + 0.3)
+            checks.push(`Sahne ${i} anlatımı pencereye sığmıyor (${s.narrDur.toFixed(1)}s ses / ${win.toFixed(1)}s pencere)`);
+        });
+      }
       if (checks.length){ showError(["Öz-doğrulama başarısız:"].concat(checks)); return; }
 
       // 9) drawable init needs a rendered layout — defer one frame

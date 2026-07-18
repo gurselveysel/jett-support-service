@@ -7,8 +7,16 @@ const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromi
 const page = await browser.newPage();
 await page.goto(filePath);
 await page.waitForFunction(() => window.__sceneBounds && window.__sceneBounds.length > 0);
-const bounds = await page.evaluate(() => window.__sceneBounds);
-bounds.forEach((b, i) => {
-  console.log(`scene${i}: base=${(b.tEnd - b.tStart).toFixed(2)}s tStart=${b.tStart.toFixed(2)} tEnd=${b.tEnd.toFixed(2)}`);
+const r = await page.evaluate(() => {
+  const b = window.__sceneBounds;
+  const DUR = parseFloat(document.getElementById('seek').max);
+  return { b, DUR, narrDriven: window.__narrDriven === true };
 });
+r.b.forEach((s, i) => {
+  const win = (r.b[i + 1] ? r.b[i + 1].tStart : r.DUR) - s.tStart;
+  const narr = s.narrDur || 0;
+  console.log(`scene${i}${s.role ? ' [' + s.role + ']' : ''}: base=${(s.tEnd - s.tStart).toFixed(2)}s window=${win.toFixed(2)}s` +
+    (narr ? ` narr=${narr.toFixed(2)}s fit=${win + 0.05 >= narr + 0.3 ? 'OK' : 'FAIL'}` : ''));
+});
+console.log(`DUR=${r.DUR}s narrDriven=${r.narrDriven}`);
 await browser.close();

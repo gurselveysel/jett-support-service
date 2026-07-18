@@ -30,7 +30,6 @@
       "id": "orient",
       "caption": "Verilen: XY₂ ve ZX₂'de kısmi yükler işaretli. İstenen: I, II, III yargılarının doğruluğu.",
       "elevenText": "[warmly] Soruda XY ikili ve ZX ikili moleküllerinde kısmi yükler işaretlenmiş. Bizden istenen, üç yargının doğru olup olmadığını bulmak.",
-      "stability": 0.38, "style": 0.13, "speed": 1.0,
       "items": [
         { "space": "photo", "type": "box", "anchor": { "x": 0.355, "y": 0.2052, "w": 0.44, "h": 0.2144 } }
       ]
@@ -39,7 +38,6 @@
       "id": "bridge",
       "caption": "Hatırlatma: EN yüksek atom ortak elektron çiftini kendine çeker → δ⁻ olur.",
       "elevenText": "[thoughtful] Küçük hatırlatma: elektronegatifliği yüksek olan atom, ortak elektron çiftini kendine çeker... ve kısmi negatif yük kazanır.",
-      "stability": 0.35, "style": 0.12, "speed": 1.0,
       "items": [
         { "space": "panel", "type": "text", "text": "Hatırla: EN yüksek atom ortak elektron çiftini çeker => δ⁻ olur." }
       ]
@@ -48,7 +46,6 @@
       "id": "xy2",
       "caption": "XY₂: X δ⁺ (merkez), Y δ⁻ (uçlar) → Y daha elektronegatif.",
       "elevenText": "XY ikili molekülüne bakalım: merkezdeki X kısmi pozitif, uçlardaki Y ise kısmi negatif... demek ki Y, X'ten daha elektronegatif.",
-      "stability": 0.35, "style": 0.12, "speed": 1.0,
       "items": [
         { "space": "photo", "type": "ellipse", "color": "#c0392b", "anchor": { "x": 0.431, "y": 0.2690, "w": 0.068, "h": 0.0444 } },
         { "space": "photo", "type": "ellipse", "color": "#1f6bd6", "anchor": { "x": 0.386, "y": 0.3419, "w": 0.060, "h": 0.0407 } },
@@ -60,7 +57,6 @@
       "id": "zx2",
       "caption": "ZX₂: Z δ⁺ (merkez), X δ⁻ (uçlar) → X daha elektronegatif.",
       "elevenText": "Aynı mantıkla ZX ikiliye bakalım: merkezdeki Z pozitif, uçlardaki X negatif... yani X, Z'den daha elektronegatif.",
-      "stability": 0.35, "style": 0.12, "speed": 1.0,
       "items": [
         { "space": "photo", "type": "ellipse", "color": "#c0392b", "anchor": { "x": 0.664, "y": 0.2690, "w": 0.068, "h": 0.0444 } },
         { "space": "photo", "type": "ellipse", "color": "#1f6bd6", "anchor": { "x": 0.733, "y": 0.3419, "w": 0.060, "h": 0.0407 } },
@@ -72,7 +68,6 @@
       "id": "chain",
       "caption": "Zincirleme: Y > X ve X > Z ⇒ Y > X > Z.",
       "elevenText": "[curious] İki karşılaştırmayı birleştirelim: Y, X'ten büyük... X de Z'den büyük. Sıralama: Y, X, Z.",
-      "stability": 0.32, "style": 0.15, "speed": 1.0,
       "items": [
         { "space": "panel", "type": "text", "text": "Birleştir: Y > X ve X > Z => zincirleme sıralama kurulur." },
         { "space": "photo", "type": "text", "near": { "x": 0.88, "y": 0.314 }, "text": "Y >\nX > Z" }
@@ -82,7 +77,6 @@
       "id": "periyot",
       "caption": "Aynı periyotta EN arttıkça yarıçap azalır.",
       "elevenText": "Bir de şunu hatırlayalım: aynı periyotta elektronegatiflik arttıkça, atom yarıçapı küçülür.",
-      "stability": 0.38, "style": 0.1, "speed": 1.0,
       "items": [
         { "space": "panel", "type": "text", "text": "Aynı periyotta EN artar, yarıçap azalır; EN'i en düşük Z'nin yarıçapı en büyük." }
       ]
@@ -91,7 +85,6 @@
       "id": "yargi1",
       "caption": "I. yargı: EN'i en düşük olan Z, yarıçapı en büyük olandır → doğru.",
       "elevenText": "[confident] Birinci yargıya bakalım: elektronegatifliği en düşük olan Z... o yüzden yarıçapı en büyük olan da Z. Doğru.",
-      "stability": 0.32, "style": 0.15, "speed": 1.0,
       "items": [
         { "space": "photo", "type": "check", "anchor": { "x": 0.078, "y": 0.5138, "w": 0.044, "h": 0.0333 } },
         { "space": "panel", "type": "text", "text": "I doğru: EN(Z) en düşük => yarıçapı en büyük Z'dir." }
@@ -101,7 +94,6 @@
       "id": "yargi2",
       "caption": "II. yargı: EN'i en yüksek olan Y'dir → doğru.",
       "elevenText": "İkinci yargı: elektronegatifliği en yüksek olan atom Y. Bu da doğru.",
-      "stability": 0.35, "style": 0.12, "speed": 1.0,
       "items": [
         { "space": "photo", "type": "check", "anchor": { "x": 0.078, "y": 0.6109, "w": 0.044, "h": 0.0333 } },
         { "space": "panel", "type": "text", "text": "II doğru: sıralamada en üstte Y var => EN'i en yüksek Y'dir." }
@@ -111,7 +103,6 @@
       "id": "yargi3",
       "caption": "III. yargı: Y > Z olduğundan ZY₃'te δ⁻ = Y → doğru.",
       "elevenText": "[thoughtful] Üçüncü yargı: Y, Z'den daha elektronegatif; ZY üçte kısmi negatif yükü Y taşır. Doğru.",
-      "stability": 0.3, "style": 0.18, "speed": 1.0,
       "items": [
         { "space": "photo", "type": "check", "anchor": { "x": 0.078, "y": 0.6654, "w": 0.044, "h": 0.0333 } },
         { "space": "panel", "type": "text", "text": "III doğru: Y > Z => ZY₃'te ortak çifti Y çeker => δ⁻ = Y." }
@@ -121,7 +112,6 @@
       "id": "verify",
       "caption": "Bağımsız kontrol: Sıralamayı tersten okuyalım — Z < X < Y; hiçbir yargıyla çelişmiyor, sonuç tutarlı.",
       "elevenText": "[thoughtful] Kontrol yapalım: sıralamayı tersten okursak Z en küçük, Y en büyük. [pause] Çelişki yok, tutarlı.",
-      "stability": 0.36, "style": 0.12, "speed": 0.98,
       "items": [
         { "space": "photo", "type": "badge", "anchor": { "x": 0.87, "y": 0.357, "w": 0.08, "h": 0.0628 } },
         { "space": "panel", "type": "text", "text": "Bağımsız kontrol: tersten okunursa Z < X < Y — çelişki yok, tutarlı." }
@@ -131,7 +121,6 @@
       "id": "final",
       "caption": "Sonuç: I, II ve III yargılarının tümü doğru → Cevap E.",
       "elevenText": "[confident] Sonuç olarak üç yargı da doğru çıktı. Doğru cevabımız E şıkkı.",
-      "stability": 0.38, "style": 0.13, "speed": 0.96,
       "items": [
         { "space": "photo", "type": "answer-circle", "anchor": { "x": 0.578, "y": 0.8308, "w": 0.21, "h": 0.0592 } },
         { "space": "panel", "type": "final-box", "text": "Cevap: E) I, II ve III" }

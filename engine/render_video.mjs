@@ -1,5 +1,5 @@
 // Lesson HTML → MP4: deterministic frame capture + narration audio mux.
-//   node render_video.mjs <lesson.html> <out.mp4> [fps]
+//   node render_video.mjs <lesson.html> <out.mp4> [fps=30] [height=1080]
 // Frames come from the engine's own render(t) via seek (pure function of t),
 // so the video is pixel-identical to live playback. The video clock follows
 // the same narration-hold rule as the live player: the timeline waits at a
@@ -9,43 +9,55 @@
 import pkg from '/opt/node22/lib/node_modules/playwright/index.js';
 const { chromium } = pkg;
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, rmSync } from 'node:fs';
+import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { tmpdir } from 'node:os';
 import { synthesizeCaptionMp3 } from './tts.mjs';
 
-const [lessonPath, outPath, fpsArg] = process.argv.slice(2);
+const [lessonPath, outPath, fpsArg, heightArg] = process.argv.slice(2);
 if (!lessonPath || !outPath){
-  console.error('usage: node render_video.mjs <lesson.html> <out.mp4> [fps]');
+  console.error('usage: node render_video.mjs <lesson.html> <out.mp4> [fps=30] [height=1080]');
   process.exit(1);
 }
-const FPS = parseInt(fpsArg || '24', 10);
+const FPS = parseInt(fpsArg || '30', 10);          // v13 default: 30fps
+const OUT_H = parseInt(heightArg || '1080', 10);   // v13 default: 1080p
+const OUT_W = Math.round(OUT_H * 16 / 9);
 const work = path.join(tmpdir(), 'jett_video_' + process.pid);
 mkdirSync(path.join(work, 'frames'), { recursive: true });
 
 const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
-const ctx = await browser.newContext();
+// 1080p output needs >1080px source pixels: capture at 2x device scale
+const ctx = await browser.newContext({ deviceScaleFactor: OUT_H > 720 ? 2 : 1 });
 await ctx.addInitScript(() => { delete window.speechSynthesis; delete window.SpeechSynthesisUtterance; });
 const page = await ctx.newPage();
-await page.setViewportSize({ width: 1720, height: 1200 }); // stage-max 1040px => crisp frames
+await page.setViewportSize({ width: 1720, height: 1200 }); // stage-max => crisp frames
 await page.goto('file://' + path.resolve(lessonPath));
 await page.waitForTimeout(1500);
 await page.click('#mode169Btn'); // deterministic 16:9 stage regardless of viewport heuristics
 
 const DURATION = parseFloat(await page.$eval('#seek', el => el.max));
 const scenes = await page.evaluate(() => window.__sceneBounds);
+const audioMeta = await page.evaluate(() => window.__audioMeta || null);
 
-// 1) narration audio per scene (same chain as the embedded tracks)
+// 1) narration audio per scene. v13: lessons built with --audio carry their
+// tracks embedded — reuse those EXACT bytes (video voice ≡ HTML voice, zero
+// extra synthesis cost). Fallback: synthesize with the same provider chain.
+const embedded = await page.evaluate(() => window.__audioTrackData || null);
 const audio = [];
 for (let i = 0; i < scenes.length; i++){
   const mp3 = path.join(work, `scene_${i}.mp3`);
-  const provider = synthesizeCaptionMp3(scenes[i].caption, mp3, {
-    elevenText: scenes[i].elevenText, stability: scenes[i].stability, style: scenes[i].style, speed: scenes[i].speed
-  });
+  if (embedded && embedded[i]){
+    writeFileSync(mp3, Buffer.from(embedded[i].split(',')[1], 'base64'));
+    if (i === 0) console.log('ses sağlayıcısı: gömülü parçalar (HTML ile birebir aynı)');
+  } else {
+    const provider = synthesizeCaptionMp3(scenes[i].caption, mp3, {
+      elevenText: scenes[i].elevenText, stability: scenes[i].stability, style: scenes[i].style, speed: scenes[i].speed
+    });
+    if (i === 0) console.log('ses sağlayıcısı:', provider);
+  }
   const dur = parseFloat(execFileSync('ffprobe',
     ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp3]).toString());
   audio.push({ mp3, dur });
-  if (i === 0) console.log('ses sağlayıcısı:', provider);
 }
 
 // 2) hold-aware clock walk: videoT advances uniformly; lessonT freezes at a
@@ -62,9 +74,18 @@ while (true){
   if (active !== sceneIdx){ sceneIdx = active; audioStartT = videoT; holdStarted = -1; }
   const aEnd = audioStartT + audio[sceneIdx].dur + 0.15;
   const speaking = videoT >= audioStartT && videoT < aEnd - 0.15;
-  const kIdx = speaking
-    ? Math.floor((videoT - audioStartT) / Math.max(0.001, audio[sceneIdx].dur) * scenes[sceneIdx].caption.split(/\s+/).filter(Boolean).length)
-    : -1;
+  // v13: karaoke advances inside the REAL speech window (s0..s1 from the
+  // generation-time timestamps) — silence no longer moves the highlight
+  const m = audioMeta && audioMeta[sceneIdx];
+  const nWords = scenes[sceneIdx].caption.split(/\s+/).filter(Boolean).length;
+  let kIdx = -1;
+  if (speaking){
+    const rel = videoT - audioStartT;
+    const p = (m && m.s0 != null && m.s1 > m.s0)
+      ? (rel - m.s0) / (m.s1 - m.s0)
+      : rel / Math.max(0.001, audio[sceneIdx].dur);
+    kIdx = p < 0 ? -1 : Math.min(nWords - 1, Math.floor(p * nWords));
+  }
   frames.push({ lessonT, kIdx, speaking });
 
   // advance
@@ -124,7 +145,7 @@ execFileSync('ffmpeg', [
   ...inputs,
   '-filter_complex', filter,
   '-map', '0:v', '-map', '[mix]',
-  '-vf', 'scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2:color=0x0c0f14,format=yuv420p',
+  '-vf', `scale=${OUT_W}:${OUT_H}:force_original_aspect_ratio=decrease,pad=${OUT_W}:${OUT_H}:(ow-iw)/2:(oh-ih)/2:color=0x0c0f14,format=yuv420p`,
   '-c:v', 'libx264', '-preset', 'medium', '-crf', '20',
   '-c:a', 'aac', '-b:a', '96k',
   outPath

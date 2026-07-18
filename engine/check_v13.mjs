@@ -126,7 +126,32 @@ const VP_WIDTHS = [320, 375, 414, 768, 1024, 1440, 1920];
   const glyphs = await page.$$eval('.glyph', els => els.length);
   assert(glyphs > 80, `glif sayısı > 80 (${glyphs})`);
   const DUR = parseFloat(await page.$eval('#seek', el => el.max));
-  assert(DUR >= 20 && DUR <= 75, `süre bant içinde (${DUR}s)`);
+  // v13: narration-driven lessons carry REAL speech length, so their cap is
+  // wider (DUR_MAX_NARR=150) — compressing honest speech back under 75s would
+  // recreate the audio-overflow defect this release eliminates
+  const narrDriven = await page.evaluate(() => window.__narrDriven === true);
+  assert(DUR >= 20 && DUR <= (narrDriven ? 150 : 75), `süre bant içinde (${DUR}s, anlatım-güdümlü=${narrDriven})`);
+
+  /* ---------- v13 narration-aware schedule (only when audio is embedded) ---------- */
+  const narrInfo = await page.evaluate(() => ({ bounds: window.__sceneBounds, meta: window.__audioMeta }));
+  if (narrInfo.meta){
+    // every scene window holds its own measured narration => zero boundary
+    // freezes and zero audio spill BY SCHEDULE, not by runtime hold-caps
+    const fits = narrInfo.bounds.every((s, i) => {
+      if (!s.narrDur) return true;
+      const win = (narrInfo.bounds[i + 1] ? narrInfo.bounds[i + 1].tStart : DUR) - s.tStart;
+      return win + 0.05 >= s.narrDur + 0.3;
+    });
+    assert(fits, 'anlatım her sahne penceresine sığıyor (bekleme=0, taşma=0 garantisi)');
+    const metaSane = narrInfo.meta.every(m => m.dur > 0 && (m.s0 === null || (m.s0 >= 0 && m.s0 < m.s1 && m.s1 <= m.dur + 0.05)));
+    assert(metaSane, 'ses meta verisi tutarlı (dur/s0/s1)');
+    const winCount = narrInfo.meta.filter(m => m.s0 !== null).length;
+    assert(winCount > 0, `konuşma penceresi ölçülmüş sahne sayısı > 0 (${winCount}/${narrInfo.meta.length})`);
+    const roled = narrInfo.bounds.filter(s => s.role).length;
+    assert(roled === narrInfo.bounds.length, `tüm sahnelerde retorik rol çözülü (${roled}/${narrInfo.bounds.length})`);
+  } else {
+    console.log('  (gömülü ses yok — anlatım-plan assert’leri bu derste atlandı)');
+  }
 
   const panelUsed = await page.evaluate(() => window.__panelUsed);
   assert(panelUsed === expectPanel, `panel kullanımı beklendiği gibi (${panelUsed})`);
