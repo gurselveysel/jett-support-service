@@ -54,7 +54,7 @@
     {
       "id": "verilen",
       "caption": "Verilen: f ≤ g için 4, f > g için 5 farklı tam sayı. İstenen: a + b.",
-      "elevenText": "[warmly] f küçük eşit g'de dört, f büyük g'de beş tam sayı var... istenen, a artı b.",
+      "elevenText": "[warmly] Bakalım... f küçük eşit g'de dört, f büyük g'de beş tam sayı var... istenen, a artı b.",
       "stability": 0.42, "style": 0.1, "speed": 1.0,
       "items": [
         {

@@ -56,7 +56,7 @@
       "id": "verilen",
       "caption": "İstenen: |AC|. Verilen: m(B) = 60°, m(DAC) = 10°, m(C) = 10°, |BD| = 2.",
       "elevenText": "[warmly] B altmış, DAC on, C on derece... BD iki birim. İstenen AC.",
-      "stability": 0.42, "style": 0.1, "speed": 1.0,
+      "stability": 0.4, "style": 0.08, "speed": 0.98,
       "items": [
         {
           "space": "photo",
@@ -202,7 +202,7 @@
       "id": "final",
       "caption": "Sonuç: |AC| = 2√3 birim.",
       "elevenText": "[warmly] Sonuç olarak AC uzunluğu... iki kök üç birim.",
-      "stability": 0.4, "style": 0.15, "speed": 0.92,
+      "stability": 0.42, "style": 0.12, "speed": 0.9,
       "items": [
         {
           "space": "photo",
