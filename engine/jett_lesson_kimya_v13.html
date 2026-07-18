@@ -358,6 +358,21 @@
   };
 
   /* ================================================================
+     PEN PERSONAS (v13) — general, contract-selectable pen characters.
+     These are NOT per-question values: a persona is a reusable physical
+     profile (nib width, ink pooling, pressure floor, hand wobble) that
+     any lesson may pick via meta.character.style. Default reproduces
+     the v12 look exactly. Unknown style => visible ContractGate error.
+  ================================================================ */
+  const PEN_PERSONAS = {
+    varsayilan: { width: 1.0,  pool: 0.18, floor: 0.55, wobble: 1.0  },
+    dolma:      { width: 1.0,  pool: 0.24, floor: 0.48, wobble: 1.15 }, // fountain: juicy pooling, deep taper
+    tukenmez:   { width: 0.85, pool: 0.10, floor: 0.70, wobble: 0.85 }, // ballpoint: thin, even, steady
+    keceli:     { width: 1.35, pool: 0.06, floor: 0.80, wobble: 0.75 }  // marker: broad, flat, confident
+  };
+  let PEN = PEN_PERSONAS.varsayilan;
+
+  /* ================================================================
      UTILS
   ================================================================ */
   function clamp01(x){ return Math.max(0, Math.min(1, x)); }
@@ -413,6 +428,9 @@
     need(c.meta && c.meta.title, "meta.title eksik");
     need(c.meta && c.meta.subject, "meta.subject eksik");
     need(c.meta && c.meta.topic, "meta.topic eksik");
+    // no silent guessing: an unrecognized pen persona is a visible error, not a fallback
+    need(!(c.meta && c.meta.character && c.meta.character.style) || PEN_PERSONAS[c.meta.character.style],
+      "meta.character.style bilinmiyor (geçerli: " + Object.keys(PEN_PERSONAS).join(", ") + ")");
     need(c.academic_contract && c.academic_contract.given, "academic_contract.given eksik");
     need(c.academic_contract && c.academic_contract.asked, "academic_contract.asked eksik");
     need(c.canonical_solution && Array.isArray(c.canonical_solution.steps) && c.canonical_solution.steps.length > 0, "canonical_solution.steps eksik/boş");
@@ -524,7 +542,7 @@
       if (tok.kind === "delta"){
         const d = deltaPath(cursor, y, fontSize);
         const adv = DELTA_ADVANCE * (fontSize / UPM);
-        glyphs.push({ d, isSpace: false, isPunct: false, advancePx: adv });
+        glyphs.push({ d, isSpace: false, isPunct: false, advancePx: adv, ox: cursor });
         cursor += adv;
         prevGlyph = null; prevFont = null;
         continue;
@@ -532,7 +550,7 @@
       if (tok.kind === "sym"){
         const d = SYM_PATHS[tok.sym](cursor, y, fontSize);
         const adv = SYM_ADVANCE[tok.sym] * (fontSize / UPM);
-        glyphs.push({ d, isSpace: false, isPunct: false, advancePx: adv });
+        glyphs.push({ d, isSpace: false, isPunct: false, advancePx: adv, ox: cursor });
         cursor += adv;
         prevGlyph = null; prevFont = null;
         continue;
@@ -543,7 +561,7 @@
         const yOff = tok.kind === "super" ? -fontSize * 0.34 : fontSize * 0.10;
         const path = g.getPath(cursor, y + yOff, subFs);
         const adv = g.advanceWidth * (subFs / UPM) * 1.05;
-        glyphs.push({ d: roundPathData(path.toPathData(2)), isSpace: false, isPunct: false, advancePx: adv });
+        glyphs.push({ d: roundPathData(path.toPathData(2)), isSpace: false, isPunct: false, advancePx: adv, ox: cursor });
         cursor += adv;
         prevGlyph = null; prevFont = null;
         continue;
@@ -558,7 +576,7 @@
       const path = g.getPath(cursor, y, fontSize);
       const adv = g.advanceWidth * (fontSize / UPM);
       glyphs.push({ d: roundPathData(path.toPathData(2)), isSpace: false, isPunct: /[.,;:()]/.test(tok.ch),
-                    isPause: /[.,;:]/.test(tok.ch), advancePx: adv });
+                    isPause: /[.,;:]/.test(tok.ch), advancePx: adv, ox: cursor });
       prevGlyph = g; prevFont = tok.font;
       cursor += adv;
     }
@@ -634,13 +652,28 @@
       return { ...g, start: t0, end: strokeEnd, fillStart: strokeEnd, fillEnd: t1 };
     });
   }
+  // v13 humanization: on top of the v12 per-line rotation, each WORD gets a
+  // tiny slant of its own (rotated around the word's first glyph — a real hand
+  // re-angles at every word start) and each glyph sits a hair off the baseline.
+  // All deterministic (seeded rnd) => seek-safe; amplitudes scale with the pen
+  // persona's wobble and stay far below legibility thresholds.
+  window.__handJitterSample = { maxDy: 0, maxRot: 0 }; // test hook: observed jitter bounds
   function glyphGroupMarkup(id, x, y, fontSize, glyphsTimed, rnd, color){
     const ink = color || "var(--pen)";
     const rot = ((rnd() - 0.5) * 2.2).toFixed(2);
-    const baseW = Math.max(1.6, fontSize * 0.075);
+    const baseW = Math.max(1.6, fontSize * 0.075) * PEN.width;
     const g = svgEl("g", { id, class: "hw-line", transform: `rotate(${rot} ${x} ${y})` });
+    let wordRot = 0, wordAnchor = null;
     for (const gl of glyphsTimed){
-      if (gl.isSpace || !gl.d) continue;
+      if (gl.isSpace){ wordAnchor = null; continue; }
+      if (!gl.d) continue;
+      if (wordAnchor === null){
+        wordAnchor = (gl.ox !== undefined ? gl.ox : x);
+        wordRot = (rnd() - 0.5) * 1.6 * PEN.wobble; // ±0.8° per word
+        if (Math.abs(wordRot) > window.__handJitterSample.maxRot) window.__handJitterSample.maxRot = Math.abs(wordRot);
+      }
+      const dy = (rnd() - 0.5) * 1.2 * PEN.wobble;   // ±0.6 SVG-units baseline wander
+      if (Math.abs(dy) > window.__handJitterSample.maxDy) window.__handJitterSample.maxDy = Math.abs(dy);
       const w = (baseW * (0.85 + rnd() * 0.3)).toFixed(2);
       const p = svgEl("path", {
         class: "ann-draw glyph",
@@ -648,7 +681,8 @@
         "data-fill-start": gl.fillStart.toFixed(3), "data-fill-end": gl.fillEnd.toFixed(3),
         d: gl.d, fill: ink, "fill-opacity": "0",
         stroke: ink, "stroke-width": w,
-        "stroke-linecap": "round", "stroke-linejoin": "round", opacity: "0"
+        "stroke-linecap": "round", "stroke-linejoin": "round", opacity: "0",
+        transform: `rotate(${wordRot.toFixed(2)} ${wordAnchor.toFixed(1)} ${y.toFixed(1)}) translate(0 ${dy.toFixed(2)})`
       });
       g.appendChild(p);
     }
@@ -944,7 +978,7 @@
   // scribble layer on top.
   function sketchifyShape(el, rnd){
     const tag = el.tagName.toLowerCase();
-    const wob = 1.6;
+    const wob = 1.6 * PEN.wobble; // shape wobble follows the pen persona too
     if (tag === "rect"){
       const x = parseFloat(el.getAttribute("x")), y = parseFloat(el.getAttribute("y"));
       const w = parseFloat(el.getAttribute("width")), h = parseFloat(el.getAttribute("height"));
@@ -1183,7 +1217,8 @@
     });
     window.__inkMapsBuilt = inkMapsBuilt; // test hook
   }
-  function pressureTaper(p){ return 0.55 + 0.45 * Math.sin(Math.PI * p); }
+  // pressure floor comes from the pen persona (fountain bites deeper than a marker)
+  function pressureTaper(p){ return PEN.floor + (1 - PEN.floor) * Math.sin(Math.PI * p); }
 
   // instantaneous ink speed (arc-length per unit eased-time) via central
   // difference on the curvature remap — mean slope is 1 by construction.
@@ -1344,7 +1379,7 @@
           // sin(π·raw) envelope guarantees pool(1)=1 — finished letters all
           // rest at the same uniform width.
           const vNorm = clamp01(inkSpeedAt(el, raw) / 2);
-          const pool = 1 + CFG.POOL_GAIN * (1 - vNorm) * Math.sin(Math.PI * raw);
+          const pool = 1 + PEN.pool * (1 - vNorm) * Math.sin(Math.PI * raw);
           if (pool < window.__poolSample.min) window.__poolSample.min = pool;
           if (pool > window.__poolSample.max) window.__poolSample.max = pool;
           el.style.strokeWidth = (m.baseW * pressureTaper(raw) * pool).toFixed(2);
@@ -1911,6 +1946,8 @@
       // 1) contract gate
       const cErrs = validateContract(CONTRACT);
       if (cErrs.length){ showError(["Sözleşme doğrulanamadı:"].concat(cErrs.slice(0, 6))); return; }
+      PEN = PEN_PERSONAS[(CONTRACT.meta.character && CONTRACT.meta.character.style) || "varsayilan"];
+      window.__penPersona = { name: (CONTRACT.meta.character && CONTRACT.meta.character.style) || "varsayilan", ...PEN }; // test hook
 
       // 2) fonts
       if (typeof opentype === "undefined"){ showError("Gömülü opentype.js yüklenemedi."); return; }
@@ -1919,6 +1956,15 @@
         extFont = opentype.parse(b64ToBuf(FONT_EXT_B64));
         UPM = latinFont.unitsPerEm;
       } catch(e){ showError("Gömülü el yazısı fontu çözümlenemedi: " + e.message); return; }
+      // test hook: which chars of a probe string the embedded fonts CANNOT draw.
+      // Restores uncoveredChars afterwards so a probe can never poison SelfCheck.
+      window.__probeCoverage = (s) => {
+        const before = new Set(uncoveredChars);
+        tokenize(s);
+        const missing = Array.from(uncoveredChars).filter(ch => !before.has(ch));
+        missing.forEach(ch => uncoveredChars.delete(ch));
+        return missing;
+      };
 
       // 3) image → dimensions
       const img = new Image();

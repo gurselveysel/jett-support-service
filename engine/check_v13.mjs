@@ -159,6 +159,19 @@ const VP_WIDTHS = [320, 375, 414, 768, 1024, 1440, 1920];
   const inkMapsBuilt = await page.evaluate(() => window.__inkMapsBuilt || 0);
   assert(inkMapsBuilt > 0, `InkPhysics: eğrilik haritası üretildi (${inkMapsBuilt})`);
 
+  /* ---------- v13 handwriting: coverage, humanization bounds, persona ---------- */
+  // full Turkish alphabet + engine math symbols must be drawable — otherwise a
+  // future contract hits an invisible gap SelfCheck would only catch per-lesson
+  const uncovered = await page.evaluate(() =>
+    window.__probeCoverage("abcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ0123456789≤≥→⇒√Δδ₀₁₂₃₄₅₆₇₈₉⁺⁻(),.;:'?!+-=|/x"));
+  assert(uncovered.length === 0, `tam alfabe+sembol kapsaması (eksik: ${uncovered.join(" ") || "yok"})`);
+  // hand jitter engaged but bounded (word slant ≤ ±0.8°·wobble, baseline ≤ ±0.6u·wobble)
+  const jit = await page.evaluate(() => window.__handJitterSample);
+  const pen = await page.evaluate(() => window.__penPersona);
+  assert(jit.maxDy > 0 && jit.maxDy <= 0.6 * pen.wobble + 0.01, `taban çizgisi sapması devrede ve sınırlı (${jit.maxDy.toFixed(2)})`);
+  assert(jit.maxRot > 0 && jit.maxRot <= 0.8 * pen.wobble + 0.01, `kelime eğimi devrede ve sınırlı (${jit.maxRot.toFixed(2)}°)`);
+  assert(pen && pen.name && pen.width > 0, `kalem kişiliği çözüldü (${pen && pen.name})`);
+
   /* ---------- camera ---------- */
   const camInfo = await page.evaluate((DUR) => {
     const totalH = parseFloat(document.getElementById('masterSvg').getAttribute('viewBox').split(' ')[3]);
@@ -227,13 +240,15 @@ const VP_WIDTHS = [320, 375, 414, 768, 1024, 1440, 1920];
   const rest2 = await page.evaluate(() => Array.from(document.querySelectorAll('.glyph')).slice(0, 20)
     .map(el => el.style.strokeWidth));
   assert(rest1.every((r, i) => r.w === rest2[i]), 'dinlenme kalınlığı seek gidiş-dönüşte birebir aynı');
-  assert(rest1.every(r => Math.abs(parseFloat(r.w) - 0.55 * r.base) < 0.02), 'dinlenme kalınlığı = 0.55×taban (pool(1)=1 kanıtı)');
+  // v13: the pressure floor is the pen persona's (default persona keeps v12's 0.55)
+  assert(rest1.every(r => Math.abs(parseFloat(r.w) - pen.floor * r.base) < 0.02), `dinlenme kalınlığı = ${pen.floor}×taban (pool(1)=1 kanıtı)`);
 
   // pooling engaged during drawing, bounded
   await page.evaluate(() => { window.__poolSample.min = 1; window.__poolSample.max = 1; });
   for (let t = 2; t < Math.min(DUR, 26); t += 0.4) await seekTo(page, t);
   const pool = await page.evaluate(() => window.__poolSample);
-  assert(pool.max > 1.0 && pool.max <= 1.19, `mürekkep yoğunlaşması devrede ve sınırlı (max ${pool.max.toFixed(3)})`);
+  // v13: pooling amplitude is the persona's (default persona keeps v12's 0.18)
+  assert(pool.max > 1.0 && pool.max <= 1 + pen.pool + 0.01, `mürekkep yoğunlaşması devrede ve sınırlı (max ${pool.max.toFixed(3)})`);
 
   // style-write cache: re-render at the same t writes nothing
   await seekTo(page, 10);
