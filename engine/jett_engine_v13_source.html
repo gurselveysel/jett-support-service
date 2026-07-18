@@ -4,99 +4,209 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jett Öğretmen Çözümü</title>
+<script>
+/* pre-paint theme apply — avoids a flash of the wrong theme before the engine boots */
+(function(){ try { var t = localStorage.getItem("jett-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch(e){} })();
+</script>
 <style>
+  /* ================================================================
+     v13 DESIGN SYSTEM — token layer.
+     Stage content colors (paper/ink/pen) are intentionally theme-FREE:
+     the lesson page is paper in both themes; only the chrome themes.
+  ================================================================ */
+  @font-face{font-family:'Inter';src:url(data:font/woff2;base64,__UI_FONT_400_B64__) format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Inter';src:url(data:font/woff2;base64,__UI_FONT_600_B64__) format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+
   :root{
+    /* ---- ink & paper (theme-independent stage) ---- */
     --ink:#1f2937;
     --pen:#2F6BFF;            /* overwritten at boot from contract character profile */
-    --pen-soft: rgba(47,107,255,.10);
+    --pen-soft:color-mix(in srgb, var(--pen) 10%, transparent); /* derived — safe for ANY color format */
     --paper:#fffdf8;
     --line:#e3ddca;
-    --warn:#c0392b;
-    --ok:#1f9d55;
-    --warn-soft:#f0b429;
-    --ok-soft:#35d187;
-    --stage-max:clamp(320px, 62vw, 1040px);
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;height:100%;background:#11151c;font-family:Arial,Helvetica,sans-serif;color:var(--ink);}
-  #app{display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px 10px 22px;min-height:100%;}
-  h1{color:#e7ecf7;font-size:15px;font-weight:600;margin:2px 0 0;text-align:center;}
-  .subtitle{color:#93a3c2;font-size:12px;margin:-6px 0 4px;text-align:center;}
+    --warn:#c0392b; --ok:#1f9d55; --warn-soft:#f0b429; --ok-soft:#35d187;
 
-  .stage-wrap{width:100%;max-width:var(--stage-max);background:#0c0f14;border-radius:14px;padding:12px;box-shadow:0 10px 30px rgba(0,0,0,.35);}
-  .stage-frame{position:relative;width:100%;background:radial-gradient(120% 140% at 50% 50%, #171d29 0%, #0c0f14 60%, #07090d 100%);border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+    /* ---- type / space / radius / shadow / motion tokens ---- */
+    --font-ui:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    --fs-xs:11px; --fs-sm:12.5px; --fs-md:13.5px; --fs-lg:15px; --fs-xl:17px;
+    --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:22px;
+    --r-sm:9px; --r-md:13px; --r-lg:18px; --r-full:999px;
+    --ease:cubic-bezier(.2,.7,.3,1);
+    --dur-1:120ms; --dur-2:220ms;
+    --stage-max:clamp(320px, 94vw, 1080px);
+
+    /* ---- theme: dark (default) ---- */
+    --bg:#0e1218;
+    --bg-card:#161b25;
+    --bg-inset:#0a0d13;
+    --bg-btn:#252c3b;
+    --bg-btn-hover:#313a51;
+    --text:#e8edf7;
+    --text-dim:#97a3bd;
+    --text-faint:#5f6b86;
+    --border:#242b3a;
+    --focus-ring:#7fa8ff;
+    --shadow-1:0 1px 3px rgba(0,0,0,.35);
+    --shadow-2:0 14px 40px rgba(0,0,0,.45);
+    color-scheme:dark;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#eef1f6; --bg-card:#ffffff; --bg-inset:#e2e7f0;
+      --bg-btn:#e9edf4; --bg-btn-hover:#dde3ee;
+      --text:#1b2334; --text-dim:#58627a; --text-faint:#8b94a8;
+      --border:#d9dfe9; --focus-ring:#2f6bff;
+      --shadow-1:0 1px 3px rgba(23,32,51,.10);
+      --shadow-2:0 14px 40px rgba(23,32,51,.14);
+      color-scheme:light;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#eef1f6; --bg-card:#ffffff; --bg-inset:#e2e7f0;
+    --bg-btn:#e9edf4; --bg-btn-hover:#dde3ee;
+    --text:#1b2334; --text-dim:#58627a; --text-faint:#8b94a8;
+    --border:#d9dfe9; --focus-ring:#2f6bff;
+    --shadow-1:0 1px 3px rgba(23,32,51,.10);
+    --shadow-2:0 14px 40px rgba(23,32,51,.14);
+    color-scheme:light;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);font-family:var(--font-ui);color:var(--text);
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  #app{display:flex;flex-direction:column;align-items:center;gap:var(--sp-3);min-height:100%;
+    padding:var(--sp-3) max(var(--sp-3), env(safe-area-inset-right)) var(--sp-5) max(var(--sp-3), env(safe-area-inset-left));}
+
+  /* ---- page head ---- */
+  .page-head{width:100%;max-width:var(--stage-max);display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-1) var(--sp-1) 0;}
+  .brand{font-size:var(--fs-lg);font-weight:600;letter-spacing:.02em;color:var(--pen);
+    background:var(--pen-soft);border-radius:var(--r-sm);padding:4px 10px;}
+  .titles{flex:1;min-width:0;}
+  h1{color:var(--text);font-size:var(--fs-lg);font-weight:600;margin:0;line-height:1.25;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .subtitle{color:var(--text-dim);font-size:var(--fs-sm);margin:1px 0 0;}
+
+  /* ---- stage ---- */
+  .stage-wrap{width:100%;max-width:var(--stage-max);background:var(--bg-card);border:1px solid var(--border);
+    border-radius:var(--r-lg);padding:var(--sp-3);box-shadow:var(--shadow-2);}
+  .stage-wrap:fullscreen{border-radius:0;border:none;display:flex;align-items:center;justify-content:center;background:var(--bg);}
+  .stage-wrap:fullscreen .stage-frame{max-height:100vh;width:auto;max-width:100vw;height:100%;}
+  .stage-frame{position:relative;width:100%;background:var(--bg-inset);border-radius:var(--r-md);overflow:hidden;
+    display:flex;align-items:center;justify-content:center;margin:0 auto;}
+  /* auto mode: the frame takes the CONTENT's aspect (set at boot) — no pillarboxing */
+  .stage-frame.mode-auto{aspect-ratio:var(--content-ar, 16/9);max-height:min(76vh, 900px);width:auto;max-width:100%;}
   .stage-frame.mode-169{aspect-ratio:16/9;}
-  .stage-frame.mode-916{aspect-ratio:9/16;max-width:clamp(280px, 46vw, 480px);margin:0 auto;}
+  .stage-frame.mode-916{aspect-ratio:9/16;max-width:clamp(280px, 46vw, 480px);}
   #masterSvg{width:100%;height:100%;display:block;}
 
-  .caption-bar{position:absolute;left:0;right:0;bottom:0;background:rgba(15,18,26,.72);color:#fff;font-size:13px;line-height:1.4;padding:8px 12px;min-height:18px;display:flex;align-items:center;backdrop-filter:blur(2px);}
+  /* boot shade: engine derives everything at load; never show a dead white frame */
+  #bootShade{position:absolute;inset:0;z-index:15;display:flex;flex-direction:column;gap:var(--sp-3);
+    align-items:center;justify-content:center;background:var(--bg-inset);color:var(--text-dim);
+    font-size:var(--fs-sm);transition:opacity var(--dur-2) var(--ease);}
+  #bootShade.hide{opacity:0;pointer-events:none;}
+  .spinner{width:26px;height:26px;border-radius:50%;border:3px solid var(--border);border-top-color:var(--pen);
+    animation:spin .9s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  .caption-bar{position:absolute;left:0;right:0;bottom:0;background:rgba(13,16,24,.78);color:#fff;
+    font-size:var(--fs-md);line-height:1.45;padding:9px 14px;min-height:18px;display:flex;align-items:center;backdrop-filter:blur(3px);}
   #captionText{display:inline;}
   .caption-bar.force-hidden{display:none;}
   .caption-bar span.speaking{color:#ffd76a;}
   .caption-bar span.spoken{color:#bdd0f2;}
-  #speakIndicator{position:absolute;right:10px;bottom:42px;font-size:15px;display:none;z-index:5;
+  #speakIndicator{position:absolute;right:10px;bottom:44px;font-size:15px;display:none;z-index:5;
     animation:speakPulse 1.1s ease-in-out infinite;filter:drop-shadow(0 1px 2px rgba(0,0,0,.6));}
   #speakIndicator.show{display:block;}
   @keyframes speakPulse{0%,100%{opacity:.35;}50%{opacity:1;}}
 
-  #errorOverlay{position:absolute;inset:0;background:#fff;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;z-index:20;}
+  #errorOverlay{position:absolute;inset:0;background:var(--bg-card);display:none;align-items:center;justify-content:center;text-align:center;padding:24px;z-index:20;}
   #errorOverlay.show{display:flex;}
-  #errorOverlay .box{max-width:380px;}
-  #errorOverlay h2{color:var(--warn);font-size:16px;margin:0 0 8px;}
-  #errorOverlay p{font-size:13px;color:#555;margin:0;white-space:pre-line;}
+  #errorOverlay .box{max-width:400px;}
+  #errorOverlay h2{color:var(--warn);font-size:var(--fs-xl);margin:0 0 8px;}
+  #errorOverlay p{font-size:var(--fs-md);color:var(--text-dim);margin:0;white-space:pre-line;}
 
-  .controls{width:100%;max-width:var(--stage-max);background:#171b24;border-radius:12px;padding:10px 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:#e7ecf7;}
-  .btn{border:none;border-radius:8px;background:#2a3040;color:#e7ecf7;font-size:13px;font-weight:600;padding:12px 14px;min-height:44px;white-space:nowrap;cursor:pointer;display:inline-flex;align-items:center;gap:7px;}
-  .btn:hover{background:#343c50;}
-  .btn.primary{background:var(--pen);color:#fff;}
-  .btn.primary:hover{filter:brightness(.92);}
-  .btn:disabled{opacity:.4;cursor:not-allowed;}
-  .btn.active{outline:2px solid var(--pen);}
-  .btn:focus-visible, #seek:focus-visible, input[type="checkbox"]:focus-visible{outline:2px solid #7fa8ff;outline-offset:2px;}
+  /* ---- controls toolbar ---- */
+  .controls{width:100%;max-width:var(--stage-max);background:var(--bg-card);border:1px solid var(--border);
+    border-radius:var(--r-md);padding:var(--sp-2) var(--sp-3);display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center;color:var(--text);}
+  .btn{border:none;border-radius:var(--r-sm);background:var(--bg-btn);color:var(--text);font-family:var(--font-ui);
+    font-size:var(--fs-md);font-weight:600;padding:11px 13px;min-height:44px;white-space:nowrap;cursor:pointer;
+    display:inline-flex;align-items:center;gap:7px;
+    transition:background var(--dur-1) var(--ease), transform var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);}
+  .btn:hover{background:var(--bg-btn-hover);}
+  .btn:active{transform:scale(.965);}
+  .btn.primary{background:var(--pen);color:var(--pen-contrast, #fff);}
+  .btn.primary:hover{filter:brightness(.94);}
+  .btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+  .btn.active{outline:2px solid var(--pen);outline-offset:-1px;}
+  .btn:focus-visible, #seek:focus-visible, input[type="checkbox"]:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;}
   .btn .icon{width:16px;height:16px;fill:currentColor;flex-shrink:0;}
+  /* state toggles: fixed two-part structure so label width NEVER shifts */
+  .btn.toggle .t-label{color:inherit;}
+  .btn.toggle .t-state{font-weight:400;font-size:var(--fs-sm);color:var(--text-dim);
+    background:var(--bg-inset);border-radius:var(--r-full);padding:2px 9px;min-width:62px;text-align:center;}
+  .btn.toggle.active .t-state{color:var(--pen-contrast,#fff);background:var(--pen);}
+
   .seek-wrap{flex:1 1 220px;display:flex;align-items:center;gap:8px;min-width:160px;}
   .seek-track-wrap{position:relative;flex:1;height:32px;display:flex;align-items:center;}
   .seek-base,.seek-fill{position:absolute;left:0;top:50%;height:6px;transform:translateY(-50%);border-radius:3px;pointer-events:none;}
-  .seek-base{width:100%;background:rgba(255,255,255,.18);z-index:0;}
+  .seek-base{width:100%;background:var(--bg-inset);z-index:0;}
   .seek-fill{width:0%;background:var(--pen);z-index:1;}
   .seek-ticks{position:absolute;left:0;right:0;top:50%;height:10px;transform:translateY(-50%);z-index:2;pointer-events:none;}
-  .seek-ticks .tick{position:absolute;top:0;width:2px;height:10px;margin-left:-1px;background:rgba(255,255,255,.55);border-radius:1px;}
+  .seek-ticks .tick{position:absolute;top:0;width:2px;height:10px;margin-left:-1px;background:var(--text-faint);border-radius:1px;}
   #seek{position:relative;z-index:3;flex:1;height:32px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;}
   #seek::-webkit-slider-runnable-track{background:transparent;height:6px;}
   #seek::-moz-range-track{background:transparent;height:6px;border:none;}
-  #seek::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;margin-top:-7px;border-radius:50%;background:#fff;border:3px solid var(--pen);box-shadow:0 1px 3px rgba(0,0,0,.4);cursor:pointer;}
-  #seek::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--pen);box-shadow:0 1px 3px rgba(0,0,0,.4);cursor:pointer;}
-  .time-label{font-size:12px;color:#9aa7c2;min-width:76px;text-align:right;font-variant-numeric:tabular-nums;}
+  #seek::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;margin-top:-7px;border-radius:50%;background:#fff;border:3px solid var(--pen);box-shadow:var(--shadow-1);cursor:pointer;transition:transform var(--dur-1) var(--ease);}
+  #seek:active::-webkit-slider-thumb{transform:scale(1.18);}
+  #seek::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--pen);box-shadow:var(--shadow-1);cursor:pointer;}
+  .time-label{font-size:var(--fs-sm);color:var(--text-dim);min-width:86px;text-align:right;font-variant-numeric:tabular-nums;}
   .mode-toggle{display:flex;flex-wrap:wrap;gap:6px;}
 
-  .mini-controls{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;gap:12px;
-    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
-    background:rgba(17,21,28,.92);backdrop-filter:blur(6px);
-    transform:translateY(100%);transition:transform .2s ease;box-shadow:0 -4px 16px rgba(0,0,0,.35);}
+  .mini-controls{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;gap:var(--sp-3);
+    padding:10px max(14px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+    background:color-mix(in srgb, var(--bg-card) 92%, transparent);backdrop-filter:blur(8px);border-top:1px solid var(--border);
+    transform:translateY(100%);transition:transform var(--dur-2) var(--ease);box-shadow:var(--shadow-2);}
   .mini-controls.show{transform:translateY(0);}
   .mini-controls .btn{padding:10px;min-height:40px;min-width:40px;justify-content:center;}
-  .mini-progress{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.18);overflow:hidden;}
-  .mini-progress-fill{height:100%;background:var(--pen);width:0%;}
+  .mini-progress{flex:1;height:22px;border-radius:var(--r-full);background:transparent;overflow:visible;position:relative;cursor:pointer;touch-action:none;}
+  .mini-progress::before{content:"";position:absolute;left:0;right:0;top:50%;height:4px;transform:translateY(-50%);border-radius:2px;background:var(--bg-inset);}
+  .mini-progress-fill{position:absolute;left:0;top:50%;height:4px;transform:translateY(-50%);border-radius:2px;background:var(--pen);width:0%;}
 
-  .teacher-gate{width:100%;max-width:var(--stage-max);background:#171b24;border:1px solid #262c3a;border-radius:12px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;}
-  .teacher-gate .left{display:flex;align-items:center;gap:10px;font-size:13px;color:#c7d0e6;flex-wrap:wrap;row-gap:8px;}
+  .teacher-gate{width:100%;max-width:var(--stage-max);background:var(--bg-card);border:1px solid var(--border);
+    border-radius:var(--r-md);padding:var(--sp-3) var(--sp-3);display:flex;flex-wrap:wrap;gap:var(--sp-3);align-items:center;justify-content:space-between;}
+  .teacher-gate .left{display:flex;align-items:center;gap:10px;font-size:var(--fs-md);color:var(--text-dim);flex-wrap:wrap;row-gap:8px;}
   .check-hit{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-14px -14px -14px 0;cursor:pointer;}
   .teacher-gate input[type="checkbox"]{width:22px;height:22px;accent-color:var(--pen);}
-  .teacher-gate .status{font-size:12px;font-weight:700;}
+  .teacher-gate .status{font-size:var(--fs-sm);font-weight:600;}
   .teacher-gate .status.pending{color:var(--warn-soft);}
-  .teacher-gate .status.ready{color:var(--ok-soft);}
-  .send-result{font-size:12px;color:var(--ok-soft);font-weight:700;display:none;align-items:center;gap:4px;}
+  .teacher-gate .status.ready{color:var(--ok);}
+  :root:not([data-theme="light"]) .teacher-gate .status.ready{color:var(--ok-soft);}
+  .send-result{font-size:var(--fs-sm);color:var(--ok);font-weight:600;display:none;align-items:center;gap:4px;}
+  :root:not([data-theme="light"]) .send-result{color:var(--ok-soft);}
 
-  footer{color:#5b6580;font-size:11px;margin-top:2px;text-align:center;}
+  footer{color:var(--text-faint);font-size:var(--fs-xs);margin-top:2px;text-align:center;}
+
+  /* reduced motion: kill decorative movement; functionality is untouched */
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;}
+  }
 </style>
 </head>
 <body>
 <div id="app">
-  <h1>Öğretmen Kontrollü Çözüm Animasyonu</h1>
-  <div class="subtitle" id="subtitle"></div>
+  <header class="page-head">
+    <div class="brand" aria-hidden="true">Jett</div>
+    <div class="titles">
+      <h1>Öğretmen Kontrollü Çözüm Animasyonu</h1>
+      <div class="subtitle" id="subtitle"></div>
+    </div>
+    <button class="btn" id="themeToggleBtn" aria-label="Temayı değiştir">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.5-.04-.9-.1-1.4A7 7 0 0 1 12.6 3.1c-.2-.06-.4-.1-.6-.1z"></path></svg>
+    </button>
+  </header>
 
-  <div class="stage-wrap">
-    <div class="stage-frame mode-169" id="stageFrame">
+  <div class="stage-wrap" id="stageWrap">
+    <div class="stage-frame mode-auto" id="stageFrame">
       <svg id="masterSvg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <clipPath id="clipDiagramGuard"><rect id="clipRect" x="0" y="0" width="1000" height="1000"/></clipPath>
@@ -115,6 +225,7 @@
 
       <div class="caption-bar" id="captionBar"><span id="captionText"></span></div>
       <div id="speakIndicator" aria-hidden="true">🔊</div>
+      <div id="bootShade"><div class="spinner" aria-hidden="true"></div><span>Ders hazırlanıyor…</span></div>
       <div id="errorOverlay">
         <div class="box">
           <h2>İç Kontrol: Ders Yayınlanamadı</h2>
@@ -144,15 +255,29 @@
       <span class="time-label" id="timeLabel">—</span>
     </div>
     <div class="mode-toggle" role="group" aria-label="Görüntü modu">
-      <button class="btn active" id="mode169Btn" aria-pressed="true">16:9</button>
+      <button class="btn active" id="modeAutoBtn" aria-pressed="true">Otomatik</button>
+      <button class="btn" id="mode169Btn" aria-pressed="false">16:9</button>
       <button class="btn" id="mode916Btn" aria-pressed="false">9:16</button>
-      <button class="btn" id="captionToggleBtn">Alt yazı: Açık</button>
-      <button class="btn active" id="narrationToggleBtn">Anlatım: Açık</button>
-      <button class="btn active" id="cameraToggleBtn">Kamera: Açık</button>
+    </div>
+    <div class="mode-toggle" role="group" aria-label="Oynatma seçenekleri">
+      <button class="btn toggle active" id="captionToggleBtn" aria-pressed="true" data-state="on">
+        <span class="t-label">Alt yazı</span><span class="t-state">Açık</span>
+      </button>
+      <button class="btn toggle active" id="narrationToggleBtn" aria-pressed="true" data-state="on">
+        <span class="t-label">Anlatım</span><span class="t-state">Açık</span>
+      </button>
+      <button class="btn toggle active" id="cameraToggleBtn" aria-pressed="true" data-state="on">
+        <span class="t-label">Kamera</span><span class="t-state">Açık</span>
+      </button>
+      <button class="btn" id="fullscreenBtn" aria-label="Tam ekran">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5v2H6v3H4zm11-5h5v5h-2V6h-3V4zM4 15h2v3h3v2H4v-5zm14 0h2v5h-5v-2h3v-3z"></path></svg>
+      </button>
     </div>
   </div>
 
-  <div class="mini-controls" id="miniControls" aria-hidden="true">
+  <!-- v12 had aria-hidden="true" here while keeping a focusable button inside — an
+       a11y contradiction. Visibility is conveyed by the .show class + transform. -->
+  <div class="mini-controls" id="miniControls">
     <button class="btn primary" id="miniPlayPauseBtn" aria-label="Oynat/Duraklat">
       <svg class="icon" id="miniIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z"></path></svg>
     </button>
@@ -166,7 +291,7 @@
       <label for="teacherApprove">Öğretmen olarak çözümü inceledim, onaylıyorum.</label>
     </div>
     <div class="left">
-      <span class="status pending" id="gateStatus">Onay bekleniyor — animasyon en az bir kez sonuna kadar izlenmeli.</span>
+      <span class="status pending" id="gateStatus" role="status" aria-live="polite">Onay bekleniyor — animasyon en az bir kez sonuna kadar izlenmeli.</span>
       <button class="btn primary" id="sendBtn" disabled>Öğrenciye Gönder</button>
       <span class="send-result" id="sendResult">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> Gönderildi
@@ -269,6 +394,7 @@
     document.getElementById("errorMsg").textContent =
       (Array.isArray(lines) ? lines : [lines]).join("\n") + "\n\nDers güvenli şekilde durduruldu — insan incelemesi gerekiyor.";
     document.getElementById("errorOverlay").classList.add("show");
+    document.getElementById("bootShade").classList.add("hide"); // the error IS the state — no spinner on top
     document.getElementById("playBtn").disabled = true;
     document.getElementById("seek").disabled = true;
   }
@@ -1256,8 +1382,9 @@
     }
 
     seekEl.value = t.toFixed(1);
-    const label = t.toFixed(1) + " / " + DURATION.toFixed(1) + " s";
+    const label = fmtTime(t) + " / " + fmtTime(DURATION);
     timeLabel.textContent = label;
+    timeLabel.title = t.toFixed(1) + " / " + DURATION.toFixed(1) + " s"; // precise readout on hover
     const pct = (t / DURATION * 100) + "%";
     document.getElementById("seekFill").style.width = pct;
     document.getElementById("miniProgressFill").style.width = pct;
@@ -1268,6 +1395,11 @@
      PLAYBACK + SHELL (v8, unchanged behavior)
   ================================================================ */
   let currentTime = 0, playing = false, rafId = null, lastFrameAt = null, hasCompletedOnce = false;
+
+  function fmtTime(s){
+    s = Math.max(0, Math.round(s));
+    return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  }
 
   /* ----------------------------------------------------------------
      Narration controller — scene-synced speechSynthesis readout with
@@ -1302,14 +1434,22 @@
   let holdStartWall = 0, holdCap = 0, notSpeakingSince = null;
   const narrHook = window.__narration = { holding: false, speaking: false, state: narrState }; // test hook
 
-  const NARR_LABELS = { on: "Anlatım: Açık", off: "Anlatım: Kapalı", "no-voice": "Anlatım: TR ses yok",
-                        unavailable: "Anlatım: Ses bulunamadı", unsupported: "Anlatım: Yok" };
+  // v13: state toggles keep a fixed two-part structure (label + state pill),
+  // so a state change never shifts the toolbar layout. State is also exposed
+  // machine-readably via data-state + aria-pressed.
+  function paintToggle(btn, stateText, isOn, stateKey){
+    btn.querySelector(".t-state").textContent = stateText;
+    btn.classList.toggle("active", isOn);
+    btn.setAttribute("aria-pressed", String(isOn));
+    btn.dataset.state = stateKey;
+  }
+  const NARR_STATE_TEXT = { on: "Açık", off: "Kapalı", "no-voice": "TR ses yok",
+                            unavailable: "Ses bulunamadı", unsupported: "Yok" };
   function setNarrState(s){
     narrState = s;
     narrHook.state = s;
     const btn = document.getElementById("narrationToggleBtn");
-    btn.textContent = NARR_LABELS[s];
-    btn.classList.toggle("active", s === "on");
+    paintToggle(btn, NARR_STATE_TEXT[s], s === "on", s);
     btn.disabled = s === "unsupported";
     if (s !== "on") releaseNarrHold();
   }
@@ -1580,29 +1720,25 @@
   document.getElementById("restartBtn").addEventListener("click", restart);
   seekEl.addEventListener("input", (e) => { pause(); currentTime = parseFloat(e.target.value); render(currentTime); });
 
+  // v13: default framing is "auto" — the frame takes the CONTENT's aspect
+  // (set as --content-ar at boot), so no viewport heuristic and no pillarboxing.
+  // 16:9 / 9:16 remain as explicit manual choices (render_video picks 16:9).
   const stageFrame = document.getElementById("stageFrame");
-  const mode169Btn = document.getElementById("mode169Btn");
-  const mode916Btn = document.getElementById("mode916Btn");
-  let userChoseMode = false;
+  const modeBtns = {
+    auto: document.getElementById("modeAutoBtn"),
+    "169": document.getElementById("mode169Btn"),
+    "916": document.getElementById("mode916Btn")
+  };
   function setMode(mode){
-    const is169 = mode === "169";
-    stageFrame.classList.toggle("mode-169", is169);
-    stageFrame.classList.toggle("mode-916", !is169);
-    mode169Btn.classList.toggle("active", is169);
-    mode916Btn.classList.toggle("active", !is169);
-    mode169Btn.setAttribute("aria-pressed", String(is169));
-    mode916Btn.setAttribute("aria-pressed", String(!is169));
+    stageFrame.classList.toggle("mode-auto", mode === "auto");
+    stageFrame.classList.toggle("mode-169", mode === "169");
+    stageFrame.classList.toggle("mode-916", mode === "916");
+    for (const k in modeBtns){
+      modeBtns[k].classList.toggle("active", k === mode);
+      modeBtns[k].setAttribute("aria-pressed", String(k === mode));
+    }
   }
-  function autoPickMode(){ return (window.innerWidth / window.innerHeight) < 0.9 ? "916" : "169"; }
-  mode169Btn.addEventListener("click", () => { userChoseMode = true; setMode("169"); });
-  mode916Btn.addEventListener("click", () => { userChoseMode = true; setMode("916"); });
-  let resizeTimer = null;
-  window.addEventListener("resize", () => {
-    if (userChoseMode) return;
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => setMode(autoPickMode()), 150);
-  });
-  window.addEventListener("orientationchange", () => { if (!userChoseMode) setMode(autoPickMode()); });
+  for (const k in modeBtns) modeBtns[k].addEventListener("click", () => setMode(k));
 
   const miniControls = document.getElementById("miniControls");
   const miniIcon = document.getElementById("miniIcon");
@@ -1615,19 +1751,28 @@
   document.getElementById("miniPlayPauseBtn").addEventListener("click", () => { playing ? pause() : play(); updateMiniIcon(); });
 
   let captionsOn = true;
-  document.getElementById("captionToggleBtn").addEventListener("click", (e) => {
+  const captionBtn = document.getElementById("captionToggleBtn");
+  captionBtn.addEventListener("click", () => {
     captionsOn = !captionsOn;
     document.getElementById("captionBar").classList.toggle("force-hidden", !captionsOn);
-    e.target.textContent = "Alt yazı: " + (captionsOn ? "Açık" : "Kapalı");
+    paintToggle(captionBtn, captionsOn ? "Açık" : "Kapalı", captionsOn, captionsOn ? "on" : "off");
   });
 
   const cameraBtn = document.getElementById("cameraToggleBtn");
+  function paintCameraBtn(){
+    paintToggle(cameraBtn, CAM.on ? "Açık" : "Kapalı", CAM.on, CAM.on ? "on" : "off");
+  }
   cameraBtn.addEventListener("click", () => {
     CAM.on = !CAM.on;
-    cameraBtn.textContent = "Kamera: " + (CAM.on ? "Açık" : "Kapalı");
-    cameraBtn.classList.toggle("active", CAM.on);
+    paintCameraBtn();
     render(currentTime); // rAF isn't running while paused — snap the frame now
   });
+  // reduced-motion preference: decorative auto-pan starts OFF; the user can
+  // still turn the camera on deliberately (preference, not a lockout).
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    CAM.on = false;
+    paintCameraBtn();
+  }
 
   const narrationBtn = document.getElementById("narrationToggleBtn");
   setNarrState(narrState); // paint the initial label/disabled state
@@ -1648,6 +1793,78 @@
       }
     });
   }
+
+  /* ----------------------------------------------------------------
+     v13 shell: keyboard map, fullscreen, theme, mini-bar seek.
+     All additive — playback/narration/camera semantics are untouched.
+  ---------------------------------------------------------------- */
+  // keyboard: Space play/pause, ←/→ ±5s, Home/End. Global (not seek-focused),
+  // skipped while typing in a form control or when the engine refused to play.
+  document.addEventListener("keydown", (e) => {
+    const tag = (e.target.tagName || "").toLowerCase();
+    const isSeekBar = e.target.id === "seek";
+    const isTyping = tag === "textarea" || e.target.isContentEditable ||
+                     (tag === "input" && !isSeekBar && e.target.type !== "checkbox");
+    if (isTyping) return;
+    if (document.getElementById("playBtn").disabled) return;
+    const seekBy = (d) => {
+      pause();
+      currentTime = Math.max(0, Math.min(DURATION, currentTime + d));
+      render(currentTime);
+    };
+    if (e.code === "Space"){
+      // a focused button keeps its native Space=click; checkbox keeps Space=toggle
+      if (tag === "button" || tag === "input") return;
+      e.preventDefault(); playing ? pause() : play();
+    }
+    // arrows/Home/End work everywhere incl. focused buttons and the seek bar
+    // itself (±5s beats the native 0.1s range step for a lesson-length timeline)
+    else if (e.key === "ArrowRight"){ e.preventDefault(); seekBy(5); }
+    else if (e.key === "ArrowLeft"){ e.preventDefault(); seekBy(-5); }
+    else if (e.key === "Home"){ e.preventDefault(); seekBy(-Infinity); }
+    else if (e.key === "End"){ e.preventDefault(); seekBy(Infinity); }
+  });
+
+  // fullscreen on the stage card; hidden where the API doesn't exist (iOS Safari phones)
+  const fsBtn = document.getElementById("fullscreenBtn");
+  const stageWrap = document.getElementById("stageWrap");
+  if (!stageWrap.requestFullscreen) fsBtn.style.display = "none";
+  else {
+    fsBtn.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else stageWrap.requestFullscreen().catch(() => {});
+    });
+    document.addEventListener("fullscreenchange", () => {
+      fsBtn.setAttribute("aria-label", document.fullscreenElement ? "Tam ekrandan çık" : "Tam ekran");
+    });
+  }
+
+  // theme: system-preference by default; the button pins the OPPOSITE of the
+  // current effective theme and persists it (best-effort — private mode etc.)
+  document.getElementById("themeToggleBtn").addEventListener("click", () => {
+    const attr = document.documentElement.getAttribute("data-theme");
+    const effective = attr || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    const next = effective === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("jett-theme", next); } catch(e){}
+  });
+
+  // mini bar: the progress strip is tap/drag-seekable (phones scroll past the toolbar)
+  const miniProg = document.querySelector(".mini-progress");
+  function miniSeek(ev){
+    const r = miniProg.getBoundingClientRect();
+    if (r.width <= 0) return;
+    pause();
+    currentTime = Math.max(0, Math.min(DURATION, (ev.clientX - r.left) / r.width * DURATION));
+    render(currentTime);
+  }
+  miniProg.addEventListener("pointerdown", (ev) => {
+    miniSeek(ev);
+    try { miniProg.setPointerCapture(ev.pointerId); } catch(e){ /* synthetic/expired pointer ids */ }
+  });
+  miniProg.addEventListener("pointermove", (ev) => {
+    if (ev.buttons) miniSeek(ev);
+  });
 
   const approveBox = document.getElementById("teacherApprove");
   const sendBtn = document.getElementById("sendBtn");
@@ -1734,11 +1951,24 @@
       const { finalBoxGroup, glyphCount } = buildDom(sceneMeta, svgImgH, panelH);
       finalBox = finalBoxGroup;
 
-      // theming + labels from the contract
+      // theming + labels from the contract. --pen-soft derives in CSS via
+      // color-mix (works for ANY color format — the old hex+"1A" concat only
+      // survived 6-digit hex). Primary-button text contrast is guarded here:
+      // a light contract pen color gets dark text instead of white.
       if (CONTRACT.meta.character && CONTRACT.meta.character.pen_color){
         document.documentElement.style.setProperty("--pen", CONTRACT.meta.character.pen_color);
-        const c = CONTRACT.meta.character.pen_color;
-        document.documentElement.style.setProperty("--pen-soft", c + "1A");
+        try {
+          const probe = document.createElement("div");
+          probe.style.color = CONTRACT.meta.character.pen_color;
+          probe.style.display = "none";
+          document.body.appendChild(probe);
+          const m = getComputedStyle(probe).color.match(/\d+(\.\d+)?/g) || [];
+          probe.remove();
+          if (m.length >= 3){
+            const lum = 0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2];
+            if (lum > 160) document.documentElement.style.setProperty("--pen-contrast", "#101623");
+          }
+        } catch(e){ /* contrast guard is best-effort; default stays white */ }
       }
       document.title = CONTRACT.meta.title;
       document.getElementById("subtitle").textContent = CONTRACT.meta.subject + " · " + CONTRACT.meta.topic;
@@ -1766,10 +1996,13 @@
 
       // 10) shell init — every displayed number is derived
       seekEl.max = DURATION.toFixed(1);
-      setMode(autoPickMode());
+      // auto framing: the frame's aspect IS the content's aspect (derived, per-lesson)
+      document.documentElement.style.setProperty("--content-ar", `${CFG.SVG_W} / ${totalH}`);
+      setMode("auto");
       buildSeekTicks();
       render(0);
       updateGate();
+      document.getElementById("bootShade").classList.add("hide");
       window.__engineReady = true; // test hook
     } catch(e){
       showError("Beklenmeyen motor hatası: " + e.message);

@@ -67,8 +67,8 @@ const ttsStub = (opts) => `(() => {
 
 const TR_VOICE = [{ lang: 'tr-TR', name: 'Stub TR', localService: true, default: true, voiceURI: 'stub' }];
 
-async function newStubPage(opts, viewport){
-  const ctx = await browser.newContext();
+async function newStubPage(opts, viewport, ctxOpts){
+  const ctx = await browser.newContext(ctxOpts || {});
   await ctx.addInitScript(ttsStub(opts));
   const page = await ctx.newPage();
   if (viewport) await page.setViewportSize(viewport);
@@ -80,14 +80,38 @@ async function newStubPage(opts, viewport){
 }
 const seekTo = (page, t) => page.$eval('#seek', (el, v) => { el.value = v; el.dispatchEvent(new Event('input')); }, t);
 
-/* ================= viewports (real engine irrelevant here) ================= */
-for (const vp of [{w:320,h:568},{w:375,h:812},{w:1440,h:900}]) {
+/* ================= viewports (real engine irrelevant here) =================
+   v13: the old width<900 → 9:16 heuristic is GONE by design — the default
+   "auto" frame takes the content's own aspect at every viewport, so the
+   expectation here is mode-auto everywhere + no horizontal overflow across
+   the full device matrix, portrait AND landscape. */
+const VP_WIDTHS = [320, 375, 414, 768, 1024, 1440, 1920];
+{
+  const vps = [];
+  for (const w of VP_WIDTHS){
+    const h = Math.round(w * (w < 800 ? 2.16 : 0.62)); // phone-ish portrait / desktop-ish landscape
+    vps.push({ w, h });
+    vps.push({ w: h, h: w }); // rotated
+  }
   const { ctx, page } = await newStubPage({ voices: TR_VOICE, startDelay: 50, endDelay: 800, boundary: false },
-                                           { width: vp.w, height: vp.h });
-  const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
-  const mode = await page.$eval('#stageFrame', el => el.className.includes('mode-916') ? '916' : '169');
-  assert(!overflow, `${vp.w}x${vp.h} yatay taşma yok`);
-  assert(vp.w < 900 ? mode === '916' : mode === '169', `${vp.w}x${vp.h} otomatik mod (${mode})`);
+                                           { width: 1200, height: 900 });
+  let allOk = true, autoOk = true, frameOk = true;
+  for (const vp of vps){
+    await page.setViewportSize({ width: vp.w, height: vp.h });
+    await page.waitForTimeout(60);
+    const r = await page.evaluate(() => ({
+      overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
+      auto: document.getElementById('stageFrame').classList.contains('mode-auto'),
+      frameW: document.getElementById('stageFrame').getBoundingClientRect().width,
+      vw: document.documentElement.clientWidth
+    }));
+    if (r.overflow){ allOk = false; console.log(`   taşma: ${vp.w}x${vp.h}`); }
+    if (!r.auto) autoOk = false;
+    if (r.frameW > r.vw + 1){ frameOk = false; console.log(`   çerçeve taşması: ${vp.w}x${vp.h}`); }
+  }
+  assert(allOk, `${vps.length} viewport (dikey+yatay) yatay taşma yok`);
+  assert(autoOk, 'tüm viewportlarda varsayılan kadraj: Otomatik (içerik oranı)');
+  assert(frameOk, 'sahne çerçevesi her viewportta ekrana sığıyor');
   await ctx.close();
 }
 
@@ -179,8 +203,14 @@ for (const vp of [{w:320,h:568},{w:375,h:812},{w:1440,h:900}]) {
   await page.click('#cameraToggleBtn');
   const vbOff = await page.$eval('#masterSvg', el => el.getAttribute('viewBox'));
   assert(parseFloat(vbOff.split(' ')[2]) === 1000, 'kamera kapatınca (duraklatıkken) anında tam görünüm');
-  const camLabel = await page.$eval('#cameraToggleBtn', el => el.textContent.trim());
-  assert(camLabel === 'Kamera: Kapalı', `kamera düğme etiketi (${camLabel})`);
+  // v13: state is exposed via data-state + aria-pressed + a fixed-width state
+  // pill (the old "Kamera: Kapalı" single text label caused layout shift)
+  const camState = await page.$eval('#cameraToggleBtn', el => ({
+    state: el.dataset.state, pressed: el.getAttribute('aria-pressed'),
+    pill: el.querySelector('.t-state').textContent
+  }));
+  assert(camState.state === 'off' && camState.pressed === 'false' && camState.pill === 'Kapalı',
+    `kamera düğme durumu (${camState.state}/${camState.pill})`);
   await page.click('#cameraToggleBtn'); // back on
 
   /* ---------- rhythm + pooling + style-write cache ---------- */
@@ -268,6 +298,94 @@ for (const vp of [{w:320,h:568},{w:375,h:812},{w:1440,h:900}]) {
   await ctx.close();
 }
 
+/* ================= v13 shell: theme, keyboard, layout-stability, a11y ================= */
+{
+  const { ctx, page } = await newStubPage({ voices: TR_VOICE, startDelay: 50, endDelay: 800, boundary: false },
+                                           { width: 1200, height: 900 });
+  const DUR = parseFloat(await page.$eval('#seek', el => el.max));
+
+  // boot shade: never a dead frame — hidden once the engine is ready
+  assert(await page.$eval('#bootShade', el => el.classList.contains('hide')), 'yükleme örtüsü motor hazır olunca gizli');
+
+  // video-product time label (precise seconds live in the tooltip)
+  const tl = await page.$eval('#timeLabel', el => ({ text: el.textContent, title: el.title }));
+  assert(/^\d+:\d{2} \/ \d+:\d{2}$/.test(tl.text), `zaman etiketi mm:ss (${tl.text})`);
+  assert(/ s$/.test(tl.title), 'hassas süre tooltipte');
+
+  // theme: default follows system; the button pins an explicit theme and flips the palette
+  const bg0 = await page.evaluate(() => getComputedStyle(document.body).backgroundColor);
+  await page.click('#themeToggleBtn');
+  const t1 = await page.evaluate(() => ({ attr: document.documentElement.getAttribute('data-theme'),
+                                          bg: getComputedStyle(document.body).backgroundColor }));
+  assert(t1.attr === 'light' || t1.attr === 'dark', `tema düğmesi data-theme yazıyor (${t1.attr})`);
+  assert(t1.bg !== bg0, 'tema geçişi paleti gerçekten değiştiriyor');
+  await page.click('#themeToggleBtn');
+  const t2 = await page.evaluate(() => document.documentElement.getAttribute('data-theme'));
+  assert(t2 !== t1.attr, `ikinci tıklama temayı geri çeviriyor (${t1.attr}→${t2})`);
+
+  // layout stability: toggling state may not change the button's width
+  const wBefore = await page.$eval('#captionToggleBtn', el => el.getBoundingClientRect().width);
+  await page.click('#captionToggleBtn');
+  const wAfter = await page.$eval('#captionToggleBtn', el => el.getBoundingClientRect().width);
+  await page.click('#captionToggleBtn'); // back on
+  assert(Math.abs(wBefore - wAfter) < 0.6, `durum düğmesi genişliği sabit (${wBefore.toFixed(1)}→${wAfter.toFixed(1)})`);
+
+  // keyboard map: Space plays (body focus), ArrowRight = +5s, Home = 0
+  await page.evaluate(() => document.activeElement && document.activeElement.blur());
+  await page.keyboard.press('Space');
+  await page.waitForTimeout(500);
+  const advanced = await page.$eval('#seek', el => parseFloat(el.value));
+  assert(advanced > 0, `klavye: Space oynatıyor (t=${advanced})`);
+  await page.keyboard.press('Space'); // pause
+  const tBefore = await page.$eval('#seek', el => parseFloat(el.value));
+  await page.keyboard.press('ArrowRight');
+  const tArrow = await page.$eval('#seek', el => parseFloat(el.value));
+  assert(Math.abs(tArrow - Math.min(DUR, tBefore + 5)) < 0.15, `klavye: → +5s (${tBefore.toFixed(1)}→${tArrow.toFixed(1)})`);
+  await page.keyboard.press('Home');
+  assert((await page.$eval('#seek', el => parseFloat(el.value))) === 0, 'klavye: Home başa sarıyor');
+
+  // a11y: every state/mode toggle carries aria-pressed
+  const ariaOk = await page.evaluate(() =>
+    ['modeAutoBtn','mode169Btn','mode916Btn','captionToggleBtn','narrationToggleBtn','cameraToggleBtn']
+      .every(id => document.getElementById(id).hasAttribute('aria-pressed')));
+  assert(ariaOk, 'tüm durum/mod düğmelerinde aria-pressed var');
+
+  // fullscreen present in Chromium (hidden only where the API is missing)
+  assert(await page.$eval('#fullscreenBtn', el => el.style.display !== 'none'), 'tam ekran düğmesi görünür');
+
+  // manual framing override still works and round-trips to auto
+  await page.click('#mode916Btn');
+  assert(await page.$eval('#stageFrame', el => el.classList.contains('mode-916')), 'manuel 9:16 kadraj çalışıyor');
+  await page.click('#modeAutoBtn');
+  assert(await page.$eval('#stageFrame', el => el.classList.contains('mode-auto')), 'Otomatik kadraja dönüş çalışıyor');
+
+  // mini bar seek handler (synthetic pointer — the bar itself is interactive now)
+  const miniT = await page.evaluate(() => {
+    const bar = document.querySelector('.mini-progress');
+    const r = bar.getBoundingClientRect();
+    bar.dispatchEvent(new PointerEvent('pointerdown', { clientX: r.left + r.width / 2, bubbles: true, pointerId: 7 }));
+    return parseFloat(document.getElementById('seek').value);
+  });
+  assert(Math.abs(miniT - DUR / 2) < DUR * 0.06, `mini çubuk dokunarak sarıyor (orta≈${miniT.toFixed(1)}s)`);
+
+  await ctx.close();
+}
+
+/* ================= v13 shell: reduced-motion preference ================= */
+{
+  const { ctx, page } = await newStubPage({ voices: TR_VOICE, startDelay: 50, endDelay: 800, boundary: false },
+                                           { width: 1200, height: 900 }, { reducedMotion: 'reduce' });
+  const cam = await page.$eval('#cameraToggleBtn', el => ({ state: el.dataset.state, pressed: el.getAttribute('aria-pressed') }));
+  assert(cam.state === 'off' && cam.pressed === 'false', `reduced-motion: kamera kapalı başlıyor (${cam.state})`);
+  // decorative pulse is effectively frozen by the reduced-motion CSS guard
+  const pulseDur = await page.evaluate(() => getComputedStyle(document.getElementById('speakIndicator')).animationDuration);
+  assert(parseFloat(pulseDur) <= 0.011, `reduced-motion: nabız animasyonu durdu (${pulseDur})`);
+  // the user may still deliberately enable the camera (preference, not lockout)
+  await page.click('#cameraToggleBtn');
+  assert((await page.$eval('#cameraToggleBtn', el => el.dataset.state)) === 'on', 'reduced-motion: kamera istenirse açılabiliyor');
+  await ctx.close();
+}
+
 /* ================= narration first-speak + gesture unlock (fresh page) ================= */
 {
   const { ctx, page } = await newStubPage({ voices: TR_VOICE, startDelay: 50, endDelay: 1200, boundary: false },
@@ -351,8 +469,9 @@ for (const vp of [{w:320,h:568},{w:375,h:812},{w:1440,h:900}]) {
     assert(spoke, 'sessiz motorda gömülü ses devreye girdi (anlatım hâlâ Açık)');
     assert(stubUnused, 'sessiz motorda speechSynthesis yolu kullanılmadı (gömülü ses tercih edildi)');
   } else {
-    const label = await page.$eval('#narrationToggleBtn', el => el.textContent.trim());
-    assert(label === 'Anlatım: Ses bulunamadı', `sessiz motor tespiti: düğme "${label}"`);
+    // v13: state pill instead of a single mutating label
+    const st = await page.$eval('#narrationToggleBtn', el => ({ state: el.dataset.state, pill: el.querySelector('.t-state').textContent }));
+    assert(st.state === 'unavailable' && st.pill === 'Ses bulunamadı', `sessiz motor tespiti: düğme durumu "${st.state}/${st.pill}"`);
   }
   await page.click('#pauseBtn');
   // completion after a near-end play: immediate without audio; with embedded
@@ -378,15 +497,16 @@ for (const vp of [{w:320,h:568},{w:375,h:812},{w:1440,h:900}]) {
   await page.waitForTimeout(1200);
   assert(await page.evaluate(() => window.__engineReady === true), 'API yokken motor yine hazır');
   const hasAudioNoApi = await page.evaluate(() => (window.__audioTracks || 0) > 0);
-  const noApiLabel = await page.$eval('#narrationToggleBtn', el => el.textContent.trim());
-  const noApiDisabled = await page.$eval('#narrationToggleBtn', el => el.disabled);
+  // v13: state read from data-state + pill (fixed-width toggle structure)
+  const noApiState = await page.$eval('#narrationToggleBtn',
+    el => ({ state: el.dataset.state, pill: el.querySelector('.t-state').textContent, disabled: el.disabled }));
   if (hasAudioNoApi){
     // embedded audio keeps narration functional even without the Web Speech API
-    assert(noApiLabel === 'Anlatım: Açık', `API yokken gömülü sesle düğme "Anlatım: Açık" (${noApiLabel})`);
-    assert(!noApiDisabled, 'API yokken gömülü sesle düğme aktif');
+    assert(noApiState.state === 'on' && noApiState.pill === 'Açık', `API yokken gömülü sesle anlatım açık (${noApiState.state}/${noApiState.pill})`);
+    assert(!noApiState.disabled, 'API yokken gömülü sesle düğme aktif');
   } else {
-    assert(noApiLabel === 'Anlatım: Yok', `API yokken düğme "Anlatım: Yok" (${noApiLabel})`);
-    assert(noApiDisabled, 'API yokken düğme devre dışı');
+    assert(noApiState.state === 'unsupported' && noApiState.pill === 'Yok', `API yokken durum unsupported (${noApiState.state}/${noApiState.pill})`);
+    assert(noApiState.disabled, 'API yokken düğme devre dışı');
   }
   await ctx.close();
 }
