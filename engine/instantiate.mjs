@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { synthesizeCaptionMp3 } from './tts.mjs';
+import { ENGINE_VERSION } from './build_engine.mjs';
 
 const args = process.argv.slice(2);
 const withAudio = args.includes('--audio');
@@ -24,7 +25,7 @@ const contract = JSON.parse(readFileSync(contractPath, 'utf8')); // fail fast on
 const mime = imagePath.toLowerCase().endsWith('.png') ? 'image/png' : 'image/jpeg';
 const dataUri = `data:${mime};base64,` + readFileSync(imagePath).toString('base64');
 
-let html = readFileSync('jett_engine_v12_template.html', 'utf8');
+let html = readFileSync(`jett_engine_${ENGINE_VERSION}_template.html`, 'utf8');
 const put = (slot, content) => {
   if (!html.includes(slot)) throw new Error('slot not found: ' + slot);
   html = html.split(slot).join(content);
