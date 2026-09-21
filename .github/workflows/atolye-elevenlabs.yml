@@ -1,5 +1,5 @@
-name: Atolye ElevenLabs A05 B12
-run-name: Atolye A05-B12 - 125 unique questions - secret verification
+name: Atolye ElevenLabs A06 B10
+run-name: Atolye A06-B10 - 125 unique questions - included-credit production
 on:
   push:
     branches: [atolye-elevenlabs-20260921]
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 permissions: {}
 concurrency:
-  group: atolye-elevenlabs-a05-b12
+  group: atolye-elevenlabs-a06-b10
   cancel-in-progress: false
 jobs:
   speech:
@@ -21,11 +21,11 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: |
           import os, sys, json, pathlib, urllib.request, urllib.error, base64, hashlib, re, math
-          out = pathlib.Path('atolye-elevenlabs-a05-b12')
+          out = pathlib.Path('atolye-elevenlabs-a06-b10')
           out.mkdir(exist_ok=True)
           voice = 'tZYpRZkmCNQcfmtDbhUg'
           model_id = 'eleven_v3'
-          report = {'pair':['A-Temel_Matematik-05','B-Temel_Matematik-12'],
+          report = {'pair':['A-Temel_Matematik-06','B-Temel_Matematik-10'],
                     'provider':'elevenlabs','voice_id':voice,'model_id':model_id,
                     'commit':os.environ.get('GITHUB_SHA'), 'run_id':os.environ.get('GITHUB_RUN_ID'),
                     'credential_present':False,'api_called':False,'tts_called':False,
@@ -45,7 +45,7 @@ jobs:
           # A rerun must never unknowingly spend credits twice. Use a fresh dispatch only after inspecting artifacts.
           if int(os.environ.get('GITHUB_RUN_ATTEMPT','1')) > 1:
               stop('blocked_automatic_audio_regeneration', action='Inspect and reuse existing audio artifacts; fresh dispatch only if no audio was generated.')
-          text='Bu soruda çift tam sayıların hangi işlemlere göre kapalı olduğunu araştırıyoruz. Kapalı olmak şu demektir: Kümeden seçtiğimiz iki sayıya işlemi uyguladığımızda sonuç yine aynı kümede kalmalı. Birkaç örneğin doğru çıkması yetmez; kural bütün çift tam sayılar için geçerli olmalı.\n\nİki çift tam sayıyı iki pe ve iki ke biçiminde yazalım. Burada pe ve ke birer tam sayıdır.\n\nToplamlarına bakalım. İki pe artı iki ke, eşittir iki çarpı, parantez içinde pe artı ke. Tam sayıların toplamı tam sayıdır. Bunun iki katı da çifttir.\n\nÇıkarmada da aynı düşünce geçerli. İki pe eksi iki ke, eşittir iki çarpı, parantez içinde pe eksi ke. Fark negatif olabilir; bu bir sorun değildir. Negatif çift tam sayılar da A kümesindedir.\n\nŞimdi çarpalım. İki pe çarpı iki ke, eşittir iki çarpı, parantez içinde iki çarpı pe çarpı ke. Sonuç yine bir tam sayının iki katıdır. Demek ki toplama, çıkarma ve çarpma işlemlerinde kümenin dışına çıkmayız.\n\nBölmede ise tek bir karşı örnek yeterli. İki ve dört bu kümededir. Ama iki bölü dört, eşittir bir bölü iki. Bu sonuç tam sayı bile değildir; dolayısıyla A kümesine ait değildir. Bölme işleminde kapalılık yoktur.\n\nToplama, çıkarma ve çarpmanın birlikte verildiği C seçeneğini işaretliyoruz.'
+          text="Bu soruda baz istasyonunun kapsama uzaklığıyla üç kişinin uzaklığını karşılaştıracağız. Bütün değerler metre cinsinden verilmiş. İstasyondan yararlanmak için kişinin uzaklığı kapsama sınırını aşmamalı.\n\nKapsama uzaklığı iki virgül kırk üç çarpı on üzeri beş metredir. On üzeri beş, yüz bin demektir. İki virgül kırk üçü yüz binle çarparsak iki yüz kırk üç bin metre buluruz.\n\nAli'nin uzaklığı yirmi bir virgül üç çarpı on üzeri dört. On binle çarpınca iki yüz on üç bin metre eder. İki yüz on üç bin, iki yüz kırk üç binden küçük. Ali kapsama alanındadır.\n\nBerna için yirmi üç virgül üç çarpı on üzeri dört, iki yüz otuz üç bin metredir. Bu da iki yüz kırk üç binden küçük. Berna da yararlanabilir.\n\nCeyda'nın uzaklığı bir virgül yirmi beş çarpı on üzeri sekiz, yani yüz yirmi beş milyon metredir. Bu uzaklık iki yüz kırk üç bin metreden büyüktür. Ceyda kapsama dışında kalır.\n\nSonuç olarak Ali ve Berna bu baz istasyonundan yararlanabilir. D seçeneğini işaretliyoruz."
           class NoRedirect(urllib.request.HTTPRedirectHandler):
               def redirect_request(self, req, fp, code, msg, headers, newurl):
                   return None
@@ -154,7 +154,7 @@ jobs:
         shell: python
         run: |
           import json, pathlib, subprocess, math
-          out=pathlib.Path('atolye-elevenlabs-a05-b12')
+          out=pathlib.Path('atolye-elevenlabs-a06-b10')
           report=json.loads((out/'report.json').read_text())
           try:
               probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(out/'speech.mp3')]))
@@ -175,7 +175,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
-          name: atolye-elevenlabs-a05-b12-${{ github.run_id }}
-          path: atolye-elevenlabs-a05-b12/
+          name: atolye-elevenlabs-a06-b10-${{ github.run_id }}
+          path: atolye-elevenlabs-a06-b10/
           if-no-files-found: warn
           retention-days: 30
