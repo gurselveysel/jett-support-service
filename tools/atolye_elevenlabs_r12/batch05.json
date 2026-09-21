@@ -1,0 +1,4390 @@
+[
+  {
+    "id": "A-Temel_Matematik-22",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-22",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 22,
+      "pdf_sayfasi": 22,
+      "basili_sayfa": 22,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        625.307
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        617.307,
+        300.0,
+        783.973
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-22",
+      "calisma_sirasi": 22,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-03",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-22",
+      "answer_label_rects": [
+        [
+          265.9220275878906,
+          768.0015869140625,
+          274.697021484375,
+          778.7926025390625
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-03",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 3,
+      "pdf_sayfasi": 18,
+      "basili_sayfa": 18,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        131.4
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        123.4,
+        576.0,
+        289.733
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-03",
+      "calisma_sirasi": 128,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-22",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-22",
+      "answer_label_rects": [
+        [
+          542.2999877929688,
+          274.09478759765625,
+          551.074951171875,
+          284.8857727050781
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-22",
+      "B-Temel_Matematik-03"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-22",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 22,
+      "pdf_sayfasi": 22,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Altı rakamdan iki farklı rakam C(6,2)=15; dört harften iki farklı harf C(4,2)=6 yolla seçilir. Rakamların kendi aralarındaki artan sırası ve harflerin kendi aralarındaki alfabetik sırası sabittir. Dört yerden rakamların iki yerini C(4,2)=6 yolla seçebiliriz. Toplam 15·6·6=540 şifre oluşur.",
+      "kontrol_yontemi": "Seçilen rakamlar 1,2 ve harfler a,b olsun. Sıraları koruyan altı örnek:12ab,1a2b,1ab2,a12b,a1b2,ab12. Bu, son çarpanın 6 olduğunu bağımsız gösterir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "İki rakamı on beş, iki harfi altı farklı şekilde seçeriz. Seçtiklerimizin kendi iç sırası bellidir; fakat rakam ve harfler iç içe geçebilir. Dört konumdan rakamların konumlarını seçmenin altı yolu vardır. On beş çarpı altı çarpı altı, beş yüz kırk eder. E seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "C(6,2)=15",
+        "C(4,2)=6",
+        "Yer seçimi:C(4,2)=6",
+        "15·6·6=540"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 22 | Temel Matematik Testi 22",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-03"
+    },
+    "narration": "Şifreyi seçme ve yerleştirme olarak iki adımda sayalım. Artan sıra şartıyla iki farklı rakam seçiyoruz. Altı rakamdan ikisini seçmenin sayısı, altı çarpı beş bölü iki, on beştir. Dört harften iki farklı harf seçmenin sayısı, dört çarpı üç bölü iki, altıdır. Şimdi dört konumdan rakamların duracağı iki konumu seçelim; bunun da altı yolu var. Seçilen rakamlar kendi aralarında küçükten büyüğe, harfler kendi aralarında alfabetik sıraya gireceği için ayrıca permütasyonla çarpmıyoruz. On beş çarpı altı çarpı altı, beş yüz kırk şifre eder. E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Şifreyi seçme ve yerleştirme olarak iki adımda sayalım. Artan sıra şartıyla iki farklı rakam seçiyoruz. Altı rakamdan ikisini seçmenin sayısı, altı çarpı beş bölü iki, on beştir. Dört harften iki farklı harf seçmenin sayısı, dört çarpı üç bölü iki, altıdır. Şimdi dört konumdan rakamların duracağı iki konumu seçelim; bunun da altı yolu var. Seçilen rakamlar kendi aralarında küçükten büyüğe, harfler kendi aralarında alfabetik sıraya gireceği için ayrıca permütasyonla çarpmıyoruz. On beş çarpı altı çarpı altı, beş yüz kırk şifre eder. E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Rakam seçimi: 6×5/2=15",
+        "Altı rakamdan ikisini seçmenin sayısı, altı çarpı beş bölü iki, on beştir"
+      ],
+      [
+        "Harf seçimi: 4×3/2=6",
+        "Dört harften iki farklı harf seçmenin sayısı, dört çarpı üç bölü iki, altıdır"
+      ],
+      [
+        "Rakamların yerleri: 6",
+        "dört konumdan rakamların duracağı iki konumu seçelim; bunun da altı yolu var"
+      ],
+      [
+        "15×6×6=540",
+        "On beş çarpı altı çarpı altı, beş yüz kırk şifre eder"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "academic_note": "Artan sıra ve seçim, farklı iki rakam ve farklı iki harf olarak yorumlandı; özgün çözümle uyumlu.",
+    "source_word_marks": [
+      [
+        "farklı",
+        "Dört harften iki farklı harf seçmenin sayısı, dört çarpı üç bölü iki, altıdır"
+      ],
+      [
+        "rakamları",
+        "dört konumdan rakamların duracağı iki konumu seçelim; bunun da altı yolu var"
+      ],
+      [
+        "şifre",
+        "On beş çarpı altı çarpı altı, beş yüz kırk şifre eder"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-06",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-06",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 6,
+      "pdf_sayfasi": 28,
+      "basili_sayfa": 28,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.318,
+        80.327
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.327,
+        576.0,
+        422.66
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-06",
+      "calisma_sirasi": 46,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-01",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-06",
+      "answer_label_rects": [
+        [
+          476.0360107421875,
+          406.6131286621094,
+          484.8110046386719,
+          417.40411376953125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-01",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 1,
+      "pdf_sayfasi": 27,
+      "basili_sayfa": 27,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.943,
+        131.355
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        123.35499999999999,
+        300.0,
+        473.355
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-01",
+      "calisma_sirasi": 166,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-06",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-06",
+      "answer_label_rects": [
+        [
+          199.66099548339844,
+          457.640869140625,
+          208.43600463867188,
+          468.4318542480469
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-06",
+      "B-Fen_Bilimleri-01"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-06",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Fizik",
+      "soru_numarasi": 6,
+      "pdf_sayfasi": 28,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Özdeş üreteçlerin gerilimi ε olsun. Şekil1’de seri üreteçler dirençte2ε gerilim ve2ε/R akım oluşturur. Şekil2’de paralel üreteçler dirençte ε gerilim ve ε/R toplam akım oluşturur. Bu akımı iki özdeş üreteç eşit paylaştığı için L’den ε/(2R), K’den2ε/R geçer. L daha az akım verdiği için aynı kapasitede daha uzun sürede tükenir. Üç yargı doğrudur.",
+      "kontrol_yontemi": "K akımı/L akımı=4. İdeal özdeş üreteçlerin yük kapasitesi aynı kabul edilirse tL=4tK. Paralelde gerilimlerin toplanmadığı kontrol edilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Seri bağlı iki üreteç gerilimlerini toplar; paralel bağlı iki özdeş üreteç ise tek üreteç gerilimini korur. Bu nedenle ilk dirençten daha çok akım geçer, ikinci dirençte gerilim daha düşüktür. Paralelde akım da üreteçler arasında paylaşılır. L daha yavaş tükenir. Üç yargı doğrudur; E seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "V1=2ε,I1=2ε/R",
+        "V2=ε,I2=ε/R",
+        "IL=ε/(2R),IK=2ε/R",
+        "tL>tK",
+        "I,II,III"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 28 | Fen Bilimleri Testi 6",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-01"
+    },
+    "narration": "Özdeş, ideal pillerin her birinin gerilimine ve diyelim. Birinci devrede seri bağlandıkları için toplam gerilim iki ve olur. Direnç aynı olduğundan birinci devrenin akımı, iki ve bölü re olur. Ka pili bu akımın tamamını verir. İkinci devrede piller paraleldir; direnç üzerindeki gerilim ve, toplam akım ve bölü redir. Özdeş piller bu akımı eşit paylaşır. Le pilinden geçen akım, ve bölü iki redir. Böylece birinci devrenin direnç gerilimi daha büyük, ka pilinin akımı da daha büyüktür. Aynı kapasiteli le pili daha az akım verdiği için daha uzun süre dayanır. Üç yargı da doğrudur; E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Özdeş, ideal pillerin her birinin gerilimine ve diyelim. Birinci devrede seri bağlandıkları için toplam gerilim iki ve olur. Direnç aynı olduğundan birinci devrenin akımı, iki ve bölü re olur. Ka pili bu akımın tamamını verir. İkinci devrede piller paraleldir; direnç üzerindeki gerilim ve, toplam akım ve bölü redir. Özdeş piller bu akımı eşit paylaşır. Le pilinden geçen akım, ve bölü iki redir. Böylece birinci devrenin direnç gerilimi daha büyük, ka pilinin akımı da daha büyüktür. Aynı kapasiteli le pili daha az akım verdiği için daha uzun süre dayanır. Üç yargı da doğrudur; E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Seri: 2V; paralel: V",
+        "Birinci devrede seri bağlandıkları için toplam gerilim iki ve olur"
+      ],
+      [
+        "K akımı: 2V/R",
+        "birinci devrenin akımı, iki ve bölü re olur"
+      ],
+      [
+        "L akımı: V/(2R)",
+        "Le pilinden geçen akım, ve bölü iki redir"
+      ],
+      [
+        "L daha uzun dayanır",
+        "le pili daha az akım verdiği için daha uzun süre dayanır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "geçen",
+        "Le pilinden geçen akım, ve bölü iki redir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-07",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-07",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 7,
+      "pdf_sayfasi": 29,
+      "basili_sayfa": 29,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.94,
+        80.375
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.375,
+        300.0,
+        379.042
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-07",
+      "calisma_sirasi": 47,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-04",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-07",
+      "answer_label_rects": [
+        [
+          203.4196319580078,
+          363.3891906738281,
+          212.19464111328125,
+          374.18017578125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-04",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 4,
+      "pdf_sayfasi": 28,
+      "basili_sayfa": 28,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        379.043
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-04",
+      "calisma_sirasi": 169,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-07",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-07",
+      "answer_label_rects": [
+        [
+          203.41700744628906,
+          363.3902282714844,
+          212.1920166015625,
+          374.18121337890625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-07",
+      "B-Fen_Bilimleri-04"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-07",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Fizik",
+      "soru_numarasi": 7,
+      "pdf_sayfasi": 29,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Yay dalgası, yayın maddesel ortamında titreşimlerin aktarılmasıyla yayılır; mekanik dalgadır. Elektromanyetik dalga sütununda gösterilmesi yanlıştır. Radyo ve kızılötesi elektromanyetik; su ve deprem dalgaları mekaniktir.",
+      "kontrol_yontemi": "Ortamı kaldırma testi uygulanır: yay ve su olmadan bu dalgalar taşınamaz; radyo ve kızılötesi boşlukta yayılabilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Dalganın yayılmak için maddesel ortama ihtiyaç duyup duymadığına bakarız. Yay dalgası ancak yay üzerinde ilerleyebilir, yani mekaniktir. Tabloda elektromanyetik sütununa yazılması hatadır. E seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Mekanik:su,deprem,yay",
+        "EM:radyo,kızılötesi",
+        "Yanlış satır:yay"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 29 | Fen Bilimleri Testi 7",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-04"
+    },
+    "narration": "Dalgaları yayılmak için maddesel ortama ihtiyaç duyup duymamalarına göre ayırıyoruz. Su ve deprem dalgaları mekanik dalgalardır; ortamın titreşimleriyle yayılırlar. Yay dalgası da yayın titreşimiyle iletilir, yani mekaniktir. Tabloda yay dalgası elektromanyetik sütununa yazıldığı için hata buradadır. Radyo ve kızılötesi dalgalar ise elektromanyetiktir; boşlukta da yayılabilirler. Yanlış sınıflandırılan yay dalgasını veren E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Dalgaları yayılmak için maddesel ortama ihtiyaç duyup duymamalarına göre ayırıyoruz. Su ve deprem dalgaları mekanik dalgalardır; ortamın titreşimleriyle yayılırlar. Yay dalgası da yayın titreşimiyle iletilir, yani mekaniktir. Tabloda yay dalgası elektromanyetik sütununa yazıldığı için hata buradadır. Radyo ve kızılötesi dalgalar ise elektromanyetiktir; boşlukta da yayılabilirler. Yanlış sınıflandırılan yay dalgasını veren E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Mekanik: maddesel ortam",
+        "Su ve deprem dalgaları mekanik dalgalardır"
+      ],
+      [
+        "Yay da mekaniktir",
+        "Yay dalgası da yayın titreşimiyle iletilir, yani mekaniktir"
+      ],
+      [
+        "Radyo ve kızılötesi: EM",
+        "Radyo ve kızılötesi dalgalar ise elektromanyetiktir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "Dalgalar",
+        "Su ve deprem dalgaları mekanik dalgalardır"
+      ],
+      [
+        "mekanik",
+        "Yay dalgası da yayın titreşimiyle iletilir, yani mekaniktir"
+      ],
+      [
+        "elektromanyetik",
+        "Radyo ve kızılötesi dalgalar ise elektromanyetiktir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-10",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-10",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 10,
+      "pdf_sayfasi": 29,
+      "basili_sayfa": 29,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        506.338
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        498.338,
+        576.0,
+        783.671
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-10",
+      "calisma_sirasi": 50,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-11",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-10",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          747.4025268554688,
+          346.1000061035156,
+          758.1935424804688
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-11",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 11,
+      "pdf_sayfasi": 30,
+      "basili_sayfa": 30,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        357.709
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-11",
+      "calisma_sirasi": 176,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-10",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-10",
+      "answer_label_rects": [
+        [
+          60.94698715209961,
+          321.44110107421875,
+          69.72199249267578,
+          332.2320861816406
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-10",
+      "B-Fen_Bilimleri-11"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-10",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Kimya",
+      "soru_numarasi": 10,
+      "pdf_sayfasi": 29,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Yerlerden X=Mg, Y=Al ve Z=F olarak belirlenir. X’in valans elektron sayısı2, Y’nin3, Z’nin7’dir. 2+3=5≠7 olduğundan E yanlıştır. Mg’nin atom yarıçapı ve metalik aktifliği bu üçlüde en büyüktür; F’nin elektronegatifliği en büyüktür. Mg’nin dolu3s² alt kabuğu nedeniyle ilk iyonlaşma enerjisi Al’den büyüktür.",
+      "kontrol_yontemi": "Periyot–grup koordinatları X:3.periyot2.grup;Y:3.periyot13.grup;Z:2.periyot17.grup olarak sayılır. Elektron düzenleri Mg[Ne]3s²,Al[Ne]3s²3p¹,F[He]2s²2p⁵.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Tablodaki konumları sayınca X magnezyum, Y alüminyum, Z flor olur. Son katman elektronları sırasıyla iki, üç ve yedidir. İlk ikisinin toplamı beş eder; yedi değildir. Bu nedenle E seçeneği yanlıştır. Diğer karşılaştırmalar periyodik özelliklerle uyumludur.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "X=Mg:2",
+        "Y=Al:3",
+        "Z=F:7",
+        "2+3≠7",
+        "Yanlış:E"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 29 | Fen Bilimleri Testi 10",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-11"
+    },
+    "narration": "Periyodik tablodaki yerlerinden elementleri tanıyalım. İks magnezyum, ye alüminyum, ze flordur. İksin değerlik elektron sayısı iki, yenin üç, zenin yedidir. İki ile üçün toplamı beştir; yedi etmez. Bu nedenle E seçeneğindeki eşitlik yanlıştır. Diğer bilgileri de kontrol edelim. Bu üçlüde atom yarıçapı ve metalik etkinliği en büyük olan magnezyum, elektronegatifliği en büyük olan flordur. İlk iyonlaşma enerjisinde ise magnezyumun dolu üç es alt kabuğu nedeniyle alüminyumdan yüksek olduğu istisnayı hatırlamalıyız. Yanlış ifade istendiğinden E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Periyodik tablodaki yerlerinden elementleri tanıyalım. İks magnezyum, ye alüminyum, ze flordur. İksin değerlik elektron sayısı iki, yenin üç, zenin yedidir. İki ile üçün toplamı beştir; yedi etmez. Bu nedenle E seçeneğindeki eşitlik yanlıştır. Diğer bilgileri de kontrol edelim. Bu üçlüde atom yarıçapı ve metalik etkinliği en büyük olan magnezyum, elektronegatifliği en büyük olan flordur. İlk iyonlaşma enerjisinde ise magnezyumun dolu üç es alt kabuğu nedeniyle alüminyumdan yüksek olduğu istisnayı hatırlamalıyız. Yanlış ifade istendiğinden E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "X: Mg; Y: Al; Z: F",
+        "İks magnezyum, ye alüminyum, ze flordur"
+      ],
+      [
+        "Değerlik: 2,3,7",
+        "İksin değerlik elektron sayısı iki, yenin üç, zenin yedidir"
+      ],
+      [
+        "2+3=5 ≠ 7",
+        "İki ile üçün toplamı beştir; yedi etmez"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "elektron",
+        "İksin değerlik elektron sayısı iki, yenin üç, zenin yedidir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-12",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-12",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 12,
+      "pdf_sayfasi": 30,
+      "basili_sayfa": 30,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        462.303
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        454.303,
+        300.0,
+        783.97
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-12",
+      "calisma_sirasi": 52,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-10",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-12",
+      "answer_label_rects": [
+        [
+          60.946998596191406,
+          749.1959228515625,
+          69.7040023803711,
+          759.9869384765625
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-10",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 10,
+      "pdf_sayfasi": 29,
+      "basili_sayfa": 29,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.32,
+        462.312
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        454.312,
+        576.0,
+        783.979
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-10",
+      "calisma_sirasi": 175,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-12",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-12",
+      "answer_label_rects": [
+        [
+          337.3298034667969,
+          749.2052001953125,
+          346.0867919921875,
+          759.9962158203125
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-12",
+      "B-Fen_Bilimleri-10"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-12",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Kimya",
+      "soru_numarasi": 12,
+      "pdf_sayfasi": 30,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "Aynı düzende X’in akması30s, Y’nin20s sürer. Okul düzeyindeki eş koşullu akış kabulünde X daha viskozdur; moleküller arası çekimi daha güçlü kabul edilir, I doğru. Y’nin viskozitesi daha yüksek değildir; II yanlış. X’in sıcaklığını azaltmak sıvının viskozitesini daha da artırır; bu, daha az viskoz Y ile eşitlemez. III yanlış.",
+      "kontrol_yontemi": "Akışkanlık ile viskozite ters ilişkilidir. X’i ısıtmak viskozitesini düşürme yönünde etki eder; soğutma ters yöndedir. Farklı sıvılarda nicel akış için yoğunluk gibi ek değişkenler de önemlidir; soru ideal okul modelindedir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Daha yavaş akan sıvı bu karşılaştırmada daha viskozdur. X otuz, Y yirmi saniyede aktığı için X’in viskozitesi daha büyüktür. Y için söylenen ikinci yargı yanlıştır. X’i soğutmak akışını kolaylaştırmaz; viskozitesini daha da artırır. Yalnız birinci yargı doğrudur, A seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "tX=30>tY=20",
+        "ηX>ηY",
+        "X soğursa ηX artar",
+        "Yalnız I"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 30 | Fen Bilimleri Testi 12",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-10"
+    },
+    "narration": "Sorunun eş koşullu akış deneyini karşılaştıralım. İks sıvısı otuz, ye sıvısı yirmi saniyede akıyor. İks akmaya daha fazla direnç gösterdiği için viskozitesi daha büyük kabul edilir. Bu okul düzeyi karşılaştırmada, moleküller arası çekimi daha güçlü olan sıvı ikstir; birinci yargı doğrudur. Yenin viskozitesinin daha yüksek olduğunu söyleyen ikinci yargı tersini söylüyor, yanlıştır. Bir sıvıyı soğutmak genellikle viskozitesini artırır. İksi soğutmak, zaten daha küçük viskoziteli olan yeye yaklaştırmaz. Üçüncü yargı da yanlıştır. Yalnız birinciyi veren A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Sorunun eş koşullu akış deneyini karşılaştıralım. İks sıvısı otuz, ye sıvısı yirmi saniyede akıyor. İks akmaya daha fazla direnç gösterdiği için viskozitesi daha büyük kabul edilir. Bu okul düzeyi karşılaştırmada, moleküller arası çekimi daha güçlü olan sıvı ikstir; birinci yargı doğrudur. Yenin viskozitesinin daha yüksek olduğunu söyleyen ikinci yargı tersini söylüyor, yanlıştır. Bir sıvıyı soğutmak genellikle viskozitesini artırır. İksi soğutmak, zaten daha küçük viskoziteli olan yeye yaklaştırmaz. Üçüncü yargı da yanlıştır. Yalnız birinciyi veren A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Akış: X 30s; Y 20s",
+        "İks sıvısı otuz, ye sıvısı yirmi saniyede akıyor"
+      ],
+      [
+        "Viskozite: X>Y",
+        "viskozitesi daha büyük kabul edilir"
+      ],
+      [
+        "Soğutma → viskozite artar",
+        "Bir sıvıyı soğutmak genellikle viskozitesini artırır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "academic_note": "Eş koşullu akış deneyinin okul düzeyi viskozite karşılaştırması varsayımı açıkça belirtildi.",
+    "source_word_marks": [
+      [
+        "saniye",
+        "İks sıvısı otuz, ye sıvısı yirmi saniyede akıyor"
+      ],
+      [
+        "viskozitesi",
+        "viskozitesi daha büyük kabul edilir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-13",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-13",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 13,
+      "pdf_sayfasi": 30,
+      "basili_sayfa": 30,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        261.043
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-13",
+      "calisma_sirasi": 53,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-09",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-13",
+      "answer_label_rects": [
+        [
+          426.218017578125,
+          226.5899658203125,
+          435.20001220703125,
+          237.38095092773438
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-09",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 9,
+      "pdf_sayfasi": 29,
+      "basili_sayfa": 29,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        261.043
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-09",
+      "calisma_sirasi": 174,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-13",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-13",
+      "answer_label_rects": [
+        [
+          426.218017578125,
+          226.5899658203125,
+          435.20001220703125,
+          237.38095092773438
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-13",
+      "B-Fen_Bilimleri-09"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-13",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Kimya",
+      "soru_numarasi": 13,
+      "pdf_sayfasi": 30,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "İdeal gaz denkleminden V=nRT/P; R ortak olduğundan nT/P karşılaştırılır. X için0,5·100/3=50/3;Y için1·300/2=150;Z için1,5·200/1=300 bulunur. Böylece VZ>VY>VX, B seçeneği.",
+      "kontrol_yontemi": "Pozitif ortak R ile çarpma sıralamayı değiştirmez. Birimler mutlak sıcaklıkK olarak verilmiştir; Celsius dönüşümü gerekmez.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Gaz hacimlerini karşılaştırırken yalnız basınca bakamayız. Mol sayısını sıcaklıkla çarpıp basınca böleriz. X için elli bölü üç, Y için yüz elli, Z için üç yüz bulunur. En büyük Z, sonra Y, en küçük X’tir. B seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "V/R=nT/P",
+        "X:50/3",
+        "Y:150",
+        "Z:300",
+        "Z>Y>X"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 30 | Fen Bilimleri Testi 13",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-09"
+    },
+    "narration": "Hacimleri karşılaştırmak için ideal gaz bağıntısını kullanalım. Basınç çarpı hacim, mol sayısı çarpı gaz sabiti çarpı mutlak sıcaklıktır. Hacim için mol sayısıyla sıcaklığı çarpıp basınca böleriz. Gaz sabiti hepsinde aynı olduğu için sıralamada sadeleşir. İks için sıfır virgül beş çarpı yüz bölü üç, elli bölü üç çıkar. Ye için bir çarpı üç yüz bölü iki, yüz ellidir. Ze için bir buçuk çarpı iki yüz bölü bir, üç yüzdür. En büyük hacim ze, sonra ye, en küçük ikstir. B seçeneğini işaretliyoruz.",
+    "segments": [
+      "Hacimleri karşılaştırmak için ideal gaz bağıntısını kullanalım. Basınç çarpı hacim, mol sayısı çarpı gaz sabiti çarpı mutlak sıcaklıktır. Hacim için mol sayısıyla sıcaklığı çarpıp basınca böleriz. Gaz sabiti hepsinde aynı olduğu için sıralamada sadeleşir. İks için sıfır virgül beş çarpı yüz bölü üç, elli bölü üç çıkar. Ye için bir çarpı üç yüz bölü iki, yüz ellidir. Ze için bir buçuk çarpı iki yüz bölü bir, üç yüzdür. En büyük hacim ze, sonra ye, en küçük ikstir. B seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "V=nRT/P",
+        "Hacim için mol sayısıyla sıcaklığı çarpıp basınca böleriz"
+      ],
+      [
+        "X: 0,5×100/3=50/3",
+        "İks için sıfır virgül beş çarpı yüz bölü üç, elli bölü üç çıkar"
+      ],
+      [
+        "Y: 150; Z: 300",
+        "Ye için bir çarpı üç yüz bölü iki, yüz ellidir. Ze için bir buçuk çarpı iki yüz bölü bir, üç yüzdür"
+      ],
+      [
+        "VZ>VY>VX",
+        "En büyük hacim ze, sonra ye, en küçük ikstir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "sayısı",
+        "Hacim için mol sayısıyla sıcaklığı çarpıp basınca böleriz"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-14",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-14",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 14,
+      "pdf_sayfasi": 30,
+      "basili_sayfa": 30,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        542.149
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        534.149,
+        576.0,
+        783.816
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-14",
+      "calisma_sirasi": 54,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-08",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-14",
+      "answer_label_rects": [
+        [
+          517.7120361328125,
+          749.21240234375,
+          527.1530151367188,
+          760.00341796875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-08",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 8,
+      "pdf_sayfasi": 29,
+      "basili_sayfa": 29,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.923,
+        542.164
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        534.164,
+        300.0,
+        783.831
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-08",
+      "calisma_sirasi": 173,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-14",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-14",
+      "answer_label_rects": [
+        [
+          241.3197021484375,
+          749.2273559570312,
+          250.76071166992188,
+          760.0183715820312
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-14",
+      "B-Fen_Bilimleri-08"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-14",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Kimya",
+      "soru_numarasi": 14,
+      "pdf_sayfasi": 30,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Aynı sıcaklık, eşit şeker ve su kütlesinde değişen etken tanecik boyutudur. Pudra şekerinin toplam temas yüzeyi en büyük, toz şekerinki orta, küp şekerinki en küçüktür. Çözünme hızı II>I>III olur.",
+      "kontrol_yontemi": "Çözünme hızı ile denge çözünürlüğü ayrılır: küçük tanecik daha hızlı çözünür, bu aynı madde için aynı sıcaklıktaki denge çözünürlüğünün daha büyük olduğu anlamına gelmez.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Sıcaklık ve miktarlar aynı olduğunda tanecik boyutunu karşılaştırırız. Pudra şekerinde suyla temas eden toplam yüzey en büyüktür. Toz şeker sonra, küp şeker en son gelir. Çözünme hızı ikinci, birinci, üçüncü sırasındadır. C seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Yüzey:pudra>toz>küp",
+        "Hız:II>I>III",
+        "C"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 30 | Fen Bilimleri Testi 14",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-08"
+    },
+    "narration": "Üç kapta sıcaklık, su miktarı ve şeker kütlesi aynı. Değişen özellik şekerin tanecik boyutudur. Tanecikler küçüldükçe suyla temas eden toplam yüzey büyür ve çözünme hızlanır. Pudra şekerinin yüzeyi en büyük olduğu için ikinci kap en hızlıdır. Toz şeker bulunan birinci kap onu izler. Küp şeker bulunan üçüncü kap en yavaştır. Çözünme miktarıyla çözünme hızını karıştırmayalım; burada sorulan hızdır. Sıralama ikinci, birinci, üçüncü olur. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Üç kapta sıcaklık, su miktarı ve şeker kütlesi aynı. Değişen özellik şekerin tanecik boyutudur. Tanecikler küçüldükçe suyla temas eden toplam yüzey büyür ve çözünme hızlanır. Pudra şekerinin yüzeyi en büyük olduğu için ikinci kap en hızlıdır. Toz şeker bulunan birinci kap onu izler. Küp şeker bulunan üçüncü kap en yavaştır. Çözünme miktarıyla çözünme hızını karıştırmayalım; burada sorulan hızdır. Sıralama ikinci, birinci, üçüncü olur. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Küçük tanecik → büyük yüzey",
+        "Tanecikler küçüldükçe suyla temas eden toplam yüzey büyür"
+      ],
+      [
+        "Pudra > toz > küp",
+        "Pudra şekerinin yüzeyi en büyük olduğu için ikinci kap en hızlıdır"
+      ],
+      [
+        "Hız: II>I>III",
+        "Sıralama ikinci, birinci, üçüncü olur"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "şeker,",
+        "Pudra şekerinin yüzeyi en büyük olduğu için ikinci kap en hızlıdır"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-16",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-16",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 16,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        364.164
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        356.164,
+        300.0,
+        492.497
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-16",
+      "calisma_sirasi": 56,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-20",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-16",
+      "answer_label_rects": [
+        [
+          266.81298828125,
+          457.9169616699219,
+          276.25396728515625,
+          468.70794677734375
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-20",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 20,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.063,
+        590.797
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        582.797,
+        576.0,
+        733.1419067382812
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-20",
+      "calisma_sirasi": 185,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-16",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-16",
+      "answer_label_rects": [
+        [
+          542.9390258789062,
+          684.5499267578125,
+          552.3800048828125,
+          695.3409423828125
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-16",
+      "B-Fen_Bilimleri-20"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-16",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Biyoloji",
+      "soru_numarasi": 16,
+      "pdf_sayfasi": 31,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Doğal koşullarda çiftleşip verimli, yani üreyebilen yavrular oluşturabilen bireyler grubu biyolojik tür tanımına karşılık gelir. Bu nedenle aranan sınıflama kategorisi türdür; C.",
+      "kontrol_yontemi": "Sınıf, takım, aile ve cins birden fazla tür içerebilir; bu üst basamaklarda bütün bireylerin verimli döl oluşturması beklenmez.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Tanımdaki belirleyici ifade, doğal koşullarda çiftleşerek verimli döl oluşturabilmektir. Bu özellik biyolojik tür tanımını verir. Üst sınıflama basamakları daha geniş gruplardır. Doğru cevap tür, yani C seçeneğidir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Doğal çiftleşme",
+        "Verimli döl",
+        "Tür"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 31 | Fen Bilimleri Testi 16",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-20"
+    },
+    "narration": "Tanımdaki belirleyici koşula dikkat edelim: doğal ortamda çiftleşip, kendileri de üreyebilen yavrular oluşturmak. Bu, biyolojik tür tanımına karşılık gelir. Yalnız dış görünüş benzerliği yeterli değildir; verimli döl oluşturabilme koşulu da aranır. Cins, aile, takım ve sınıf daha geniş sınıflandırma basamaklarıdır. Soruda verilen en özel birim türdür. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Tanımdaki belirleyici koşula dikkat edelim: doğal ortamda çiftleşip, kendileri de üreyebilen yavrular oluşturmak. Bu, biyolojik tür tanımına karşılık gelir. Yalnız dış görünüş benzerliği yeterli değildir; verimli döl oluşturabilme koşulu da aranır. Cins, aile, takım ve sınıf daha geniş sınıflandırma basamaklarıdır. Soruda verilen en özel birim türdür. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Doğal koşullarda çiftleşme",
+        "doğal ortamda çiftleşip"
+      ],
+      [
+        "Verimli döl",
+        "kendileri de üreyebilen yavrular oluşturmak"
+      ],
+      [
+        "Biyolojik tür",
+        "Bu, biyolojik tür tanımına karşılık gelir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "çiftleşip",
+        "doğal ortamda çiftleşip"
+      ],
+      [
+        "Biyoloji",
+        "Bu, biyolojik tür tanımına karşılık gelir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-17",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-17",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 17,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.928,
+        644.073
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        636.073,
+        300.0,
+        783.74
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-17",
+      "calisma_sirasi": 57,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-18",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-17",
+      "answer_label_rects": [
+        [
+          60.9379997253418,
+          690.971923828125,
+          69.92000579833984,
+          701.762939453125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-18",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 18,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.335
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.335,
+        576.0,
+        220.002
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-18",
+      "calisma_sirasi": 183,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-17",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-17",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          127.23394012451172,
+          346.3070068359375,
+          138.02493286132812
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-17",
+      "B-Fen_Bilimleri-18"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-17",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Biyoloji",
+      "soru_numarasi": 17,
+      "pdf_sayfasi": 31,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "Nişasta, glikojen ve selülozun üçü de çok sayıda glikozun glikozit bağlarıyla bağlanmasından oluşan polisakkaritlerdir. Bağların türü ve dallanma düzeni farklı olsa da yapı taşının glikoz olması ortaktır. Selüloz depo değil yapı maddesidir ve insanın kendi enzimleriyle sindirilemez.",
+      "kontrol_yontemi": "Nişasta ve glikojenin depo,selülozun yapı görevi olduğu karşılaştırılır. Glikojen tipik bitki depo maddesi değildir; bu yüzdenA ortak değildir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Üç molekülün görevi aynı değil; nişasta ve glikojen depolar, selüloz yapı oluşturur. Ortak noktaları, çok sayıda glikozun glikozit bağlarıyla bağlanmasıdır. Selülozu insanın kendi enzimleri sindiremediği için son seçenek ortak olamaz. B seçeneği doğrudur.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Üçü de polisakkarit",
+        "Yapı taşı:glikoz",
+        "Bağ:glikozit",
+        "B"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 31 | Fen Bilimleri Testi 17",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-18"
+    },
+    "narration": "Nişasta, glikojen ve selülozun üçü de polisakkarittir. Ortak yapı taşları glikozdur. Çok sayıda glikoz, glikozit bağlarıyla birleşerek bu büyük molekülleri oluşturur. B seçeneği bu ortak özelliği söylüyor. İşlevleri ise aynı değildir: nişasta ve glikojen depo maddeleriyken, selüloz bitki hücre duvarında yapıya katılır. İnsan selülozu kendi sindirim enzimleriyle parçalayamaz. Bu nedenle depolama, bitkide üretilme veya insanda sindirilme özelliklerini üçünün ortak özelliği sayamayız. B seçeneğini işaretliyoruz.",
+    "segments": [
+      "Nişasta, glikojen ve selülozun üçü de polisakkarittir. Ortak yapı taşları glikozdur. Çok sayıda glikoz, glikozit bağlarıyla birleşerek bu büyük molekülleri oluşturur. B seçeneği bu ortak özelliği söylüyor. İşlevleri ise aynı değildir: nişasta ve glikojen depo maddeleriyken, selüloz bitki hücre duvarında yapıya katılır. İnsan selülozu kendi sindirim enzimleriyle parçalayamaz. Bu nedenle depolama, bitkide üretilme veya insanda sindirilme özelliklerini üçünün ortak özelliği sayamayız. B seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Üçü de polisakkarit",
+        "Nişasta, glikojen ve selülozun üçü de polisakkarittir"
+      ],
+      [
+        "Glikoz + glikozit bağları",
+        "Çok sayıda glikoz, glikozit bağlarıyla birleşerek bu büyük molekülleri oluşturur"
+      ],
+      [
+        "Selüloz: yapı maddesi",
+        "selüloz bitki hücre duvarında yapıya katılır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "Nişasta,",
+        "Nişasta, glikojen ve selülozun üçü de polisakkarittir"
+      ],
+      [
+        "molekülleri",
+        "Çok sayıda glikoz, glikozit bağlarıyla birleşerek bu büyük molekülleri oluşturur"
+      ],
+      [
+        "selüloz",
+        "selüloz bitki hücre duvarında yapıya katılır"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-18",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-18",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 18,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        233.043
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-18",
+      "calisma_sirasi": 58,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-16",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-18",
+      "answer_label_rects": [
+        [
+          533.02099609375,
+          198.60015869140625,
+          542.4619750976562,
+          209.39114379882812
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-16",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 16,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        299.924
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        291.924,
+        300.0,
+        452.924
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-16",
+      "calisma_sirasi": 181,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-18",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-18",
+      "answer_label_rects": [
+        [
+          256.64300537109375,
+          418.1479187011719,
+          266.083984375,
+          428.93890380859375
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-18",
+      "B-Fen_Bilimleri-16"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-18",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Biyoloji",
+      "soru_numarasi": 18,
+      "pdf_sayfasi": 31,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Geviş getirenlerin midesi dört özelleşmiş bölümden oluşabilir; I doğru. Selülozu parçalayan enzimleri hayvanın kendi hücreleri değil, sindirim sistemindeki simbiyotik mikroorganizmalar sağlar; II bu haliyle yanlış. Besini geri getirip tekrar çiğneme geviş getirmedir; III doğru.",
+      "kontrol_yontemi": "Enzim üreticisi ile sindirimin gerçekleştiği yer ayrılır. İşkembe mikroorganizmaları selülozu parçalar; hayvanın geviş getirme davranışı ise mekanik işleme yardım eder.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Dört bölümlü mide ve besini geri getirerek yeniden çiğneme, geviş getirenlere uygundur. Ancak selülozu parçalayan enzimi hayvanın kendisi üretmez; sindirim sistemindeki mikroorganizmalar üretir. Bu yüzden birinci ve üçüncü yargılar doğru, cevap C’dir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Dört mide bölümü ✓",
+        "Selülaz:ortak mikroorganizmalar",
+        "Yeniden çiğneme ✓",
+        "I ve III"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 31 | Fen Bilimleri Testi 18",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [
+        {
+          "kurum": "OpenStax",
+          "baslik": "Biology 2e, 34.1 Digestive Systems",
+          "url": "https://openstax.org/books/biology-2e/pages/34-1-digestive-systems",
+          "erisim": "2026-09-21"
+        }
+      ],
+      "eslesen_soru": "B-Fen_Bilimleri-16"
+    },
+    "narration": "Geviş getirenlerde sindirimi hayvanın kendi enzimleriyle, birlikte yaşayan mikroorganizmaların katkısını ayırarak değerlendirelim. Mide dört özelleşmiş bölümden oluşabilir; birinci yargı doğrudur. Selülozu parçalayan enzimleri hayvanın kendi hücreleri üretmez. Sindirim sistemindeki ortak yaşayan mikroorganizmalar üretir. Bu yüzden ikinci yargı, enzimi hayvana atfettiği biçimiyle yanlıştır. Yutulmuş besini ağza geri getirip yeniden çiğnemek geviş getirmedir; üçüncü yargı doğrudur. Birinci ve üçüncüyü veren C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Geviş getirenlerde sindirimi hayvanın kendi enzimleriyle, birlikte yaşayan mikroorganizmaların katkısını ayırarak değerlendirelim. Mide dört özelleşmiş bölümden oluşabilir; birinci yargı doğrudur. Selülozu parçalayan enzimleri hayvanın kendi hücreleri üretmez. Sindirim sistemindeki ortak yaşayan mikroorganizmalar üretir. Bu yüzden ikinci yargı, enzimi hayvana atfettiği biçimiyle yanlıştır. Yutulmuş besini ağza geri getirip yeniden çiğnemek geviş getirmedir; üçüncü yargı doğrudur. Birinci ve üçüncüyü veren C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "I: dört bölümlü mide",
+        "Mide dört özelleşmiş bölümden oluşabilir"
+      ],
+      [
+        "Selülaz: mikroorganizmalar",
+        "Sindirim sistemindeki ortak yaşayan mikroorganizmalar üretir"
+      ],
+      [
+        "III: yeniden çiğneme",
+        "Yutulmuş besini ağza geri getirip yeniden çiğnemek geviş getirmedir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "oluşabilir.",
+        "Mide dört özelleşmiş bölümden oluşabilir"
+      ],
+      [
+        "sindirim",
+        "Sindirim sistemindeki ortak yaşayan mikroorganizmalar üretir"
+      ],
+      [
+        "getirip",
+        "Yutulmuş besini ağza geri getirip yeniden çiğnemek geviş getirmedir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-19",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-19",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 19,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        344.121
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        336.121,
+        576.0,
+        425.455
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-19",
+      "calisma_sirasi": 59,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-15",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-19",
+      "answer_label_rects": [
+        [
+          402.93499755859375,
+          409.8211669921875,
+          411.7099914550781,
+          420.6121520996094
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-15",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 15,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.351
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.351,
+        300.0,
+        161.684
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-15",
+      "calisma_sirasi": 180,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-19",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-19",
+      "answer_label_rects": [
+        [
+          126.5570068359375,
+          146.05096435546875,
+          135.33201599121094,
+          156.84194946289062
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-19",
+      "B-Fen_Bilimleri-15"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-19",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Biyoloji",
+      "soru_numarasi": 19,
+      "pdf_sayfasi": 31,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Nitrifikasyon bakterileri inorganik azot bileşiklerinin yükseltgenmesinden enerji kazanıp bu enerjiyi organik madde üretiminde kullanabilir. Bu kemosentezdir. Yeşil algler,siyanobakteriler ve öglena ışık enerjisini kullanır; mantarlar heterotroftur.",
+      "kontrol_yontemi": "Enerji kaynağı kimyasal yükseltgenme,karbon kaynağıCO2 olduğunda kemoototrofluk tanınır. Işık enerjisiyle fotosentezden ayrılır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Kemosentezde enerji ışıktan değil, inorganik maddelerin kimyasal tepkimelerinden sağlanır. Nitrifikasyon bakterileri bu enerjiyi organik madde üretmek için kullanabilir. Verilen seçeneklerde uygun grup E’dir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "İnorganik madde yükseltgenmesi",
+        "Kimyasal enerji",
+        "CO2→organik madde",
+        "Nitrifikasyon bakterileri"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 31 | Fen Bilimleri Testi 19",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [
+        {
+          "kurum": "OpenStax",
+          "baslik": "Biology 2e, 22.3 Prokaryotic Metabolism",
+          "url": "https://openstax.org/books/biology-2e/pages/22-3-prokaryotic-metabolism",
+          "erisim": "2026-09-21"
+        }
+      ],
+      "eslesen_soru": "B-Fen_Bilimleri-15"
+    },
+    "narration": "Kemosentezde organik madde üretimi için ışık yerine kimyasal tepkimelerden sağlanan enerji kullanılır. Nitrifikasyon bakterileri inorganik azot bileşiklerini yükseltgerken enerji elde edebilir. Bu enerjiyi organik madde sentezinde kullanmaları kemosentezdir. Yeşil algler, siyanobakteriler ve öglena fotosentez yaparken ışık enerjisini kullanır. Mantarlar ise hazır organik besin alır. Seçenekler içinde kemosentez yapabilen grup nitrifikasyon bakterileridir. E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Kemosentezde organik madde üretimi için ışık yerine kimyasal tepkimelerden sağlanan enerji kullanılır. Nitrifikasyon bakterileri inorganik azot bileşiklerini yükseltgerken enerji elde edebilir. Bu enerjiyi organik madde sentezinde kullanmaları kemosentezdir. Yeşil algler, siyanobakteriler ve öglena fotosentez yaparken ışık enerjisini kullanır. Mantarlar ise hazır organik besin alır. Seçenekler içinde kemosentez yapabilen grup nitrifikasyon bakterileridir. E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Kemosentez: kimyasal enerji",
+        "ışık yerine kimyasal tepkimelerden sağlanan enerji kullanılır"
+      ],
+      [
+        "Nitrifikasyon bakterileri",
+        "Nitrifikasyon bakterileri inorganik azot bileşiklerini yükseltgerken enerji elde edebilir"
+      ],
+      [
+        "Enerji → organik madde",
+        "Bu enerjiyi organik madde sentezinde kullanmaları kemosentezdir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "Nitrifikasyon",
+        "Nitrifikasyon bakterileri inorganik azot bileşiklerini yükseltgerken enerji elde edebilir"
+      ],
+      [
+        "kemosentez",
+        "Bu enerjiyi organik madde sentezinde kullanmaları kemosentezdir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-20",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-20",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 20,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.324,
+        536.541
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        528.541,
+        576.0,
+        743.4971313476562
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-20",
+      "calisma_sirasi": 60,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-17",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-20",
+      "answer_label_rects": [
+        [
+          487.5710144042969,
+          694.9051513671875,
+          496.9580078125,
+          705.6961669921875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-17",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Biyoloji",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 17,
+      "pdf_sayfasi": 31,
+      "basili_sayfa": 31,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.946,
+        590.786
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        582.786,
+        300.0,
+        783.786
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-17",
+      "calisma_sirasi": 182,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-20",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-20",
+      "answer_label_rects": [
+        [
+          211.19300842285156,
+          749.1500244140625,
+          220.58001708984375,
+          759.9410400390625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-20",
+      "B-Fen_Bilimleri-17"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-20",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Biyoloji",
+      "soru_numarasi": 20,
+      "pdf_sayfasi": 31,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Kuşlar kolay besin bulduğu için yarar sağlar; sığırlar ne yarar ne zarar görür. Etkileşim (+,0) biçimindedir ve kommensalizm olarak adlandırılır. D seçeneği.",
+      "kontrol_yontemi": "Mutualizm(+,+),parazitizm(+,-),amensalizm(-,0),rekabet(-,-) ile işaret karşılaştırması yapılır. Metin sığır için açıkça etkisizlik belirtir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Metindeki yarar ve zararları ayrı işaretleyelim. Kuş besin bulduğu için artı. Sığır etkilenmediği için sıfır. Bir tarafın yarar gördüğü, diğerinin etkilenmediği ilişki kommensalizmdir. D seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Kuş:+",
+        "Sığır:0",
+        "(+,0)=Kommensalizm",
+        "D"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 31 | Fen Bilimleri Testi 20",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-17"
+    },
+    "narration": "İki canlı üzerindeki etkiyi ayrı ayrı yazalım. Kuşlar kaçışan böcekleri kolay yakaladıkları için yarar görüyor; kuşlara artı işareti verelim. Metin sığırların ne yarar ne zarar gördüğünü açıkça söylüyor; sığırlar için sıfır yazalım. Bir türün yarar gördüğü, diğerinin etkilenmediği artı sıfır ilişkisi kommensalizmdir. Mutualizmde iki tür de yarar görürdü; parazitizmde ise birinin yararına karşılık diğeri zarar görürdü. Sorudaki ilişkiyi veren D seçeneğini işaretliyoruz.",
+    "segments": [
+      "İki canlı üzerindeki etkiyi ayrı ayrı yazalım. Kuşlar kaçışan böcekleri kolay yakaladıkları için yarar görüyor; kuşlara artı işareti verelim. Metin sığırların ne yarar ne zarar gördüğünü açıkça söylüyor; sığırlar için sıfır yazalım. Bir türün yarar gördüğü, diğerinin etkilenmediği artı sıfır ilişkisi kommensalizmdir. Mutualizmde iki tür de yarar görürdü; parazitizmde ise birinin yararına karşılık diğeri zarar görürdü. Sorudaki ilişkiyi veren D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Kuş: +",
+        "kuşlara artı işareti verelim"
+      ],
+      [
+        "Sığır: 0",
+        "sığırlar için sıfır yazalım"
+      ],
+      [
+        "(+ , 0) → kommensalizm",
+        "artı sıfır ilişkisi kommensalizmdir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "kuşlar",
+        "kuşlara artı işareti verelim"
+      ],
+      [
+        "sığırlar,",
+        "sığırlar için sıfır yazalım"
+      ],
+      [
+        "Kommensalizm",
+        "artı sıfır ilişkisi kommensalizmdir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-09",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-09",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Coğrafya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 9,
+      "pdf_sayfasi": 13,
+      "basili_sayfa": 13,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        584.107
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        576.107,
+        576.0,
+        783.773
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-09",
+      "calisma_sirasi": 109,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-06",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-09",
+      "answer_label_rects": [
+        [
+          480.0828857421875,
+          767.9856567382812,
+          488.8578796386719,
+          778.7766723632812
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-06",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Coğrafya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 6,
+      "pdf_sayfasi": 13,
+      "basili_sayfa": 13,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        280.043
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-06",
+      "calisma_sirasi": 231,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-09",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-09",
+      "answer_label_rects": [
+        [
+          203.7050018310547,
+          264.2552490234375,
+          212.48001098632812,
+          275.0462341308594
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-09",
+      "B-Sosyal_Bilimler-06"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-09",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Coğrafya",
+      "soru_numarasi": 9,
+      "pdf_sayfasi": 13,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "İkincil sektör, ham maddeyi işleme ve inşaat faaliyetlerini kapsar. Pamuğu iplik ve kumaşa dönüştürme ile yapı inşa etme bu sektördedir. Ürünün tüketiciye ulaştırılması ve satışı hizmet, yani üçüncül sektördür.",
+      "kontrol_yontemi": "Faaliyetler üretim–işleme–hizmet ayrımıyla sınıflanır: II sanayi,III inşaat,I ticaret/dağıtım.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "İkincil sektör, ham maddeyi işleme ve inşaat faaliyetlerini kapsar. Pamuğu iplik ve kumaşa dönüştürme ile yapı inşa etme bu sektördedir. Ürünün tüketiciye ulaştırılması ve satışı hizmet, yani üçüncül sektördür. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "I:üçüncül",
+        "II:ikincil",
+        "III:ikincil",
+        "II ve III"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 13 | Sosyal Bilimler Testi 9",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-06"
+    },
+    "narration": "İkincil ekonomik sektörde ham madde işlenir veya yapı inşa edilir. Pamuğun iplik ve kumaşa dönüştürülmesi sanayi faaliyetidir; ikinci örnek bu sektöre girer. Konut, köprü ve yol yapımı da inşaat faaliyetidir; üçüncü örnek de ikincil sektördedir. Ürünlerin tüketiciye ulaştırılıp satılması ise ticaret ve dağıtım hizmetidir, üçüncül sektöre girer. Dolayısıyla ikinci ve üçüncü örnekleri seçmeliyiz. E seçeneğini işaretliyoruz.",
+    "segments": [
+      "İkincil ekonomik sektörde ham madde işlenir veya yapı inşa edilir. Pamuğun iplik ve kumaşa dönüştürülmesi sanayi faaliyetidir; ikinci örnek bu sektöre girer. Konut, köprü ve yol yapımı da inşaat faaliyetidir; üçüncü örnek de ikincil sektördedir. Ürünlerin tüketiciye ulaştırılıp satılması ise ticaret ve dağıtım hizmetidir, üçüncül sektöre girer. Dolayısıyla ikinci ve üçüncü örnekleri seçmeliyiz. E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "II: işleme → sanayi",
+        "Pamuğun iplik ve kumaşa dönüştürülmesi sanayi faaliyetidir"
+      ],
+      [
+        "III: yapı → inşaat",
+        "Konut, köprü ve yol yapımı da inşaat faaliyetidir"
+      ],
+      [
+        "I: ticaret → üçüncül",
+        "Ürünlerin tüketiciye ulaştırılıp satılması ise ticaret ve dağıtım hizmetidir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "pamuğun",
+        "Pamuğun iplik ve kumaşa dönüştürülmesi sanayi faaliyetidir"
+      ],
+      [
+        "köprü,",
+        "Konut, köprü ve yol yapımı da inşaat faaliyetidir"
+      ],
+      [
+        "ulaştırılıp",
+        "Ürünlerin tüketiciye ulaştırılıp satılması ise ticaret ve dağıtım hizmetidir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-10",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-10",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Coğrafya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 10,
+      "pdf_sayfasi": 14,
+      "basili_sayfa": 14,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        507.376
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-10",
+      "calisma_sirasi": 110,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-08",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-10",
+      "answer_label_rects": [
+        [
+          60.946998596191406,
+          472.8480529785156,
+          69.7040023803711,
+          483.6390380859375
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-08",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Coğrafya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 8,
+      "pdf_sayfasi": 13,
+      "basili_sayfa": 13,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.309,
+        80.331
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.331,
+        576.0,
+        507.665
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-08",
+      "calisma_sirasi": 233,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-10",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-10",
+      "answer_label_rects": [
+        [
+          337.31903076171875,
+          472.8032531738281,
+          346.0760192871094,
+          483.59423828125
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-10",
+      "B-Sosyal_Bilimler-08"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-10",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Coğrafya",
+      "soru_numarasi": 10,
+      "pdf_sayfasi": 14,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "Suyun çözünebilen kayacı eritmesi yer altında boşluk oluşturur. Boşluğun tavanı çökünce yüzeyde derin çukur meydana gelir. Bu çökme kökenli karstik şekil obruk olarak adlandırılır.",
+      "kontrol_yontemi": "Traverten birikme şeklidir; kanyon akarsu aşındırmasıyla ilgilidir. Görselin son basamağındaki tavan çökmesi obruğu ayırt eder.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Suyun çözünebilen kayacı eritmesi yer altında boşluk oluşturur. Boşluğun tavanı çökünce yüzeyde derin çukur meydana gelir. Bu çökme kökenli karstik şekil obruk olarak adlandırılır. Doğru seçenek A.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Çözünme",
+        "Yer altı boşluğu",
+        "Tavan çökmesi",
+        "Obruk"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 14 | Sosyal Bilimler Testi 10",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-08"
+    },
+    "narration": "Şeklin üç aşamasını izleyelim. Önce su, kayacın çatlaklarından yer altına sızıyor. Çözünebilen kayacı aşındırarak yer altında boşluklar oluşturuyor. Boşluk büyüdüğünde tavanı taşıyamıyor ve çökme gerçekleşiyor. Yüzeyde oluşan derin çukur, çökme kökenli bir obruk. Traverten birikme şeklidir; burada ise çözünme ve çökme var. Düden suyun yer altına geçtiği yeri anlatır; şekilde özellikle tavanın çökmesi gösterilmiş. Obruğu veren A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Şeklin üç aşamasını izleyelim. Önce su, kayacın çatlaklarından yer altına sızıyor. Çözünebilen kayacı aşındırarak yer altında boşluklar oluşturuyor. Boşluk büyüdüğünde tavanı taşıyamıyor ve çökme gerçekleşiyor. Yüzeyde oluşan derin çukur, çökme kökenli bir obruk. Traverten birikme şeklidir; burada ise çözünme ve çökme var. Düden suyun yer altına geçtiği yeri anlatır; şekilde özellikle tavanın çökmesi gösterilmiş. Obruğu veren A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "1: sızma",
+        "su, kayacın çatlaklarından yer altına sızıyor"
+      ],
+      [
+        "2: çözünme ve boşluk",
+        "Çözünebilen kayacı aşındırarak yer altında boşluklar oluşturuyor"
+      ],
+      [
+        "3: çökme → obruk",
+        "Yüzeyde oluşan derin çukur, çökme kökenli bir obruk"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "altına",
+        "su, kayacın çatlaklarından yer altına sızıyor"
+      ],
+      [
+        "derin",
+        "Yüzeyde oluşan derin çukur, çökme kökenli bir obruk"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-12",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-12",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 12,
+      "pdf_sayfasi": 14,
+      "basili_sayfa": 14,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.318,
+        80.273
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.273,
+        576.0,
+        254.606
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-12",
+      "calisma_sirasi": 112,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-13",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-12",
+      "answer_label_rects": [
+        [
+          337.3280029296875,
+          219.83587646484375,
+          346.0849914550781,
+          230.62686157226562
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-13",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 13,
+      "pdf_sayfasi": 15,
+      "basili_sayfa": 15,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.317
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.317,
+        300.0,
+        254.65
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-13",
+      "calisma_sirasi": 238,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-12",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-12",
+      "answer_label_rects": [
+        [
+          60.94701385498047,
+          219.88031005859375,
+          69.70401763916016,
+          230.67129516601562
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-12",
+      "B-Sosyal_Bilimler-13"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-12",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Felsefe",
+      "soru_numarasi": 12,
+      "pdf_sayfasi": 14,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "Parçada varlığın sürekli değiştiği, aynı nehrin ve maddenin aynı kalmadığı vurgulanır. Varlığı sabit bir nesne değil sürekli oluş süreci olarak ele alan bu görüş oluşçudur.",
+      "kontrol_yontemi": "Değişim yasasının varlığı, her şeyin bütünüyle yok sayıldığı hiççilik veya bilginin askıya alındığı kuşkuculuk anlamına gelmez.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Parçada varlığın sürekli değiştiği, aynı nehrin ve maddenin aynı kalmadığı vurgulanır. Varlığı sabit bir nesne değil sürekli oluş süreci olarak ele alan bu görüş oluşçudur. Doğru seçenek A.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Sürekli değişim",
+        "Varlık=oluş",
+        "A"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 14 | Sosyal Bilimler Testi 12",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-13"
+    },
+    "narration": "Parçanın temel vurgusu, evrendeki varlıkların sürekli değişmesidir. Nehir örneğinde suyun akıp gitmesi, hiçbir şeyin aynı biçimde kalmamasını açıklıyor. Herakleitos için varlık durağan bir şey olarak değil, oluş ve değişme süreci olarak ele alınıyor. Bu görüşe oluşçuluk denir. Parça bilginin kuşkulu oluşunu ya da hiçbir şeyin var olmadığını savunmuyor; değişimi açıklıyor. Oluşçu görüşü veren A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Parçanın temel vurgusu, evrendeki varlıkların sürekli değişmesidir. Nehir örneğinde suyun akıp gitmesi, hiçbir şeyin aynı biçimde kalmamasını açıklıyor. Herakleitos için varlık durağan bir şey olarak değil, oluş ve değişme süreci olarak ele alınıyor. Bu görüşe oluşçuluk denir. Parça bilginin kuşkulu oluşunu ya da hiçbir şeyin var olmadığını savunmuyor; değişimi açıklıyor. Oluşçu görüşü veren A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Sürekli değişme",
+        "evrendeki varlıkların sürekli değişmesidir"
+      ],
+      [
+        "Varlık: oluş süreci",
+        "oluş ve değişme süreci olarak ele alınıyor"
+      ],
+      [
+        "Oluşçuluk",
+        "Bu görüşe oluşçuluk denir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "evrende",
+        "evrendeki varlıkların sürekli değişmesidir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-13",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-13",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 13,
+      "pdf_sayfasi": 14,
+      "basili_sayfa": 14,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.318,
+        568.379
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        560.379,
+        576.0,
+        783.712
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-13",
+      "calisma_sirasi": 113,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-14",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-13",
+      "answer_label_rects": [
+        [
+          477.8450012207031,
+          767.9266357421875,
+          486.6199951171875,
+          778.7176513671875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-14",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 14,
+      "pdf_sayfasi": 15,
+      "basili_sayfa": 15,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        342.541
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        334.541,
+        300.0,
+        557.875
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-14",
+      "calisma_sirasi": 239,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-13",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-13",
+      "answer_label_rects": [
+        [
+          201.46401977539062,
+          542.089111328125,
+          210.23902893066406,
+          552.880126953125
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-13",
+      "B-Sosyal_Bilimler-14"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-13",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Felsefe",
+      "soru_numarasi": 13,
+      "pdf_sayfasi": 14,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Bilginin ne olduğu, neyin doğru sayılacağı, nelerin bilinebileceği ve bilginin sınırları epistemolojinin, yani bilgi felsefesinin sorularıdır.",
+      "kontrol_yontemi": "Ontoloji varlığı,estetik güzeli ve sanatı,felsefi antropoloji insanı merkeze alır. Buradaki ortak tema bilginin geçerliliği ve sınırıdır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Bilginin ne olduğu, neyin doğru sayılacağı, nelerin bilinebileceği ve bilginin sınırları epistemolojinin, yani bilgi felsefesinin sorularıdır. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Bilgi nedir?",
+        "Doğruluk",
+        "Bilginin sınırları",
+        "Epistemoloji"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 14 | Sosyal Bilimler Testi 13",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-14"
+    },
+    "narration": "Parçadaki soruları ortak bir başlık altında toplayalım. Bilgi nedir, neyi bilebiliriz, neyi doğru sayarız ve bilgimizin sınırları nelerdir? Bunların hepsi bilgi felsefesinin konusudur. Bilgi felsefesinin diğer adı epistemolojidir. Ontoloji varlığı, estetik güzeli ve sanatı, felsefi antropoloji insanı araştırır. Burada doğrudan bilginin niteliği ve sınırları sorgulandığı için epistemolojiyi seçiyoruz. Cevap E seçeneğidir.",
+    "segments": [
+      "Parçadaki soruları ortak bir başlık altında toplayalım. Bilgi nedir, neyi bilebiliriz, neyi doğru sayarız ve bilgimizin sınırları nelerdir? Bunların hepsi bilgi felsefesinin konusudur. Bilgi felsefesinin diğer adı epistemolojidir. Ontoloji varlığı, estetik güzeli ve sanatı, felsefi antropoloji insanı araştırır. Burada doğrudan bilginin niteliği ve sınırları sorgulandığı için epistemolojiyi seçiyoruz. Cevap E seçeneğidir."
+    ],
+    "notes": [
+      [
+        "Bilgi nedir?",
+        "Bilgi nedir, neyi bilebiliriz"
+      ],
+      [
+        "Doğruluk ve sınırlar",
+        "neyi doğru sayarız ve bilgimizin sınırları nelerdir"
+      ],
+      [
+        "Epistemoloji",
+        "Bilgi felsefesinin diğer adı epistemolojidir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "bilgi",
+        "Bilgi nedir, neyi bilebiliriz"
+      ],
+      [
+        "bilgimizin",
+        "neyi doğru sayarız ve bilgimizin sınırları nelerdir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-14",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-14",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 14,
+      "pdf_sayfasi": 15,
+      "basili_sayfa": 15,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        218.043
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-14",
+      "calisma_sirasi": 114,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-15",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-14",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          183.67816162109375,
+          70.3340072631836,
+          194.46914672851562
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-15",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 15,
+      "pdf_sayfasi": 15,
+      "basili_sayfa": 15,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        645.906
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        637.906,
+        300.0,
+        783.906
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-15",
+      "calisma_sirasi": 240,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-14",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-14",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          749.20849609375,
+          70.3340072631836,
+          759.99951171875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-14",
+      "B-Sosyal_Bilimler-15"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-14",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Felsefe",
+      "soru_numarasi": 14,
+      "pdf_sayfasi": 15,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Önerme doğru veya yanlış değeri taşıyan bir yargı bildirir. “İlk filozof Thales midir?” bir soru cümlesidir; doğruluk değeri ileri süren bir iddia değildir. Diğerleri doğru veya yanlış olabilen bildirimlerdir.",
+      "kontrol_yontemi": "Bir cümlenin yanlış olması onu önerme olmaktan çıkarmaz. Sorunun yanıtı bir önerme olabilir, fakat soru cümlesinin kendisi değildir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Önerme doğru veya yanlış değeri taşıyan bir yargı bildirir. “İlk filozof Thales midir?” bir soru cümlesidir; doğruluk değeri ileri süren bir iddia değildir. Diğerleri doğru veya yanlış olabilen bildirimlerdir. Doğru seçenek D.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Yargı→doğru/yanlış",
+        "Soru→yargı bildirmez",
+        "D"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 15 | Sosyal Bilimler Testi 14",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-15"
+    },
+    "narration": "Bir önermenin mutlaka doğru olması gerekmez; doğru ya da yanlış değeri alabilen bir yargı bildirmesi gerekir. Seçeneklerdeki bildirme cümleleri bu özelliği taşır. D seçeneği ise, ilk filozof Tales midir diye soruyor. Soru bir yargı ileri sürmediğinden kendisine doğru veya yanlış değeri veremeyiz. İlk filozof Talestir biçiminde bir bildirim olsaydı, doğruluğunu tartışabileceğimiz bir önerme olurdu. Önerme olmayan soru cümlesini veren D seçeneğini işaretliyoruz.",
+    "segments": [
+      "Bir önermenin mutlaka doğru olması gerekmez; doğru ya da yanlış değeri alabilen bir yargı bildirmesi gerekir. Seçeneklerdeki bildirme cümleleri bu özelliği taşır. D seçeneği ise, ilk filozof Tales midir diye soruyor. Soru bir yargı ileri sürmediğinden kendisine doğru veya yanlış değeri veremeyiz. İlk filozof Talestir biçiminde bir bildirim olsaydı, doğruluğunu tartışabileceğimiz bir önerme olurdu. Önerme olmayan soru cümlesini veren D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Önerme: yargı bildirir",
+        "doğru ya da yanlış değeri alabilen bir yargı bildirmesi gerekir"
+      ],
+      [
+        "Soru: yargı bildirmez",
+        "Soru bir yargı ileri sürmediğinden"
+      ],
+      [
+        "D: soru cümlesi",
+        "Önerme olmayan soru cümlesini veren D seçeneğini işaretliyoruz"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "alabilen",
+        "doğru ya da yanlış değeri alabilen bir yargı bildirmesi gerekir"
+      ],
+      [
+        "önerme",
+        "Önerme olmayan soru cümlesini veren D seçeneğini işaretliyoruz"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-15",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-15",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 15,
+      "pdf_sayfasi": 15,
+      "basili_sayfa": 15,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        522.307
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        514.307,
+        300.0,
+        782.307
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-15",
+      "calisma_sirasi": 115,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-11",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-15",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          670.3745727539062,
+          69.92900848388672,
+          681.1655883789062
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-11",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 11,
+      "pdf_sayfasi": 14,
+      "basili_sayfa": 14,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.336
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.336,
+        576.0,
+        340.002
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-11",
+      "calisma_sirasi": 236,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-15",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-15",
+      "answer_label_rects": [
+        [
+          337.3249206542969,
+          228.40386962890625,
+          346.3069152832031,
+          239.19485473632812
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-15",
+      "B-Sosyal_Bilimler-11"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-15",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Felsefe",
+      "soru_numarasi": 15,
+      "pdf_sayfasi": 15,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "Parçada deneyin bilgiye ham madde sağladığı, aklın ise bu malzemeyi kategorilerle düzenlediği açıklanır. Bilgi ne yalnız duyudan ne yalnız akıldan doğar; iki unsurun birlikte çalışmasıyla oluşur.",
+      "kontrol_yontemi": "“Ham madde” duyusal veri, “işleme” aklın düzenleme etkinliğidir. Birini dışlayan seçenekler paragrafın açık açıklamasına aykırıdır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Parçada deneyin bilgiye ham madde sağladığı, aklın ise bu malzemeyi kategorilerle düzenlediği açıklanır. Bilgi ne yalnız duyudan ne yalnız akıldan doğar; iki unsurun birlikte çalışmasıyla oluşur. Doğru seçenek B.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Deney:malzeme",
+        "Akıl:düzenleme",
+        "Birlikte bilgi",
+        "B"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 15 | Sosyal Bilimler Testi 15",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-11"
+    },
+    "narration": "Kantın görüşünde duyular ve akıl birlikte çalışır. Duyular, deney yoluyla bilginin ham maddesini sağlar. Akıl ise bu verileri kategorilerle düzenleyerek bilgiye dönüştürür. Dolayısıyla duyusal veri tek başına işlenmiş bilgi değildir; akıl da deneysel veriyi tamamen yok sayarak bilgi üretemez. B seçeneği, bilginin bir yönüyle deneye, diğer yönüyle akla dayandığını söylüyor. Parçanın iki unsuru birlikte kullanma düşüncesini karşılayan B seçeneğini işaretliyoruz.",
+    "segments": [
+      "Kantın görüşünde duyular ve akıl birlikte çalışır. Duyular, deney yoluyla bilginin ham maddesini sağlar. Akıl ise bu verileri kategorilerle düzenleyerek bilgiye dönüştürür. Dolayısıyla duyusal veri tek başına işlenmiş bilgi değildir; akıl da deneysel veriyi tamamen yok sayarak bilgi üretemez. B seçeneği, bilginin bir yönüyle deneye, diğer yönüyle akla dayandığını söylüyor. Parçanın iki unsuru birlikte kullanma düşüncesini karşılayan B seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Deney → ham madde",
+        "Duyular, deney yoluyla bilginin ham maddesini sağlar"
+      ],
+      [
+        "Akıl → düzenleme",
+        "Akıl ise bu verileri kategorilerle düzenleyerek bilgiye dönüştürür"
+      ],
+      [
+        "Deney + akıl → bilgi",
+        "bilginin bir yönüyle deneye, diğer yönüyle akla dayandığını söylüyor"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "maddesini",
+        "Duyular, deney yoluyla bilginin ham maddesini sağlar"
+      ],
+      [
+        "kategoriler",
+        "Akıl ise bu verileri kategorilerle düzenleyerek bilgiye dönüştürür"
+      ],
+      [
+        "bilginin",
+        "bilginin bir yönüyle deneye, diğer yönüyle akla dayandığını söylüyor"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-17",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-17",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 17,
+      "pdf_sayfasi": 15,
+      "basili_sayfa": 15,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        522.263
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        514.263,
+        576.0,
+        683.596
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-17",
+      "calisma_sirasi": 117,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-18",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-17",
+      "answer_label_rects": [
+        [
+          476.03302001953125,
+          667.7928466796875,
+          484.8080139160156,
+          678.5838623046875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-18",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 18,
+      "pdf_sayfasi": 16,
+      "basili_sayfa": 16,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.328
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.328,
+        300.0,
+        241.994
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-18",
+      "calisma_sirasi": 243,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-17",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-17",
+      "answer_label_rects": [
+        [
+          199.65501403808594,
+          225.8577880859375,
+          208.43002319335938,
+          236.64877319335938
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-17",
+      "B-Sosyal_Bilimler-18"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-17",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "soru_numarasi": 17,
+      "pdf_sayfasi": 15,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Zekât, infak ve sadaka başkalarının ihtiyaçlarını gözetme ve paylaşma boyutu taşır. Komşunun açlığına kayıtsız kalmama anlayışı üçünün de sosyal yönüne yansır.",
+      "kontrol_yontemi": "Yalnız ibadetlerin zorunluluk derecesi karşılaştırılmaz; ortak dayanışma ve yardım işlevi aranır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Zekât, infak ve sadaka başkalarının ihtiyaçlarını gözetme ve paylaşma boyutu taşır. Komşunun açlığına kayıtsız kalmama anlayışı üçünün de sosyal yönüne yansır. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Zekât",
+        "İnfak",
+        "Sadaka",
+        "Paylaşma ve dayanışma",
+        "Üçü de"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 15 | Sosyal Bilimler Testi 17",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-18"
+    },
+    "narration": "Sorudaki hadis, çevremizdeki ihtiyaç sahiplerine karşı sorumluluğu ve paylaşmayı vurguluyor. Zekât, belirli şartlarda maldan pay vermeyi içerir. İnfak, ihtiyaçları gözeterek Allah yolunda harcamayı anlatır. Sadaka da yardım ve iyilik yoluyla dayanışmayı destekler. Üçü de komşunun ve toplumun ihtiyaçlarına kayıtsız kalmama anlayışıyla ilişkilidir. Bu nedenle yalnız birini seçmeyiz; birinci, ikinci ve üçüncü birlikte doğrudur. E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Sorudaki hadis, çevremizdeki ihtiyaç sahiplerine karşı sorumluluğu ve paylaşmayı vurguluyor. Zekât, belirli şartlarda maldan pay vermeyi içerir. İnfak, ihtiyaçları gözeterek Allah yolunda harcamayı anlatır. Sadaka da yardım ve iyilik yoluyla dayanışmayı destekler. Üçü de komşunun ve toplumun ihtiyaçlarına kayıtsız kalmama anlayışıyla ilişkilidir. Bu nedenle yalnız birini seçmeyiz; birinci, ikinci ve üçüncü birlikte doğrudur. E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Zekât: paylaşma",
+        "Zekât, belirli şartlarda maldan pay vermeyi içerir"
+      ],
+      [
+        "İnfak: ihtiyaçları gözetme",
+        "İnfak, ihtiyaçları gözeterek Allah yolunda harcamayı anlatır"
+      ],
+      [
+        "Sadaka: yardımlaşma",
+        "Sadaka da yardım ve iyilik yoluyla dayanışmayı destekler"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "zekât,",
+        "Zekât, belirli şartlarda maldan pay vermeyi içerir"
+      ],
+      [
+        "sadaka",
+        "Sadaka da yardım ve iyilik yoluyla dayanışmayı destekler"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-18",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-18",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 18,
+      "pdf_sayfasi": 16,
+      "basili_sayfa": 16,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.315
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.315,
+        300.0,
+        313.982
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-18",
+      "calisma_sirasi": 118,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-20",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-18",
+      "answer_label_rects": [
+        [
+          114.68600463867188,
+          297.91778564453125,
+          124.07300567626953,
+          308.7087707519531
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-20",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 20,
+      "pdf_sayfasi": 16,
+      "basili_sayfa": 16,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        327.7691955566406
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-20",
+      "calisma_sirasi": 245,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-18",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-18",
+      "answer_label_rects": [
+        [
+          391.06402587890625,
+          297.97821044921875,
+          400.4510192871094,
+          308.7691955566406
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-18",
+      "B-Sosyal_Bilimler-20"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-18",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "soru_numarasi": 18,
+      "pdf_sayfasi": 16,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Parça İslam sanatının Allah’ın birliğini ve yaratılışın güzelliğini yansıtma amacı taşıdığını söyler. Kur’an’ın okunması ve korunmasının musiki ve hat gibi sanatlara etkisi de anlatılır. Estetik değerlere önem verilmediği sonucuna ise varılamaz; güzellik ve süsleme vurgusu bunun tersidir.",
+      "kontrol_yontemi": "Birinci ve üçüncü yargıların karşılığı metinde bulunur. İkinci, sanat ve güzellik üzerinde kurulan açıklamayla çelişir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Parça İslam sanatının Allah’ın birliğini ve yaratılışın güzelliğini yansıtma amacı taşıdığını söyler. Kur’an’ın okunması ve korunmasının musiki ve hat gibi sanatlara etkisi de anlatılır. Estetik değerlere önem verilmediği sonucuna ise varılamaz; güzellik ve süsleme vurgusu bunun tersidir. Doğru seçenek D.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Birlik ve güzellik✓",
+        "Estetik önemsiz✗",
+        "Maneviyat✓",
+        "I ve III"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 16 | Sosyal Bilimler Testi 18",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-20"
+    },
+    "narration": "Metindeki ifadelerle öncülleri eşleştirelim. İslam sanatının Allahın birliğini ve yaratılışın güzelliğini yansıtmayı amaçladığı söyleniyor. Bu, birinci öncülü destekler. Kuranın okunması ve korunmasının musikiye ve hat sanatına ilham vermesi, üçüncü öncülün manevi içerik vurgusuyla uyumludur. İkinci öncül ise estetik değerlere önem verilmediğini söylüyor. Oysa metin güzellikten, mimarlıktan ve süslemeden söz ediyor; bu öncül metinle çelişiyor. Birinci ve üçüncü öncülleri veren D seçeneğini işaretliyoruz.",
+    "segments": [
+      "Metindeki ifadelerle öncülleri eşleştirelim. İslam sanatının Allahın birliğini ve yaratılışın güzelliğini yansıtmayı amaçladığı söyleniyor. Bu, birinci öncülü destekler. Kuranın okunması ve korunmasının musikiye ve hat sanatına ilham vermesi, üçüncü öncülün manevi içerik vurgusuyla uyumludur. İkinci öncül ise estetik değerlere önem verilmediğini söylüyor. Oysa metin güzellikten, mimarlıktan ve süslemeden söz ediyor; bu öncül metinle çelişiyor. Birinci ve üçüncü öncülleri veren D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "I: birlik ve güzellik",
+        "Allahın birliğini ve yaratılışın güzelliğini yansıtmayı amaçladığı söyleniyor"
+      ],
+      [
+        "III: manevi içerik",
+        "üçüncü öncülün manevi içerik vurgusuyla uyumludur"
+      ],
+      [
+        "II: metne aykırı",
+        "bu öncül metinle çelişiyor"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "güzelliğini",
+        "Allahın birliğini ve yaratılışın güzelliğini yansıtmayı amaçladığı söyleniyor"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-19",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-19",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 19,
+      "pdf_sayfasi": 16,
+      "basili_sayfa": 16,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        542.906
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        534.906,
+        300.0,
+        783.906
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-19",
+      "calisma_sirasi": 119,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-17",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-19",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          678.8875122070312,
+          70.38800811767578,
+          689.6785278320312
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-17",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 17,
+      "pdf_sayfasi": 15,
+      "basili_sayfa": 15,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.318,
+        542.839
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        534.839,
+        576.0,
+        783.839
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-17",
+      "calisma_sirasi": 242,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-19",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-19",
+      "answer_label_rects": [
+        [
+          337.3280029296875,
+          678.8197631835938,
+          346.76898193359375,
+          689.6107788085938
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-19",
+      "B-Sosyal_Bilimler-17"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-19",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "soru_numarasi": 19,
+      "pdf_sayfasi": 16,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Paragraf temizliği hem bedensel hem manevi arınma olarak ele alır. Elbiseyi temiz tutma bedensel, kötülükleri terk etme manevi boyuta karşılık gelir. İkisini aynı ayette birleştiren seçenek, paragrafı doğrudan destekler.",
+      "kontrol_yontemi": "Diğer seçenekler hesap verme,infak,yardımlaşma veya namaz temasındadır. C’nin iki parçası paragrafın iki boyutuyla bire bir eşleşir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Paragraf temizliği hem bedensel hem manevi arınma olarak ele alır. Elbiseyi temiz tutma bedensel, kötülükleri terk etme manevi boyuta karşılık gelir. İkisini aynı ayette birleştiren seçenek, paragrafı doğrudan destekler. Doğru seçenek C.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Elbiseyi temiz tut→bedensel",
+        "Kötülükleri terk et→manevi",
+        "C"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 16 | Sosyal Bilimler Testi 19",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-17"
+    },
+    "narration": "Paragraf temizliğin iki yönünü birlikte anlatıyor: bedensel temizlik ve manevi arınma. Aradığımız seçenek bu iki yönü de desteklemeli. C seçeneğinde elbiseni temiz tut ifadesi bedensel temizliği, kötü şeyleri terk et ifadesi manevi arınmayı karşılıyor. Diğer seçeneklerde hesap verme, paylaşma, yardımlaşma veya ibadetten uzaklaşma konuları öne çıkıyor. İki boyutu aynı ifadede birleştiren C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Paragraf temizliğin iki yönünü birlikte anlatıyor: bedensel temizlik ve manevi arınma. Aradığımız seçenek bu iki yönü de desteklemeli. C seçeneğinde elbiseni temiz tut ifadesi bedensel temizliği, kötü şeyleri terk et ifadesi manevi arınmayı karşılıyor. Diğer seçeneklerde hesap verme, paylaşma, yardımlaşma veya ibadetten uzaklaşma konuları öne çıkıyor. İki boyutu aynı ifadede birleştiren C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Beden: elbiseni temiz tut",
+        "elbiseni temiz tut ifadesi bedensel temizliği"
+      ],
+      [
+        "Manevi: kötülüğü terk et",
+        "kötü şeyleri terk et ifadesi manevi arınmayı karşılıyor"
+      ],
+      [
+        "İki boyut birlikte",
+        "İki boyutu aynı ifadede birleştiren C seçeneğini işaretliyoruz"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "bedensel",
+        "elbiseni temiz tut ifadesi bedensel temizliği"
+      ],
+      [
+        "arınmayı,",
+        "kötü şeyleri terk et ifadesi manevi arınmayı karşılıyor"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-20",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-20",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 20,
+      "pdf_sayfasi": 16,
+      "basili_sayfa": 16,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.309,
+        80.262
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.262,
+        576.0,
+        337.9510803222656
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-20",
+      "calisma_sirasi": 120,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-16",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-20",
+      "answer_label_rects": [
+        [
+          475.2530212402344,
+          308.16009521484375,
+          484.02801513671875,
+          318.9510803222656
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-16",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 16,
+      "pdf_sayfasi": 15,
+      "basili_sayfa": 15,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.318,
+        146.893
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        138.893,
+        576.0,
+        390.559
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-16",
+      "calisma_sirasi": 241,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-20",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-20",
+      "answer_label_rects": [
+        [
+          475.2619934082031,
+          374.7908020019531,
+          484.0369873046875,
+          385.581787109375
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-20",
+      "B-Sosyal_Bilimler-16"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-20",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "soru_numarasi": 20,
+      "pdf_sayfasi": 16,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Gençlere sorumluluk verilmesi ve görüşlerini cesaretle söylemelerinin desteklenmesi özgüven kazanmalarını sağlar. Öğretmenlik, yöneticilik ve komutanlık görevleri toplumsal konum edinmelerine ve yeteneklerini kullanmalarına da imkân verir. Üç sonuç da paragrafla desteklenir.",
+      "kontrol_yontemi": "Özgüven için cesaretlendirme; toplumsal konum için görevlendirme; yetenek kullanımı için sorumluluk alma örnekleri ayrı eşleştirilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Gençlere sorumluluk verilmesi ve görüşlerini cesaretle söylemelerinin desteklenmesi özgüven kazanmalarını sağlar. Öğretmenlik, yöneticilik ve komutanlık görevleri toplumsal konum edinmelerine ve yeteneklerini kullanmalarına da imkân verir. Üç sonuç da paragrafla desteklenir. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Cesaret→özgüven",
+        "Görev→toplumsal konum",
+        "Sorumluluk→yetenek kullanımı",
+        "I,II,III"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 16 | Sosyal Bilimler Testi 20",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-16"
+    },
+    "narration": "Parçadaki teşviklerin sonuçlarını değerlendirelim. Gençlerin düşüncelerini cesaretle söylemesi ve karar alması desteklendiğinde özgüvenleri gelişir; birinci öncül uygundur. Öğretmenlik, yöneticilik ve komutanlık gibi sorumluluklar toplumda önemli roller üstlenmelerini sağlar; ikinci öncül de uygundur. Bu görevler yeteneklerini kullanıp geliştirmelerine fırsat verir; üçüncü öncül de desteklenir. Böylece üç sonuç da metinden çıkarılabilir. E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Parçadaki teşviklerin sonuçlarını değerlendirelim. Gençlerin düşüncelerini cesaretle söylemesi ve karar alması desteklendiğinde özgüvenleri gelişir; birinci öncül uygundur. Öğretmenlik, yöneticilik ve komutanlık gibi sorumluluklar toplumda önemli roller üstlenmelerini sağlar; ikinci öncül de uygundur. Bu görevler yeteneklerini kullanıp geliştirmelerine fırsat verir; üçüncü öncül de desteklenir. Böylece üç sonuç da metinden çıkarılabilir. E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "I: özgüven",
+        "özgüvenleri gelişir"
+      ],
+      [
+        "II: toplumsal rol",
+        "toplumda önemli roller üstlenmelerini sağlar"
+      ],
+      [
+        "III: yeteneği kullanma",
+        "yeteneklerini kullanıp geliştirmelerine fırsat verir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "özgüven",
+        "özgüvenleri gelişir"
+      ],
+      [
+        "üstlenmeleri",
+        "toplumda önemli roller üstlenmelerini sağlar"
+      ],
+      [
+        "geliştirmelerine",
+        "yeteneklerini kullanıp geliştirmelerine fırsat verir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-22",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-22",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": "Din Kültürü ve Ahlak Bilgisi muafiyeti için ek sorular",
+      "basili_soru_numarasi": 22,
+      "pdf_sayfasi": 17,
+      "basili_sayfa": 17,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        312.043
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-22",
+      "calisma_sirasi": 122,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-24",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-22",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          267.09027099609375,
+          70.3340072631836,
+          277.8812561035156
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-24",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": "Din Kültürü ve Ahlak Bilgisi muafiyeti için ek sorular",
+      "basili_soru_numarasi": 24,
+      "pdf_sayfasi": 17,
+      "basili_sayfa": 17,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.309,
+        80.312
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.312,
+        576.0,
+        311.979
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-24",
+      "calisma_sirasi": 249,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-22",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-22",
+      "answer_label_rects": [
+        [
+          337.31903076171875,
+          267.026123046875,
+          346.7060241699219,
+          277.8171081542969
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-22",
+      "B-Sosyal_Bilimler-24"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-22",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Felsefe",
+      "soru_numarasi": 22,
+      "pdf_sayfasi": 17,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Üç açıklama da sanatçının hayal gücü, iç dünyası, ilhamı ve özgün ifadeleriyle yeni bir şey ortaya koymasını vurgular. Ortak görüş sanatın yaratıcılık ve özgünlüğe dayanmasıdır.",
+      "kontrol_yontemi": "Dış dünyayı aynen kopyalamak veya yalnız teknik süreç izlemek bu yeni yaratım vurgusunu karşılamaz.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Üç açıklama da sanatçının hayal gücü, iç dünyası, ilhamı ve özgün ifadeleriyle yeni bir şey ortaya koymasını vurgular. Ortak görüş sanatın yaratıcılık ve özgünlüğe dayanmasıdır. Doğru seçenek D.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Hayal gücü",
+        "İç dünya",
+        "Özgün ifade",
+        "Yaratıcılık"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 17 | Sosyal Bilimler Testi 22",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-24"
+    },
+    "narration": "Üç düşünürün ortak vurgusunu buluyoruz. İlk açıklamada hayal gücü, ikincide iç dünyadan gelen ilham, üçüncüde özgün fikir ve duygular öne çıkıyor. Üçü de sanatçının yeni bir şey ortaya koymasını anlatıyor. Bu ortaklık, yaratıcılık ve özgünlüktür. Yalnız dış dünyayı yansıtmak ya da kopyalamak bu açıklamaları karşılamaz; teknik süreç ve toplumsal işlev de ortak odak değildir. Sanatın yaratıcılık ve özgünlüğe dayandığını söyleyen D seçeneğini işaretliyoruz.",
+    "segments": [
+      "Üç düşünürün ortak vurgusunu buluyoruz. İlk açıklamada hayal gücü, ikincide iç dünyadan gelen ilham, üçüncüde özgün fikir ve duygular öne çıkıyor. Üçü de sanatçının yeni bir şey ortaya koymasını anlatıyor. Bu ortaklık, yaratıcılık ve özgünlüktür. Yalnız dış dünyayı yansıtmak ya da kopyalamak bu açıklamaları karşılamaz; teknik süreç ve toplumsal işlev de ortak odak değildir. Sanatın yaratıcılık ve özgünlüğe dayandığını söyleyen D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Hayal, ilham, özgün fikir",
+        "hayal gücü, ikincide iç dünyadan gelen ilham, üçüncüde özgün fikir ve duygular öne çıkıyor"
+      ],
+      [
+        "Yeni bir şey ortaya koyma",
+        "Üçü de sanatçının yeni bir şey ortaya koymasını anlatıyor"
+      ],
+      [
+        "Yaratıcılık ve özgünlük",
+        "Bu ortaklık, yaratıcılık ve özgünlüktür"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "hayal",
+        "hayal gücü, ikincide iç dünyadan gelen ilham, üçüncüde özgün fikir ve duygular öne çıkıyor"
+      ],
+      [
+        "sanatçının",
+        "Üçü de sanatçının yeni bir şey ortaya koymasını anlatıyor"
+      ],
+      [
+        "yaratıcılık",
+        "Bu ortaklık, yaratıcılık ve özgünlüktür"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-23",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-23",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": "Din Kültürü ve Ahlak Bilgisi muafiyeti için ek sorular",
+      "basili_soru_numarasi": 23,
+      "pdf_sayfasi": 17,
+      "basili_sayfa": 17,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        573.807
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        565.807,
+        300.0,
+        783.807
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-23",
+      "calisma_sirasi": 123,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-21",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-23",
+      "answer_label_rects": [
+        [
+          60.94699478149414,
+          711.57861328125,
+          69.92900085449219,
+          722.36962890625
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-21",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": "Din Kültürü ve Ahlak Bilgisi muafiyeti için ek sorular",
+      "basili_soru_numarasi": 21,
+      "pdf_sayfasi": 16,
+      "basili_sayfa": 16,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        573.807
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        565.807,
+        576.0,
+        783.807
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-21",
+      "calisma_sirasi": 246,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-23",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-23",
+      "answer_label_rects": [
+        [
+          337.3249206542969,
+          711.57861328125,
+          346.3069152832031,
+          722.36962890625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-23",
+      "B-Sosyal_Bilimler-21"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-23",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Felsefe",
+      "soru_numarasi": 23,
+      "pdf_sayfasi": 17,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "Akıl yürütme öncüller arasında mantıksal ilişkiler kurarak sonuç çıkarma etkinliğidir. Öncüllerin mutlaka kişisel görüşlerden oluşması gerekmez; olgusal veya genel kabul gören önermeler de öncül olabilir. Bu yüzden kişisel görüşü öncül kullanmak zorunlu değildir.",
+      "kontrol_yontemi": "“Bütün insanlar ölümlüdür; Sokrates insandır; o hâlde ölümlüdür” örneğinde özel bir kişisel kanaat öncülü gerekmez. Diğer seçenekler akıl yürütmenin yapısal özellikleridir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Akıl yürütme öncüller arasında mantıksal ilişkiler kurarak sonuç çıkarma etkinliğidir. Öncüllerin mutlaka kişisel görüşlerden oluşması gerekmez; olgusal veya genel kabul gören önermeler de öncül olabilir. Bu yüzden kişisel görüşü öncül kullanmak zorunlu değildir. Doğru seçenek B.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Öncüller",
+        "Mantıksal ilişki",
+        "Sonuç",
+        "Kişisel görüş zorunlu değil",
+        "B"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 17 | Sosyal Bilimler Testi 23",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-21"
+    },
+    "narration": "Soruda akıl yürütmenin gerektirmediği özellik aranıyor. Akıl yürütürken öncül adı verilen önermelerden hareket eder, aralarında mantıksal ilişkiler kurarak bir sonuca ulaşırız. Bu nedenle önermelere dayanma, ilişki kurma ve yöntemli düşünme gereklidir. Ancak öncüllerin mutlaka kişisel görüş olması gerekmez. Gözlemle doğrulanan bir bilgi veya genel bir önerme de öncül olabilir. Kişisel görüş kullanmak mümkün olsa bile zorunlu değildir. B seçeneğini işaretliyoruz.",
+    "segments": [
+      "Soruda akıl yürütmenin gerektirmediği özellik aranıyor. Akıl yürütürken öncül adı verilen önermelerden hareket eder, aralarında mantıksal ilişkiler kurarak bir sonuca ulaşırız. Bu nedenle önermelere dayanma, ilişki kurma ve yöntemli düşünme gereklidir. Ancak öncüllerin mutlaka kişisel görüş olması gerekmez. Gözlemle doğrulanan bir bilgi veya genel bir önerme de öncül olabilir. Kişisel görüş kullanmak mümkün olsa bile zorunlu değildir. B seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Öncül → mantıksal sonuç",
+        "aralarında mantıksal ilişkiler kurarak bir sonuca ulaşırız"
+      ],
+      [
+        "Kişisel görüş şart değil",
+        "öncüllerin mutlaka kişisel görüş olması gerekmez"
+      ],
+      [
+        "Mümkün ≠ zorunlu",
+        "Kişisel görüş kullanmak mümkün olsa bile zorunlu değildir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "Mantıksal",
+        "aralarında mantıksal ilişkiler kurarak bir sonuca ulaşırız"
+      ],
+      [
+        "öncüller",
+        "öncüllerin mutlaka kişisel görüş olması gerekmez"
+      ],
+      [
+        "kullanma",
+        "Kişisel görüş kullanmak mümkün olsa bile zorunlu değildir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-24",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-24",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": "Din Kültürü ve Ahlak Bilgisi muafiyeti için ek sorular",
+      "basili_soru_numarasi": 24,
+      "pdf_sayfasi": 17,
+      "basili_sayfa": 17,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.318,
+        80.328
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.328,
+        576.0,
+        269.994
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-24",
+      "calisma_sirasi": 124,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-25",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-24",
+      "answer_label_rects": [
+        [
+          337.3280029296875,
+          216.308837890625,
+          346.76898193359375,
+          227.09982299804688
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-25",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": "Din Kültürü ve Ahlak Bilgisi muafiyeti için ek sorular",
+      "basili_soru_numarasi": 25,
+      "pdf_sayfasi": 17,
+      "basili_sayfa": 17,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.309,
+        529.664
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        521.664,
+        576.0,
+        733.0381469726562
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-25",
+      "calisma_sirasi": 250,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-24",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-24",
+      "answer_label_rects": [
+        [
+          337.31903076171875,
+          665.6451416015625,
+          346.760009765625,
+          676.4361572265625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-24",
+      "B-Sosyal_Bilimler-25"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-24",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Felsefe",
+      "soru_numarasi": 24,
+      "pdf_sayfasi": 17,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Doğruluk, düşüncenin veya bilginin nesnesini olduğu gibi yansıtması biçiminde tanımlanır. Bu, bilginin gerçeklikle uygunluk ilişkisidir. Yararlı olmak, kabul görmek veya otorite tarafından onaylanmak aynı ölçüt değildir.",
+      "kontrol_yontemi": "Tutarlılık önermelerin birbirleriyle çelişmemesidir; uygunluk ise dış dünyadaki durumla örtüşmedir. Parça ikinci ölçütü tanımlar.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Doğruluk, düşüncenin veya bilginin nesnesini olduğu gibi yansıtması biçiminde tanımlanır. Bu, bilginin gerçeklikle uygunluk ilişkisidir. Yararlı olmak, kabul görmek veya otorite tarafından onaylanmak aynı ölçüt değildir. Doğru seçenek C.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Bilgi",
+        "Gerçeklik",
+        "Örtüşme=uygunluk",
+        "C"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 17 | Sosyal Bilimler Testi 24",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-25"
+    },
+    "narration": "Parçada doğruluk, bilginin nesnesini olduğu gibi yansıtması biçiminde tanımlanıyor. Yani düşüncemizle gerçeklik arasında bir uygunluk arıyoruz. Bir bilginin yararlı bulunması, başkalarınca kabul edilmesi veya bir otoritece onaylanması tek başına bu uygunluğu göstermez. Tutarlılık ise önermelerin birbirleriyle çelişmemesiyle ilgilidir. Sorudaki tanımın doğrudan karşılığı, bilgi ile gerçeklik arasındaki uygunluktur. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Parçada doğruluk, bilginin nesnesini olduğu gibi yansıtması biçiminde tanımlanıyor. Yani düşüncemizle gerçeklik arasında bir uygunluk arıyoruz. Bir bilginin yararlı bulunması, başkalarınca kabul edilmesi veya bir otoritece onaylanması tek başına bu uygunluğu göstermez. Tutarlılık ise önermelerin birbirleriyle çelişmemesiyle ilgilidir. Sorudaki tanımın doğrudan karşılığı, bilgi ile gerçeklik arasındaki uygunluktur. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Bilgi → nesnesini yansıtır",
+        "bilginin nesnesini olduğu gibi yansıtması biçiminde tanımlanıyor"
+      ],
+      [
+        "Doğruluk: uygunluk",
+        "düşüncemizle gerçeklik arasında bir uygunluk arıyoruz"
+      ],
+      [
+        "Tutarlılık: çelişmeme",
+        "Tutarlılık ise önermelerin birbirleriyle çelişmemesiyle ilgilidir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "nesnesini",
+        "bilginin nesnesini olduğu gibi yansıtması biçiminde tanımlanıyor"
+      ],
+      [
+        "gerçeklik",
+        "düşüncemizle gerçeklik arasında bir uygunluk arıyoruz"
+      ],
+      [
+        "tutarlı",
+        "Tutarlılık ise önermelerin birbirleriyle çelişmemesiyle ilgilidir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Sosyal_Bilimler-25",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-25",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": "Din Kültürü ve Ahlak Bilgisi muafiyeti için ek sorular",
+      "basili_soru_numarasi": 25,
+      "pdf_sayfasi": 17,
+      "basili_sayfa": 17,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.318,
+        563.601
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        555.601,
+        576.0,
+        746.3828735351562
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-25",
+      "calisma_sirasi": 125,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-22",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-25",
+      "answer_label_rects": [
+        [
+          337.3280029296875,
+          641.3878784179688,
+          346.0849914550781,
+          652.1788940429688
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-22",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Felsefe",
+      "alt_bolum": "Din Kültürü ve Ahlak Bilgisi muafiyeti için ek sorular",
+      "basili_soru_numarasi": 22,
+      "pdf_sayfasi": 17,
+      "basili_sayfa": 17,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.231
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.231,
+        300.0,
+        249.231
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-22",
+      "calisma_sirasi": 247,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-25",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-25",
+      "answer_label_rects": [
+        [
+          60.94701385498047,
+          158.01824951171875,
+          69.70401763916016,
+          168.80923461914062
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-25",
+      "B-Sosyal_Bilimler-22"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-25",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Felsefe",
+      "soru_numarasi": 25,
+      "pdf_sayfasi": 17,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "Epiküros’un aktarılan görüşünde ulaşılmak istenen temel hedef mutluluktur. İnsan eylemlerinin hangi sonuca yönelmesi gerektiği açıklandığı için bu görüş ahlaki eylemin amacının ne olduğu sorusuna cevap verir.",
+      "kontrol_yontemi": "Özgürlük, sorumluluk veya evrensel yasa tartışılmamıştır. “İlk işimiz mutluluğa erişme yollarını aramak” ifadesi amaç bildirmektedir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Epiküros’un aktarılan görüşünde ulaşılmak istenen temel hedef mutluluktur. İnsan eylemlerinin hangi sonuca yönelmesi gerektiği açıklandığı için bu görüş ahlaki eylemin amacının ne olduğu sorusuna cevap verir. Doğru seçenek A.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Hedef:mutluluk",
+        "Eylemin amacı",
+        "A"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 17 | Sosyal Bilimler Testi 25",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-22"
+    },
+    "narration": "Epikürosun aktarılan düşüncesinde ulaşılmak istenen hedef mutluluktur. Mutluluğa erişme yollarını aramamız gerektiği söylenerek eylemlerin amacı açıklanıyor. Burada evrensel bir ahlak yasasının varlığı, özgür irade veya sorumluluğun niteliği tartışılmıyor. Hangi hedefe yönelmeliyiz sorusuna, mutluluğa yönelmeliyiz cevabı veriliyor. Bu nedenle görüş, ahlaki eylemin amacı nedir sorusuna karşılık gelir. A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Epikürosun aktarılan düşüncesinde ulaşılmak istenen hedef mutluluktur. Mutluluğa erişme yollarını aramamız gerektiği söylenerek eylemlerin amacı açıklanıyor. Burada evrensel bir ahlak yasasının varlığı, özgür irade veya sorumluluğun niteliği tartışılmıyor. Hangi hedefe yönelmeliyiz sorusuna, mutluluğa yönelmeliyiz cevabı veriliyor. Bu nedenle görüş, ahlaki eylemin amacı nedir sorusuna karşılık gelir. A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Hedef: mutluluk",
+        "ulaşılmak istenen hedef mutluluktur"
+      ],
+      [
+        "Eylemin amacı",
+        "eylemlerin amacı açıklanıyor"
+      ],
+      [
+        "Ahlaki eylemin amacı nedir?",
+        "ahlaki eylemin amacı nedir sorusuna karşılık gelir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "amacı",
+        "eylemlerin amacı açıklanıyor"
+      ],
+      [
+        "eylemin",
+        "ahlaki eylemin amacı nedir sorusuna karşılık gelir"
+      ]
+    ]
+  }
+]
