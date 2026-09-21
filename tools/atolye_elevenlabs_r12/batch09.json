@@ -1,0 +1,748 @@
+[
+  {
+    "id": "A-Temel_Matematik-01",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-01",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 1,
+      "pdf_sayfasi": 18,
+      "basili_sayfa": 18,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        131.4
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        123.4,
+        300.0,
+        307.733
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-01",
+      "calisma_sirasi": 1,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": true,
+      "zamanli_cizim_hazir": true,
+      "video_uretildi": true,
+      "video_kontrol_edildi": true,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-14",
+      "mevcut_pilot": true,
+      "ses_dosyasi_yerel": true,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "video_sha256": "c52881baea1211ffa9804d37f64a21f672d4f2d5d638e16e16e970a104b39561",
+      "video_suresi": 74.166667,
+      "nihai_video_tamamlandi": true,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-01",
+      "teknik_mp4_kontrol": true,
+      "gorsel_ornek_kare_kontrol": true,
+      "sesli_mp4_dosyasi": "A/Temel_Matematik/A-Temel_Matematik-01/cozum.mp4",
+      "answer_label_rects": [
+        [
+          160.42401123046875,
+          291.85174560546875,
+          169.86502075195312,
+          302.6427307128906
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-14",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 14,
+      "pdf_sayfasi": 20,
+      "basili_sayfa": 20,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        344.137
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        336.137,
+        576.0,
+        520.471
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-14",
+      "calisma_sirasi": 139,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": true,
+      "zamanli_cizim_hazir": true,
+      "video_uretildi": true,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "Sesli MP4 mevcut ve teknik/görsel kontrollerden geçti; doğrudan dinleyerek nihai işitsel kabul verilmedi.",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-01",
+      "ses_dosyasi_yerel": true,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-01",
+      "teknik_mp4_kontrol": true,
+      "gorsel_ornek_kare_kontrol": true,
+      "sesli_mp4_dosyasi": "B/Temel_Matematik/B-Temel_Matematik-14/cozum.mp4",
+      "yeni_tts_kullanildi": false,
+      "ses_ayni_A_master_ile_pcm_esit": true,
+      "B_ozgun_kaynak_ve_numara_uyarlandi": true,
+      "answer_label_rects": [
+        [
+          436.8020324707031,
+          504.58935546875,
+          446.2430114746094,
+          515.38037109375
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-01",
+      "B-Temel_Matematik-14"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-01",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 1,
+      "pdf_sayfasi": 18,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Parça uzunluğu ve parça sayısı doğal sayıdır. Parça sayısına n dersek n, 180’in böleni; n≥5 ve 180/n≥5 olduğundan n≤36 olmalıdır. Bu aralıktaki bölenler 5, 6, 9, 10, 12, 15, 18, 20, 30 ve 36’dır. On farklı parça sayısı mümkündür.",
+      "kontrol_yontemi": "Her n için 180/n hesaplanır: 36,30,20,18,15,12,10,9,6,5. Hepsi en az 5 olan tam sayıdır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Yüz seksen santimetrelik çubuk, eş uzunlukta parçalara ayrılıyor. Kaç farklı parça sayısı mümkün? İki koşulu birlikte kullanalım. Parça sayısı çarpı bir parçanın uzunluğu, yüz seksene eşittir. Uzunluk tam sayı olduğundan, parça sayısı yüz seksenin pozitif bir bölenidir. En az beş parça isteniyor. Her parça en az beş santimetre olduğundan, parça sayısı en fazla otuz altı olabilir. Yani beş ile otuz altı arasındaki bölenleri arıyoruz. Sınırlar dahil. Bu bölenler: beş, altı, dokuz, on, on iki, on beş, on sekiz, yirmi, otuz ve otuz altı. Toplam on değer. Şimdi farklı yoldan kontrol edelim. Yüz seksenin on sekiz pozitif böleni var. Beşten küçük dört böleni ve otuz altıdan büyük dört böleni çıkaralım. On sekiz eksi dört eksi dört, on eder. Uç değerler de uygundur. Beş parça, otuz altışar santimetre. Otuz altı parça, beşer santimetre. Cevap C seçeneği, on. Unutma, en az ifadesinde sınır değer de sayılır.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "180 = n · ℓ",
+        "n ≥ 5, ℓ ≥ 5",
+        "5 ≤ n ≤ 36",
+        "5,6,9,10,12,15,18,20,30,36",
+        "10"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 18 | Temel Matematik Testi 1",
+      "video_durumu": "mevcut_onayli_pilot",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-14"
+    },
+    "legacy_voice_upgrade": true,
+    "narration": "Parça sayısına en diyelim. Çubuk yüz seksen santimetre ve bütün parçalar eşit tam sayı uzunluğunda olduğu için, en sayısı yüz sekseni kalansız bölmeli. En az beş parça şartından en, beş veya daha büyük olur. Her parça en az beş santimetre olduğundan, yüz sekseni parça sayısına böldüğümüzde en az beş bulmalıyız; bu da parça sayısının en çok otuz altı olması demektir. Beş ile otuz altı arasındaki uygun bölenleri sıralayalım: beş, altı, dokuz, on, on iki, on beş, on sekiz, yirmi, otuz ve otuz altı. Toplam on farklı değer var. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Parça sayısına en diyelim. Çubuk yüz seksen santimetre ve bütün parçalar eşit tam sayı uzunluğunda olduğu için, en sayısı yüz sekseni kalansız bölmeli. En az beş parça şartından en, beş veya daha büyük olur. Her parça en az beş santimetre olduğundan, yüz sekseni parça sayısına böldüğümüzde en az beş bulmalıyız; bu da parça sayısının en çok otuz altı olması demektir. Beş ile otuz altı arasındaki uygun bölenleri sıralayalım: beş, altı, dokuz, on, on iki, on beş, on sekiz, yirmi, otuz ve otuz altı. Toplam on farklı değer var. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "n: 180 sayısının böleni",
+        "en sayısı yüz sekseni kalansız bölmeli"
+      ],
+      [
+        "5≤n≤36",
+        "parça sayısının en çok otuz altı olması demektir"
+      ],
+      [
+        "5,6,9,10,12,15,18,20,30,36",
+        "beş, altı, dokuz, on, on iki, on beş, on sekiz, yirmi, otuz ve otuz altı"
+      ],
+      [
+        "10 farklı değer",
+        "Toplam on farklı değer var"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [],
+    "legacy_upgrade": true
+  },
+  {
+    "id": "A-Temel_Matematik-03",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-03",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 3,
+      "pdf_sayfasi": 18,
+      "basili_sayfa": 18,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.934,
+        650.814
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        642.814,
+        300.0,
+        783.814
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-03",
+      "calisma_sirasi": 3,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": true,
+      "zamanli_cizim_hazir": true,
+      "video_uretildi": true,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "Sesli MP4 mevcut ve teknik/görsel kontrollerden geçti; doğrudan dinleyerek nihai işitsel kabul verilmedi.",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-13",
+      "ses_dosyasi_yerel": true,
+      "ses_durumu": "ozgun_Emre_Kadir_yerelde_ve_MP4_icinde",
+      "gorsel_montaj_uretildi": true,
+      "zamanli_cizim_taslagi_hazir": true,
+      "nihai_video_tamamlandi": false,
+      "onceki_yerel_sesli_mp4_var": true,
+      "onceki_yerel_sesli_mp4_kabul_edildi": false,
+      "video_durumu": "sesli_MP4_teknik_gorsel_kontrol_tamam_isitsel_kabul_acik",
+      "r6_gorsel_montaj_uretildi": true,
+      "r6_kalem_merkez_cizgisi": true,
+      "r6_ses_uretildi": true,
+      "r6_ses_dosyasi_yerel": true,
+      "r6_gorsel_kareler_kontrol_edildi": true,
+      "r6_ses_goruntu_birlestirildi": true,
+      "r6_sesli_senkron_kontrol_edildi": false,
+      "r6_gorsel_dosya": "Revizyon_6_Duzeltme/A/Temel_Matematik/A-Temel_Matematik-03/zamanli_cizim_SESSIZ_r6.mp4",
+      "mp4_teknik_kontrol_edildi": true,
+      "gercek_kareler_kontrol_edildi": true,
+      "bagimsiz_asr_kontrol_edildi": true,
+      "dogrudan_dinleme_onayi": false,
+      "video_klasoru": "Sesli_Duzeltme_R7/A/Temel_Matematik/A-Temel_Matematik-03",
+      "video_sha256": "4c0e0030969c1a7d67f4e839acf27426fa5a3d21e8abfcdb4702fac4dea1394d",
+      "video_suresi": 92.5,
+      "r7_1_gercek_ses_zaman_duzeltmesi": 31,
+      "video_guncelleme": "2026-09-21T06:40:54.233653+00:00",
+      "ortak_anlatim_master_id": "A-Temel_Matematik-03",
+      "teknik_mp4_kontrol": true,
+      "gorsel_ornek_kare_kontrol": true,
+      "sesli_mp4_dosyasi": "A/Temel_Matematik/A-Temel_Matematik-03/cozum.mp4",
+      "answer_label_rects": [
+        [
+          60.94490051269531,
+          768.0242919921875,
+          69.701904296875,
+          778.8153076171875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-13",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 13,
+      "pdf_sayfasi": 20,
+      "basili_sayfa": 20,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.312,
+        80.368
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.368,
+        576.0,
+        213.368
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-13",
+      "calisma_sirasi": 138,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": true,
+      "zamanli_cizim_hazir": true,
+      "video_uretildi": true,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "Sesli MP4 mevcut ve teknik/görsel kontrollerden geçti; doğrudan dinleyerek nihai işitsel kabul verilmedi.",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-03",
+      "ses_dosyasi_yerel": true,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-03",
+      "teknik_mp4_kontrol": true,
+      "gorsel_ornek_kare_kontrol": true,
+      "sesli_mp4_dosyasi": "B/Temel_Matematik/B-Temel_Matematik-13/cozum.mp4",
+      "yeni_tts_kullanildi": false,
+      "ses_ayni_A_master_ile_pcm_esit": true,
+      "B_ozgun_kaynak_ve_numara_uyarlandi": true,
+      "answer_label_rects": [
+        [
+          337.32281494140625,
+          197.58197021484375,
+          346.0798034667969,
+          208.37295532226562
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-03",
+      "B-Temel_Matematik-13"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-03",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 3,
+      "pdf_sayfasi": 18,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "Bölme algoritması 76=a·b+4 verir; dolayısıyla a·b=72. Kalan bölenden küçük olduğundan a>4’tür. b>5 doğal sayı olduğundan b≥6, dolayısıyla a≤12’dir. 72’nin bu aralıktaki bölenleri 6,8,9,12 olmak üzere dört tanedir.",
+      "kontrol_yontemi": "(a,b)=(6,12),(8,9),(9,8),(12,6). Her çiftte ab+4=76, b>5 ve 4<a sağlanır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Üçüncü soruda bölme işlemini okuyalım. Bölünen yetmiş altı, bölen a, bölüm b ve kalan dörttür. Bölme kuralı bize şu eşitliği verir: a çarpı b, eşittir yetmiş altı eksi dört. Yani a çarpı b, eşittir yetmiş iki. Şimdi iki koşulu birlikte kullanalım. Kalan, bölenden küçük olmalıdır. Bu yüzden a, dörtten büyüktür. Soruda b’nin beşten büyük olduğu söyleniyor. b doğal sayı olduğundan en az altıdır. Çarpım yetmiş iki olduğuna göre a, en fazla on iki olabilir. Öyleyse yetmiş ikinin, dörtten büyük ve on ikiden küçük ya da eşit olan bölenlerini arıyoruz. Bunlar altı, sekiz, dokuz ve on ikidir. Bağımsız kontrol için bölüm değerlerini de bulalım. Sırasıyla on iki, dokuz, sekiz ve altı elde edilir. Hepsi beşten büyüktür; kalan dört de her bölenin altındadır. Böylece dört farklı a değeri vardır. Doğru cevap A seçeneğidir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "a·b=76−4=72",
+        "a>4, b≥6",
+        "4<a≤12",
+        "a:6,8,9,12",
+        "b:12,9,8,6",
+        "4"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 18 | Temel Matematik Testi 3",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-13"
+    },
+    "legacy_voice_upgrade": true,
+    "narration": "Bölme şemasında bölünen yetmiş altı, bölen a, bölüm be ve kalan dört. Bölünen, bölen ile bölümün çarpımına kalanın eklenmesiyle bulunur. Bu yüzden a çarpı be artı dört, yetmiş altıdır; a ile benin çarpımı yetmiş iki olur. Kalan bölenden küçük olduğundan a dörtten büyüktür. Be beşten büyük bir doğal sayıysa en az altıdır. Çarpım yetmiş iki olduğuna göre a en çok on iki olabilir. Dörtten büyük, on ikiden küçük veya eşit olan yetmiş iki bölenleri altı, sekiz, dokuz ve on ikidir. Dört farklı a değeri vardır. A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Bölme şemasında bölünen yetmiş altı, bölen a, bölüm be ve kalan dört. Bölünen, bölen ile bölümün çarpımına kalanın eklenmesiyle bulunur. Bu yüzden a çarpı be artı dört, yetmiş altıdır; a ile benin çarpımı yetmiş iki olur. Kalan bölenden küçük olduğundan a dörtten büyüktür. Be beşten büyük bir doğal sayıysa en az altıdır. Çarpım yetmiş iki olduğuna göre a en çok on iki olabilir. Dörtten büyük, on ikiden küçük veya eşit olan yetmiş iki bölenleri altı, sekiz, dokuz ve on ikidir. Dört farklı a değeri vardır. A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "76=a×b+4 → a×b=72",
+        "a ile benin çarpımı yetmiş iki olur"
+      ],
+      [
+        "Kalan<bölen → a>4",
+        "Kalan bölenden küçük olduğundan a dörtten büyüktür"
+      ],
+      [
+        "b≥6 → a≤12",
+        "a en çok on iki olabilir"
+      ],
+      [
+        "a:6,8,9,12 → 4 değer",
+        "Dört farklı a değeri vardır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [],
+    "legacy_upgrade": true
+  },
+  {
+    "id": "A-Temel_Matematik-04",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-04",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 4,
+      "pdf_sayfasi": 18,
+      "basili_sayfa": 18,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        131.4
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        123.4,
+        576.0,
+        285.066
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-04",
+      "calisma_sirasi": 4,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": true,
+      "zamanli_cizim_hazir": true,
+      "video_uretildi": true,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "Sesli MP4 mevcut ve teknik/görsel kontrollerden geçti; doğrudan dinleyerek nihai işitsel kabul verilmedi.",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-11",
+      "ses_dosyasi_yerel": true,
+      "ses_durumu": "ozgun_Emre_Kadir_yerelde_ve_MP4_icinde",
+      "gorsel_montaj_uretildi": true,
+      "zamanli_cizim_taslagi_hazir": true,
+      "nihai_video_tamamlandi": false,
+      "onceki_yerel_sesli_mp4_var": true,
+      "onceki_yerel_sesli_mp4_kabul_edildi": false,
+      "video_durumu": "sesli_MP4_teknik_gorsel_kontrol_tamam_isitsel_kabul_acik",
+      "mp4_teknik_kontrol_edildi": true,
+      "gercek_kareler_kontrol_edildi": true,
+      "bagimsiz_asr_kontrol_edildi": true,
+      "dogrudan_dinleme_onayi": false,
+      "video_klasoru": "Sesli_Duzeltme_R7/A/Temel_Matematik/A-Temel_Matematik-04",
+      "video_sha256": "d3c16e01c4b125a0b0f9add453fd0a2c00c1c2be85d1566628c36d629d06cc9d",
+      "video_suresi": 78.0,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-04",
+      "teknik_mp4_kontrol": true,
+      "gorsel_ornek_kare_kontrol": true,
+      "sesli_mp4_dosyasi": "A/Temel_Matematik/A-Temel_Matematik-04/cozum.mp4",
+      "answer_label_rects": [
+        [
+          494.510009765625,
+          269.19866943359375,
+          503.8970031738281,
+          279.9896545410156
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-11",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 11,
+      "pdf_sayfasi": 20,
+      "basili_sayfa": 20,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        346.096
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        338.096,
+        300.0,
+        499.762
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-11",
+      "calisma_sirasi": 136,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": true,
+      "zamanli_cizim_hazir": true,
+      "video_uretildi": true,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "Sesli MP4 mevcut ve teknik/görsel kontrollerden geçti; doğrudan dinleyerek nihai işitsel kabul verilmedi.",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-04",
+      "ses_dosyasi_yerel": true,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-04",
+      "teknik_mp4_kontrol": true,
+      "gorsel_ornek_kare_kontrol": true,
+      "sesli_mp4_dosyasi": "B/Temel_Matematik/B-Temel_Matematik-11/cozum.mp4",
+      "yeni_tts_kullanildi": false,
+      "ses_ayni_A_master_ile_pcm_esit": true,
+      "B_ozgun_kaynak_ve_numara_uyarlandi": true,
+      "answer_label_rects": [
+        [
+          218.1320037841797,
+          483.8948059082031,
+          227.51901245117188,
+          494.685791015625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-04",
+      "B-Temel_Matematik-11"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-04",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 4,
+      "pdf_sayfasi": 18,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "En az parsel için kare kenarı, 264 ve 192’nin en büyük ortak böleni olmalıdır. Öklid algoritmasında kalanlar 72,48,24,0 olduğundan EBOB=24 m’dir. Uzun kenarda 264/24=11, kısa kenarda 192/24=8 parsel bulunur. Toplam 11·8=88 bostan gerekir.",
+      "kontrol_yontemi": "11·24=264 ve 8·24=192. Alan kontrolü: 88·24²=264·192=50688 m². Daha büyük ortak bölen olmadığından daha az eş kare mümkün değildir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Dikdörtgen tarlayı eş kare parsellere ayırıyoruz. En az sayıda bostan için karelerin kenarını mümkün olduğu kadar büyük seçmeliyiz. Bu kenar, hem iki yüz altmış dördü hem de yüz doksan ikiyi kalansız bölmelidir. Yani iki uzunluğun en büyük ortak bölenini arıyoruz. Öklid yöntemiyle kontrol edelim. İki yüz altmış dört eksi yüz doksan iki, eşittir yetmiş iki. Yüz doksan ikiyi yetmiş ikiye böldüğümüzde kalan kırk sekizdir. Yetmiş ikinin kırk sekize bölümünden kalan yirmi dörttür. Kırk sekiz, yirmi dörde tam bölünür. Böylece en büyük kare kenarı yirmi dört metredir. Uzun kenarda iki yüz altmış dört bölü yirmi dört, eşittir on bir kare bulunur. Kısa kenarda yüz doksan iki bölü yirmi dört, eşittir sekiz kare bulunur. Toplam parsel sayısı on bir çarpı sekiz, eşittir seksen sekizdir. Her parselde bir bostan olduğundan cevap D seçeneğidir. Son kontrolümüz: on bir tane yirmi dört metre, iki yüz altmış dört metreyi; sekiz tane yirmi dört metre de yüz doksan iki metreyi tam karşılar.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "264−192=72",
+        "192=2·72+48",
+        "72=48+24",
+        "EBOB=24",
+        "264÷24=11",
+        "192÷24=8",
+        "11·8=88"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 18 | Temel Matematik Testi 4",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-11"
+    },
+    "legacy_voice_upgrade": true,
+    "narration": "En az sayıda kare parsel için kare kenarını mümkün olduğunca büyük seçmeliyiz. Kareler tarlayı artıksız kaplayacağı için bu kenar hem iki yüz altmış dördü hem yüz doksan ikiyi bölmeli. En büyük ortak böleni bulalım. İki yüz altmış dörtten yüz doksan ikiyi çıkarınca yetmiş iki kalır. Yüz doksan ikinin yetmiş ikiye bölümünden kırk sekiz; yetmiş ikinin kırk sekize bölümünden yirmi dört kalır. Kırk sekiz, yirmi dörde tam bölünür; kare kenarı yirmi dört metredir. Uzun kenarda on bir, kısa kenarda sekiz kare olur. On bir çarpı sekiz eşittir seksen sekiz. Her parselde bir bostan olduğundan D seçeneğini işaretliyoruz.",
+    "segments": [
+      "En az sayıda kare parsel için kare kenarını mümkün olduğunca büyük seçmeliyiz. Kareler tarlayı artıksız kaplayacağı için bu kenar hem iki yüz altmış dördü hem yüz doksan ikiyi bölmeli. En büyük ortak böleni bulalım. İki yüz altmış dörtten yüz doksan ikiyi çıkarınca yetmiş iki kalır. Yüz doksan ikinin yetmiş ikiye bölümünden kırk sekiz; yetmiş ikinin kırk sekize bölümünden yirmi dört kalır. Kırk sekiz, yirmi dörde tam bölünür; kare kenarı yirmi dört metredir. Uzun kenarda on bir, kısa kenarda sekiz kare olur. On bir çarpı sekiz eşittir seksen sekiz. Her parselde bir bostan olduğundan D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "En büyük ortak bölen",
+        "En büyük ortak böleni bulalım"
+      ],
+      [
+        "Kalanlar:72,48,24,0",
+        "Kırk sekiz, yirmi dörde tam bölünür"
+      ],
+      [
+        "264/24=11;192/24=8",
+        "Uzun kenarda on bir, kısa kenarda sekiz kare olur"
+      ],
+      [
+        "11×8=88 bostan",
+        "On bir çarpı sekiz eşittir seksen sekiz"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [],
+    "legacy_upgrade": true
+  },
+  {
+    "id": "A-Temel_Matematik-17",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-17",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 17,
+      "pdf_sayfasi": 21,
+      "basili_sayfa": 21,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        654.411
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        646.411,
+        300.0,
+        783.744
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-17",
+      "calisma_sirasi": 17,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-07",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-17",
+      "akademik_duzeltme_R12": "MEB 2026 Ortaöğretim Matematik programı, basılı/PDF sayfa76: doğal ortam, ölçüm, müdahale ve örneklem olmak üzere dört kaynak açıkça tanımlandı. E seçeneği doğrulandı.",
+      "akademik_kaynaklar": [
+        {
+          "url": "https://tymm.meb.gov.tr/assets/pdf/matematik-dersi_20260819_143102_154.pdf",
+          "pdf_page": 76,
+          "access_date": "2026-09-21"
+        }
+      ],
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          768.0086059570312,
+          69.72200775146484,
+          778.7996215820312
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-07",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 7,
+      "pdf_sayfasi": 19,
+      "basili_sayfa": 19,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        209.709
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-07",
+      "calisma_sirasi": 132,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-17",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-17",
+      "akademik_duzeltme_R12": "MEB 2026 Ortaöğretim Matematik programı, basılı/PDF sayfa76: doğal ortam, ölçüm, müdahale ve örneklem olmak üzere dört kaynak açıkça tanımlandı. E seçeneği doğrulandı.",
+      "akademik_kaynaklar": [
+        {
+          "url": "https://tymm.meb.gov.tr/assets/pdf/matematik-dersi_20260819_143102_154.pdf",
+          "pdf_page": 76,
+          "access_date": "2026-09-21"
+        }
+      ],
+      "answer_label_rects": [
+        [
+          337.3249206542969,
+          193.97418212890625,
+          346.09991455078125,
+          204.76516723632812
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-17",
+      "B-Temel_Matematik-07"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-17",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 17,
+      "pdf_sayfasi": 21,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Sorunun kullandığı sınıflamada değişebilirlik; doğal farklılıklardan, örnek seçiminden, ölçümden veya bir müdahaleden kaynaklanabilir. “Gözlem yapmaktan kaynaklı değişebilirlik” bu dört kaynak yanında ayrı bir başlık değildir. Bu sınıflama kabulüyle E seçeneği beklenir.",
+      "kontrol_yontemi": "A–D ifadeleri ayrı kaynakları adlandırır. Gözlem sırasında araç veya gözlemci etkisi varsa bu ölçüm/müdahale başlıklarına girer; bağımsız beşinci kaynak olarak sunulmaz.",
+      "akademik_durum": "mufredat_terimi_teyit_bekliyor",
+      "akademik_not": "E, sorunun kullandığı dört kaynaklı sınıflamaya göre beklenen cevaptır. Güncel MEB kaynağındaki tam terminoloji ayrıca teyit edilmelidir; kesin doğrulanmış sayısına alınmadı.",
+      "anlatim_metni": "Verilerin farklılaşması doğal farklılıklardan, seçtiğimiz örneklemden, ölçümden veya yaptığımız bir müdahaleden kaynaklanabilir. Soruda bu başlıkların dışındaki ifade soruluyor. Gözlem yapmaktan kaynaklı değişebilirlik, burada kullanılan sınıflamada ayrı bir başlık olarak verilmez. Bu nedenle beklenen cevap E’dir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Doğal",
+        "Örneklem",
+        "Ölçüm",
+        "Müdahale",
+        "Ayrı başlık olmayan:E"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 21 | Temel Matematik Testi 17",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-07"
+    },
+    "narration": "İstatistikte verilerin neden değiştiğini dört başlıkta inceleriz. Farklı örneklemler seçince sonuçların değişmesi, örneklemden kaynaklı değişebilirliktir. Aynı sınıftaki öğrencilerin boylarının farklı olması, doğal değişebilirliğe örnektir. Bir bitkiye verilen ışığı bilerek değiştirip gelişimini karşılaştırırsak, müdahaleden kaynaklı değişebilirliği araştırırız. Ölçme aracı veya ölçümü yapan kişiden doğan farklar ise ölçümden kaynaklı değişebilirliktir. Böylece örneklem, doğal ortam, müdahale ve ölçüm başlıkları ilk dört seçenekte yer alıyor. Gözlem yapmaktan kaynaklı değişebilirlik, bu sınıflandırmada ayrı bir beşinci başlık değildir. Kullanılmayan kavramı soran soruda E seçeneğini işaretliyoruz.",
+    "segments": [
+      "İstatistikte verilerin neden değiştiğini dört başlıkta inceleriz. Farklı örneklemler seçince sonuçların değişmesi, örneklemden kaynaklı değişebilirliktir. Aynı sınıftaki öğrencilerin boylarının farklı olması, doğal değişebilirliğe örnektir. Bir bitkiye verilen ışığı bilerek değiştirip gelişimini karşılaştırırsak, müdahaleden kaynaklı değişebilirliği araştırırız. Ölçme aracı veya ölçümü yapan kişiden doğan farklar ise ölçümden kaynaklı değişebilirliktir. Böylece örneklem, doğal ortam, müdahale ve ölçüm başlıkları ilk dört seçenekte yer alıyor. Gözlem yapmaktan kaynaklı değişebilirlik, bu sınıflandırmada ayrı bir beşinci başlık değildir. Kullanılmayan kavramı soran soruda E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Örneklem ve doğal değişebilirlik",
+        "doğal değişebilirliğe örnektir"
+      ],
+      [
+        "Müdahale: koşulu değiştirme",
+        "müdahaleden kaynaklı değişebilirliği araştırırız"
+      ],
+      [
+        "Ölçüm: araç veya kişi farkı",
+        "ölçümden kaynaklı değişebilirliktir"
+      ],
+      [
+        "Gözlem: ayrı bir başlık değil",
+        "ayrı bir beşinci başlık değildir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [],
+    "academic_correction": "MEB 2026 Matematik Programı PDF s.76 dört değişkenlik sınıfı ile E doğrulandı.",
+    "academic_sources": [
+      {
+        "url": "https://tymm.meb.gov.tr/assets/pdf/matematik-dersi_20260819_143102_154.pdf",
+        "pdf_page": 76
+      }
+    ]
+  }
+]
