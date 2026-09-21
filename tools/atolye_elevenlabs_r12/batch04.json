@@ -1,0 +1,2581 @@
+[
+  {
+    "id": "A-Temel_Matematik-15",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-15",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 15,
+      "pdf_sayfasi": 21,
+      "basili_sayfa": 21,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        257.709
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-15",
+      "calisma_sirasi": 15,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-08",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-15",
+      "answer_label_rects": [
+        [
+          60.94698715209961,
+          223.089111328125,
+          70.33399200439453,
+          233.88009643554688
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-08",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 8,
+      "pdf_sayfasi": 19,
+      "basili_sayfa": 19,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        295.293
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        287.293,
+        576.0,
+        472.627
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-08",
+      "calisma_sirasi": 133,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-15",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-15",
+      "answer_label_rects": [
+        [
+          337.3249206542969,
+          438.0063171386719,
+          346.7119140625,
+          448.79730224609375
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-15",
+      "B-Temel_Matematik-08"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-15",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 15,
+      "pdf_sayfasi": 21,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Kutu grafiğinde en küçük değer 6, birinci çeyrek 9, ortanca 17, üçüncü çeyrek 22 ve en büyük değer 29’dur. Açıklık 29−6=23’tür; 16 değildir. Bu nedenle yanlış ifade D’dir. Çeyrekler açıklığı ise 22−9=13 olur.",
+      "kontrol_yontemi": "Grafiğin iki bıyık ucu açıklık için, kutunun iki kenarı çeyrekler açıklığı için ayrı okunur. Açıklık ile çeyrekler açıklığının karıştırılmadığı kontrol edilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Kutu grafiğinde açıklığı bulmak için kutunun kenarlarını değil, en dıştaki iki değeri kullanırız. En küçük altı, en büyük yirmi dokuzdur. Aradaki fark yirmi üç eder. Açıklığın on altı olduğunu söyleyen D seçeneği bu nedenle yanlıştır.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Min6, Q1=9, Medyan17, Q3=22, Maks29",
+        "Açıklık=29−6=23",
+        "Çeyrekler açıklığı=13",
+        "Yanlış:D"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 21 | Temel Matematik Testi 15",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-08"
+    },
+    "segments": [
+      "Kutu grafiğini soldan sağa okuyalım. En küçük değer altı. Kutunun sol kenarı alt çeyrek dokuz, içindeki çizgi ortanca on yedi. Kutunun sağ kenarı üst çeyrek yirmi iki, en büyük değer yirmi dokuzdur.",
+      "Açıklık, en büyük değerle en küçük değerin farkıdır. Yirmi dokuz eksi altı, yirmi üç eder. D seçeneğinde açıklığın on altı olduğu yazılmış; bu yanlıştır.",
+      "Çeyrekler açıklığını da kontrol edelim: üst çeyrek eksi alt çeyrek, yani yirmi iki eksi dokuz, on üçtür. Diğer seçenekler grafiğe uyuyor. Yanlış ifade sorulduğu için D seçeneğini işaretliyoruz."
+    ],
+    "narration": "Kutu grafiğini soldan sağa okuyalım. En küçük değer altı. Kutunun sol kenarı alt çeyrek dokuz, içindeki çizgi ortanca on yedi. Kutunun sağ kenarı üst çeyrek yirmi iki, en büyük değer yirmi dokuzdur.\n\nAçıklık, en büyük değerle en küçük değerin farkıdır. Yirmi dokuz eksi altı, yirmi üç eder. D seçeneğinde açıklığın on altı olduğu yazılmış; bu yanlıştır.\n\nÇeyrekler açıklığını da kontrol edelim: üst çeyrek eksi alt çeyrek, yani yirmi iki eksi dokuz, on üçtür. Diğer seçenekler grafiğe uyuyor. Yanlış ifade sorulduğu için D seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "Alt:9; ortanca:17; üst:22",
+        "Kutunun sol kenarı alt çeyrek dokuz, içindeki çizgi ortanca on yedi. Kutunun sağ kenarı üst çeyrek yirmi iki"
+      ],
+      [
+        "Açıklık=29−6=23",
+        "Yirmi dokuz eksi altı, yirmi üç eder"
+      ],
+      [
+        "Çeyrekler açıklığı=22−9=13",
+        "yirmi iki eksi dokuz, on üçtür"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Temel_Matematik-16",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-16",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 16,
+      "pdf_sayfasi": 21,
+      "basili_sayfa": 21,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        343.201
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        335.201,
+        300.0,
+        568.868
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-16",
+      "calisma_sirasi": 16,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-09",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-16",
+      "answer_label_rects": [
+        [
+          216.2779998779297,
+          553.0992431640625,
+          225.66500854492188,
+          563.8902587890625
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-09",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 9,
+      "pdf_sayfasi": 19,
+      "basili_sayfa": 19,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        558.119
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        550.119,
+        576.0,
+        783.785
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-09",
+      "calisma_sirasi": 134,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-16",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-16",
+      "answer_label_rects": [
+        [
+          492.6559143066406,
+          768.0165405273438,
+          502.04290771484375,
+          778.8075561523438
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-16",
+      "B-Temel_Matematik-09"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-16",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 16,
+      "pdf_sayfasi": 21,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Frekanslara göre toplam 20 çocuk vardır: ilk 5 çocuk 2, sonraki 6 çocuk 3, sonraki 6 çocuk 4, son 3 çocuk 5 yaşındadır. Sıralı verinin alt yarısındaki 5. ve 6. değerler 2 ve 3 olduğundan Q1=2,5’tir. Üst yarının ortasındaki 15. ve 16. değerler 4 ve 4 olduğundan Q3=4’tür. Çeyrekler açıklığı 4−2,5=1,5’tir.",
+      "kontrol_yontemi": "Sıralı indeks aralıkları 1–5:2;6–11:3;12–17:4;18–20:5 olarak yazılır. Okul düzeyindeki yarıların ortancası yöntemiyle çeyrek konumları tekrar kontrol edilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Önce frekansları açarak yirmi çocuğu yaş sırasına koyarız. Alt yarının ortasındaki iki yaş, iki ve üçtür; birinci çeyrek iki buçuktur. Üst yarının ortasındaki iki yaş da dörttür; üçüncü çeyrek dört olur. Aradaki fark bir buçuk, yani D seçeneğidir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "n=20",
+        "Q1=(2+3)/2=2,5",
+        "Q3=(4+4)/2=4",
+        "4−2,5=1,5"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 21 | Temel Matematik Testi 16",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-09"
+    },
+    "segments": [
+      "Grafikte iki yaşında beş, üç yaşında altı, dört yaşında altı ve beş yaşında üç çocuk var. Toplam yirmi çocuk ediyor. Yaşları küçükten büyüğe sıraladığımızı düşünelim.",
+      "İlk beş sırada iki yaşındakiler var. Altıncı sıradan on birinci sıraya kadar üç yaşındakiler, on ikinci sıradan on yedinci sıraya kadar dört yaşındakiler gelir. Son üç sırada beş yaşındakiler bulunur.",
+      "Alt çeyrek için alt yarıdaki on verinin ortancasını alırız. Beşinci değer iki, altıncı değer üç. İkiyle üçü toplayıp ikiye böleriz, iki buçuk buluruz.",
+      "Üst yarının ortasındaki on beşinci ve on altıncı değerlerin ikisi de dört. Üst çeyrek dört olur. Çeyrekler açıklığı dört eksi iki buçuk, bir buçuktur. D seçeneğini işaretliyoruz."
+    ],
+    "narration": "Grafikte iki yaşında beş, üç yaşında altı, dört yaşında altı ve beş yaşında üç çocuk var. Toplam yirmi çocuk ediyor. Yaşları küçükten büyüğe sıraladığımızı düşünelim.\n\nİlk beş sırada iki yaşındakiler var. Altıncı sıradan on birinci sıraya kadar üç yaşındakiler, on ikinci sıradan on yedinci sıraya kadar dört yaşındakiler gelir. Son üç sırada beş yaşındakiler bulunur.\n\nAlt çeyrek için alt yarıdaki on verinin ortancasını alırız. Beşinci değer iki, altıncı değer üç. İkiyle üçü toplayıp ikiye böleriz, iki buçuk buluruz.\n\nÜst yarının ortasındaki on beşinci ve on altıncı değerlerin ikisi de dört. Üst çeyrek dört olur. Çeyrekler açıklığı dört eksi iki buçuk, bir buçuktur. D seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "n=5+6+6+3=20",
+        "Toplam yirmi çocuk ediyor"
+      ],
+      [
+        "Alt çeyrek=(2+3)/2=2,5",
+        "Beşinci değer iki, altıncı değer üç. İkiyle üçü toplayıp ikiye böleriz, iki buçuk buluruz"
+      ],
+      [
+        "Üst çeyrek=(4+4)/2=4",
+        "on beşinci ve on altıncı değerlerin ikisi de dört. Üst çeyrek dört olur"
+      ],
+      [
+        "4−2,5=1,5",
+        "Çeyrekler açıklığı dört eksi iki buçuk, bir buçuktur"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Temel_Matematik-18",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-18",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 18,
+      "pdf_sayfasi": 21,
+      "basili_sayfa": 21,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.318,
+        80.355
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.355,
+        576.0,
+        373.688
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-18",
+      "calisma_sirasi": 18,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-06",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-18",
+      "answer_label_rects": [
+        [
+          387.87200927734375,
+          358.0255432128906,
+          397.2590026855469,
+          368.8165283203125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-06",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 6,
+      "pdf_sayfasi": 19,
+      "basili_sayfa": 19,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.943,
+        490.353
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        482.353,
+        300.0,
+        783.687
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-06",
+      "calisma_sirasi": 131,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-18",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-18",
+      "answer_label_rects": [
+        [
+          111.49411010742188,
+          768.0176391601562,
+          120.88111114501953,
+          778.8086547851562
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-18",
+      "B-Temel_Matematik-06"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-18",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 18,
+      "pdf_sayfasi": 21,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Orta doğru parçası (−3,5) ve (3,−5) noktalarından geçtiğinden eğimi −10/6=−5/3’tür; I’deki −3x/5 ifadesi yanlıştır. Grafik [5,7] aralığında yükseldiğinden II doğrudur. x≤−3 için y=5 yatay olduğu için III de doğrudur.",
+      "kontrol_yontemi": "Doğru denkleminde x=3 yazılınca −5 elde edilir; I’deki ifade −9/5 verir ve grafiğe uymaz. Diğer iki aralıkta grafik yönü ve yataylığı ayrı kontrol edilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Önce ortadaki doğrunun eğimini iki uç noktasından bulalım. Sonuç eksi beş bölü üçtür. İlk yargıdaki katsayı bunun tersi olduğundan yanlıştır. Beş ile yedi arasında grafik yükseliyor; ikinci yargı doğru. Eksi üçün solunda grafik yatay; üçüncü yargı da doğru. D seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "m=(−5−5)/(3+3)=−5/3",
+        "I yanlış",
+        "[5,7]:artan",
+        "(−∞,−3]:sabit",
+        "II ve III"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 21 | Temel Matematik Testi 18",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-06"
+    },
+    "segments": [
+      "Önce ortadaki eğik parçayı inceleyelim. Bu doğru, eksi üçe beş ve üçe eksi beş noktalarından geçiyor. Eğimi, ye değerlerindeki farkın iks değerlerindeki farka bölümüdür.",
+      "Eksi beş eksi beş, bölü üç eksi eksi üç; eksi on bölü altı, yani eksi beş bölü üç eder. Doğru başlangıç noktasından da geçtiği için bu parçada fonksiyon eksi beş iks bölü üçtür. Birinci yargıdaki eksi üç iks bölü beş doğru değildir.",
+      "Beş ile yedi arasında grafik sağa giderken yükseliyor; ikinci yargı doğrudur. Eksi üç ve solundaki gösterilen parça yataydır; fonksiyonun değeri beş olarak sabittir. Üçüncü yargı da doğrudur. İkinci ve üçüncüyü veren D seçeneğini işaretliyoruz."
+    ],
+    "narration": "Önce ortadaki eğik parçayı inceleyelim. Bu doğru, eksi üçe beş ve üçe eksi beş noktalarından geçiyor. Eğimi, ye değerlerindeki farkın iks değerlerindeki farka bölümüdür.\n\nEksi beş eksi beş, bölü üç eksi eksi üç; eksi on bölü altı, yani eksi beş bölü üç eder. Doğru başlangıç noktasından da geçtiği için bu parçada fonksiyon eksi beş iks bölü üçtür. Birinci yargıdaki eksi üç iks bölü beş doğru değildir.\n\nBeş ile yedi arasında grafik sağa giderken yükseliyor; ikinci yargı doğrudur. Eksi üç ve solundaki gösterilen parça yataydır; fonksiyonun değeri beş olarak sabittir. Üçüncü yargı da doğrudur. İkinci ve üçüncüyü veren D seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "Eğim=(−5−5)/(3+3)=−5/3",
+        "Eksi beş eksi beş, bölü üç eksi eksi üç; eksi on bölü altı, yani eksi beş bölü üç eder"
+      ],
+      [
+        "I: f(x)=−5x/3",
+        "bu parçada fonksiyon eksi beş iks bölü üçtür"
+      ],
+      [
+        "II: [5,7] artan",
+        "Beş ile yedi arasında grafik sağa giderken yükseliyor"
+      ],
+      [
+        "III: x≤−3 için sabit",
+        "Eksi üç ve solundaki gösterilen parça yataydır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Temel_Matematik-19",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-19",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 19,
+      "pdf_sayfasi": 21,
+      "basili_sayfa": 21,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        484.313
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        476.313,
+        576.0,
+        710.646
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-19",
+      "calisma_sirasi": 19,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-05",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-19",
+      "answer_label_rects": [
+        [
+          476.03363037109375,
+          694.7637939453125,
+          484.8086242675781,
+          705.5548095703125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-05",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 5,
+      "pdf_sayfasi": 19,
+      "basili_sayfa": 19,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        306.376
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-05",
+      "calisma_sirasi": 130,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-19",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-19",
+      "answer_label_rects": [
+        [
+          199.65570068359375,
+          290.82696533203125,
+          208.4307098388672,
+          301.6179504394531
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-19",
+      "B-Temel_Matematik-05"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-19",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 19,
+      "pdf_sayfasi": 21,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Sağa 3 birim, aşağı 3 birim ötelenme g(x)=f(x−3)−3 verir. Açıldığında g(x)=2x²−20x+50=2(x−5)² bulunur. Tek kök 5’tir. Katsayılar toplamı g(1)=32’dir. Tepe noktası x=5’te ve katsayı pozitif olduğundan [5,∞) aralığında artandır. Üç yargı da doğrudur.",
+      "kontrol_yontemi": "Ötelemeden önce f(x)=2(x−2)²+3; tepe noktası (2,3) idi. Ötelemeyle (5,0) olur ve bulunan g bunu verir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Sağa ötelemede x yerine x eksi üç, aşağı ötelemede fonksiyonun dışına eksi üç yazarız. Düzenlenince iki çarpı x eksi beşin karesi elde edilir. Kök beş, katsayılar toplamı otuz iki ve artan aralık beşten sonsuza kadardır. Üç yargı da doğru olduğu için E seçeneğini seçeriz.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "g(x)=f(x−3)−3",
+        "2x²−20x+50=2(x−5)²",
+        "Kök5",
+        "g(1)=32",
+        "Artan:[5,∞)"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 21 | Temel Matematik Testi 19",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-05"
+    },
+    "segments": [
+      "Fonksiyonu önce tepe noktası biçiminde yazalım. İki iks kare eksi sekiz iks artı on bir, iki çarpı iks eksi ikinin karesi artı üçtür. Tepe noktası ikiye üçtür.",
+      "Grafiği üç birim sağa ve üç birim aşağı taşıyınca tepe noktası beşe sıfıra gelir. Yeni fonksiyon iki çarpı iks eksi beşin karesidir. Açarsak iki iks kare eksi yirmi iks artı elli elde ederiz.",
+      "Kare sıfır olduğunda iks beş olur; birinci yargı doğrudur. Katsayılar toplamını bulmak için iks yerine bir yazabiliriz. İki çarpı bir eksi beşin karesi, otuz iki eder. İkinci yargı da doğru.",
+      "Kareli terimin katsayısı pozitif olduğu için parabola yukarı açılır. Tepe noktasının sağında, yani beşten itibaren artandır. Üçüncü yargı da doğru. E seçeneğini işaretliyoruz."
+    ],
+    "narration": "Fonksiyonu önce tepe noktası biçiminde yazalım. İki iks kare eksi sekiz iks artı on bir, iki çarpı iks eksi ikinin karesi artı üçtür. Tepe noktası ikiye üçtür.\n\nGrafiği üç birim sağa ve üç birim aşağı taşıyınca tepe noktası beşe sıfıra gelir. Yeni fonksiyon iki çarpı iks eksi beşin karesidir. Açarsak iki iks kare eksi yirmi iks artı elli elde ederiz.\n\nKare sıfır olduğunda iks beş olur; birinci yargı doğrudur. Katsayılar toplamını bulmak için iks yerine bir yazabiliriz. İki çarpı bir eksi beşin karesi, otuz iki eder. İkinci yargı da doğru.\n\nKareli terimin katsayısı pozitif olduğu için parabola yukarı açılır. Tepe noktasının sağında, yani beşten itibaren artandır. Üçüncü yargı da doğru. E seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "f(x)=2(x−2)²+3",
+        "iki çarpı iks eksi ikinin karesi artı üçtür"
+      ],
+      [
+        "g(x)=2(x−5)²",
+        "Yeni fonksiyon iki çarpı iks eksi beşin karesidir"
+      ],
+      [
+        "Kök: 5",
+        "Kare sıfır olduğunda iks beş olur"
+      ],
+      [
+        "g(1)=2(1−5)²=32",
+        "İki çarpı bir eksi beşin karesi, otuz iki eder"
+      ],
+      [
+        "x≥5 için artan",
+        "Tepe noktasının sağında, yani beşten itibaren artandır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Temel_Matematik-20",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-20",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 20,
+      "pdf_sayfasi": 22,
+      "basili_sayfa": 22,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        87.195
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        79.195,
+        300.0,
+        201.862
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-20",
+      "calisma_sirasi": 20,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-02",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-20",
+      "answer_label_rects": [
+        [
+          165.35299682617188,
+          185.87677001953125,
+          174.79400634765625,
+          196.66775512695312
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-02",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 2,
+      "pdf_sayfasi": 18,
+      "basili_sayfa": 18,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        669.341
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        661.341,
+        300.0,
+        783.675
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-02",
+      "calisma_sirasi": 127,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-20",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-20",
+      "answer_label_rects": [
+        [
+          165.35299682617188,
+          768.0230712890625,
+          174.79400634765625,
+          778.8140869140625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-20",
+      "B-Temel_Matematik-02"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-20",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 20,
+      "pdf_sayfasi": 22,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "1/8≤1/(x−2)≤1/3 ve görüntü pozitif olduğundan x>2’dir. Pozitif paydalar üzerinden ters çevrildiğinde 3≤x−2≤8, dolayısıyla 5≤x≤10 bulunur. A’daki tam sayılar 5,6,7,8,9,10’dur; toplamları 45’tir.",
+      "kontrol_yontemi": "f(5)=1/3 ve f(10)=1/8. Fonksiyon x>2’de azalan olduğundan bu iki uç arasındaki bütün değerleri tam olarak verilen görüntü aralığına götürür.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Görüntü aralığı pozitif, bu yüzden payda da pozitiftir. Fonksiyon bu bölgede azalandır; uçları ters sırayla eşleştiririz. Üçte bir için x beş, sekizde bir için x on olur. Beşten ona kadar altı tam sayı vardır. Toplamları kırk beştir; C seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "1/8≤1/(x−2)≤1/3",
+        "3≤x−2≤8",
+        "A=[5,10]",
+        "5+6+7+8+9+10=45"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 22 | Temel Matematik Testi 20",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-02"
+    },
+    "segments": [
+      "Fonksiyonun A kümesindeki değerleri sekizde bir ile üçte bir arasında. Bir bölü iks eksi iki pozitif olduğuna göre payda pozitiftir; iks ikiden büyüktür.",
+      "Pozitif sayılarda tersini alırken sıralama yönü değişir. Bir bölü iks eksi ikinin sekizde bir ile üçte bir arasında olması, iks eksi ikinin üç ile sekiz arasında olması demektir.",
+      "Her tarafa iki eklersek iks beş ile on arasında kalır, sınırlar dahil. A kümesindeki tam sayılar beş, altı, yedi, sekiz, dokuz ve ondur.",
+      "Bu altı sayıyı toplayalım: beş ile on, altı ile dokuz ve yedi ile sekiz çiftlerinin her biri on beş eder. Üç çarpı on beş, kırk beş. C seçeneğini işaretliyoruz."
+    ],
+    "narration": "Fonksiyonun A kümesindeki değerleri sekizde bir ile üçte bir arasında. Bir bölü iks eksi iki pozitif olduğuna göre payda pozitiftir; iks ikiden büyüktür.\n\nPozitif sayılarda tersini alırken sıralama yönü değişir. Bir bölü iks eksi ikinin sekizde bir ile üçte bir arasında olması, iks eksi ikinin üç ile sekiz arasında olması demektir.\n\nHer tarafa iki eklersek iks beş ile on arasında kalır, sınırlar dahil. A kümesindeki tam sayılar beş, altı, yedi, sekiz, dokuz ve ondur.\n\nBu altı sayıyı toplayalım: beş ile on, altı ile dokuz ve yedi ile sekiz çiftlerinin her biri on beş eder. Üç çarpı on beş, kırk beş. C seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "x>2",
+        "iks ikiden büyüktür"
+      ],
+      [
+        "3 ≤ x−2 ≤ 8",
+        "iks eksi ikinin üç ile sekiz arasında olması demektir"
+      ],
+      [
+        "5 ≤ x ≤ 10",
+        "iks beş ile on arasında kalır, sınırlar dahil"
+      ],
+      [
+        "5+6+7+8+9+10=45",
+        "Üç çarpı on beş, kırk beş"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Temel_Matematik-21",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-21",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 21,
+      "pdf_sayfasi": 22,
+      "basili_sayfa": 22,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.943,
+        293.337
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        285.337,
+        300.0,
+        538.003
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-21",
+      "calisma_sirasi": 21,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-04",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-21",
+      "answer_label_rects": [
+        [
+          96.33448791503906,
+          517.8541870117188,
+          105.72148895263672,
+          528.6452026367188
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-04",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 4,
+      "pdf_sayfasi": 18,
+      "basili_sayfa": 18,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        537.137
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        529.137,
+        576.0,
+        781.804
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-04",
+      "calisma_sirasi": 129,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-21",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-21",
+      "answer_label_rects": [
+        [
+          372.71246337890625,
+          761.6534423828125,
+          382.0994567871094,
+          772.4444580078125
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-21",
+      "B-Temel_Matematik-04"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-21",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 21,
+      "pdf_sayfasi": 22,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Grafiğin düşey asimptotu x=−3 olduğundan payda x+3 olmalıdır. Grafikte y ekseni kesişimi 1’dir; k/(x+3) için f(0)=k/3=1, buradan k=3 bulunur. Fonksiyon 3/(x+3), yani D’dir.",
+      "kontrol_yontemi": "x→−3⁺ iken sonuç +∞, x→−3⁻ iken −∞; |x| büyüdükçe sonuç 0’a yaklaşır. Bu davranışlar çizimin iki koluyla tutarlıdır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Düşey asimptot eksi üçte olduğu için paydayı x artı üç seçeriz. Grafik y eksenini birde kesiyor. x yerine sıfır yazdığımızda payın üç olması gerektiğini görürüz. Böylece üç bölü x artı üç bulunur. D seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Asimptot:x=−3",
+        "f(x)=k/(x+3)",
+        "f(0)=1 → k=3",
+        "D"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 22 | Temel Matematik Testi 21",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-04"
+    },
+    "segments": [
+      "Grafikte eğrinin yaklaştığı düşey doğru iks eşittir eksi üç. Seçeneklerde paydanın sıfır olduğu değer bu düşey asimptotu vermeli. Dolayısıyla paydası iks artı üç olan seçeneklere bakarız.",
+      "Şimdi ye eksenini kestiği noktayı kullanalım. İks sıfırken fonksiyonun değeri bir. Fonksiyonu ka bölü iks artı üç biçiminde yazarsak, sıfırda ka bölü üç eşittir bir olur. Buradan ka üç çıkar.",
+      "Fonksiyon üç bölü iks artı üçtür. İks eksi üçten büyükken pozitif, küçükken negatiftir; iki kolun konumu da grafikle uyuşur. D seçeneğini işaretliyoruz."
+    ],
+    "narration": "Grafikte eğrinin yaklaştığı düşey doğru iks eşittir eksi üç. Seçeneklerde paydanın sıfır olduğu değer bu düşey asimptotu vermeli. Dolayısıyla paydası iks artı üç olan seçeneklere bakarız.\n\nŞimdi ye eksenini kestiği noktayı kullanalım. İks sıfırken fonksiyonun değeri bir. Fonksiyonu ka bölü iks artı üç biçiminde yazarsak, sıfırda ka bölü üç eşittir bir olur. Buradan ka üç çıkar.\n\nFonksiyon üç bölü iks artı üçtür. İks eksi üçten büyükken pozitif, küçükken negatiftir; iki kolun konumu da grafikle uyuşur. D seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "Asimptot: x=−3",
+        "düşey doğru iks eşittir eksi üç"
+      ],
+      [
+        "f(x)=k/(x+3)",
+        "Fonksiyonu ka bölü iks artı üç biçiminde yazarsak"
+      ],
+      [
+        "k/3=1 → k=3",
+        "ka bölü üç eşittir bir olur. Buradan ka üç çıkar"
+      ],
+      [
+        "f(x)=3/(x+3)",
+        "Fonksiyon üç bölü iks artı üçtür"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Turkce-05",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-05",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 5,
+      "pdf_sayfasi": 3,
+      "basili_sayfa": 3,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        409.043
+      ],
+      "klasor": "A/Turkce/A-Turkce-05",
+      "calisma_sirasi": 65,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-28",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-05",
+      "answer_label_rects": [
+        [
+          60.946998596191406,
+          256.497314453125,
+          69.7040023803711,
+          267.2882995605469
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-28",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 28,
+      "pdf_sayfasi": 8,
+      "basili_sayfa": 8,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        454.837
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        446.837,
+        576.0,
+        783.837
+      ],
+      "klasor": "B/Turkce/B-Turkce-28",
+      "calisma_sirasi": 213,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-05",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-05",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          630.9581909179688,
+          346.0820007324219,
+          641.7492065429688
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-05",
+      "B-Turkce-28"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-05",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 5,
+      "pdf_sayfasi": 3,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "İlk cümlede hayallerin yaşama amaç ve değer kattığı söylenir. İkinci cümlede Joseph Addison’ın sözleri aktarılıp aynı düşünce desteklenir. Tanınmış bir düşünürün sözünün kanıt olarak kullanılması tanık göstermedir.",
+      "kontrol_yontemi": "İkinci cümlede gerçek bir yaşanmış olay örneği verilmez ve bütün yaş grupları karşılaştırılmaz. Doğrudan alıntı, ilk düşünceyi desteklemek için kullanılmıştır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "İlk cümlede hayallerin yaşama amaç ve değer kattığı söylenir. İkinci cümlede Joseph Addison’ın sözleri aktarılıp aynı düşünce desteklenir. Tanınmış bir düşünürün sözünün kanıt olarak kullanılması tanık göstermedir. Doğru seçenek A.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "İlk düşünce:hayal yaşamı anlamlandırır",
+        "Addison sözüyle destek",
+        "Tanık gösterme"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 3 | Türkçe Testi 5",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-28"
+    },
+    "segments": [
+      "İki cümle arasındaki düşünce ilişkisine bakalım. İlk cümle, hayallerin yaşama amaç ve anlam kattığını söylüyor. Hayalsiz bir yaşamın geride anlamlı bir şey bırakmayacağı savunuluyor.",
+      "İkinci cümlede ise Addison adıyla aktarılan söz kullanılıyor. Bu sözde de gerçekleştirilecek bir düşe sahip olmanın önemi vurgulanıyor. Böylece ilk cümlenin düşüncesi destekleniyor.",
+      "Bir düşünceyi tanınmış bir kişinin sözüyle destekleme yöntemine tanık gösterme denir. Burada düşünceler çatışmıyor ve yaşanmış bir olay örneklenmiyor. Tanık göstermeyi belirten A seçeneğini işaretliyoruz."
+    ],
+    "narration": "İki cümle arasındaki düşünce ilişkisine bakalım. İlk cümle, hayallerin yaşama amaç ve anlam kattığını söylüyor. Hayalsiz bir yaşamın geride anlamlı bir şey bırakmayacağı savunuluyor.\n\nİkinci cümlede ise Addison adıyla aktarılan söz kullanılıyor. Bu sözde de gerçekleştirilecek bir düşe sahip olmanın önemi vurgulanıyor. Böylece ilk cümlenin düşüncesi destekleniyor.\n\nBir düşünceyi tanınmış bir kişinin sözüyle destekleme yöntemine tanık gösterme denir. Burada düşünceler çatışmıyor ve yaşanmış bir olay örneklenmiyor. Tanık göstermeyi belirten A seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "İlk düşünce: hayallerin önemi",
+        "İlk cümle, hayallerin yaşama amaç ve anlam kattığını söylüyor"
+      ],
+      [
+        "Aktarılan sözle destek",
+        "Böylece ilk cümlenin düşüncesi destekleniyor"
+      ],
+      [
+        "Tanık gösterme",
+        "Bir düşünceyi tanınmış bir kişinin sözüyle destekleme yöntemine tanık gösterme denir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Turkce-06",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-06",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 6,
+      "pdf_sayfasi": 3,
+      "basili_sayfa": 3,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        553.119
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        545.119,
+        300.0,
+        783.786
+      ],
+      "klasor": "A/Turkce/A-Turkce-06",
+      "calisma_sirasi": 66,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-27",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-06",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          767.8863525390625,
+          69.72200775146484,
+          778.6773681640625
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-27",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 27,
+      "pdf_sayfasi": 8,
+      "basili_sayfa": 8,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.306,
+        80.284
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.284,
+        576.0,
+        310.951
+      ],
+      "klasor": "B/Turkce/B-Turkce-27",
+      "calisma_sirasi": 212,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-06",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-06",
+      "answer_label_rects": [
+        [
+          337.3160095214844,
+          295.05157470703125,
+          346.09100341796875,
+          305.8425598144531
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-06",
+      "B-Turkce-27"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-06",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 6,
+      "pdf_sayfasi": 3,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Parçada ürün adının hedef ülkede farklı çağrışım yaratması, satış sorununun açıklaması olarak sunulmuştur. Verilen örnekten çıkarılmak istenen pazarlama ilkesi, hedef ülkenin dilini ve kültürel özelliklerini dikkate almaktır.",
+      "kontrol_yontemi": "Seçenekler paragrafın kurduğu gerekçe ile karşılaştırılır. Sorun yazım yanlışı, ürünün teknik üstünlüğü veya reklam miktarı olarak sunulmamıştır; dilsel-kültürel anlamdır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "Bu, parçanın sunduğu örnekten yapılan okuduğunu anlama çıkarımıdır. Nova satış anekdotunun tarihsel doğruluğu burada doğrulanmış bir ticari olgu olarak ileri sürülmemiştir.",
+      "anlatim_metni": "Parçada ürün adının hedef ülkede farklı çağrışım yaratması, satış sorununun açıklaması olarak sunulmuştur. Verilen örnekten çıkarılmak istenen pazarlama ilkesi, hedef ülkenin dilini ve kültürel özelliklerini dikkate almaktır. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Hedef ülke",
+        "Dilsel çağrışım",
+        "Kültürel özellikler"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 3 | Türkçe Testi 6",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-27"
+    },
+    "segments": [
+      "Bu soruyu, metnin anlattığı örneğin verdiği mesaja göre çözüyoruz. Metinde satış sorunu otomobilin biçimi ya da fiyatıyla değil, ürün adının hedef ülkedeki dilsel çağrışımıyla açıklanıyor.",
+      "Burada çıkarılmak istenen ilke, bir ürünü başka ülkede pazarlarken o ülkenin dilini ve kültürel özelliklerini dikkate almaktır. Aynı ad farklı bir dilde farklı bir anlam çağrıştırabilir.",
+      "Sorun metinde yazım yanlışı, ürünün üstün niteliği veya satış miktarını tahmin etme olarak sunulmuyor. Ürünün pazarlanacağı ülkenin kültürel özelliklerini belirten E seçeneğini işaretliyoruz."
+    ],
+    "narration": "Bu soruyu, metnin anlattığı örneğin verdiği mesaja göre çözüyoruz. Metinde satış sorunu otomobilin biçimi ya da fiyatıyla değil, ürün adının hedef ülkedeki dilsel çağrışımıyla açıklanıyor.\n\nBurada çıkarılmak istenen ilke, bir ürünü başka ülkede pazarlarken o ülkenin dilini ve kültürel özelliklerini dikkate almaktır. Aynı ad farklı bir dilde farklı bir anlam çağrıştırabilir.\n\nSorun metinde yazım yanlışı, ürünün üstün niteliği veya satış miktarını tahmin etme olarak sunulmuyor. Ürünün pazarlanacağı ülkenin kültürel özelliklerini belirten E seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "Hedef ülke: dil ve kültür",
+        "o ülkenin dilini ve kültürel özelliklerini dikkate almaktır"
+      ],
+      [
+        "Ürün adının çağrışımı",
+        "Aynı ad farklı bir dilde farklı bir anlam çağrıştırabilir"
+      ],
+      [
+        "Kültürel özellikler",
+        "Ürünün pazarlanacağı ülkenin kültürel özelliklerini belirten E seçeneğini işaretliyoruz"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "academic_note": "Anlatı gerçek pazarlama tarihi kanıtı olarak sunulmaz; yalnız parçanın iletisi çözümlenir."
+  },
+  {
+    "id": "A-Turkce-07",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-07",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 7,
+      "pdf_sayfasi": 3,
+      "basili_sayfa": 3,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        379.709
+      ],
+      "klasor": "A/Turkce/A-Turkce-07",
+      "calisma_sirasi": 67,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-26",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-07",
+      "answer_label_rects": [
+        [
+          387.4008483886719,
+          363.9121398925781,
+          396.3828430175781,
+          374.703125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-26",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 26,
+      "pdf_sayfasi": 8,
+      "basili_sayfa": 8,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        484.453
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        476.453,
+        300.0,
+        783.786
+      ],
+      "klasor": "B/Turkce/B-Turkce-26",
+      "calisma_sirasi": 211,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-07",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-07",
+      "answer_label_rects": [
+        [
+          111.02299499511719,
+          767.9891357421875,
+          120.00499725341797,
+          778.7801513671875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-07",
+      "B-Turkce-26"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-07",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 7,
+      "pdf_sayfasi": 3,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "“Parası çıkışmamak” kişinin parasının ihtiyaçlarına yetmemesi demektir. Gereken yerde para harcamaktan isteyerek kaçınmak anlamına gelmez. Diğer deyimlerin açıklamaları bağlama uygundur; yanlış açıklama ikinci deyime aittir.",
+      "kontrol_yontemi": "Paranın yetersiz olması ile para harcamayı istememek birbirinden ayrılır. “Parası çıkışmamak” ibaresi yüksek çözünürlüklü soru görüntüsünden ayrıca kontrol edilmiştir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "“Parası çıkışmamak” kişinin parasının ihtiyaçlarına yetmemesi demektir. Gereken yerde para harcamaktan isteyerek kaçınmak anlamına gelmez. Diğer deyimlerin açıklamaları bağlama uygundur; yanlış açıklama ikinci deyime aittir. Doğru seçenek B.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Parası çıkışmamak:parası yetmemek",
+        "İsteyerek harcamamak değil",
+        "II"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 3 | Türkçe Testi 7",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-26"
+    },
+    "segments": [
+      "Deyimlerin açıklamalarını karşılaştırıyoruz. Parası çıkışmamak, bir kişinin parasının ihtiyaçlarını karşılamaya yetmemesidir. Parasını harcamamayı kendi isteğiyle seçmesi anlamına gelmez.",
+      "İkinci deyimin açıklamasında gereken yerde para harcamaktan kaçınmak denmiş. Bu, yetersizlik yerine isteyerek kaçınmayı anlatıyor. Dolayısıyla açıklama deyimle uyuşmuyor.",
+      "Bir dediğini iki etmemek isteneni hemen yerine getirmek, ipe un sermek bahanelerle işten kaçınmak, gün saymak beklemek ve dert yanmak yakınmaktır. Yanlış açıklanan ikinci deyimi veren B seçeneğini işaretliyoruz."
+    ],
+    "narration": "Deyimlerin açıklamalarını karşılaştırıyoruz. Parası çıkışmamak, bir kişinin parasının ihtiyaçlarını karşılamaya yetmemesidir. Parasını harcamamayı kendi isteğiyle seçmesi anlamına gelmez.\n\nİkinci deyimin açıklamasında gereken yerde para harcamaktan kaçınmak denmiş. Bu, yetersizlik yerine isteyerek kaçınmayı anlatıyor. Dolayısıyla açıklama deyimle uyuşmuyor.\n\nBir dediğini iki etmemek isteneni hemen yerine getirmek, ipe un sermek bahanelerle işten kaçınmak, gün saymak beklemek ve dert yanmak yakınmaktır. Yanlış açıklanan ikinci deyimi veren B seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "Parası çıkışmamak: yetmemek",
+        "Parası çıkışmamak, bir kişinin parasının ihtiyaçlarını karşılamaya yetmemesidir"
+      ],
+      [
+        "İsteyerek kaçınmak değil",
+        "Parasını harcamamayı kendi isteğiyle seçmesi anlamına gelmez"
+      ],
+      [
+        "Yanlış açıklama: II",
+        "Yanlış açıklanan ikinci deyimi veren B seçeneğini işaretliyoruz"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Turkce-08",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-08",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 8,
+      "pdf_sayfasi": 3,
+      "basili_sayfa": 3,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        553.207
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        545.207,
+        576.0,
+        783.873
+      ],
+      "klasor": "A/Turkce/A-Turkce-08",
+      "calisma_sirasi": 68,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-25",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-08",
+      "answer_label_rects": [
+        [
+          337.3249206542969,
+          728.58056640625,
+          346.7119140625,
+          739.37158203125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-25",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 25,
+      "pdf_sayfasi": 8,
+      "basili_sayfa": 8,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        310.709
+      ],
+      "klasor": "B/Turkce/B-Turkce-25",
+      "calisma_sirasi": 210,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-08",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-08",
+      "answer_label_rects": [
+        [
+          60.94699478149414,
+          255.75030517578125,
+          70.33399963378906,
+          266.5412902832031
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-08",
+      "B-Turkce-25"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-08",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 8,
+      "pdf_sayfasi": 3,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Batılılaşmanın başlangıcının on sekizinci yüzyıla uzandığı açıkça belirtilir. Dolayısıyla bu hareketin birkaç yüzyıllık geçmişi olduğu çıkar. Belirli askerî yeniliklerin yapıldığı veya Cumhuriyet’in kuruluşuna etkisi ise bu cümlelerde açıklanmamıştır.",
+      "kontrol_yontemi": "Kesin çıkarım yalnız metindeki başlangıç zamanı üzerinden yapılır. “Her alanda yenilik gerektiğini görmek” ile belirli bir alanda yeniliklerin fiilen yapılmış olması aynı iddia değildir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Batılılaşmanın başlangıcının on sekizinci yüzyıla uzandığı açıkça belirtilir. Dolayısıyla bu hareketin birkaç yüzyıllık geçmişi olduğu çıkar. Belirli askerî yeniliklerin yapıldığı veya Cumhuriyet’in kuruluşuna etkisi ise bu cümlelerde açıklanmamıştır. Doğru seçenek D.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Başlangıç:18.yüzyıl",
+        "Birkaç asırlık geçmiş",
+        "D"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 3 | Türkçe Testi 8",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-25"
+    },
+    "segments": [
+      "Kesin çıkarım sorularında, yalnız cümlede verilen bilgiye dayanırız. Metin batılılaşma hareketinin başlangıcını on sekizinci yüzyıla götürüyor.",
+      "Başlangıç birkaç yüzyıl öncesine uzandığına göre bu hareketin birkaç asırlık geçmişi vardır. D seçeneği, verilen zamanı doğrudan karşılıyor.",
+      "Cümlede hangi askeri yeniliklerin yapıldığı veya bu yönelişin Cumhuriyetin kuruluşuna nasıl etki ettiği açıklanmıyor. Bunlar için ek bilgi gerekir. Kesin olarak çıkarılabilen yargıyı veren D seçeneğini işaretliyoruz."
+    ],
+    "narration": "Kesin çıkarım sorularında, yalnız cümlede verilen bilgiye dayanırız. Metin batılılaşma hareketinin başlangıcını on sekizinci yüzyıla götürüyor.\n\nBaşlangıç birkaç yüzyıl öncesine uzandığına göre bu hareketin birkaç asırlık geçmişi vardır. D seçeneği, verilen zamanı doğrudan karşılıyor.\n\nCümlede hangi askeri yeniliklerin yapıldığı veya bu yönelişin Cumhuriyetin kuruluşuna nasıl etki ettiği açıklanmıyor. Bunlar için ek bilgi gerekir. Kesin olarak çıkarılabilen yargıyı veren D seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "Başlangıç: 18. yüzyıl",
+        "Metin batılılaşma hareketinin başlangıcını on sekizinci yüzyıla götürüyor"
+      ],
+      [
+        "Birkaç asırlık geçmiş",
+        "bu hareketin birkaç asırlık geçmişi vardır"
+      ],
+      [
+        "Yalnız verilen bilgi",
+        "Bunlar için ek bilgi gerekir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Sosyal_Bilimler-03",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-03",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Tarih",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 3,
+      "pdf_sayfasi": 12,
+      "basili_sayfa": 12,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.928,
+        671.372
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        663.372,
+        300.0,
+        783.705
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-03",
+      "calisma_sirasi": 103,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-04",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-03",
+      "answer_label_rects": [
+        [
+          60.93798065185547,
+          749.1590576171875,
+          69.69498443603516,
+          759.9500732421875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-04",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Tarih",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 4,
+      "pdf_sayfasi": 12,
+      "basili_sayfa": 12,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.306,
+        349.724
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        341.724,
+        576.0,
+        462.057
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-04",
+      "calisma_sirasi": 229,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-03",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-03",
+      "answer_label_rects": [
+        [
+          337.31597900390625,
+          427.51104736328125,
+          346.0729675292969,
+          438.3020324707031
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-03",
+      "B-Sosyal_Bilimler-04"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-03",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Tarih",
+      "soru_numarasi": 3,
+      "pdf_sayfasi": 12,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "Beşinci yüzyılda Orta Avrupa’daki Büyük Macar Ovası ile ilişkilendirilen topluluk Avrupa Hunlarıdır. Verilen zaman ve yer, seçenekler içinde Hunları gösterir.",
+      "kontrol_yontemi": "Göktürk ve Uygurların merkezî tarih sahası İç Asya; Peçeneklerin Avrupa’daki öne çıkışı daha sonraki yüzyıllardır. Zaman–yer birlikte değerlendirilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Beşinci yüzyılda Orta Avrupa’daki Büyük Macar Ovası ile ilişkilendirilen topluluk Avrupa Hunlarıdır. Verilen zaman ve yer, seçenekler içinde Hunları gösterir. Doğru seçenek A.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "5.yüzyıl",
+        "Büyük Macar Ovası",
+        "Avrupa Hunları"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 12 | Sosyal Bilimler Testi 3",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-04"
+    },
+    "segments": [
+      "Sorudaki iki belirleyici ipucu zaman ve yer. Zaman beşinci yüzyıl; yer Büyük Macar Ovası, yani Orta Avrupa. Türkistandan batıya doğru gerçekleşen göçün bu bölgeye ulaşması soruluyor.",
+      "Bu zaman ve coğrafyada seçenekler içinde Avrupa Hunları öne çıkar. Hunlar, Orta Avrupadaki varlıklarıyla bu iki ipucuna birlikte uyar.",
+      "Yalnız Türkistan bağlantısına bakmak yeterli değil; topluluğun hangi dönemde nerede bulunduğunu da eşleştirmeliyiz. Hunları veren A seçeneğini işaretliyoruz."
+    ],
+    "narration": "Sorudaki iki belirleyici ipucu zaman ve yer. Zaman beşinci yüzyıl; yer Büyük Macar Ovası, yani Orta Avrupa. Türkistandan batıya doğru gerçekleşen göçün bu bölgeye ulaşması soruluyor.\n\nBu zaman ve coğrafyada seçenekler içinde Avrupa Hunları öne çıkar. Hunlar, Orta Avrupadaki varlıklarıyla bu iki ipucuna birlikte uyar.\n\nYalnız Türkistan bağlantısına bakmak yeterli değil; topluluğun hangi dönemde nerede bulunduğunu da eşleştirmeliyiz. Hunları veren A seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "Zaman: 5. yüzyıl",
+        "Zaman beşinci yüzyıl"
+      ],
+      [
+        "Yer: Büyük Macar Ovası",
+        "yer Büyük Macar Ovası, yani Orta Avrupa"
+      ],
+      [
+        "Avrupa Hunları",
+        "Bu zaman ve coğrafyada seçenekler içinde Avrupa Hunları öne çıkar"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Sosyal_Bilimler-04",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-04",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Tarih",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 4,
+      "pdf_sayfasi": 12,
+      "basili_sayfa": 12,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.291,
+        137.006
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        129.006,
+        576.0,
+        311.006
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-04",
+      "calisma_sirasi": 104,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-02",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-04",
+      "answer_label_rects": [
+        [
+          518.7049560546875,
+          276.56927490234375,
+          528.1459350585938,
+          287.3602600097656
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-02",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Tarih",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 2,
+      "pdf_sayfasi": 12,
+      "basili_sayfa": 12,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.916,
+        591.509
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        583.509,
+        300.0,
+        765.842
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-02",
+      "calisma_sirasi": 227,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-04",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-04",
+      "answer_label_rects": [
+        [
+          242.32998657226562,
+          731.0720825195312,
+          251.77099609375,
+          741.8630981445312
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-04",
+      "B-Sosyal_Bilimler-02"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-04",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Tarih",
+      "soru_numarasi": 4,
+      "pdf_sayfasi": 12,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Alıntı, soylu bir aileden gelmeyen kişilerin yetiştirilerek askerî ve idarî makamlara ulaşmasını vurgular. Seçenekler içinde bu insan yetiştirme ve devlet hizmetine kazandırma düzenini karşılayan sistem devşirmedir.",
+      "kontrol_yontemi": "İkta toprak geliri; veraset yönetimin intikali; lonca esnaf örgütlenmesi; vakıf hayır düzenidir. Parçada anlatılan personel yetiştirme işlevini bunlar karşılamaz.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Alıntı, soylu bir aileden gelmeyen kişilerin yetiştirilerek askerî ve idarî makamlara ulaşmasını vurgular. Seçenekler içinde bu insan yetiştirme ve devlet hizmetine kazandırma düzenini karşılayan sistem devşirmedir. Doğru seçenek C.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Soyluluk şartı yok",
+        "Yetiştirme",
+        "Devlet hizmeti",
+        "Devşirme"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 12 | Sosyal Bilimler Testi 4",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-02"
+    },
+    "segments": [
+      "Elçinin vurguladığı nokta, devletin yüksek görevlerine gelen kişilerin soylu ailelerden gelmemesidir. Sıradan insanların yetiştirilip askeri ve idari görevlere getirilebildiğini anlatıyor.",
+      "Seçenekler içinde insanları yetiştirerek devlet hizmetine kazandıran düzen devşirme sistemidir. Metindeki yetiştirme ve görev verme vurgusu bu sistemi işaret eder.",
+      "Veraset, hükümdarlığın geçişiyle; lonca esnaf örgütlenmesiyle ilgilidir. İkta toprak gelirlerine, vakıf ise belirli bir hizmete ayrılan mal ve gelire ilişkindir. Metnin vurgusuna uyan C seçeneğini işaretliyoruz."
+    ],
+    "narration": "Elçinin vurguladığı nokta, devletin yüksek görevlerine gelen kişilerin soylu ailelerden gelmemesidir. Sıradan insanların yetiştirilip askeri ve idari görevlere getirilebildiğini anlatıyor.\n\nSeçenekler içinde insanları yetiştirerek devlet hizmetine kazandıran düzen devşirme sistemidir. Metindeki yetiştirme ve görev verme vurgusu bu sistemi işaret eder.\n\nVeraset, hükümdarlığın geçişiyle; lonca esnaf örgütlenmesiyle ilgilidir. İkta toprak gelirlerine, vakıf ise belirli bir hizmete ayrılan mal ve gelire ilişkindir. Metnin vurgusuna uyan C seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "Soyluluk şartı yok",
+        "devletin yüksek görevlerine gelen kişilerin soylu ailelerden gelmemesidir"
+      ],
+      [
+        "Yetiştirme → devlet hizmeti",
+        "Sıradan insanların yetiştirilip askeri ve idari görevlere getirilebildiğini anlatıyor"
+      ],
+      [
+        "Devşirme",
+        "insanları yetiştirerek devlet hizmetine kazandıran düzen devşirme sistemidir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Sosyal_Bilimler-05",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-05",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Tarih",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 5,
+      "pdf_sayfasi": 12,
+      "basili_sayfa": 12,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        573.807
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        565.807,
+        576.0,
+        782.14
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-05",
+      "calisma_sirasi": 105,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-01",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-05",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          701.2825927734375,
+          346.3070068359375,
+          712.0736083984375
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-01",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Tarih",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 1,
+      "pdf_sayfasi": 12,
+      "basili_sayfa": 12,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        137.069
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        129.069,
+        300.0,
+        345.402
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-01",
+      "calisma_sirasi": 226,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-05",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-05",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          264.54510498046875,
+          69.92900848388672,
+          275.3360900878906
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-05",
+      "B-Sosyal_Bilimler-01"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-05",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Tarih",
+      "soru_numarasi": 5,
+      "pdf_sayfasi": 12,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "Tahrir, nüfusu, toprağı ve gelir kaynaklarını belirleyerek vergilerin ve dirlik dağıtımının düzenlenmesini sağlar. Bu, ekonomik ve malî yönetimi kolaylaştırır. Taht mücadelelerinin önlenmesi ise hanedan verasetiyle ilgilidir; verilen tahrir işlevlerinden çıkarılamaz.",
+      "kontrol_yontemi": "Her seçenek sayımın konusu ile ilişkilendirilir. Vergi,gelir ve dirlik doğrudan bağlı; hanedan içi iktidar mücadelesi değildir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Tahrir, nüfusu, toprağı ve gelir kaynaklarını belirleyerek vergilerin ve dirlik dağıtımının düzenlenmesini sağlar. Bu, ekonomik ve malî yönetimi kolaylaştırır. Taht mücadelelerinin önlenmesi ise hanedan verasetiyle ilgilidir; verilen tahrir işlevlerinden çıkarılamaz. Doğru seçenek B.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Tahrir:nüfus,toprak,gelir",
+        "Malî düzen✓",
+        "Taht mücadelesi bağlantısı yok",
+        "B"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 12 | Sosyal Bilimler Testi 5",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-01"
+    },
+    "segments": [
+      "Tahrir işleminin metinde verilen işlevlerini izleyelim. Nüfus, toprak ve gelir kaynakları sayılarak kayıt altına alınıyor. Böylece vergiler ve toprak gelirlerinin dağıtımı düzenlenebiliyor.",
+      "Bu kayıtlar dirlik sisteminin işleyişine, gelir kaynaklarının yönetimine ve ekonomik düzenlemelere yardımcı olur. A, C, D ve E seçenekleri bu mali ve ekonomik işlemlerle bağlantılıdır.",
+      "Taht mücadeleleri ise hanedan içindeki hükümdarlık ve veraset meselesidir. Tahririn anlatılan işlevlerinden, taht mücadelelerini önlediği sonucu çıkarılamaz. Savunulamayacak yargıyı veren B seçeneğini işaretliyoruz."
+    ],
+    "narration": "Tahrir işleminin metinde verilen işlevlerini izleyelim. Nüfus, toprak ve gelir kaynakları sayılarak kayıt altına alınıyor. Böylece vergiler ve toprak gelirlerinin dağıtımı düzenlenebiliyor.\n\nBu kayıtlar dirlik sisteminin işleyişine, gelir kaynaklarının yönetimine ve ekonomik düzenlemelere yardımcı olur. A, C, D ve E seçenekleri bu mali ve ekonomik işlemlerle bağlantılıdır.\n\nTaht mücadeleleri ise hanedan içindeki hükümdarlık ve veraset meselesidir. Tahririn anlatılan işlevlerinden, taht mücadelelerini önlediği sonucu çıkarılamaz. Savunulamayacak yargıyı veren B seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "Tahrir: nüfus, toprak, gelir",
+        "Nüfus, toprak ve gelir kaynakları sayılarak kayıt altına alınıyor"
+      ],
+      [
+        "Vergi ve dirlik düzeni",
+        "vergiler ve toprak gelirlerinin dağıtımı düzenlenebiliyor"
+      ],
+      [
+        "Taht mücadelesi: bağlantı yok",
+        "taht mücadelelerini önlediği sonucu çıkarılamaz"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Sosyal_Bilimler-08",
+    "metadata": {
+      "soru_kimligi": "A-Sosyal_Bilimler-08",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Coğrafya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 8,
+      "pdf_sayfasi": 13,
+      "basili_sayfa": 13,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        429.709
+      ],
+      "klasor": "A/Sosyal_Bilimler/A-Sosyal_Bilimler-08",
+      "calisma_sirasi": 108,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Sosyal_Bilimler-07",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-08",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          414.15008544921875,
+          346.1000061035156,
+          424.9410705566406
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Sosyal_Bilimler-07",
+      "kitapcik": "B",
+      "test": "Sosyal Bilimler Testi",
+      "test_kodu": "Sosyal_Bilimler",
+      "ders": "Coğrafya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 7,
+      "pdf_sayfasi": 13,
+      "basili_sayfa": 13,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        434.238
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        426.238,
+        300.0,
+        783.904
+      ],
+      "klasor": "B/Sosyal_Bilimler/B-Sosyal_Bilimler-07",
+      "calisma_sirasi": 232,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Sosyal_Bilimler-08",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Sosyal_Bilimler-08",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          768.0115966796875,
+          69.72200775146484,
+          778.8026123046875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Sosyal_Bilimler-08",
+      "B-Sosyal_Bilimler-07"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Sosyal_Bilimler-08",
+      "kitapcik": "A",
+      "test": "Sosyal Bilimler Testi",
+      "ders": "Coğrafya",
+      "soru_numarasi": 8,
+      "pdf_sayfasi": 13,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Grafikte en düşük aylık sıcaklık yaklaşık on derece; diğer ayların çoğu bunun üzerindedir. Bu nedenle yıllık sıcaklık ortalaması on derecenin üzerindedir. Yağışlar yazın yoğunlaşır ve düzensiz dağılır; yaz sıcaklıklarının temmuz çevresinde yükselmesi Kuzey Yarım Küreyi gösterir.",
+      "kontrol_yontemi": "Bütün aylık sıcaklıklar en az on ve bazıları kesinlikle daha yüksek olduğundan aritmetik ortalama da ondan büyüktür. Yalnız iki yağışlı ayın toplamı bile dört yüz milimetreyi aşar.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Grafikte en düşük aylık sıcaklık yaklaşık on derece; diğer ayların çoğu bunun üzerindedir. Bu nedenle yıllık sıcaklık ortalaması on derecenin üzerindedir. Yağışlar yazın yoğunlaşır ve düzensiz dağılır; yaz sıcaklıklarının temmuz çevresinde yükselmesi Kuzey Yarım Küreyi gösterir. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Aylık sıcaklıklar≥10",
+        "Birçoğu>10",
+        "Ortalama>10",
+        "E"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 13 | Sosyal Bilimler Testi 8",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Sosyal_Bilimler-07"
+    },
+    "segments": [
+      "Grafikte mavi sütunlar yağışı, pembe çizgi sıcaklığı gösteriyor. Sıcaklık için sağdaki derece ölçeğini okumalıyız.",
+      "En soğuk ay yaklaşık on derece. Diğer aylar on derecenin üstüne çıkıyor; yaz ortasında yirmi beş derecenin de üzerinde. Bütün ayların ortalaması bu durumda on dereceden büyük olur.",
+      "Yağışlar yaz aylarında yoğunlaşmış ve yıl içine eşit dağılmamış. En sıcak dönem yılın ortasına geldiği için Güney Yarım Küre ifadesi de grafiğe uymaz. Yıllık yağış miktarı aylık sütunların toplamıyla değerlendirilir, tek bir ayla değil.",
+      "Doğrudan ulaşabildiğimiz yargı, yıllık sıcaklık ortalamasının on derecenin üzerinde olmasıdır. E seçeneğini işaretliyoruz."
+    ],
+    "narration": "Grafikte mavi sütunlar yağışı, pembe çizgi sıcaklığı gösteriyor. Sıcaklık için sağdaki derece ölçeğini okumalıyız.\n\nEn soğuk ay yaklaşık on derece. Diğer aylar on derecenin üstüne çıkıyor; yaz ortasında yirmi beş derecenin de üzerinde. Bütün ayların ortalaması bu durumda on dereceden büyük olur.\n\nYağışlar yaz aylarında yoğunlaşmış ve yıl içine eşit dağılmamış. En sıcak dönem yılın ortasına geldiği için Güney Yarım Küre ifadesi de grafiğe uymaz. Yıllık yağış miktarı aylık sütunların toplamıyla değerlendirilir, tek bir ayla değil.\n\nDoğrudan ulaşabildiğimiz yargı, yıllık sıcaklık ortalamasının on derecenin üzerinde olmasıdır. E seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "En düşük sıcaklık: 10",
+        "En soğuk ay yaklaşık on derece"
+      ],
+      [
+        "Diğer aylar >10",
+        "Diğer aylar on derecenin üstüne çıkıyor"
+      ],
+      [
+        "Yıllık ortalama >10",
+        "Bütün ayların ortalaması bu durumda on dereceden büyük olur"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Fen_Bilimleri-04",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-04",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 4,
+      "pdf_sayfasi": 28,
+      "basili_sayfa": 28,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        381.043
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-04",
+      "calisma_sirasi": 44,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-03",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-04",
+      "answer_label_rects": [
+        [
+          114.68598937988281,
+          365.4781799316406,
+          124.07299041748047,
+          376.2691650390625
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-03",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 3,
+      "pdf_sayfasi": 27,
+      "basili_sayfa": 27,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        482.903
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        474.903,
+        576.0,
+        783.903
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-03",
+      "calisma_sirasi": 168,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-04",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-04",
+      "answer_label_rects": [
+        [
+          391.06402587890625,
+          768.0050048828125,
+          400.4510192871094,
+          778.7960205078125
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-04",
+      "B-Fen_Bilimleri-03"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-04",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Fizik",
+      "soru_numarasi": 4,
+      "pdf_sayfasi": 28,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "K’den L’ye inerken yerçekimi potansiyel enerjisi azalır ve kinetik enerji artar; I doğru. Sürtünme olmadığı için L’den M’ye çıkarken mekanik enerji değişmez; II yanlış. K–L arasında yerçekimi kuvvetinin hareket doğrultusunda bileşeni bulunduğu için pozitif iş yapılır; III doğru.",
+      "kontrol_yontemi": "Enerji korunumu K+U=sabit. K–L için yerçekimi işi mg(hK−hL)>0’dır. Mekanik enerji ile yalnız kinetik enerji birbirine karıştırılmamalıdır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Aşağı inerken yükseklik enerjisi kinetik enerjiye dönüşür, hız artar. Sürtünme olmadığından toplam mekanik enerji azalmaz. Yerçekimi, K’den L’ye inerken pozitif iş yapar. Birinci ve üçüncü yargılar doğrudur. D seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "K→L:U azalır,K artar",
+        "Mekanik enerji sabit",
+        "Wg=mg(hK−hL)>0",
+        "I ve III"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 28 | Fen Bilimleri Testi 4",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-03"
+    },
+    "segments": [
+      "Sürtünme önemsiz olduğu için hareket boyunca mekanik enerji korunur. Ka noktasından le noktasına inerken yükseklik azalır. Yerçekimi potansiyel enerjisi azalırken kinetik enerji artar. Birinci yargı doğrudur.",
+      "Le noktasından em noktasına çıkarken bu dönüşüm tersine döner: kinetik enerji azalır, potansiyel enerji artar. Ancak ikisinin toplamı olan mekanik enerji azalmaz. İkinci yargı yanlıştır.",
+      "Ka ile le arasında yerçekimi kuvveti hareket yönünde iş yapar. Potansiyel enerjideki azalma kinetik enerjiye aktarılır; üçüncü yargı da doğrudur. Birinci ve üçüncü yargıları veren D seçeneğini işaretliyoruz."
+    ],
+    "narration": "Sürtünme önemsiz olduğu için hareket boyunca mekanik enerji korunur. Ka noktasından le noktasına inerken yükseklik azalır. Yerçekimi potansiyel enerjisi azalırken kinetik enerji artar. Birinci yargı doğrudur.\n\nLe noktasından em noktasına çıkarken bu dönüşüm tersine döner: kinetik enerji azalır, potansiyel enerji artar. Ancak ikisinin toplamı olan mekanik enerji azalmaz. İkinci yargı yanlıştır.\n\nKa ile le arasında yerçekimi kuvveti hareket yönünde iş yapar. Potansiyel enerjideki azalma kinetik enerjiye aktarılır; üçüncü yargı da doğrudur. Birinci ve üçüncü yargıları veren D seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "K → L: kinetik artar",
+        "Yerçekimi potansiyel enerjisi azalırken kinetik enerji artar"
+      ],
+      [
+        "Mekanik enerji sabit",
+        "ikisinin toplamı olan mekanik enerji azalmaz"
+      ],
+      [
+        "Yerçekimi pozitif iş yapar",
+        "Ka ile le arasında yerçekimi kuvveti hareket yönünde iş yapar"
+      ],
+      [
+        "I ve III",
+        "Birinci ve üçüncü yargıları veren D seçeneğini işaretliyoruz"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  },
+  {
+    "id": "A-Fen_Bilimleri-05",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-05",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 5,
+      "pdf_sayfasi": 28,
+      "basili_sayfa": 28,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        579.476
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        571.476,
+        300.0,
+        783.809
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-05",
+      "calisma_sirasi": 45,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-02",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-05",
+      "answer_label_rects": [
+        [
+          111.50901794433594,
+          767.98095703125,
+          120.8960189819336,
+          778.77197265625
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-02",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 2,
+      "pdf_sayfasi": 27,
+      "basili_sayfa": 27,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        131.4
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        123.4,
+        576.0,
+        335.733
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-02",
+      "calisma_sirasi": 167,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-05",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-05",
+      "answer_label_rects": [
+        [
+          387.88702392578125,
+          319.90484619140625,
+          397.2740173339844,
+          330.6958312988281
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-05",
+      "B-Fen_Bilimleri-02"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-05",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Fizik",
+      "soru_numarasi": 5,
+      "pdf_sayfasi": 28,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Sürtünmesiz düşey atışta en büyük yükseklik h=v0²/(2g)’dir. Kütle formülde bulunmaz; kütleyi azaltmak yüksekliği değiştirmez. İlk hızı artırmak yüksekliği artırır. Yerçekimi ivmesini azaltmak da paydayı küçülterek yüksekliği artırır. II ve III doğrudur.",
+      "kontrol_yontemi": "Enerji eşitliği mv0²/2=mgh yazılıp m sadeleştirilir. v0 iki katına çıkarsa yükseklik4 kat;g yarıya inerse2 kat olur.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Kinetik enerjiyi potansiyel enerjiye eşitlediğimizde kütle sadeleşir. En yüksek nokta, ilk hızın karesinin iki g’ye bölünmesiyle bulunur. Kütleyi azaltmak işe yaramaz. Hızı artırmak veya yerçekimini azaltmak yüksekliği artırır. D seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "h=v0²/(2g)",
+        "m etkisiz",
+        "v0 artarsa h artar",
+        "g azalırsa h artar",
+        "II ve III"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 28 | Fen Bilimleri Testi 5",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-02"
+    },
+    "segments": [
+      "Sürtünmesiz düşey atışta, cismin çıkabildiği en büyük yükseklik ilk hızın karesinin iki çarpı yerçekimi ivmesine bölümüdür. Bu bağıntıda kütle yer almaz.",
+      "Bu nedenle yalnız kütleyi azaltmak yüksekliği artırmaz. Birinci değişiklik işe yaramaz. İlk hızı artırırsak paydaki hızın karesi artar ve cisim daha yükseğe çıkar. İkinci değişiklik uygundur.",
+      "Yerçekimi ivmesini azaltırsak payda küçülür, yükseklik büyür. Üçüncü değişiklik de uygundur. Yüksekliği artıran ikinci ve üçüncü işlemleri birlikte veren D seçeneğini işaretliyoruz."
+    ],
+    "narration": "Sürtünmesiz düşey atışta, cismin çıkabildiği en büyük yükseklik ilk hızın karesinin iki çarpı yerçekimi ivmesine bölümüdür. Bu bağıntıda kütle yer almaz.\n\nBu nedenle yalnız kütleyi azaltmak yüksekliği artırmaz. Birinci değişiklik işe yaramaz. İlk hızı artırırsak paydaki hızın karesi artar ve cisim daha yükseğe çıkar. İkinci değişiklik uygundur.\n\nYerçekimi ivmesini azaltırsak payda küçülür, yükseklik büyür. Üçüncü değişiklik de uygundur. Yüksekliği artıran ikinci ve üçüncü işlemleri birlikte veren D seçeneğini işaretliyoruz.",
+    "notes": [
+      [
+        "h=v₀²/(2g)",
+        "ilk hızın karesinin iki çarpı yerçekimi ivmesine bölümüdür"
+      ],
+      [
+        "Kütle etkisiz",
+        "Bu bağıntıda kütle yer almaz"
+      ],
+      [
+        "İlk hız artar → h artar",
+        "İlk hızı artırırsak paydaki hızın karesi artar ve cisim daha yükseğe çıkar"
+      ],
+      [
+        "g azalır → h artar",
+        "Yerçekimi ivmesini azaltırsak payda küçülür, yükseklik büyür"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": []
+  }
+]
