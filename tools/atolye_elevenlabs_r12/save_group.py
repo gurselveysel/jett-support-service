@@ -20,7 +20,10 @@ for i in items:
   if key=='partner_metadata':sq['ortak_video_baglantisi']=i['id']
  s.setdefault('r12_elevenlabs_uretimleri',[]).append(entry)
  allnew=s['r12_elevenlabs_uretimleri'];unique=5+len(allnew);physical=len(s['video_teslim_manifesti']);eleven=2+len(allnew)
- nextid='A-Temel_Matematik-12' if num==1 else 'A-Temel_Matematik-13';nq=next(x for x in s['sorular'] if x['soru_kimligi']==nextid)
+ made={x['soru_kimligi'] for x in s['video_teslim_manifesti']}
+pending=[x for x in s['sorular'] if x['kitapcik']=='A' and x['soru_kimligi'] not in made and x['akademik_durum']=='dogrulandi']
+order={'Temel_Matematik':0,'Fen_Bilimleri':1,'Turkce':2,'Sosyal_Bilimler':3}
+nq=min(pending,key=lambda x:(order[x['test_kodu']],x['basili_soru_numarasi']));nextid=nq['soru_kimligi']
 s['ozet'].update(toplam_soru=125,hedef_sesli_video=125,sesli_mp4_mevcut=physical,sesli_mp4_mevcut_benzersiz_soru=unique,onceki_mp4_dosyasi=8,onceki_benzersiz_sesli_soru=5,bu_tur_yeni_sesli_mp4=len(allnew),mevcut_benzersiz_elevenlabs_kaydi=eleven,yeni_ses_kaydi_gereken_benzersiz_soru=125-unique,yeni_video_uretim_kalan=125-unique,nihai_kabul_bekleyen_mevcut_benzersiz_soru=unique-1,bu_tur_teknik_ve_gorsel_kontrol_gecen=len(allnew),bu_tur_nihai_kabul=0,elevenlabs_bu_tur_yeni_ses=len(allnew),siradaki_kesin_video_sorusu=nextid,eslesen_siradaki_B_sorusu=nq['eslesen_soru'],elevenlabs_sesine_gecis_bekleyen_onceki_benzersiz_video=3)
 s['siradaki_islem']=nextid+' / '+nq['eslesen_soru']+'. A11/B19 akademik engeli korundu. Mevcut MP3 ve zaman damgalarını yeniden kullan; güncel workflow son grubun seslerini içerir, tekrar çalıştırma.'
 s['video_sayim_yontemi']=f'125 A sorusu hedefi. B kayıtları aynı çözüme bağlıdır. {physical} fiziksel MP4 varyantı = {unique} benzersiz soru; kopyalar sayılmaz. {eleven} benzersiz ElevenLabs sesi ve korunmuş 3 önceki sağlayıcı çözümü vardır. Nihai kabul 1 önceki kayıt; bu tur işitsel kabul yok.'
@@ -35,7 +38,7 @@ GERÇEK DOSYA SAYIMI: {unique} benzersiz soru, {physical} fiziksel MP4 varyantı
 Bu tur: {len(allnew)} yeni ElevenLabs sesi + MP4. Mevcut toplam ElevenLabs çözümü: {eleven}.
 Önceki 3 sağlayıcı çözümü korundu; gerekirse ElevenLabs geçişi ayrı yapılmalı.
 Yeni video üretimi kalan: {125-unique}. Önceki nihai kabul: 1. Nihai kabul bekleyen toplam: 124.
-Akademik engelli: 4 benzersiz soru (A-Matematik02,11,17 ve A-Fen01). Erişim engeli: 0.
+Akademik engelli: 5 benzersiz soru (A-Matematik02,11,17 ve A-Fen01,11). Erişim engeli: 0.
 Yeni MP4'ler: 1080×1920,30fps,H264/AAC; tam çözümleme başarılı.
 Gerçek başlangıç, işlem ve sonuç kareleri incelendi. İşitsel dinleme yapılmadı; nihai kabul verilmedi.
 
