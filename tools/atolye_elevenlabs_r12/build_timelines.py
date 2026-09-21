@@ -5,6 +5,7 @@ import fitz,numpy as np
 import io,os
 from PIL import Image,ImageDraw,ImageFont
 from glyphs import G,paths
+from source_layout import render_source,sections,map_point
 ROOT=Path(__file__).resolve().parent
 FONT='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 NAVY='#0b3d59';INK='#184e69'
@@ -33,14 +34,13 @@ def build(item,batch='batch01'):
  for name in ['speech.mp3','alignment.json','speech.json','report.json','narration.txt']:
   shutil.copy2(ROOT/f'audio{num:02d}'/ident/name,q/name)
  timing=Timing(q);report=json.loads((q/'report.json').read_text());ad=report['duration_seconds'];duration=math.ceil((ad+5.2)*30)/30;switch=ad+.6
- images={};transforms={};endbottom=[]
+ images={};transforms={};layouts={};endbottom=[]
  for b,m in [('A',item['metadata']),('B',item['partner_metadata'])]:
   source_doc=fitz.open(ROOT.parent/'sources'/m['pdf_dosyasi'])
   source_page=source_doc[m['pdf_sayfasi']-1]
-  source_pix=source_page.get_pixmap(clip=fitz.Rect(m['soru_kirpma_konumu_pt']),matrix=fitz.Matrix(3.2,3.2))
-  src=Image.open(io.BytesIO(source_pix.tobytes('png'))).convert('RGB');save_image(src,q/f'kaynak_{b}.png')
+  src,layouts[b],source_width=render_source(source_page,m);save_image(src,q/f'kaynak_{b}.png')
   maxh=995;w=min(940,round(maxh*src.width/src.height));h=round(src.height*w/src.width);x=(1080-w)//2;y=385
-  transforms[b]=(x,y,w/(m['soru_kirpma_konumu_pt'][2]-m['soru_kirpma_konumu_pt'][0]))
+  transforms[b]=(x,y,w/source_width)
   endbottom.append(y+h)
   im=Image.new('RGB',(1080,1920),NAVY);d=ImageDraw.Draw(im)
   logo=Image.open(ROOT/'atolye_logo.png').convert('RGB');logo.thumbnail((350,268));im.paste(logo,(45,20))
@@ -50,6 +50,7 @@ def build(item,batch='batch01'):
   a=item['metadata']['basili_soru_numarasi'];bn=item['partner_metadata']['basili_soru_numarasi']
   d.text((445,165),f'A {a:02d}  ↔  B {bn:02d}',font=ft(37),fill='white')
   d.text((445,225),'125 benzersiz soru',font=ft(22),fill='#d7e7ed')
+  if item.get('conditional_analysis'):d.text((445,267),'KOŞULLU ÇÖZÜM / İNCELEME',font=ft(21),fill='#ffd0a0')
   d.rounded_rectangle((36,310,1044,1783),20,fill='white')
   label=f'{b} KİTAPÇIĞI • Soru {m["basili_soru_numarasi"]} • PDF sayfa {m["pdf_sayfasi"]}'
   if b=='B':label='EŞLEŞEN '+label
@@ -80,24 +81,26 @@ def build(item,batch='batch01'):
   bindings.append(dict(written=written,spoken=spoken,start=s,end=e,source='ElevenLabs normalized character alignment'))
  # Source underlines: only actually printed text, in the currently displayed A source.
  m=item['metadata'];doc=fitz.open(ROOT.parent/'sources'/m['pdf_dosyasi']);pg=doc[m['pdf_sayfasi']-1];clip=fitz.Rect(m['soru_kirpma_konumu_pt']);x,y,scale=transforms['A']
- def xy(px,py):return [x+(px-clip.x0)*scale,y+(py-clip.y0)*scale]
+ def xy(px,py):
+  dx,dy=map_point(layouts['A'],px,py);return [x+dx*scale,y+dy*scale]
  for target,cue in item.get('highlights',[]):
-  rects=[r for r in pg.search_for(target,clip=clip) if r.width>0]
+  rects=[r for part in sections(m) for r in pg.search_for(target,clip=part) if r.width>0]
   s,e=timing.cue(cue)
   for r in rects:addpath([[xy(r.x0,r.y1+1),xy(r.x1,r.y1+1)]],s,min(e,s+.8),'source_'+target,color='#b66432',width=2.5,until=switch)
  for target,spoken in item.get('source_word_marks',[]):
-  matches=[w for w in pg.get_text('words',clip=clip) if w[4]==target]
+  matches=[w for part in sections(m) for w in pg.get_text('words',clip=part) if w[4]==target]
   assert matches,('Missing source mark',ident,target)
   w=min(matches,key=lambda w:w[1]);s,e=timing.cue(spoken)
   addpath([[xy(w[0]-1,w[3]+1),xy(w[2]+1,w[3]+1)]],s,min(s+.8,e),'map_label_'+target,color='#b66432',width=3,until=switch)
  # Correct option is circled at its original printed label, independently for A and B.
- ans=item['answer'];s,e=timing.cue(ans+' seçeneğini',last=True)
- for b,m in [('A',item['metadata']),('B',item['partner_metadata'])]:
-  r=m['answer_label_rects'];assert len(r)==1,(ident,b,r);r=r[0];x,y,scale=transforms[b];clip=fitz.Rect(m['soru_kirpma_konumu_pt'])
-  cx=x+((r[0]+r[2])/2-clip.x0)*scale;cy=y+((r[1]+r[3])/2-clip.y0)*scale
-  rx=max(24,(r[2]-r[0])*scale*.8);ry=max(25,(r[3]-r[1])*scale*.75)
-  pp=[[[cx+rx*math.cos(t),cy+ry*math.sin(t)] for t in np.linspace(-.5,math.tau-.3,70)]]
-  addpath(pp,s if b=='A' else switch+.05,min(e,s+1.2) if b=='A' else switch+1.0,'original_option_'+b,color='#bc572c',width=3.3,until=switch if b=='A' else duration)
+ if not item.get('conditional_analysis'):
+  ans=item['answer'];s,e=timing.cue(item.get('answer_cue',ans+' seçeneği'),last=True)
+  for b,m in [('A',item['metadata']),('B',item['partner_metadata'])]:
+   r=m['answer_label_rects'];assert len(r)==1,(ident,b,r);r=r[0];x,y,scale=transforms[b];clip=fitz.Rect(m['soru_kirpma_konumu_pt'])
+   dx,dy=map_point(layouts[b],(r[0]+r[2])/2,(r[1]+r[3])/2);cx=x+dx*scale;cy=y+dy*scale
+   rx=max(24,(r[2]-r[0])*scale*.8);ry=max(25,(r[3]-r[1])*scale*.75)
+   pp=[[[cx+rx*math.cos(t),cy+ry*math.sin(t)] for t in np.linspace(-.5,math.tau-.3,70)]]
+   addpath(pp,s if b=='A' else switch+.05,min(e,s+1.2) if b=='A' else switch+1.0,'original_option_'+b,color='#bc572c',width=3.3,until=switch if b=='A' else duration)
  # Physics direction arrow drawn directly on the original diagram.
  if ident=='A-Fen_Bilimleri-02':
   m=item['metadata'];clip=fitz.Rect(m['soru_kirpma_konumu_pt']);x,y,scale=transforms['A']
