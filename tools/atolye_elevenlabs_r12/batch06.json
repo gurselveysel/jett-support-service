@@ -1,0 +1,2982 @@
+[
+  {
+    "id": "A-Temel_Matematik-23",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-23",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 23,
+      "pdf_sayfasi": 22,
+      "basili_sayfa": 22,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.327,
+        80.348
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.348,
+        576.0,
+        461.014
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-23",
+      "calisma_sirasi": 23,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-01",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-23",
+      "answer_label_rects": [
+        [
+          476.02801513671875,
+          445.31512451171875,
+          484.8030090332031,
+          456.1061096191406
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-01",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 1,
+      "pdf_sayfasi": 18,
+      "basili_sayfa": 18,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.952,
+        131.373
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        123.37299999999999,
+        300.0,
+        512.039
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-01",
+      "calisma_sirasi": 126,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-23",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-23",
+      "answer_label_rects": [
+        [
+          199.64999389648438,
+          496.3385925292969,
+          208.4250030517578,
+          507.12957763671875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-23",
+      "B-Temel_Matematik-01"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-23",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 23,
+      "pdf_sayfasi": 22,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Yükseklik h(t)=−(t−4)²/2+8’dir. h=6 denkleminin kökleri t=2 ve t=6; şekilde yükselen kol gösterildiği için o an t=2’dir. Roket yere t=8’de ulaşır, yani 6 saniye sonra. En büyük yükseklik 8’dir. Bir ve üç saniye sonra t=3 ve t=5 olur; simetri gereği her iki yükseklik 7,5’tir. I,II,III doğrudur.",
+      "kontrol_yontemi": "h(2)=6;h(8)=0;h(4)=8;h(3)=h(5)=7,5 değerleri doğrudan yerine konur. Şekildeki yükselme bilgisi kullanılmadan t=6 seçilmemelidir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Altı metre yüksekliğe roket iki farklı anda gelebilir. Şekilde yükseldiği gösterildiği için iki saniyelik anı seçeriz. Yere sekizinci saniyede döner; geriye altı saniye kalmıştır. En yüksek noktası sekiz metredir. Üçüncü ve beşinci saniyeler tepeye eşit uzaklıkta olduğundan yükseklikleri eşittir. Üç yargı da doğrudur; E seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "h=6 → t=2 veya6",
+        "Yükseliyor → t=2",
+        "Yere:t=8 → 6 s",
+        "Maks8",
+        "h(3)=h(5)=7,5"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 22 | Temel Matematik Testi 23",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-01"
+    },
+    "narration": "Yüksekliği altı yaparak o anki zamanı bulalım. Te eksi dördün karesinin eksi yarısı artı sekiz, altıya eşit. Buradan te eksi dördün karesi dört olur; te iki veya altıdır. Şekilde roket yükselirken gösterildiği için başlangıç aldığımız an ikinci saniyedir. Yere dönüşte yükseklik sıfır olur. Aynı bağıntıdan te eksi dördün karesi on altı çıkar; uçuşun sonu sekizinci saniyedir. Sekiz eksi iki, altı saniye sonra yere düşer. Tepe noktası dördüncü saniyede sekiz metredir. Bir ve üç saniye sonrası, üçüncü ve beşinci saniyelerdir. Tepe zamanına eşit uzak olduklarından iki yükseklik de yedi buçuk metredir. Üç yargı da doğru; E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Yüksekliği altı yaparak o anki zamanı bulalım. Te eksi dördün karesinin eksi yarısı artı sekiz, altıya eşit. Buradan te eksi dördün karesi dört olur; te iki veya altıdır. Şekilde roket yükselirken gösterildiği için başlangıç aldığımız an ikinci saniyedir. Yere dönüşte yükseklik sıfır olur. Aynı bağıntıdan te eksi dördün karesi on altı çıkar; uçuşun sonu sekizinci saniyedir. Sekiz eksi iki, altı saniye sonra yere düşer. Tepe noktası dördüncü saniyede sekiz metredir. Bir ve üç saniye sonrası, üçüncü ve beşinci saniyelerdir. Tepe zamanına eşit uzak olduklarından iki yükseklik de yedi buçuk metredir. Üç yargı da doğru; E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "h=6 → (t−4)²=4",
+        "te eksi dördün karesi dört olur"
+      ],
+      [
+        "t=2; yere dönüş t=8",
+        "uçuşun sonu sekizinci saniyedir"
+      ],
+      [
+        "8−2=6; en yüksek 8",
+        "Sekiz eksi iki, altı saniye sonra yere düşer. Tepe noktası dördüncü saniyede sekiz metredir"
+      ],
+      [
+        "h(3)=h(5)=7,5",
+        "iki yükseklik de yedi buçuk metredir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "saniye",
+        "uçuşun sonu sekizinci saniyedir"
+      ],
+      [
+        "metredir.",
+        "Sekiz eksi iki, altı saniye sonra yere düşer. Tepe noktası dördüncü saniyede sekiz metredir"
+      ],
+      [
+        "yükseklik",
+        "iki yükseklik de yedi buçuk metredir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-24",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-24",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 24,
+      "pdf_sayfasi": 22,
+      "basili_sayfa": 22,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        598.227
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        590.227,
+        576.0,
+        784.561
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-24",
+      "calisma_sirasi": 24,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-26",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-24",
+      "answer_label_rects": [
+        [
+          446.0337219238281,
+          762.3422241210938,
+          455.4747009277344,
+          773.1332397460938
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-26",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 26,
+      "pdf_sayfasi": 23,
+      "basili_sayfa": 23,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        266.709
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-26",
+      "calisma_sirasi": 151,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-24",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-24",
+      "answer_label_rects": [
+        [
+          446.0337219238281,
+          244.49090576171875,
+          455.4747009277344,
+          255.28189086914062
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-24",
+      "B-Temel_Matematik-26"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-24",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 24,
+      "pdf_sayfasi": 22,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Basamaklardan yatay uzunluk 4 birim, düşey uzunluk 3 birim okunur. Uçları birleştiren doğru 3–4–5 dik üçgeninin hipotenüsüdür. α düşey kenar ile doğru arasındaki açı olduğundan komşu kenar 3’tür. cosα=3/5 olur.",
+      "kontrol_yontemi": "Açı yataydan ölçülseydi 4/5 bulunurdu; ancak şeklin açı yayı düşeyle yapılan açıyı işaretler. Pisagor:3²+4²=5².",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Basamakların toplam yatay ve düşey uzunluklarını sayalım. Dört ve üç birim elde ederiz; birleşen doğru beş birimdir. Burada işaretli açı düşey kenarla yapılıyor. Bu nedenle komşu kenar üç, hipotenüs beştir. Kosinüs üç bölü beş, yani C seçeneğidir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Yatay4, düşey3",
+        "Hipotenüs5",
+        "cosα=3/5"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 22 | Temel Matematik Testi 24",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-26"
+    },
+    "narration": "Eş karelerin kenarını bir birim kabul edelim. Pembe doğrunun iki ucu arasında yatayda dört, düşeyde üç birim fark var. Böylece kenarları üç ve dört olan bir dik üçgen kurarız. Pisagordan hipotenüsün karesi dokuz artı on altı, yirmi beş olur; hipotenüs beştir. Alfa açısı düşey kenarla yapılmıştır. Bu nedenle alfaya komşu dik kenar üçtür; dört değildir. Kosinüs, komşu dik kenarın hipotenüse oranıdır. Kosinüs alfa üç bölü beş çıkar. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Eş karelerin kenarını bir birim kabul edelim. Pembe doğrunun iki ucu arasında yatayda dört, düşeyde üç birim fark var. Böylece kenarları üç ve dört olan bir dik üçgen kurarız. Pisagordan hipotenüsün karesi dokuz artı on altı, yirmi beş olur; hipotenüs beştir. Alfa açısı düşey kenarla yapılmıştır. Bu nedenle alfaya komşu dik kenar üçtür; dört değildir. Kosinüs, komşu dik kenarın hipotenüse oranıdır. Kosinüs alfa üç bölü beş çıkar. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Yatay 4; düşey 3",
+        "yatayda dört, düşeyde üç birim fark var"
+      ],
+      [
+        "3²+4²=25 → 5",
+        "hipotenüsün karesi dokuz artı on altı, yirmi beş olur; hipotenüs beştir"
+      ],
+      [
+        "cos alfa=3/5",
+        "Kosinüs alfa üç bölü beş çıkar"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": []
+  },
+  {
+    "id": "A-Temel_Matematik-25",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-25",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 25,
+      "pdf_sayfasi": 23,
+      "basili_sayfa": 23,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        335.043
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-25",
+      "calisma_sirasi": 25,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-40",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-25",
+      "answer_label_rects": [
+        [
+          218.13201904296875,
+          319.37115478515625,
+          227.51902770996094,
+          330.1621398925781
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-40",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 40,
+      "pdf_sayfasi": 26,
+      "basili_sayfa": 26,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        477.226
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        469.226,
+        576.0,
+        747.012451171875
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-40",
+      "calisma_sirasi": 165,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-25",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-25",
+      "answer_label_rects": [
+        [
+          494.510009765625,
+          716.221435546875,
+          503.8970031738281,
+          727.012451171875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-25",
+      "B-Temel_Matematik-40"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-25",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 25,
+      "pdf_sayfasi": 23,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Evden okula 8 km, evden kütüphaneye 7 km ve bu yollar arasındaki açı 120°’dir. Okul–kütüphane uzaklığı d için kosinüs teoremi d²=8²+7²−2·8·7·cos120°=64+49+56=169 verir. d=13 km. Güzergâhın toplamı 8+13+7=28 km’dir.",
+      "kontrol_yontemi": "cos120°=−1/2 kullanılmıştır; eksiyle eksi çarpımının artı olduğu kontrol edilir. 7+8>13 olduğundan bulunan üçgen mümkündür.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Eksik yolu bulmak için kosinüs teoremini kullanırız. Yüz yirmi derecenin kosinüsü eksi bir bölü ikidir. Hesap sonunda okul ile kütüphane arası on üç kilometre çıkar. Sekiz, on üç ve yediyi toplarsak yirmi sekiz kilometre buluruz. D seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "d²=8²+7²−112·(−1/2)",
+        "d²=169 → d=13",
+        "8+13+7=28"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 23 | Temel Matematik Testi 25",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-40"
+    },
+    "narration": "Toplam yolu bulmak için önce okul ile kütüphane arasındaki bilinmeyen uzaklığı hesaplamalıyız. Evden çıkan iki kenar sekiz ve yedi kilometre, aralarındaki açı yüz yirmi derecedir. Kosinüs teoreminde karşı kenarın karesi, diğer iki kenarın kareleri toplamından iki kenar çarpımının iki katıyla açının kosinüsünün çarpımı çıkarılarak bulunur. Yüz yirminin kosinüsü eksi yarımdır. Uzaklığın karesi, altmış dört artı kırk dokuz artı elli altı, yüz altmış dokuz olur. Uzaklık on üç kilometredir. Ali evden okula sekiz, okuldan kütüphaneye on üç, eve dönüşte yedi kilometre yürür. Toplam sekiz artı on üç artı yedi, yirmi sekiz kilometredir. D seçeneğini işaretliyoruz.",
+    "segments": [
+      "Toplam yolu bulmak için önce okul ile kütüphane arasındaki bilinmeyen uzaklığı hesaplamalıyız. Evden çıkan iki kenar sekiz ve yedi kilometre, aralarındaki açı yüz yirmi derecedir. Kosinüs teoreminde karşı kenarın karesi, diğer iki kenarın kareleri toplamından iki kenar çarpımının iki katıyla açının kosinüsünün çarpımı çıkarılarak bulunur. Yüz yirminin kosinüsü eksi yarımdır. Uzaklığın karesi, altmış dört artı kırk dokuz artı elli altı, yüz altmış dokuz olur. Uzaklık on üç kilometredir. Ali evden okula sekiz, okuldan kütüphaneye on üç, eve dönüşte yedi kilometre yürür. Toplam sekiz artı on üç artı yedi, yirmi sekiz kilometredir. D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "cos120°=−1/2",
+        "Yüz yirminin kosinüsü eksi yarımdır"
+      ],
+      [
+        "d²=64+49+56=169",
+        "Uzaklığın karesi, altmış dört artı kırk dokuz artı elli altı, yüz altmış dokuz olur"
+      ],
+      [
+        "d=13",
+        "Uzaklık on üç kilometredir"
+      ],
+      [
+        "8+13+7=28",
+        "Toplam sekiz artı on üç artı yedi, yirmi sekiz kilometredir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "uzaklığı",
+        "Uzaklığın karesi, altmış dört artı kırk dokuz artı elli altı, yüz altmış dokuz olur"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-26",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-26",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 26,
+      "pdf_sayfasi": 23,
+      "basili_sayfa": 23,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.935,
+        477.226
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        469.226,
+        300.0,
+        745.226
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-26",
+      "calisma_sirasi": 26,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-39",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-26",
+      "answer_label_rects": [
+        [
+          60.94519805908203,
+          724.7409057617188,
+          69.70220184326172,
+          735.5319213867188
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-39",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 39,
+      "pdf_sayfasi": 26,
+      "basili_sayfa": 26,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.319,
+        80.372
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.372,
+        576.0,
+        348.039
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-39",
+      "calisma_sirasi": 164,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-26",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-26",
+      "answer_label_rects": [
+        [
+          337.3231201171875,
+          327.890625,
+          346.0801086425781,
+          338.6816101074219
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-26",
+      "B-Temel_Matematik-39"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-26",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 26,
+      "pdf_sayfasi": 23,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "Birim karelerden dikdörtgenin yatay kenarı 5, düşey kenarı 4 olarak okunur. α düşey kenarla yapılan açı olduğundan cotα=4/5’tir. β yatay kenarla yapıldığından cosβ=5/√41. İstenen cotα+1/cos²β=4/5+41/25=61/25’tir.",
+      "kontrol_yontemi": "Köşegen karesi5²+4²=41. Açıların yatay/düşey kenarlara göre konumları şekilden ayrıca kontrol edilir; cotα=5/4 ile karıştırılmaz.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Dikdörtgen beş birim genişliğinde ve dört birim yüksekliğindedir. Alfa düşeye göre ölçüldüğü için kotanjantı dört bölü beştir. Beta yataya göre ölçülüyor; kosinüsü beş bölü kök kırk birdir. İstenen ifadeyi ortak paydada topladığımızda altmış bir bölü yirmi beş buluruz. A seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Kenarlar5 ve4",
+        "cotα=4/5",
+        "cosβ=5/√41",
+        "4/5+41/25=61/25"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 23 | Temel Matematik Testi 26",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-39"
+    },
+    "narration": "Birim kareleri sayalım: dikdörtgenin yatay kenarı beş, düşey kenarı dört birim. Köşegenin karesi, beşin karesi artı dördün karesi, kırk birdir. Alfa düşeyle yapılan açı olduğundan, kotanjantı düşey kenarın yataya oranı, yani dört bölü beştir. Beta yatayla yapılan açıdır. Kosinüs beta beş bölü kök kırk bir olur. Bunun karesi yirmi beş bölü kırk bir; tersini alınca kırk bir bölü yirmi beş elde ederiz. İstenen toplam dört bölü beş ile kırk bir bölü yirmi beştir. Paydaları yirmi beşte eşitleyince pay yirmi artı kırk bir olur. Sonuç altmış bir bölü yirmi beş çıkar. A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Birim kareleri sayalım: dikdörtgenin yatay kenarı beş, düşey kenarı dört birim. Köşegenin karesi, beşin karesi artı dördün karesi, kırk birdir. Alfa düşeyle yapılan açı olduğundan, kotanjantı düşey kenarın yataya oranı, yani dört bölü beştir. Beta yatayla yapılan açıdır. Kosinüs beta beş bölü kök kırk bir olur. Bunun karesi yirmi beş bölü kırk bir; tersini alınca kırk bir bölü yirmi beş elde ederiz. İstenen toplam dört bölü beş ile kırk bir bölü yirmi beştir. Paydaları yirmi beşte eşitleyince pay yirmi artı kırk bir olur. Sonuç altmış bir bölü yirmi beş çıkar. A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Kenarlar: 5 ve 4",
+        "yatay kenarı beş, düşey kenarı dört birim"
+      ],
+      [
+        "cot alfa=4/5",
+        "kotanjantı düşey kenarın yataya oranı, yani dört bölü beştir"
+      ],
+      [
+        "1/cos² beta=41/25",
+        "tersini alınca kırk bir bölü yirmi beş elde ederiz"
+      ],
+      [
+        "4/5+41/25=61/25",
+        "altmış bir bölü yirmi beş çıkar"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "birim",
+        "yatay kenarı beş, düşey kenarı dört birim"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-27",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-27",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 27,
+      "pdf_sayfasi": 23,
+      "basili_sayfa": 23,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        85.19
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        77.19,
+        576.0,
+        192.19
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-27",
+      "calisma_sirasi": 27,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-38",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-27",
+      "answer_label_rects": [
+        [
+          438.8328857421875,
+          157.60675048828125,
+          447.81488037109375,
+          168.39773559570312
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-38",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 38,
+      "pdf_sayfasi": 26,
+      "basili_sayfa": 26,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        676.807
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        668.807,
+        300.0,
+        783.807
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-38",
+      "calisma_sirasi": 163,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-27",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-27",
+      "answer_label_rects": [
+        [
+          162.4550018310547,
+          749.22314453125,
+          171.43701171875,
+          760.01416015625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-27",
+      "B-Temel_Matematik-38"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-27",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 27,
+      "pdf_sayfasi": 23,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "cos x/(1−sin x) ifadesini (1+sin x) ile genişletirsek cos x(1+sin x)/(1−sin²x)=(1+sin x)/cos x olur. Verilen ifadedeki ilk iki terim eşittir ve çıkarıldıkları için yok olur. Sonuç 1, yani B’dir.",
+      "kontrol_yontemi": "0<x<π/2 aralığında cos x ve 1−sin x sıfır değildir; sadeleştirme geçerlidir. Örneğin x=π/6 yerleştirildiğinde de iki kesir √3 olur.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "İkinci kesri paydasının eşleniğiyle genişletelim. Paydada bir eksi sinüs kare, yani kosinüs kare oluşur. Bir kosinüs sadeleşince ilk kesrin aynısı elde edilir. Eşit iki terim çıkarıldığı için sıfır kalır; sondaki biri ekleriz. Sonuç bir, B seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "cos x/(1−sin x)=(1+sin x)/cos x",
+        "Aynı iki terim çıkarılır",
+        "1"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 23 | Temel Matematik Testi 27",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-38"
+    },
+    "narration": "İkinci kesrin paydasında bir eksi sinüs iks var. Payı ve paydayı bir artı sinüs iks ile çarparak genişletelim. Paydada iki kare farkından bir eksi sinüs kare iks oluşur. Bu ifade kosinüs kare ikse eşittir. Paydaki kosinüs iksi sadeleştirince ikinci kesir, payı bir artı sinüs iks, paydası kosinüs iks olan kesre dönüşür. Bu, ilk kesrin aynısıdır. Eşit iki kesir birbirinden çıkarılınca sıfır kalır; sondaki bir ise değişmez. Verilen açık aralıkta paydalar sıfır olmadığı için işlemler geçerlidir. Sonuç bir; B seçeneğini işaretliyoruz.",
+    "segments": [
+      "İkinci kesrin paydasında bir eksi sinüs iks var. Payı ve paydayı bir artı sinüs iks ile çarparak genişletelim. Paydada iki kare farkından bir eksi sinüs kare iks oluşur. Bu ifade kosinüs kare ikse eşittir. Paydaki kosinüs iksi sadeleştirince ikinci kesir, payı bir artı sinüs iks, paydası kosinüs iks olan kesre dönüşür. Bu, ilk kesrin aynısıdır. Eşit iki kesir birbirinden çıkarılınca sıfır kalır; sondaki bir ise değişmez. Verilen açık aralıkta paydalar sıfır olmadığı için işlemler geçerlidir. Sonuç bir; B seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "1−sin²x=cos²x",
+        "bir eksi sinüs kare iks oluşur. Bu ifade kosinüs kare ikse eşittir"
+      ],
+      [
+        "İki kesir eşit",
+        "Bu, ilk kesrin aynısıdır"
+      ],
+      [
+        "Aynı−aynı+1=1",
+        "Eşit iki kesir birbirinden çıkarılınca sıfır kalır; sondaki bir ise değişmez"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": []
+  },
+  {
+    "id": "A-Temel_Matematik-28",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-28",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 28,
+      "pdf_sayfasi": 23,
+      "basili_sayfa": 23,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        297.272
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        289.272,
+        576.0,
+        397.606
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-28",
+      "calisma_sirasi": 28,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-37",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-28",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          381.77337646484375,
+          346.0820007324219,
+          392.5643615722656
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-37",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 37,
+      "pdf_sayfasi": 26,
+      "basili_sayfa": 26,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        452.536
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        444.536,
+        300.0,
+        552.869
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-37",
+      "calisma_sirasi": 162,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-28",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-28",
+      "answer_label_rects": [
+        [
+          60.946998596191406,
+          537.037109375,
+          69.7040023803711,
+          547.828125
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-28",
+      "B-Temel_Matematik-37"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-28",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 28,
+      "pdf_sayfasi": 23,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "3|AC|=2|BC| olduğundan AC:CB=2:3’tür. C içten bölen nokta olduğu için C=(3A+2B)/5’tir. A(1,−3), B(11,2) yerine yazılırsa C(5,−1) elde edilir. Koordinatların toplamı 4’tür.",
+      "kontrol_yontemi": "C=A+(2/5)(B−A)=(1,−3)+(4,2)=(5,−1). Vektörler AC=(4,2),CB=(6,3) oranı2:3 verir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "C noktası doğru parçasını ikiye üç oranında içten bölüyor. Bu yüzden A’dan B’ye olan değişimin beşte ikisini alırız. Yatayda dört, düşeyde iki birim ilerleyince C’nin koordinatları beş ve eksi bir olur. Toplam dört, yani A seçeneğidir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "AC:CB=2:3",
+        "C=(3A+2B)/5",
+        "C=(5,−1)",
+        "5−1=4"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 23 | Temel Matematik Testi 28",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-37"
+    },
+    "narration": "Üç kat a ce uzunluğu, iki kat be ce uzunluğuna eşit. Bu nedenle a ce ile ce be oranı ikiye üçtür. Ce, a noktasından beye giden yolun beşte ikisindedir. İks koordinatı birden on bire gidiyor; fark on. Bunun beşte ikisi dört eder. Bire dört ekleyince cenin iks koordinatı beş olur. Ye koordinatı eksi üçten ikiye gidiyor; fark beş. Bunun beşte ikisi ikidir. Eksi üçe iki ekleyince eksi bir buluruz. Ce noktası beşe eksi birdir. Koordinat toplamı beş eksi bir, dört eder. A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Üç kat a ce uzunluğu, iki kat be ce uzunluğuna eşit. Bu nedenle a ce ile ce be oranı ikiye üçtür. Ce, a noktasından beye giden yolun beşte ikisindedir. İks koordinatı birden on bire gidiyor; fark on. Bunun beşte ikisi dört eder. Bire dört ekleyince cenin iks koordinatı beş olur. Ye koordinatı eksi üçten ikiye gidiyor; fark beş. Bunun beşte ikisi ikidir. Eksi üçe iki ekleyince eksi bir buluruz. Ce noktası beşe eksi birdir. Koordinat toplamı beş eksi bir, dört eder. A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "AC:CB=2:3",
+        "a ce ile ce be oranı ikiye üçtür"
+      ],
+      [
+        "xC=1+(2/5)×10=5",
+        "Bire dört ekleyince cenin iks koordinatı beş olur"
+      ],
+      [
+        "yC=−3+(2/5)×5=−1",
+        "Eksi üçe iki ekleyince eksi bir buluruz"
+      ],
+      [
+        "5−1=4",
+        "Koordinat toplamı beş eksi bir, dört eder"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "koordinat",
+        "Bire dört ekleyince cenin iks koordinatı beş olur"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-29",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-29",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 29,
+      "pdf_sayfasi": 23,
+      "basili_sayfa": 23,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        530.795
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        522.795,
+        576.0,
+        783.795
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-29",
+      "calisma_sirasi": 29,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-36",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-29",
+      "answer_label_rects": [
+        [
+          337.3249816894531,
+          749.1983642578125,
+          346.7659606933594,
+          759.9893798828125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-36",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 36,
+      "pdf_sayfasi": 26,
+      "basili_sayfa": 26,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.368
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.368,
+        300.0,
+        333.368
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-36",
+      "calisma_sirasi": 161,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-29",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-29",
+      "answer_label_rects": [
+        [
+          60.94700622558594,
+          298.77117919921875,
+          70.38800811767578,
+          309.5621643066406
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-29",
+      "B-Temel_Matematik-36"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-29",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 29,
+      "pdf_sayfasi": 23,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "C(3,7), eksen kesişimlerini birleştiren AB’nin orta noktasıdır. A y ekseninde olduğundan A(0,14); B x ekseninde olduğundan B(6,0) bulunur. Doğrunun kesenler biçimi x/6+y/14=1’dir. 42 ile çarpılırsa 7x+3y=42 elde edilir.",
+      "kontrol_yontemi": "(0,14), (6,0) ve (3,7) noktalarının tamamı 7x+3y=42 eşitliğini sağlar.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Orta noktanın koordinatlarını iki katına çıkararak eksen kesişimlerini buluruz. Y eksenindeki nokta on dörtte, x eksenindeki nokta altıdadır. Kesenler denklemini yazıp paydaları kaldırınca yedi x artı üç y eşittir kırk iki bulunur. C seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "A=(0,14),B=(6,0)",
+        "x/6+y/14=1",
+        "7x+3y=42"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 23 | Temel Matematik Testi 29",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-36"
+    },
+    "narration": "Orta noktanın koordinatları, uç noktaların koordinat ortalamalarıdır. A ye ekseninde olduğu için iks koordinatı sıfır, be iks ekseninde olduğu için ye koordinatı sıfırdır. Orta nokta üçe yedi olduğuna göre benin iks koordinatı altı, anın ye koordinatı on dört olur. Eksenleri altı ve on dörtte kesen doğrunun denklemini, iks bölü altı artı ye bölü on dört eşittir bir biçiminde yazabiliriz. Her terimi kırk ikiyle çarpalım: yedi iks artı üç ye eşittir kırk iki. Bu denklemi veren C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Orta noktanın koordinatları, uç noktaların koordinat ortalamalarıdır. A ye ekseninde olduğu için iks koordinatı sıfır, be iks ekseninde olduğu için ye koordinatı sıfırdır. Orta nokta üçe yedi olduğuna göre benin iks koordinatı altı, anın ye koordinatı on dört olur. Eksenleri altı ve on dörtte kesen doğrunun denklemini, iks bölü altı artı ye bölü on dört eşittir bir biçiminde yazabiliriz. Her terimi kırk ikiyle çarpalım: yedi iks artı üç ye eşittir kırk iki. Bu denklemi veren C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Orta nokta: (3,7)",
+        "Orta nokta üçe yedi olduğuna göre"
+      ],
+      [
+        "A=(0,14); B=(6,0)",
+        "benin iks koordinatı altı, anın ye koordinatı on dört olur"
+      ],
+      [
+        "x/6+y/14=1",
+        "iks bölü altı artı ye bölü on dört eşittir bir"
+      ],
+      [
+        "7x+3y=42",
+        "yedi iks artı üç ye eşittir kırk iki"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "koordinat",
+        "benin iks koordinatı altı, anın ye koordinatı on dört olur"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-30",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-30",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 30,
+      "pdf_sayfasi": 24,
+      "basili_sayfa": 24,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        438.043
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-30",
+      "calisma_sirasi": 30,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-35",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-30",
+      "answer_label_rects": [
+        [
+          60.946998596191406,
+          422.37603759765625,
+          69.7040023803711,
+          433.1670227050781
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-35",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 35,
+      "pdf_sayfasi": 25,
+      "basili_sayfa": 25,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        426.015
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        418.015,
+        576.0,
+        783.681
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-35",
+      "calisma_sirasi": 160,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-30",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-30",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          768.0145263671875,
+          346.0820007324219,
+          778.8055419921875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-30",
+      "B-Temel_Matematik-35"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-30",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 30,
+      "pdf_sayfasi": 24,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "Şekli birim karelerle, aşağı yönü pozitif alarak A(2,9), B(10,1), C(4,5), D(1,2) şeklinde indeksleyebiliriz. |OA|=2 ve |OB|=10 koşullarının izin verdiği kafes başlangıçları O(2,7) veya O(4,9)’dur. İlk durumda C ve D’nin y eksenine uzaklıkları 2 ve 1; ikinci durumda 0 ve 3 olur. İki durumda da toplam 3’tür.",
+      "kontrol_yontemi": "Her iki O için Öklid uzaklıkları doğrudan hesaplanır: OA=2, OB=10. C ve D’nin y eksenine uzaklığı yatay koordinat farkının mutlak değeridir. Tek bir başlangıç varmış gibi varsayılmadan sonuç doğrulanır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Y eksenine uzaklık, noktanın yatay uzaklığıdır. Verilen iki uzaklıkla koordinat başlangıcını yerleştirdiğimizde iki uygun yerleşim görülebilir. Birinde C ve D’nin uzaklıkları iki ve bir, diğerinde sıfır ve üçtür. Her iki durumda toplam üç çıkar. Bu yüzden cevap A’dır.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "O için iki olasılık",
+        "|xC−xO|+|xD−xO|",
+        "2+1=3 veya0+3=3",
+        "3"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 24 | Temel Matematik Testi 30",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-35"
+    },
+    "narration": "Silinmiş eksenleri bulurken karelerin aralığını birim alıyoruz. Başlangıç noktası, aya iki ve beye on birim uzaklıkta olmalı. Şekilde bunu sağlayan iki yer var: anın iki kare üstü ya da iki kare sağı. İlk yerde beye uzaklık, yatay sekiz ve düşey altı birimden, altı sekiz on üçgeniyle ondur. İkinci yerde yatay altı, düşey sekiz olur ve yine on çıkar. Ye ekseni başlangıçtan geçen düşey doğrudur. İlk olasılıkta cenin ye eksenine uzaklığı iki, denin bir birimdir. İkinci olasılıkta ce ye eksenindedir; uzaklığı sıfır, deninki üçtür. İkisinde de toplam üç eder. A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Silinmiş eksenleri bulurken karelerin aralığını birim alıyoruz. Başlangıç noktası, aya iki ve beye on birim uzaklıkta olmalı. Şekilde bunu sağlayan iki yer var: anın iki kare üstü ya da iki kare sağı. İlk yerde beye uzaklık, yatay sekiz ve düşey altı birimden, altı sekiz on üçgeniyle ondur. İkinci yerde yatay altı, düşey sekiz olur ve yine on çıkar. Ye ekseni başlangıçtan geçen düşey doğrudur. İlk olasılıkta cenin ye eksenine uzaklığı iki, denin bir birimdir. İkinci olasılıkta ce ye eksenindedir; uzaklığı sıfır, deninki üçtür. İkisinde de toplam üç eder. A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "O: A noktasının 2 üstü veya sağı",
+        "anın iki kare üstü ya da iki kare sağı"
+      ],
+      [
+        "6²+8²=10²",
+        "altı sekiz on üçgeniyle ondur"
+      ],
+      [
+        "1. olasılık: 2+1=3",
+        "cenin ye eksenine uzaklığı iki, denin bir birimdir"
+      ],
+      [
+        "2. olasılık: 0+3=3",
+        "uzaklığı sıfır, deninki üçtür"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "birimdir.",
+        "cenin ye eksenine uzaklığı iki, denin bir birimdir"
+      ],
+      [
+        "uzaklığı",
+        "uzaklığı sıfır, deninki üçtür"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-31",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-31",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 31,
+      "pdf_sayfasi": 24,
+      "basili_sayfa": 24,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        530.811
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        522.811,
+        300.0,
+        734.144
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-31",
+      "calisma_sirasi": 31,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-34",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-31",
+      "answer_label_rects": [
+        [
+          111.80599975585938,
+          718.3076171875,
+          120.78800201416016,
+          729.0986328125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-34",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 34,
+      "pdf_sayfasi": 25,
+      "basili_sayfa": 25,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        283.709
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-34",
+      "calisma_sirasi": 159,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-31",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-31",
+      "answer_label_rects": [
+        [
+          388.18402099609375,
+          267.87310791015625,
+          397.166015625,
+          278.6640930175781
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-31",
+      "B-Temel_Matematik-34"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-31",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 31,
+      "pdf_sayfasi": 24,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "Katlama doğrusu AC, AB ışını ile görüntüsü AB′ ışını arasındaki açıyı iki eş parçaya ayırır. Kesene ait 138° ve 42° açıları şeklin yönleriyle birlikte izlendiğinde AB–AB′ açısı 96° ve yarısı 48° olur. İstenen açı 138°−48°=90°’dir.",
+      "kontrol_yontemi": "Açıortaydan kesene kalan açı, uygun yönlerde verilen iki açının ortalaması (138+42)/2=90 ile de bulunur. Katlama iki tarafındaki açıların eşitliği kontrol edilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Katlama doğrusu, bir doğru parçası ile onun görüntüsü arasındaki açıyı iki eş parçaya böler. Verilen açıları aynı yönde izlediğimizde aradaki açı doksan altı derece çıkar; yarısı kırk sekizdir. Yüz otuz sekizden kırk sekizi çıkarınca doksan derece elde ederiz. B seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "AB ile AB′:96°",
+        "Katlama:48°",
+        "α=138°−48°=90°",
+        "B"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 24 | Temel Matematik Testi 31",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-34"
+    },
+    "narration": "Yansımada a ce ışını, a be ile görüntüsü a be üssü arasındaki açıyı ikiye böler. Keseni ve iki ışını kullanarak oluşan büyük üçgene bakalım. Alt kesişimde iç açı, yüz seksen eksi yüz otuz sekizden kırk ikidir. Üst kesişimde ters açı nedeniyle iç açı da kırk ikidir. A noktasındaki büyük açı, yüz seksen eksi kırk iki eksi kırk iki, doksan altı derecedir. Yansıma ekseni bunu iki eş parçaya böler; her parça kırk sekiz derece olur. Alttaki küçük üçgende, kesenle a ce arasındaki iç açı yüz seksen eksi kırk iki eksi kırk sekizden doksandır. İstenen alfa, onun bütünleridir ve o da doksan derecedir. B seçeneğini işaretliyoruz.",
+    "segments": [
+      "Yansımada a ce ışını, a be ile görüntüsü a be üssü arasındaki açıyı ikiye böler. Keseni ve iki ışını kullanarak oluşan büyük üçgene bakalım. Alt kesişimde iç açı, yüz seksen eksi yüz otuz sekizden kırk ikidir. Üst kesişimde ters açı nedeniyle iç açı da kırk ikidir. A noktasındaki büyük açı, yüz seksen eksi kırk iki eksi kırk iki, doksan altı derecedir. Yansıma ekseni bunu iki eş parçaya böler; her parça kırk sekiz derece olur. Alttaki küçük üçgende, kesenle a ce arasındaki iç açı yüz seksen eksi kırk iki eksi kırk sekizden doksandır. İstenen alfa, onun bütünleridir ve o da doksan derecedir. B seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Alt iç açı: 180−138=42°",
+        "Alt kesişimde iç açı, yüz seksen eksi yüz otuz sekizden kırk ikidir"
+      ],
+      [
+        "A açısı: 180−42−42=96°",
+        "A noktasındaki büyük açı, yüz seksen eksi kırk iki eksi kırk iki, doksan altı derecedir"
+      ],
+      [
+        "Yarı açı: 96/2=48°",
+        "her parça kırk sekiz derece olur"
+      ],
+      [
+        "alfa=90°",
+        "İstenen alfa, onun bütünleridir ve o da doksan derecedir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "noktasında",
+        "A noktasındaki büyük açı, yüz seksen eksi kırk iki eksi kırk iki, doksan altı derecedir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-32",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-32",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 32,
+      "pdf_sayfasi": 24,
+      "basili_sayfa": 24,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        295.709
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-32",
+      "calisma_sirasi": 32,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-33",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-32",
+      "answer_label_rects": [
+        [
+          441.7340087890625,
+          279.9691162109375,
+          451.17498779296875,
+          290.7601013183594
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-33",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 33,
+      "pdf_sayfasi": 25,
+      "basili_sayfa": 25,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        426.015
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        418.015,
+        300.0,
+        641.348
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-33",
+      "calisma_sirasi": 158,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-32",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-32",
+      "answer_label_rects": [
+        [
+          165.35601806640625,
+          625.6074829101562,
+          174.79702758789062,
+          636.3984985351562
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-32",
+      "B-Temel_Matematik-33"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-32",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 32,
+      "pdf_sayfasi": 24,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Katlama AD doğrusu boyunca yapılıp B, AC üzerindeki B′ noktasına taşındığı için AD, A açısını ortalar. BAD=35° ise BAC=70°’dir. ABD üçgeninde ADB=80° olduğundan B açısı 180−35−80=65° olur. ABC’de C=180−70−65=45°’dir.",
+      "kontrol_yontemi": "ABC açılarının toplamı70+65+45=180;ABD toplamı35+65+80=180. Katlama eşitliği35=35 ayrıca sağlanır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Katlama sayesinde A açısının iki parçası eşittir. Otuz beşin iki katı yetmiş derecedir. Küçük üçgende B açısını altmış beş buluruz. Büyük üçgende iç açılar toplamından yetmiş ile altmış beşi çıkarınca kırk beş derece kalır. C seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "A=2·35°=70°",
+        "B=180°−35°−80°=65°",
+        "C=180°−70°−65°=45°",
+        "C"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 24 | Temel Matematik Testi 32",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-33"
+    },
+    "narration": "Katlamada be köşesi a ce kenarına geldiği için katlama doğrusu a de, a açısının açıortayıdır. Verilen otuz beş dereceyi ikiyle çarparsak büyük üçgenin a açısı yetmiş derece olur. A be de üçgeninde açıların toplamını kullanalım. Be açısı, yüz seksen eksi otuz beş eksi seksen, altmış beş derecedir. Bu, büyük üçgenin de be açısıdır. Şimdi büyük üçgende ce açısını bulalım: yüz seksen eksi yetmiş eksi altmış beş, kırk beş derece. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Katlamada be köşesi a ce kenarına geldiği için katlama doğrusu a de, a açısının açıortayıdır. Verilen otuz beş dereceyi ikiyle çarparsak büyük üçgenin a açısı yetmiş derece olur. A be de üçgeninde açıların toplamını kullanalım. Be açısı, yüz seksen eksi otuz beş eksi seksen, altmış beş derecedir. Bu, büyük üçgenin de be açısıdır. Şimdi büyük üçgende ce açısını bulalım: yüz seksen eksi yetmiş eksi altmış beş, kırk beş derece. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "A=2×35°=70°",
+        "büyük üçgenin a açısı yetmiş derece olur"
+      ],
+      [
+        "B=180−35−80=65°",
+        "Be açısı, yüz seksen eksi otuz beş eksi seksen, altmış beş derecedir"
+      ],
+      [
+        "C=180−70−65=45°",
+        "yüz seksen eksi yetmiş eksi altmış beş, kırk beş derece"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "üçgeni",
+        "büyük üçgenin a açısı yetmiş derece olur"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-33",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-33",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 33,
+      "pdf_sayfasi": 24,
+      "basili_sayfa": 24,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        477.226
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        469.226,
+        576.0,
+        682.56
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-33",
+      "calisma_sirasi": 33,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-32",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-33",
+      "answer_label_rects": [
+        [
+          441.7340087890625,
+          666.5234375,
+          451.17498779296875,
+          677.314453125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-32",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 32,
+      "pdf_sayfasi": 25,
+      "basili_sayfa": 25,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        285.376
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-32",
+      "calisma_sirasi": 157,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-33",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-33",
+      "answer_label_rects": [
+        [
+          165.3560028076172,
+          269.67315673828125,
+          174.79701232910156,
+          280.4641418457031
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-33",
+      "B-Temel_Matematik-32"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-33",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 33,
+      "pdf_sayfasi": 24,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Merdivenin oluşturduğu küçük ve büyük dik üçgenler benzerdir. Küçük üçgende taban 12, yükseklik 5’tir. Büyük üçgenin tabanı 12+36=48 olduğundan büyütme oranı4’tür. Büyük yükseklik x=4·5=20 olur.",
+      "kontrol_yontemi": "Eğim iki üçgende de aynıdır:5/12=20/48. Toplam taban yerine yalnız36 kullanılmadığı kontrol edilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Aynı merdiven doğrusu üzerinde oluşan iki dik üçgen benzerdir. Büyük taban on iki artı otuz altı, yani kırk sekizdir. Küçük tabanın dört katı olduğuna göre yükseklik de dört katına çıkar. Beşin dört katı yirmidir. C seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Büyük taban12+36=48",
+        "x/5=48/12=4",
+        "x=20"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 24 | Temel Matematik Testi 33",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-32"
+    },
+    "narration": "Merdivenin alt ucunu ortak alan iki dik üçgeni düşünelim. İkisi de yere dik ve aynı eğik doğruyu paylaşıyor; bu nedenle benzerdir. Küçük üçgenin tabanı on iki, yüksekliği beş birim. Büyük üçgenin tabanı yalnız otuz altı değildir; on iki artı otuz altı, kırk sekizdir. Büyük tabanın küçük tabana oranı kırk sekiz bölü on iki, dört eder. Yükseklikler de aynı oranda büyür. İks, dört çarpı beşten yirmi birimdir. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Merdivenin alt ucunu ortak alan iki dik üçgeni düşünelim. İkisi de yere dik ve aynı eğik doğruyu paylaşıyor; bu nedenle benzerdir. Küçük üçgenin tabanı on iki, yüksekliği beş birim. Büyük üçgenin tabanı yalnız otuz altı değildir; on iki artı otuz altı, kırk sekizdir. Büyük tabanın küçük tabana oranı kırk sekiz bölü on iki, dört eder. Yükseklikler de aynı oranda büyür. İks, dört çarpı beşten yirmi birimdir. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Benzer dik üçgenler",
+        "bu nedenle benzerdir"
+      ],
+      [
+        "Büyük taban=12+36=48",
+        "on iki artı otuz altı, kırk sekizdir"
+      ],
+      [
+        "Oran: 48/12=4",
+        "kırk sekiz bölü on iki, dört eder"
+      ],
+      [
+        "x=4×5=20",
+        "İks, dört çarpı beşten yirmi birimdir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "birimdir.",
+        "İks, dört çarpı beşten yirmi birimdir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-34",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-34",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 34,
+      "pdf_sayfasi": 25,
+      "basili_sayfa": 25,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        504.043
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-34",
+      "calisma_sirasi": 34,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-27",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-34",
+      "answer_label_rects": [
+        [
+          182.76849365234375,
+          314.85101318359375,
+          191.63400268554688,
+          325.0425109863281
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-27",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 27,
+      "pdf_sayfasi": 23,
+      "basili_sayfa": 23,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        355.878
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        347.878,
+        576.0,
+        779.878
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-27",
+      "calisma_sirasi": 152,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-34",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-34",
+      "answer_label_rects": [
+        [
+          459.1463928222656,
+          590.3534545898438,
+          468.0118713378906,
+          600.544921875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-34",
+      "B-Temel_Matematik-27"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-34",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 34,
+      "pdf_sayfasi": 25,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "x eksenine göre yansıma (x,y)→(x,−y), ardından y eksenine yansıma (x,−y)→(−x,−y) verir. Bileşke, başlangıç noktasına göre 180° dönmedir. Şekil dördüncü bölgeye geçer; iç öğelerin konum ve yönleri de 180° döner. Buna uygun düzen D seçeneğindedir.",
+      "kontrol_yontemi": "Her köşe ve iç işaret için (x,y)→(−x,−y) uygulanır. N harfi 180° dönüşte N olarak kalır; yatay ayna görüntüsüyle karıştırılmaz.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Arka arkaya iki eksene göre yansıtma, bütün şekli yarım tur döndürür. Yalnız kutunun yeri değil, içindeki işaretlerin yerleri ve yönleri de değişir. D seçeneği bu yarım tur dönüşü doğru gösteriyor. Özellikle N harfini yalnız aynalamamak gerekir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "(x,y)→(x,−y)",
+        "→(−x,−y)",
+        "180° dönme",
+        "Şekil ve işaretler birlikte döner"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 25 | Temel Matematik Testi 34",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-27"
+    },
+    "narration": "İki yansımayı sırayla uygulayalım. İks eksenine göre yansımada iks aynı kalır, ye işaret değiştirir. Ardından ye eksenine göre yansımada bu kez iks işaret değiştirir. Sonuçta iki koordinat da başlangıçtakinin ters işaretlisidir. Bu, orijin çevresinde yüz seksen derece dönmeye eşittir. İkinci bölgedeki şekil dördüncü bölgeye geçer. Sarı daire sol üste, mavi dikdörtgen sol alta gelir. Üçgen sağ altta ve aşağı bakar. En harfi sağ üsttedir; yüz seksen derece dönünce biçimi aynı görünür. Bu yer ve yönlerin hepsi D seçeneğinde vardır. D seçeneğini işaretliyoruz.",
+    "segments": [
+      "İki yansımayı sırayla uygulayalım. İks eksenine göre yansımada iks aynı kalır, ye işaret değiştirir. Ardından ye eksenine göre yansımada bu kez iks işaret değiştirir. Sonuçta iki koordinat da başlangıçtakinin ters işaretlisidir. Bu, orijin çevresinde yüz seksen derece dönmeye eşittir. İkinci bölgedeki şekil dördüncü bölgeye geçer. Sarı daire sol üste, mavi dikdörtgen sol alta gelir. Üçgen sağ altta ve aşağı bakar. En harfi sağ üsttedir; yüz seksen derece dönünce biçimi aynı görünür. Bu yer ve yönlerin hepsi D seçeneğinde vardır. D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "(x,y) → (x,−y)",
+        "İks eksenine göre yansımada iks aynı kalır, ye işaret değiştirir"
+      ],
+      [
+        "(x,−y) → (−x,−y)",
+        "ye eksenine göre yansımada bu kez iks işaret değiştirir"
+      ],
+      [
+        "180° dönme",
+        "orijin çevresinde yüz seksen derece dönmeye eşittir"
+      ],
+      [
+        "Üçgen sağ altta, aşağı",
+        "Üçgen sağ altta ve aşağı bakar"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "eksenine",
+        "İks eksenine göre yansımada iks aynı kalır, ye işaret değiştirir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-35",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-35",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 35,
+      "pdf_sayfasi": 25,
+      "basili_sayfa": 25,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        263.043
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-35",
+      "calisma_sirasi": 35,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-25",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-35",
+      "answer_label_rects": [
+        [
+          547.2319946289062,
+          247.2811279296875,
+          556.0069580078125,
+          258.0721130371094
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-25",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 25,
+      "pdf_sayfasi": 23,
+      "basili_sayfa": 23,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        601.115
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        593.115,
+        300.0,
+        783.781
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-25",
+      "calisma_sirasi": 150,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-35",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-35",
+      "answer_label_rects": [
+        [
+          270.85400390625,
+          768.01953125,
+          279.6289978027344,
+          778.810546875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-35",
+      "B-Temel_Matematik-25"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-35",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 35,
+      "pdf_sayfasi": 25,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "AD açıortay olduğundan AB/AC=BD/DC=16/d olsun. AB=x ise AC=xd/16 olur. Üçgen eşitsizliği x+xd/16>16+d, yani x>16 verir. Dolayısıyla alabileceği en küçük tam sayı17’dir. Bu değer mümkündür: d=16 seçilirse kenarlar17,17,32 olur.",
+      "kontrol_yontemi": "17+17>32 sağlanır. İkizkenar örnekte açıortay tabanı16+16 böler; hem şekil hem koşullar gerçekleşir. Eşitsizlik yalnız alt sınır değil, ulaşılabilir tam sayı verir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Açıortay teoremiyle kenarlar ve taban parçaları arasında oran kurarız. Bu oranı üçgen eşitsizliğine yazınca x’in on altıdan büyük olması gerektiği çıkar. En küçük tam sayı on yedidir. Bunun gerçekten mümkün olduğunu on yedi, on yedi ve otuz iki kenarlı ikizkenar üçgenle kontrol ederiz. E seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "AB=x,DC=d",
+        "AC=xd/16",
+        "x(16+d)>16(16+d)",
+        "x>16",
+        "En küçük17"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 25 | Temel Matematik Testi 35",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-25"
+    },
+    "narration": "Açıortay teoremiyle başlayalım. De ce uzunluğuna de dersek, a be bölü a ce oranı on altı bölü dedir. A be iks olduğundan a ce, iks çarpı de bölü on altı olur. Üçgende iki kenarın toplamı üçüncüden büyüktür. İks artı iks çarpı de bölü on altı, on altı artı deden büyük olmalıdır. On altıyla çarpıp ortak pozitif on altı artı de çarpanını sadeleştirince iks on altıdan büyük çıkar. En küçük tam sayı adayımız on yedidir. Bunun mümkün olduğunu da kontrol edelim: de ceyi on altı seçersek kenarlar on yedi, on yedi ve otuz iki olur; üçgen eşitsizliği sağlanır. En küçük değer on yedi, E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Açıortay teoremiyle başlayalım. De ce uzunluğuna de dersek, a be bölü a ce oranı on altı bölü dedir. A be iks olduğundan a ce, iks çarpı de bölü on altı olur. Üçgende iki kenarın toplamı üçüncüden büyüktür. İks artı iks çarpı de bölü on altı, on altı artı deden büyük olmalıdır. On altıyla çarpıp ortak pozitif on altı artı de çarpanını sadeleştirince iks on altıdan büyük çıkar. En küçük tam sayı adayımız on yedidir. Bunun mümkün olduğunu da kontrol edelim: de ceyi on altı seçersek kenarlar on yedi, on yedi ve otuz iki olur; üçgen eşitsizliği sağlanır. En küçük değer on yedi, E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "AC=xd/16",
+        "a ce, iks çarpı de bölü on altı olur"
+      ],
+      [
+        "x+xd/16 > 16+d",
+        "İks artı iks çarpı de bölü on altı, on altı artı deden büyük olmalıdır"
+      ],
+      [
+        "x>16",
+        "iks on altıdan büyük çıkar"
+      ],
+      [
+        "17,17,32 mümkün → 17",
+        "kenarlar on yedi, on yedi ve otuz iki olur; üçgen eşitsizliği sağlanır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": []
+  },
+  {
+    "id": "A-Temel_Matematik-36",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-36",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 36,
+      "pdf_sayfasi": 25,
+      "basili_sayfa": 25,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        477.226
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        469.226,
+        576.0,
+        659.893
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-36",
+      "calisma_sirasi": 36,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-24",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-36",
+      "answer_label_rects": [
+        [
+          498.2090148925781,
+          644.1314086914062,
+          507.59600830078125,
+          654.9224243164062
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-24",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 24,
+      "pdf_sayfasi": 23,
+      "basili_sayfa": 23,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        263.043
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-24",
+      "calisma_sirasi": 149,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-36",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-36",
+      "answer_label_rects": [
+        [
+          221.8310089111328,
+          247.28106689453125,
+          231.218017578125,
+          258.0720520019531
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-36",
+      "B-Temel_Matematik-24"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-36",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 36,
+      "pdf_sayfasi": 25,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "ABD üçgeninde kosinüs teoremi AB²=3²+4²−2·3·4·cos60°=13 verir. ADB ve ADC bütünler olduğundan ADC=120°; AC²=x²+4²−2·x·4·cos120°=x²+16+4x. ABC, A’da dik olduğundan AB²+AC²=(x+3)². 13+x²+16+4x=x²+6x+9 denkleminden x=10 çıkar.",
+      "kontrol_yontemi": "x=10 için AB²13,AC²156 veBC²169 bulunur;13+156=169. D’nin taban üzerinde ve uzunlukların pozitif olduğu kontrol edilir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Önce altmış dereceli küçük üçgende kosinüs teoremiyle AB’nin karesini on üç buluruz. Diğer küçük üçgendeki açı yüz yirmidir. AC’nin karesini de x cinsinden yazarız. Büyük üçgen dik olduğundan bu iki kareyi toplarız. Denklem sadeleşince iki x eşittir yirmi olur. x on santimetre, D seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "AB²=13",
+        "AC²=x²+16+4x",
+        "13+x²+16+4x=(x+3)²",
+        "20=2x",
+        "x=10"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 25 | Temel Matematik Testi 36",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-24"
+    },
+    "narration": "A be de üçgeninde kosinüs teoremini kullanalım. A benin karesi, üçün karesi artı dördün karesi eksi iki çarpı üç çarpı dört çarpı kosinüs altmıştır. Kosinüs altmış yarım olduğu için dokuz artı on altı eksi on iki, on üç buluruz. De noktasındaki diğer açı yüz yirmidir. A cenin karesi için aynı teorem, iks kare artı on altı artı dört iks verir. Şimdi büyük üçgenin a köşesindeki dikliği kullanıyoruz. A be kare ile a ce karenin toplamı, hipotenüs olan iks artı üçün karesine eşittir. On üç artı iks kare artı on altı artı dört iks, iks kare artı altı iks artı dokuz eder. Sadeleştirince yirmi eşittir iki iks, dolayısıyla iks on santimetredir. D seçeneğini işaretliyoruz.",
+    "segments": [
+      "A be de üçgeninde kosinüs teoremini kullanalım. A benin karesi, üçün karesi artı dördün karesi eksi iki çarpı üç çarpı dört çarpı kosinüs altmıştır. Kosinüs altmış yarım olduğu için dokuz artı on altı eksi on iki, on üç buluruz. De noktasındaki diğer açı yüz yirmidir. A cenin karesi için aynı teorem, iks kare artı on altı artı dört iks verir. Şimdi büyük üçgenin a köşesindeki dikliği kullanıyoruz. A be kare ile a ce karenin toplamı, hipotenüs olan iks artı üçün karesine eşittir. On üç artı iks kare artı on altı artı dört iks, iks kare artı altı iks artı dokuz eder. Sadeleştirince yirmi eşittir iki iks, dolayısıyla iks on santimetredir. D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "AB²=9+16−12=13",
+        "dokuz artı on altı eksi on iki, on üç buluruz"
+      ],
+      [
+        "AC²=x²+16+4x",
+        "iks kare artı on altı artı dört iks verir"
+      ],
+      [
+        "13+x²+16+4x=(x+3)²",
+        "hipotenüs olan iks artı üçün karesine eşittir"
+      ],
+      [
+        "20=2x → x=10",
+        "yirmi eşittir iki iks, dolayısıyla iks on santimetredir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": []
+  },
+  {
+    "id": "A-Temel_Matematik-37",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-37",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 37,
+      "pdf_sayfasi": 26,
+      "basili_sayfa": 26,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        292.043
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-37",
+      "calisma_sirasi": 37,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-31",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-37",
+      "answer_label_rects": [
+        [
+          264.8240051269531,
+          276.37811279296875,
+          273.5989990234375,
+          287.1690979003906
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-31",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 31,
+      "pdf_sayfasi": 24,
+      "basili_sayfa": 24,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        426.015
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        418.015,
+        576.0,
+        637.681
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-31",
+      "calisma_sirasi": 156,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-37",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-37",
+      "answer_label_rects": [
+        [
+          541.2020263671875,
+          622.0165405273438,
+          549.9769897460938,
+          632.8075561523438
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-37",
+      "B-Temel_Matematik-31"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-37",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 37,
+      "pdf_sayfasi": 26,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "AB ve AK zıt ışınlar olduğundan BAE ile EAK bütünlerdir. Bu iki açının açıortayları AD ve AC birbirine diktir. ADC dik üçgeninde AE hipotenüse indirilen yüksekliktir. Yükseklik teoreminden AE²=DE·EC=4·8=32; AE=4√2 bulunur.",
+      "kontrol_yontemi": "Açıortay açıları toplamı180°/2=90°. Dik üçgende kurulan iki küçük üçgenin benzerliğinden AE/4=8/AE eşitliği de aynı sonucu verir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Bütünler iki açının açıortayları birbirine diktir. Böylece büyük üçgenin dik olduğunu fark ederiz. AE, hipotenüse indirilen yüksekliktir. Yüksekliğin karesi, ayırdığı parçaların çarpımına eşittir. Dört çarpı sekiz otuz iki eder. Karekökünü alınca dört kök iki bulunur. E seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "AD⊥AC",
+        "AE²=DE·EC",
+        "AE²=4·8=32",
+        "AE=4√2"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 26 | Temel Matematik Testi 37",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-31"
+    },
+    "narration": "A be ve a ka zıt yönlü ışınlardır. Bu nedenle be a e ile e a ka açıları bütünlerdir. Bu iki açıyı ortalayan a de ve a ce arasındaki açı, yüz seksenin yarısı olan doksan derecedir. Böylece a de ce bir dik üçgendir. A e ise bu dik üçgende hipotenüse indirilen yüksekliktir. Yükseklik teoremine göre yüksekliğin karesi, hipotenüs üzerindeki iki parçanın çarpımına eşittir. İks kare, dört çarpı sekizden otuz iki olur. Uzunluk pozitif olduğundan iks kök otuz iki, yani dört kök iki santimetredir. E seçeneğini işaretliyoruz.",
+    "segments": [
+      "A be ve a ka zıt yönlü ışınlardır. Bu nedenle be a e ile e a ka açıları bütünlerdir. Bu iki açıyı ortalayan a de ve a ce arasındaki açı, yüz seksenin yarısı olan doksan derecedir. Böylece a de ce bir dik üçgendir. A e ise bu dik üçgende hipotenüse indirilen yüksekliktir. Yükseklik teoremine göre yüksekliğin karesi, hipotenüs üzerindeki iki parçanın çarpımına eşittir. İks kare, dört çarpı sekizden otuz iki olur. Uzunluk pozitif olduğundan iks kök otuz iki, yani dört kök iki santimetredir. E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Bütünler açıortayları: 90°",
+        "yüz seksenin yarısı olan doksan derecedir"
+      ],
+      [
+        "AE²=DE×EC",
+        "yüksekliğin karesi, hipotenüs üzerindeki iki parçanın çarpımına eşittir"
+      ],
+      [
+        "x²=4×8=32",
+        "İks kare, dört çarpı sekizden otuz iki olur"
+      ],
+      [
+        "x=4√2",
+        "dört kök iki santimetredir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": []
+  },
+  {
+    "id": "A-Temel_Matematik-38",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-38",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 38,
+      "pdf_sayfasi": 26,
+      "basili_sayfa": 26,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        477.226
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        469.226,
+        300.0,
+        680.56
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-38",
+      "calisma_sirasi": 38,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-30",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-38",
+      "answer_label_rects": [
+        [
+          60.946998596191406,
+          664.732421875,
+          69.7040023803711,
+          675.5234375
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-30",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 30,
+      "pdf_sayfasi": 24,
+      "basili_sayfa": 24,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        283.709
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-30",
+      "calisma_sirasi": 155,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-38",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-38",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          267.882080078125,
+          346.0820007324219,
+          278.6730651855469
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-38",
+      "B-Temel_Matematik-30"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-38",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 38,
+      "pdf_sayfasi": 26,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "ABD dik üçgeninde AC dış açıortaydır. Dış açıortay teoremi AB/AD=BC/DC=40/24=5/3 verir. AB=5k ve AD=3k yazılır. Pisagor’dan (5k)²−(3k)²=16²;16k²=256 ve k=4 bulunur. AB=20 olur.",
+      "kontrol_yontemi": "AD12,BD16,AB20 bir3–4–5 dik üçgeninin dört katıdır. Dış açıortay oranı20/12=40/24=5/3 sağlanır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Dış açıortay teoremi iki kenarın oranını beşe üç verir. Kenarlara beş k ve üç k diyelim. Dik üçgende Pisagor uygulayınca on altı k kare eşittir iki yüz elli altı çıkar. k dört olduğuna göre uzun kenar yirmidir. A seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "AB/AD=40/24=5/3",
+        "AB=5k,AD=3k",
+        "25k²−9k²=256",
+        "k=4 → AB=20",
+        "A"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 26 | Temel Matematik Testi 38",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-30"
+    },
+    "narration": "Dış açıortayı a be de üçgeninde kullanıyoruz. Ce noktası bu üçgenin be de kenarının uzantısında. Dış açıortay teoremine göre a be bölü a de, be ce bölü de ceye eşittir. Be ce, on altı artı yirmi dört, kırktır. Oran kırk bölü yirmi dört, beş bölü üç olur. A beye beş ka, a deye üç ka diyelim. Dik üçgende Pisagor, yirmi beş ka kare eksi dokuz ka kare eşittir on altının karesini verir. On altı ka kare eşittir iki yüz elli altı; buradan ka dört çıkar. İstenen a be, beş çarpı dört, yirmi birimdir. A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Dış açıortayı a be de üçgeninde kullanıyoruz. Ce noktası bu üçgenin be de kenarının uzantısında. Dış açıortay teoremine göre a be bölü a de, be ce bölü de ceye eşittir. Be ce, on altı artı yirmi dört, kırktır. Oran kırk bölü yirmi dört, beş bölü üç olur. A beye beş ka, a deye üç ka diyelim. Dik üçgende Pisagor, yirmi beş ka kare eksi dokuz ka kare eşittir on altının karesini verir. On altı ka kare eşittir iki yüz elli altı; buradan ka dört çıkar. İstenen a be, beş çarpı dört, yirmi birimdir. A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "AB/AD=40/24=5/3",
+        "Oran kırk bölü yirmi dört, beş bölü üç olur"
+      ],
+      [
+        "AB=5k; AD=3k",
+        "A beye beş ka, a deye üç ka diyelim"
+      ],
+      [
+        "16k²=256 → k=4",
+        "On altı ka kare eşittir iki yüz elli altı; buradan ka dört çıkar"
+      ],
+      [
+        "AB=5×4=20",
+        "İstenen a be, beş çarpı dört, yirmi birimdir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "birim",
+        "İstenen a be, beş çarpı dört, yirmi birimdir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-39",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-39",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 39,
+      "pdf_sayfasi": 26,
+      "basili_sayfa": 26,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        366.043
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-39",
+      "calisma_sirasi": 39,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-29",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-39",
+      "answer_label_rects": [
+        [
+          441.7340087890625,
+          350.2681884765625,
+          451.17498779296875,
+          361.0591735839844
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-29",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 29,
+      "pdf_sayfasi": 24,
+      "basili_sayfa": 24,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        426.015
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        418.015,
+        300.0,
+        711.681
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-29",
+      "calisma_sirasi": 154,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-39",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-39",
+      "answer_label_rects": [
+        [
+          165.3560028076172,
+          695.906494140625,
+          174.79701232910156,
+          706.697509765625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-39",
+      "B-Temel_Matematik-29"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-39",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 39,
+      "pdf_sayfasi": 26,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "İki üçgen aynı AB tabanını paylaşır. Yükseklikleri24 ve12 olduğundan alanları2:1 oranındadır. Ortak mor alana M dersek turuncu üçgen75+M, mavi üçgen25+M alanındadır. 75+M=2(25+M) denkleminden M=25 bulunur.",
+      "kontrol_yontemi": "M25 için tam üçgen alanları100 ve50 olur; oran2, yükseklik oran24/12 ile aynıdır. Ortak alan her iki toplamda da tam bir kez sayılmıştır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Üçgenlerin tabanı aynı olduğu için alan oranı yükseklik oranına eşittir. Bu oran ikidir. Mor alana M diyerek büyük alanı yetmiş beş artı M, küçük alanı yirmi beş artı M yazarız. Birincisi ikincinin iki katıdır. Denklemden M yirmi beş çıkar. C seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "(75+M)/(25+M)=24/12=2",
+        "75+M=50+2M",
+        "M=25"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 26 | Temel Matematik Testi 39",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-29"
+    },
+    "narration": "İki lambanın oluşturduğu büyük üçgenler aynı a be tabanını paylaşıyor. Tabanlar eşit olduğundan alan oranları, yükseklik oranı olan yirmi dört bölü on iki, yani ikidir. Ortak mor bölgenin alanına em diyelim. Turuncu lambanın bütün üçgeni yetmiş beş artı em, mavi lambanın bütün üçgeni yirmi beş artı em olur. Büyük alan küçük alanın iki katı: yetmiş beş artı em eşittir iki çarpı, parantez içinde yirmi beş artı em. Sağdaki parantezi açarsak elli artı iki em elde ederiz. Düzenleyince em yirmi beş çıkar. Mor alan yirmi beş birimkaredir; C seçeneğini işaretliyoruz.",
+    "segments": [
+      "İki lambanın oluşturduğu büyük üçgenler aynı a be tabanını paylaşıyor. Tabanlar eşit olduğundan alan oranları, yükseklik oranı olan yirmi dört bölü on iki, yani ikidir. Ortak mor bölgenin alanına em diyelim. Turuncu lambanın bütün üçgeni yetmiş beş artı em, mavi lambanın bütün üçgeni yirmi beş artı em olur. Büyük alan küçük alanın iki katı: yetmiş beş artı em eşittir iki çarpı, parantez içinde yirmi beş artı em. Sağdaki parantezi açarsak elli artı iki em elde ederiz. Düzenleyince em yirmi beş çıkar. Mor alan yirmi beş birimkaredir; C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Alan oranı=24/12=2",
+        "alan oranları, yükseklik oranı olan yirmi dört bölü on iki, yani ikidir"
+      ],
+      [
+        "75+M=2(25+M)",
+        "yetmiş beş artı em eşittir iki çarpı, parantez içinde yirmi beş artı em"
+      ],
+      [
+        "75+M=50+2M",
+        "elli artı iki em elde ederiz"
+      ],
+      [
+        "M=25",
+        "Mor alan yirmi beş birimkaredir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "birimkaredir.",
+        "Mor alan yirmi beş birimkaredir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Temel_Matematik-40",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-40",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 40,
+      "pdf_sayfasi": 26,
+      "basili_sayfa": 26,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        477.226
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        469.226,
+        576.0,
+        738.5194091796875
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-40",
+      "calisma_sirasi": 40,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-28",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-40",
+      "answer_label_rects": [
+        [
+          441.72894287109375,
+          707.7283935546875,
+          451.169921875,
+          718.5194091796875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-28",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 28,
+      "pdf_sayfasi": 24,
+      "basili_sayfa": 24,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        326.709
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-28",
+      "calisma_sirasi": 153,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-40",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-40",
+      "answer_label_rects": [
+        [
+          165.35089111328125,
+          310.87799072265625,
+          174.79190063476562,
+          321.6689758300781
+        ]
+      ]
+    },
+    "pair": [
+      "A-Temel_Matematik-40",
+      "B-Temel_Matematik-28"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-40",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 40,
+      "pdf_sayfasi": 26,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "B katlanarak ağırlık merkezi G’ye geldiği için katlama doğrusu üzerindeki A’ya uzaklıklar eşittir: AB=AG. M,BC’nin orta noktası olsun. Ağırlık merkezi AG=(2/3)AM verir. Katlama doğrusu AD, BAG açısını, dolayısıyla BAM açısını ortalar. ABM’de BD/DM=AB/AM=2/3. BD=8 ise DM=12;BM=20,BC=40 ve DC=40−8=32’dir.",
+      "kontrol_yontemi": "BM20,MC20 veBD8 ileDM12 sağlanır. Açıortay oran8/12=2/3, ağırlık merkezi oranıyla aynıdır. D’nin B ile M arasında olduğu korunur.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Katlama, A’dan B’ye uzaklığı A’dan ağırlık merkezine uzaklığa eşitler. Ağırlık merkezi, kenarortayın üçte ikisi kadar uzaktadır. Bu oranı katlama doğrusunun açıortay özelliğiyle kullanırız. Sekiz birimlik parçanın yanında on iki birim bulunur. Tabanın yarısı yirmi, tamamı kırktır. D’den C’ye uzunluk otuz ikidir. C seçeneği.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "AB=AG=(2/3)AM",
+        "BD/DM=2/3",
+        "BD8 → DM12",
+        "BM20 → BC40",
+        "DC=40−8=32"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 26 | Temel Matematik Testi 40",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-28"
+    },
+    "narration": "Katlamada be noktası ağırlık merkezine geliyor; ağırlık merkezine ge diyelim. Katlama doğrusu üzerinde kalan a noktası beye ve geye eşit uzaklıktadır, yani a be ile a ge eşittir. Be cenin orta noktasına em dersek, ağırlık merkezi a em kenarortayını ikiye bir oranında böler. A ge, a emin üçte ikisidir. Katlama doğrusu a de, a be ile a ge ışınlarının açıortayı olduğundan a be em üçgeninde açıortay teoremini uygularız. Be de bölü de em oranı iki bölü üç olur. Be de sekiz ise de em on iki, be em yirmidir. Em orta nokta olduğu için be ce kırk olur. De ce, kırk eksi sekizden otuz iki birimdir. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Katlamada be noktası ağırlık merkezine geliyor; ağırlık merkezine ge diyelim. Katlama doğrusu üzerinde kalan a noktası beye ve geye eşit uzaklıktadır, yani a be ile a ge eşittir. Be cenin orta noktasına em dersek, ağırlık merkezi a em kenarortayını ikiye bir oranında böler. A ge, a emin üçte ikisidir. Katlama doğrusu a de, a be ile a ge ışınlarının açıortayı olduğundan a be em üçgeninde açıortay teoremini uygularız. Be de bölü de em oranı iki bölü üç olur. Be de sekiz ise de em on iki, be em yirmidir. Em orta nokta olduğu için be ce kırk olur. De ce, kırk eksi sekizden otuz iki birimdir. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "AB=AG=(2/3)AM",
+        "A ge, a emin üçte ikisidir"
+      ],
+      [
+        "BD/DM=2/3",
+        "Be de bölü de em oranı iki bölü üç olur"
+      ],
+      [
+        "BD=8 → DM=12; BM=20",
+        "Be de sekiz ise de em on iki, be em yirmidir"
+      ],
+      [
+        "DC=40−8=32",
+        "De ce, kırk eksi sekizden otuz iki birimdir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "birim",
+        "De ce, kırk eksi sekizden otuz iki birimdir"
+      ]
+    ]
+  }
+]
