@@ -35,7 +35,10 @@ def build(item,batch='batch01'):
  timing=Timing(q);report=json.loads((q/'report.json').read_text());ad=report['duration_seconds'];duration=math.ceil((ad+5.2)*30)/30;switch=ad+.6
  images={};transforms={};endbottom=[]
  for b,m in [('A',item['metadata']),('B',item['partner_metadata'])]:
-  src=Image.open(ROOT/(m['soru_kimligi']+'.png')).convert('RGB');src.save(q/f'kaynak_{b}.png')
+  source_doc=fitz.open(ROOT.parent/'sources'/m['pdf_dosyasi'])
+  source_page=source_doc[m['pdf_sayfasi']-1]
+  source_pix=source_page.get_pixmap(clip=fitz.Rect(m['soru_kirpma_konumu_pt']),matrix=fitz.Matrix(3.2,3.2))
+  src=Image.open(io.BytesIO(source_pix.tobytes('png'))).convert('RGB');save_image(src,q/f'kaynak_{b}.png')
   maxh=995;w=min(940,round(maxh*src.width/src.height));h=round(src.height*w/src.width);x=(1080-w)//2;y=385
   transforms[b]=(x,y,w/(m['soru_kirpma_konumu_pt'][2]-m['soru_kirpma_konumu_pt'][0]))
   endbottom.append(y+h)
@@ -82,6 +85,11 @@ def build(item,batch='batch01'):
   rects=[r for r in pg.search_for(target,clip=clip) if r.width>0]
   s,e=timing.cue(cue)
   for r in rects:addpath([[xy(r.x0,r.y1+1),xy(r.x1,r.y1+1)]],s,min(e,s+.8),'source_'+target,color='#b66432',width=2.5,until=switch)
+ for target,spoken in item.get('source_word_marks',[]):
+  matches=[w for w in pg.get_text('words',clip=clip) if w[4]==target]
+  assert matches,('Missing source mark',ident,target)
+  w=min(matches,key=lambda w:w[1]);s,e=timing.cue(spoken)
+  addpath([[xy(w[0]-1,w[3]+1),xy(w[2]+1,w[3]+1)]],s,min(s+.8,e),'map_label_'+target,color='#b66432',width=3,until=switch)
  # Correct option is circled at its original printed label, independently for A and B.
  ans=item['answer'];s,e=timing.cue(ans+' seçeneğini',last=True)
  for b,m in [('A',item['metadata']),('B',item['partner_metadata'])]:
