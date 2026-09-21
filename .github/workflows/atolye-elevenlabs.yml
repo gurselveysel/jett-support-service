@@ -1,0 +1,67 @@
+name: Atolye ElevenLabs A05 B12
+on:
+  push:
+    branches: [atolye-elevenlabs-20260921]
+    paths: [.github/workflows/atolye-elevenlabs.yml]
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: atolye-elevenlabs-a05-b12
+  cancel-in-progress: false
+jobs:
+  speech:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Generate original ElevenLabs narration and character alignment
+        shell: python
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          import os, sys, json, pathlib, urllib.request, urllib.error, base64, hashlib, re
+          key=os.environ.get('ELEVENLABS_API_KEY','').strip()
+          if not key:
+              print('ATOLYE_RESULT '+json.dumps({'status':'blocked_missing_credential','required_secret':'ELEVENLABS_API_KEY','audio_generated':False,'fallback_used':False}))
+              sys.exit(2)
+          voice='tZYpRZkmCNQcfmtDbhUg'
+          def call(path,payload=None):
+              req=urllib.request.Request('https://api.elevenlabs.io'+path,headers={'xi-api-key':key,'Content-Type':'application/json'},data=None if payload is None else json.dumps(payload,ensure_ascii=False).encode('utf-8'),method='GET' if payload is None else 'POST')
+              try:
+                  with urllib.request.urlopen(req,timeout=180) as r:
+                      return json.loads(r.read(24000000)),r.headers.get('request-id')
+              except urllib.error.HTTPError as e:
+                  try: detail=json.loads(e.read(4000)).get('detail',{})
+                  except Exception: detail={}
+                  print('ATOLYE_RESULT '+json.dumps({'status':'provider_error','http_status':e.code,'provider_code':detail.get('status') if isinstance(detail,dict) else None,'audio_generated':False,'fallback_used':False}))
+                  sys.exit(3)
+          v,_=call('/v1/voices/'+voice)
+          text='Bu soruda çift tam sayıların hangi işlemlere göre kapalı olduğunu araştırıyoruz. Kapalı olmak şu demektir: Kümeden seçtiğimiz iki sayıya işlemi uyguladığımızda sonuç yine aynı kümede kalmalı. Birkaç örneğin doğru çıkması yetmez; kural bütün çift tam sayılar için geçerli olmalı.\n\nİki çift tam sayıyı iki pe ve iki ke biçiminde yazalım. Burada pe ve ke birer tam sayıdır.\n\nToplamlarına bakalım. İki pe artı iki ke, eşittir iki çarpı, parantez içinde pe artı ke. Tam sayıların toplamı tam sayıdır. Bunun iki katı da çifttir.\n\nÇıkarmada da aynı düşünce geçerli. İki pe eksi iki ke, eşittir iki çarpı, parantez içinde pe eksi ke. Fark negatif olabilir; bu bir sorun değildir. Negatif çift tam sayılar da A kümesindedir.\n\nŞimdi çarpalım. İki pe çarpı iki ke, eşittir iki çarpı, parantez içinde iki pe ke. Sonuç yine bir tam sayının iki katıdır. Demek ki toplama, çıkarma ve çarpma işlemlerinde kümenin dışına çıkmayız.\n\nBölmede ise tek bir karşı örnek yeterli. İki ve dört bu kümededir. Ama iki bölü dört, eşittir bir bölü iki. Bu sonuç tam sayı bile değildir; dolayısıyla A kümesine ait değildir. Bölme işleminde kapalılık yoktur.\n\nToplama, çıkarma ve çarpmanın birlikte verildiği C seçeneğini işaretliyoruz.'
+          payload={'text':text,'model_id':'eleven_v3','language_code':'tr','voice_settings':{'stability':0.5,'speed':0.94}}
+          result,request_id=call('/v1/text-to-speech/'+voice+'/with-timestamps?output_format=mp3_44100_128',payload)
+          audio=base64.b64decode(result['audio_base64'],validate=True)
+          alignment=result.get('normalized_alignment') or result.get('alignment')
+          if not alignment: raise RuntimeError('No real character timestamps returned; no fallback timing allowed')
+          chars=alignment['characters']; starts=alignment['character_start_times_seconds']; ends=alignment['character_end_times_seconds']
+          assert len(chars)==len(starts)==len(ends)>0
+          assert all(float(s)<=float(e) for s,e in zip(starts,ends))
+          assert all(float(starts[i])<=float(starts[i+1]) for i in range(len(starts)-1))
+          assert len(audio)>10000
+          out=pathlib.Path('atolye-elevenlabs-a05-b12');out.mkdir()
+          (out/'speech.mp3').write_bytes(audio)
+          (out/'alignment.json').write_text(json.dumps({'alignment':result.get('alignment'),'normalized_alignment':result.get('normalized_alignment')},ensure_ascii=False,indent=2))
+          words=[];joined=''.join(chars)
+          for m in re.finditer(r'\S+',joined):
+              words.append({'word':m.group(),'start':starts[m.start()],'end':ends[m.end()-1]})
+          speech={'provider':'elevenlabs','voice_id':voice,'voice_name':v.get('name'),'model_id':'eleven_v3','duration':max(ends),'word_timestamps':words,'text':text,'request_id':request_id}
+          (out/'speech.json').write_text(json.dumps(speech,ensure_ascii=False,indent=2))
+          (out/'narration.txt').write_text(text)
+          report={'status':'audio_generated','pair':['A-Temel_Matematik-05','B-Temel_Matematik-12'],'provider':'elevenlabs','voice_id':voice,'voice_name':v.get('name'),'model_id':'eleven_v3','bytes':len(audio),'sha256':hashlib.sha256(audio).hexdigest(),'word_count':len(words),'last_alignment_second':max(ends),'fallback_used':False,'video_completed':False}
+          (out/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+          print('ATOLYE_RESULT '+json.dumps(report,ensure_ascii=False))
+      - name: Return audio and actual alignment for handwriting assembly
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: atolye-elevenlabs-a05-b12
+          path: atolye-elevenlabs-a05-b12/
+          if-no-files-found: error
+          retention-days: 1
