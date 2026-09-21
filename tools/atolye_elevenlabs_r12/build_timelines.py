@@ -40,7 +40,7 @@ def build(item,batch='batch01'):
   transforms[b]=(x,y,w/(m['soru_kirpma_konumu_pt'][2]-m['soru_kirpma_konumu_pt'][0]))
   endbottom.append(y+h)
   im=Image.new('RGB',(1080,1920),NAVY);d=ImageDraw.Draw(im)
-  logo=Image.open(ROOT.parent/'handoff/logolar/Atolye_Original_From_Cover.png').convert('RGB');logo.thumbnail((350,268));im.paste(logo,(45,20))
+  logo=Image.open(ROOT/'atolye_logo.png').convert('RGB');logo.thumbnail((350,268));im.paste(logo,(45,20))
   d.text((445,55),'SBS • VİDEO ÇÖZÜM',font=ft(25),fill='#d7e7ed')
   subject=item['metadata']['ders']; subject='Din Kültürü' if subject=='Din Kültürü ve Ahlak Bilgisi' else subject
   d.text((445,108),subject,font=ft(31),fill='white')
@@ -53,7 +53,7 @@ def build(item,batch='batch01'):
   d.text((70,333),label,font=ft(24),fill=NAVY)
   im.paste(src.resize((w,h),Image.Resampling.LANCZOS),(x,y))
   d.rectangle((0,1810,1080,1920),fill='white')
-  uz=Image.open(ROOT.parent/'handoff/logolar/UzemGO_Original_Transparent.png').convert('RGBA');uz.thumbnail((285,91));im.paste(uz,((1080-uz.width)//2,1819),uz)
+  uz=Image.open(ROOT/'uzemgo_logo.png').convert('RGBA');uz.thumbnail((285,91));im.paste(uz,((1080-uz.width)//2,1819),uz)
   images[b]=im
  top=max(endbottom)+65;bottom=1680;n=len(item['notes']);rowgap=min(139,(bottom-top)/(max(1,n-1)));size=min(53,rowgap/1.55)
  assert size>=30,(ident,top,rowgap,size)
