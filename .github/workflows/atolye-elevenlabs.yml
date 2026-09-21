@@ -1,4 +1,5 @@
 name: Atolye ElevenLabs A05 B12
+run-name: Atolye A05-B12 - 125 unique questions - secret verification
 on:
   push:
     branches: [atolye-elevenlabs-20260921]
@@ -97,7 +98,7 @@ jobs:
           required=math.ceil(len(text)*max(1.0,float(cost_factor)))
           remaining=limit-used
           report.update(narration_characters=len(text), required_credits_conservative=required,
-                        quota_checked=True, paid_overage_disabled=True)
+                        quota_checked=True, paid_overage_disabled=True, remaining_included_credits=remaining)
           if remaining < required:
               stop('blocked_insufficient_included_credits', required_credits=required, remaining_included_credits=max(0,remaining))
           maximum=selected.get('maximum_text_length_per_request')
