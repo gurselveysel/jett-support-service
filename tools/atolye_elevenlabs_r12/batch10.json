@@ -1,0 +1,665 @@
+[
+  {
+    "id": "A-Temel_Matematik-02",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-02",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 2,
+      "pdf_sayfasi": 18,
+      "basili_sayfa": 18,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.946,
+        412.893
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        404.893,
+        300.0,
+        545.559
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-02",
+      "calisma_sirasi": 2,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": false,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "kosullu_eksik_kosul",
+      "engel": "Beklenen B; mevcut kökte a∈N koşulu yok. Sonuç koşulsuz tek seçenek olarak yayımlanmamalı.",
+      "dogru_secenek": null,
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-15",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-02",
+      "answer_label_rects": []
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-15",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 15,
+      "pdf_sayfasi": 20,
+      "basili_sayfa": 20,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.324,
+        651.145
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        643.145,
+        576.0,
+        783.812
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-15",
+      "calisma_sirasi": 140,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": false,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "kosullu_eksik_kosul",
+      "engel": "Beklenen B; mevcut kökte a∈N koşulu yok. Sonuç koşulsuz tek seçenek olarak yayımlanmamalı.",
+      "dogru_secenek": null,
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-02",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-02",
+      "answer_label_rects": []
+    },
+    "pair": [
+      "A-Temel_Matematik-02",
+      "B-Temel_Matematik-15"
+    ],
+    "answer": null,
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-02",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 2,
+      "pdf_sayfasi": 18,
+      "dogru_secenek": null,
+      "gerekceli_cozum": "Soruda yalnız x ve y’nin doğal sayı olduğu yazılıdır; a için doğal sayı koşulu verilmemiştir. 90/a=x ve 120/a=y eşitliklerinden x:y=3:4 gelir. x=3k, y=4k ve k≥4 seçilirse a=30/k olur; sonsuz farklı pozitif rasyonel değer elde edilir. Ancak a’nın da doğal sayı olduğu ayrıca kabul edilirse a, 30’un böleni ve a<9 olmalıdır. Bu durumda a∈{1,2,3,5,6}; beklenen seçenek B, yani 5’tir.",
+      "kontrol_yontemi": "k=4,5,6,7,... için a=7,5;6;5;30/7;... değerleriyle x,y doğal ve 10’dan büyüktür. Bu karşı örnek ailesi eksik koşulu kanıtlar. Doğal sayı kabulündeki beş değer de yerine koyarak doğrulanır.",
+      "akademik_durum": "kosullu_eksik_kosul",
+      "akademik_not": "Beklenen B; mevcut kökte a∈N koşulu yok. Sonuç koşulsuz tek seçenek olarak yayımlanmamalı.",
+      "anlatim_metni": "Önce önemli bir noktayı ayıralım. Soruda a sayısının doğal sayı olduğu yazılmamış. Bu nedenle verilen metin tek başına beş sonucunu zorunlu kılmıyor. a da doğal sayı kabul edilirse, doksana ve yüz yirmiye bölündüğünde doğal sonuç vermeli; ayrıca dokuzdan küçük olmalıdır. Bir, iki, üç, beş ve altı koşulları sağlar. Bu ek kabulle beklenen cevap B’dir. Yayın öncesinde a’nın sayı kümesi soru köküne eklenmelidir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "x=3k, y=4k",
+        "a=30/k, k≥4",
+        "a∈N varsayımı: a|30, a<9",
+        "{1,2,3,5,6}",
+        "Beklenen B; koşul eksik"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 18 | Temel Matematik Testi 2",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-15"
+    },
+    "narration": "Bu soruda a için sayı kümesi belirtilmediğinden iki durumu ayırmalıyız. Önce verilenlerden ilerleyelim. İksin yeye oranı doksanın yüz yirmiye oranıdır; yani üç bölü dört. İkse üç ka, yeye dört ka diyebiliriz. İkisi de ondan büyük doğal sayılar olduğundan ka en az dört olur. A ise otuzun kaya bölümüdür. Ka dört, beş, altı diye sınırsız büyüyebilir; böylece a için sonsuz farklı pozitif rasyonel değer elde ederiz. Şimdi ayrıca a da doğal sayı kabul edilirse ne olacağına bakalım. A, doksan ve yüz yirminin ortak böleni, yani otuzun böleni olmalıdır. İks ondan büyük olduğu için a dokuzdan küçüktür. Uygun değerler bir, iki, üç, beş ve altıdır. Bu ek koşulla beş değer bulunur ve beklenen seçenek B olur. Ancak a doğal sayıdır koşulu soruda yazmadığı için B sonucunu koşulsuz doğru kabul edemeyiz.",
+    "segments": [
+      "Bu soruda a için sayı kümesi belirtilmediğinden iki durumu ayırmalıyız. Önce verilenlerden ilerleyelim. İksin yeye oranı doksanın yüz yirmiye oranıdır; yani üç bölü dört. İkse üç ka, yeye dört ka diyebiliriz. İkisi de ondan büyük doğal sayılar olduğundan ka en az dört olur. A ise otuzun kaya bölümüdür. Ka dört, beş, altı diye sınırsız büyüyebilir; böylece a için sonsuz farklı pozitif rasyonel değer elde ederiz. Şimdi ayrıca a da doğal sayı kabul edilirse ne olacağına bakalım. A, doksan ve yüz yirminin ortak böleni, yani otuzun böleni olmalıdır. İks ondan büyük olduğu için a dokuzdan küçüktür. Uygun değerler bir, iki, üç, beş ve altıdır. Bu ek koşulla beş değer bulunur ve beklenen seçenek B olur. Ancak a doğal sayıdır koşulu soruda yazmadığı için B sonucunu koşulsuz doğru kabul edemeyiz."
+    ],
+    "notes": [
+      [
+        "x=3k,y=4k;k≥4",
+        "İkse üç ka, yeye dört ka diyebiliriz"
+      ],
+      [
+        "a=30/k → sonsuz değer",
+        "sonsuz farklı pozitif rasyonel değer elde ederiz"
+      ],
+      [
+        "a doğal ise:1,2,3,5,6",
+        "Uygun değerler bir, iki, üç, beş ve altıdır"
+      ],
+      [
+        "Koşullu sonuç:5 → B",
+        "Bu ek koşulla beş değer bulunur ve beklenen seçenek B olur"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [
+      [
+        "doğal sayı",
+        "a için sayı kümesi belirtilmediğinden"
+      ]
+    ],
+    "source_word_marks": [],
+    "conditional_analysis": true
+  },
+  {
+    "id": "A-Temel_Matematik-11",
+    "metadata": {
+      "soru_kimligi": "A-Temel_Matematik-11",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 11,
+      "pdf_sayfasi": 19,
+      "basili_sayfa": 19,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        504.771
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        496.771,
+        576.0,
+        783.771
+      ],
+      "klasor": "A/Temel_Matematik/A-Temel_Matematik-11",
+      "calisma_sirasi": 11,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": false,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "kosullu_islem_tanimi",
+      "engel": "Beklenen E; / işleminin tam sayı bölmesi olduğu açık değil. Öğrenciye bu kabul belirtilmeden kesin cevap verilmemeli.",
+      "dogru_secenek": null,
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Temel_Matematik-19",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-11",
+      "answer_label_rects": []
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Temel_Matematik-19",
+      "kitapcik": "B",
+      "test": "Temel Matematik Testi",
+      "test_kodu": "Temel_Matematik",
+      "ders": "Temel Matematik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 19,
+      "pdf_sayfasi": 22,
+      "basili_sayfa": 22,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.32
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.32,
+        300.0,
+        359.653
+      ],
+      "klasor": "B/Temel_Matematik/B-Temel_Matematik-19",
+      "calisma_sirasi": 144,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": false,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "kosullu_islem_tanimi",
+      "engel": "Beklenen E; / işleminin tam sayı bölmesi olduğu açık değil. Öğrenciye bu kabul belirtilmeden kesin cevap verilmemeli.",
+      "dogru_secenek": null,
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Temel_Matematik-11",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Temel_Matematik-11",
+      "answer_label_rects": []
+    },
+    "pair": [
+      "A-Temel_Matematik-11",
+      "B-Temel_Matematik-19"
+    ],
+    "answer": null,
+    "original_solution": {
+      "soru_kimligi": "A-Temel_Matematik-11",
+      "kitapcik": "A",
+      "test": "Temel Matematik Testi",
+      "ders": "Temel Matematik",
+      "soru_numarasi": 11,
+      "pdf_sayfasi": 19,
+      "dogru_secenek": null,
+      "gerekceli_cozum": "Akış şemasında x=abcde/10000, y=abcde%10, z=x+y işlemleri verilmiştir. Girdi 65247 için son rakam y=7’dir. İlk işlem tam sayı bölmesi olarak amaçlandıysa x=6 ve z=13 olur; beklenen cevap E’dir. Ancak “/” normal gerçek sayı bölmesi olarak okunursa x=6,5247 ve z=13,5247 çıkar. Şemada tam sayı bölmesi veya kesme işlemi belirtilmediğinden cevap kullanılan bölme yorumuna bağlıdır.",
+      "kontrol_yontemi": "İki semantik ayrı yürütülür: floor(65247/10000)+65247%10=13; olağan bölmede aynı toplam 13,5247’dir. Yayından önce //, div veya taban/floor işlevi açıkça yazılmalıdır.",
+      "akademik_durum": "kosullu_islem_tanimi",
+      "akademik_not": "Beklenen E; / işleminin tam sayı bölmesi olduğu açık değil. Öğrenciye bu kabul belirtilmeden kesin cevap verilmemeli.",
+      "anlatim_metni": "Bu algoritma ilk ve son rakamı toplamayı amaçlıyor. Son rakam, ona bölümden kalan olduğu için yedi. İlk adım tam sayı bölmesi ise altmış beş bin iki yüz kırk yedinin on bine bölümündeki tam kısım altı olur. Toplam on üç, yani E seçeneğidir. Ancak şemada tam sayı bölmesi açık yazılmamış. Normal bölme ile farklı bir sonuç çıkar. Bu gösterim yayın öncesinde düzeltilmelidir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "65247%10=7",
+        "Tam sayı bölmesi:65247 div 10000=6",
+        "6+7=13",
+        "“/” yorumu açık yazılmalı"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 19 | Temel Matematik Testi 11",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Temel_Matematik-19"
+    },
+    "narration": "Akış şemasını, kullanılan bölme işleminin anlamını ayırarak okuyalım. Girdi altmış beş bin iki yüz kırk yedi. Yüzde işareti burada yüzde hesaplamak için değil, bölmeden kalanı bulmak için kullanılmış. Sayının ona bölümünden kalan yedidir; ye değerimiz yedi olur. İlk işlemdeki bölme, tam sayı bölmesi olarak amaçlandıysa sayıyı on bine bölüp yalnız tam kısmı alırız. Bu durumda iks altı olur. Altı ile yediyi toplar, on üç buluruz; beklenen E seçeneği budur. Fakat eğik çizgiyi normal bölme olarak okursak iks altı virgül beş iki dört yedi olur. Yedi eklenince on üç virgül beş iki dört yedi çıkar ve bu sonuç seçeneklerde yoktur. Dolayısıyla E cevabı tam sayı bölmesi kabulüne bağlıdır. Şemada işlemin tanımı açıkça verilmeden bu kabulü gizleyerek kesin cevap vermemeliyiz.",
+    "segments": [
+      "Akış şemasını, kullanılan bölme işleminin anlamını ayırarak okuyalım. Girdi altmış beş bin iki yüz kırk yedi. Yüzde işareti burada yüzde hesaplamak için değil, bölmeden kalanı bulmak için kullanılmış. Sayının ona bölümünden kalan yedidir; ye değerimiz yedi olur. İlk işlemdeki bölme, tam sayı bölmesi olarak amaçlandıysa sayıyı on bine bölüp yalnız tam kısmı alırız. Bu durumda iks altı olur. Altı ile yediyi toplar, on üç buluruz; beklenen E seçeneği budur. Fakat eğik çizgiyi normal bölme olarak okursak iks altı virgül beş iki dört yedi olur. Yedi eklenince on üç virgül beş iki dört yedi çıkar ve bu sonuç seçeneklerde yoktur. Dolayısıyla E cevabı tam sayı bölmesi kabulüne bağlıdır. Şemada işlemin tanımı açıkça verilmeden bu kabulü gizleyerek kesin cevap vermemeliyiz."
+    ],
+    "notes": [
+      [
+        "65247 mod 10=7",
+        "Sayının ona bölümünden kalan yedidir"
+      ],
+      [
+        "Tam sayı bölmesi:6+7=13",
+        "Altı ile yediyi toplar, on üç buluruz"
+      ],
+      [
+        "Normal bölme:13,5247",
+        "on üç virgül beş iki dört yedi çıkar"
+      ],
+      [
+        "E: tam sayı bölmesi kabulü",
+        "E cevabı tam sayı bölmesi kabulüne bağlıdır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [],
+    "conditional_analysis": true
+  },
+  {
+    "id": "A-Fen_Bilimleri-01",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-01",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 1,
+      "pdf_sayfasi": 27,
+      "basili_sayfa": 27,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        131.4
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        123.4,
+        300.0,
+        350.733
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-01",
+      "calisma_sirasi": 41,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": false,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "coklu_sorun_teyit_bekliyor",
+      "engel": "Beklenen B. E satırının bilimsel sınıflaması da sorunlu; tek yanlış seçenek iddiası yayıncıya sorulmalı.",
+      "dogru_secenek": null,
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-07",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-01",
+      "answer_label_rects": []
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-07",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Fizik",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 7,
+      "pdf_sayfasi": 29,
+      "basili_sayfa": 29,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        299.709
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-07",
+      "calisma_sirasi": 172,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": false,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "coklu_sorun_teyit_bekliyor",
+      "engel": "Beklenen B. E satırının bilimsel sınıflaması da sorunlu; tek yanlış seçenek iddiası yayıncıya sorulmalı.",
+      "dogru_secenek": null,
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-01",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-01",
+      "answer_label_rects": []
+    },
+    "pair": [
+      "A-Fen_Bilimleri-01",
+      "B-Fen_Bilimleri-07"
+    ],
+    "answer": null,
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-01",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Fizik",
+      "soru_numarasi": 1,
+      "pdf_sayfasi": 27,
+      "dogru_secenek": null,
+      "gerekceli_cozum": "Gözlük camının ışığı kırması optiğin uygulamasıdır; elektromanyetizma başlığıyla verilen eşleştirme bu bağlamda yanlıştır ve beklenen seçenek B’dir. Bununla birlikte tabloda röntgen cihazı “nükleer fizik” altında yazılmıştır. Tanısal röntgen tüpünde X ışınları çekirdek tepkimesiyle değil, hızlandırılan elektronların yavaşlaması ve atomik elektron geçişleriyle üretilir. Bu nedenle E satırı da standart alt dal ayrımında sorunludur; soru tek yanlış satır koşulunu güvenilir biçimde sağlamaz.",
+      "kontrol_yontemi": "İki uygulamanın fiziksel mekanizması ayrı belirlenir: gözlükte kırılma, röntgen tüpünde elektron–madde etkileşimi. Nükleer görüntüleme ile düz röntgen birbirine karıştırılmamalıdır.",
+      "akademik_durum": "coklu_sorun_teyit_bekliyor",
+      "akademik_not": "Beklenen B. E satırının bilimsel sınıflaması da sorunlu; tek yanlış seçenek iddiası yayıncıya sorulmalı.",
+      "anlatim_metni": "Gözlük camı, ışığı kırarak görüntüyü düzeltir. Bu, optiğin konusudur. Bu nedenle sorunun hedeflediği cevap B görünmektedir. Ancak röntgen cihazının nükleer fizik altında verilmesi de sorunludur. Röntgen tüpündeki ışınlar çekirdek tepkimesinden üretilmez. Tek doğru cevaplı bir soru olarak yayımlamadan önce bu satır da düzeltilmelidir.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Gözlük camı → Optik",
+        "Röntgen → Elektron/atom süreçleri",
+        "Beklenen B; E satırı da sorunlu"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 27 | Fen Bilimleri Testi 1",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [
+        {
+          "kurum": "OpenStax",
+          "baslik": "College Physics 2e, 30.4 X Rays: Atomic Origins and Applications",
+          "url": "https://openstax.org/books/college-physics-2e/pages/30-4-x-rays-atomic-origins-and-applications",
+          "erisim": "2026-09-21"
+        }
+      ],
+      "eslesen_soru": "B-Fen_Bilimleri-07"
+    },
+    "narration": "Fiziğin alt dallarını uygulamalarıyla eşleştirelim. Zincir ve çarkta hareket ve kuvvet ilişkisini mekanik inceler. Isıtma sistemi termodinamikle; dürbün ve teleskop optikle eşleşir. Gözlük camı da ışığın kırılmasından yararlandığı için bu okul sınıflandırmasında optiğin uygulamasıdır. Bu nedenle gözlük camını elektromanyetizma başlığına yerleştiren satır, beklenen B cevabını düşündürüyor. Ancak tabloda ikinci bir sorun var. Röntgen cihazı nükleer fizikle eşleştirilmiş. Tanısal röntgen tüpünde ışınlar, hızlandırılan elektronların yavaşlaması ve atomdaki elektron geçişleriyle oluşur. Bir çekirdek tepkimesi gerektirmez. Dolayısıyla E satırı da standart alt dal ayrımında sorunludur. Soru yalnız bir yanlış eşleştirme istese de mevcut tabloda tek yanlış seçeneği güvenle belirleyemiyoruz. B beklenen cevap olabilir; E satırı için yayıncı açıklaması veya düzeltmesi gerekir.",
+    "segments": [
+      "Fiziğin alt dallarını uygulamalarıyla eşleştirelim. Zincir ve çarkta hareket ve kuvvet ilişkisini mekanik inceler. Isıtma sistemi termodinamikle; dürbün ve teleskop optikle eşleşir. Gözlük camı da ışığın kırılmasından yararlandığı için bu okul sınıflandırmasında optiğin uygulamasıdır. Bu nedenle gözlük camını elektromanyetizma başlığına yerleştiren satır, beklenen B cevabını düşündürüyor. Ancak tabloda ikinci bir sorun var. Röntgen cihazı nükleer fizikle eşleştirilmiş. Tanısal röntgen tüpünde ışınlar, hızlandırılan elektronların yavaşlaması ve atomdaki elektron geçişleriyle oluşur. Bir çekirdek tepkimesi gerektirmez. Dolayısıyla E satırı da standart alt dal ayrımında sorunludur. Soru yalnız bir yanlış eşleştirme istese de mevcut tabloda tek yanlış seçeneği güvenle belirleyemiyoruz. B beklenen cevap olabilir; E satırı için yayıncı açıklaması veya düzeltmesi gerekir."
+    ],
+    "notes": [
+      [
+        "Mekanik,ısıtma,optik:uyumlu",
+        "dürbün ve teleskop optikle eşleşir"
+      ],
+      [
+        "Gözlük camı → Optik",
+        "Gözlük camı da ışığın kırılmasından yararlandığı için"
+      ],
+      [
+        "Röntgen:elektron süreçleri",
+        "Bir çekirdek tepkimesi gerektirmez"
+      ],
+      [
+        "B beklenir;E de sorunlu",
+        "E satırı için yayıncı açıklaması veya düzeltmesi gerekir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [
+      [
+        "Gözlük camı",
+        "Gözlük camı da ışığın kırılmasından yararlandığı için"
+      ],
+      [
+        "Röntgen cihazı",
+        "Röntgen cihazı nükleer fizikle eşleştirilmiş"
+      ]
+    ],
+    "source_word_marks": [],
+    "conditional_analysis": true,
+    "academic_sources": [
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/30-4-x-rays-atomic-origins-and-applications"
+      }
+    ]
+  },
+  {
+    "id": "A-Fen_Bilimleri-11",
+    "metadata": {
+      "soru_kimligi": "A-Fen_Bilimleri-11",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 11,
+      "pdf_sayfasi": 30,
+      "basili_sayfa": 30,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        259.376
+      ],
+      "klasor": "A/Fen_Bilimleri/A-Fen_Bilimleri-11",
+      "calisma_sirasi": 51,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Fen_Bilimleri-14",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-11",
+      "akademik_inceleme_R12": "1 numaralı C–H bağının polar/apolar sayılması kullanılan sınıflandırmaya bağlıdır. E beklenen cevap olsa da A ifadesi de tartışmalıdır. Kaynak müfredat/cevap anahtarı teyidi olmadan tek cevap dayatılmadı.",
+      "akademik_duzeltme_R12": "MEB OGM Kimya Konu Pekiştirme PDF s.88, çözüm14: aynı asetik asit yapısında C-H bağları polar sınıflandırılıyor. Bu okul sınıflamasında tek yanlış E; hidrojen bağının kopması kimyasal yapı değiştirmez.",
+      "akademik_kaynaklar": [
+        {
+          "url": "https://ogmmateryal.eba.gov.tr/panel/upload/etkilesimli/kitap/konu-pekistirme/12/kimya/kimya.pdf",
+          "pdf_page": 88
+        }
+      ],
+      "answer_label_rects": [
+        [
+          60.944210052490234,
+          233.38604736328125,
+          69.7192153930664,
+          244.17703247070312
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Fen_Bilimleri-14",
+      "kitapcik": "B",
+      "test": "Fen Bilimleri Testi",
+      "test_kodu": "Fen_Bilimleri",
+      "ders": "Kimya",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 14,
+      "pdf_sayfasi": 30,
+      "basili_sayfa": 30,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        604.707
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        596.707,
+        576.0,
+        783.707
+      ],
+      "klasor": "B/Fen_Bilimleri/B-Fen_Bilimleri-14",
+      "calisma_sirasi": 179,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Fen_Bilimleri-11",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Fen_Bilimleri-11",
+      "akademik_inceleme_R12": "1 numaralı C–H bağının polar/apolar sayılması kullanılan sınıflandırmaya bağlıdır. E beklenen cevap olsa da A ifadesi de tartışmalıdır. Kaynak müfredat/cevap anahtarı teyidi olmadan tek cevap dayatılmadı.",
+      "akademik_duzeltme_R12": "MEB OGM Kimya Konu Pekiştirme PDF s.88, çözüm14: aynı asetik asit yapısında C-H bağları polar sınıflandırılıyor. Bu okul sınıflamasında tek yanlış E; hidrojen bağının kopması kimyasal yapı değiştirmez.",
+      "akademik_kaynaklar": [
+        {
+          "url": "https://ogmmateryal.eba.gov.tr/panel/upload/etkilesimli/kitap/konu-pekistirme/12/kimya/kimya.pdf",
+          "pdf_page": 88
+        }
+      ],
+      "answer_label_rects": [
+        [
+          337.3221740722656,
+          757.716552734375,
+          346.09716796875,
+          768.507568359375
+        ]
+      ]
+    },
+    "pair": [
+      "A-Fen_Bilimleri-11",
+      "B-Fen_Bilimleri-14"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Fen_Bilimleri-11",
+      "kitapcik": "A",
+      "test": "Fen Bilimleri Testi",
+      "ders": "Kimya",
+      "soru_numarasi": 11,
+      "pdf_sayfasi": 30,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "4 numaralı kesikli etkileşim, farklı moleküller arasındaki hidrojen bağıdır. Bu etkileşimin kırılması molekülün kimyasal bağlarını değiştirmek zorunda değildir; fiziksel değişim kapsamında gerçekleşebilir. Dolayısıyla “kimyasal değişim gerçekleşir” diyen E yanlıştır. 2 numaralı C–C bağı güçlü kimyasal bağ;3 numaralı hidrojen bağı zayıf etkileşimdir. O–H bağında oksijen daha elektronegatiftir ve δ− uçtur.",
+      "kontrol_yontemi": "Kesikli moleküller arası çizgiler ile molekül içindeki sürekli kovalent bağlar ayrı izlenir. Suyun buharlaşmasında hidrojen bağları azalırken H2O kimliği korunması karşı örnektir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Kesikli çizgi, moleküller arasındaki hidrojen bağını gösteriyor. Bu bağı kırmak, molekülün iç yapısını mutlaka değiştirmez. Örneğin buharlaşırken su yine su olarak kalır. Dördüncü etkileşimin kırılmasını kimyasal değişim sayan E seçeneği bu yüzden yanlıştır.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "4:Hidrojen bağı",
+        "Moleküller arası etkileşim",
+        "Kırılma→zorunlu kimyasal değişim değil",
+        "Yanlış:E"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 30 | Fen Bilimleri Testi 11",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Fen_Bilimleri-14"
+    },
+    "narration": "Şekilde molekül içindeki bağlarla moleküller arasındaki etkileşimleri ayıralım. Bir numaralı karbon hidrojen bağı, MEB okul sınıflandırmasında polar kovalent sayılır. Polarlığı zayıf olsa da farklı atomlar arasındaki bu bağ için burada kullanılan sınıflama budur. İki numaralı karbon karbon bağı, güçlü bir kimyasal bağdır. Üç ve dört numaralı kesikli çizgiler ise moleküller arasındaki hidrojen bağlarını gösterir; bunlar zayıf etkileşim grubundadır. Beş numaralı oksijen hidrojen bağında oksijen elektronları daha güçlü çeker ve kısmi negatif uç olur. Dört numaralı hidrojen bağı koptuğunda moleküllerin kendi kimyasal yapıları aynı kalabilir. Bu nedenle kopmanın mutlaka kimyasal değişim oluşturduğunu söyleyemeyiz. Yanlış ifade E seçeneğidir.",
+    "segments": [
+      "Şekilde molekül içindeki bağlarla moleküller arasındaki etkileşimleri ayıralım. Bir numaralı karbon hidrojen bağı, MEB okul sınıflandırmasında polar kovalent sayılır. Polarlığı zayıf olsa da farklı atomlar arasındaki bu bağ için burada kullanılan sınıflama budur. İki numaralı karbon karbon bağı, güçlü bir kimyasal bağdır. Üç ve dört numaralı kesikli çizgiler ise moleküller arasındaki hidrojen bağlarını gösterir; bunlar zayıf etkileşim grubundadır. Beş numaralı oksijen hidrojen bağında oksijen elektronları daha güçlü çeker ve kısmi negatif uç olur. Dört numaralı hidrojen bağı koptuğunda moleküllerin kendi kimyasal yapıları aynı kalabilir. Bu nedenle kopmanın mutlaka kimyasal değişim oluşturduğunu söyleyemeyiz. Yanlış ifade E seçeneğidir."
+    ],
+    "notes": [
+      [
+        "1:C-H → okulda polar",
+        "MEB okul sınıflandırmasında polar kovalent sayılır"
+      ],
+      [
+        "2:C-C → güçlü bağ",
+        "İki numaralı karbon karbon bağı, güçlü bir kimyasal bağdır"
+      ],
+      [
+        "3 ve4:hidrojen bağı",
+        "bunlar zayıf etkileşim grubundadır"
+      ],
+      [
+        "5:O ucu kısmi negatif",
+        "kısmi negatif uç olur"
+      ],
+      [
+        "4 kopar → kimyasal değişim şart değil",
+        "kopmanın mutlaka kimyasal değişim oluşturduğunu söyleyemeyiz"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [],
+    "conditional_analysis": false,
+    "academic_correction": "MEB OGM Kimya Konu Pekiştirme PDF s.88, çözüm14: aynı asetik asit yapısında C-H bağları polar sınıflandırılıyor. Bu okul sınıflamasında tek yanlış E; hidrojen bağının kopması kimyasal yapı değiştirmez.",
+    "academic_sources": [
+      {
+        "url": "https://ogmmateryal.eba.gov.tr/panel/upload/etkilesimli/kitap/konu-pekistirme/12/kimya/kimya.pdf",
+        "pdf_page": 88
+      }
+    ]
+  }
+]
