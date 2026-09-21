@@ -1,0 +1,2891 @@
+[
+  {
+    "id": "A-Turkce-25",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-25",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 25,
+      "pdf_sayfasi": 8,
+      "basili_sayfa": 8,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        434.376
+      ],
+      "klasor": "A/Turkce/A-Turkce-25",
+      "calisma_sirasi": 85,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-40",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-25",
+      "answer_label_rects": [
+        [
+          60.94698715209961,
+          399.89447021484375,
+          70.33399200439453,
+          410.6854553222656
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-40",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 40,
+      "pdf_sayfasi": 11,
+      "basili_sayfa": 11,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        371.636
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        363.636,
+        576.0,
+        740.969
+      ],
+      "klasor": "B/Turkce/B-Turkce-40",
+      "calisma_sirasi": 225,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-25",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-25",
+      "answer_label_rects": [
+        [
+          337.32489013671875,
+          691.153564453125,
+          346.7118835449219,
+          701.944580078125
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-25",
+      "B-Turkce-40"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-25",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 25,
+      "pdf_sayfasi": 8,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Parça eserin mitolojilerden yararlanmasını, fantastik niteliğini, farklı dillere çevrilmesini ve modern fantastik yazını etkilemesini anlatır. “Sinematografik yönü” bulunması, sinemaya uyarlanmış ve bu yolla daha geniş kitlelere ulaşmış olmasıyla aynı bilgi değildir. Bu son durumdan söz edilmez.",
+      "kontrol_yontemi": "A mitoloji listesiyle;B fantastik roman ifadesiyle;C çevirilerle;E türüne etkisiyle eşleştirilir. D’yi kanıtlayan bir uyarlama cümlesi bulunmaz.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Parça eserin mitolojilerden yararlanmasını, fantastik niteliğini, farklı dillere çevrilmesini ve modern fantastik yazını etkilemesini anlatır. “Sinematografik yönü” bulunması, sinemaya uyarlanmış ve bu yolla daha geniş kitlelere ulaşmış olmasıyla aynı bilgi değildir. Bu son durumdan söz edilmez. Doğru seçenek D.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Mitoloji✓",
+        "Fantastik✓",
+        "Çeviri✓",
+        "Türüne etki✓",
+        "Uyarlama yoluyla yayılım yok"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 8 | Türkçe Testi 25",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-40"
+    },
+    "narration": "Bu soruda esere ilişkin dışarıdan bildiklerimizi değil, parçada söylenenleri arıyoruz. Mitolojilerden yararlanılması A seçeneğini, fantastik bir roman olması B seçeneğini karşılıyor. Başka dillere çevrilmesi ulusal sınırları aştığını; modern fantastik yazını etkilemesi de kendi türüne etkisini gösteriyor. Ancak sinematografik yönü bulunması, sinemaya aktarıldığı ve bu yolla daha çok kişiye ulaştığı demek değildir. Parçada bu son bilgi verilmemiş. Değinilmeyen D seçeneğini işaretliyoruz.",
+    "segments": [
+      "Bu soruda esere ilişkin dışarıdan bildiklerimizi değil, parçada söylenenleri arıyoruz. Mitolojilerden yararlanılması A seçeneğini, fantastik bir roman olması B seçeneğini karşılıyor. Başka dillere çevrilmesi ulusal sınırları aştığını; modern fantastik yazını etkilemesi de kendi türüne etkisini gösteriyor. Ancak sinematografik yönü bulunması, sinemaya aktarıldığı ve bu yolla daha çok kişiye ulaştığı demek değildir. Parçada bu son bilgi verilmemiş. Değinilmeyen D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Mitoloji; fantastik öğeler",
+        "Mitolojilerden yararlanılması A seçeneğini, fantastik bir roman olması B seçeneğini karşılıyor"
+      ],
+      [
+        "Çeviri; türüne etki",
+        "Başka dillere çevrilmesi ulusal sınırları aştığını"
+      ],
+      [
+        "Sinema yoluyla yayılım yok",
+        "Parçada bu son bilgi verilmemiş"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "academic_note": "Paragrafın anlam ilişkileri çözüldü; kaynak metnin tarihsel, bilimsel veya biyografik iddiaları bağımsız doğrulanmış bilgi olarak sunulmadı.",
+    "source_word_marks": [
+      [
+        "fantastik",
+        "Mitolojilerden yararlanılması A seçeneğini, fantastik bir roman olması B seçeneğini karşılıyor"
+      ],
+      [
+        "parçada",
+        "Parçada bu son bilgi verilmemiş"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-26",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-26",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 26,
+      "pdf_sayfasi": 8,
+      "basili_sayfa": 8,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        542.805
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        534.805,
+        300.0,
+        742.472
+      ],
+      "klasor": "A/Turkce/A-Turkce-26",
+      "calisma_sirasi": 86,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-39",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-26",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          689.0824584960938,
+          70.38800811767578,
+          699.8734741210938
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-39",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 39,
+      "pdf_sayfasi": 11,
+      "basili_sayfa": 11,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.279
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.279,
+        576.0,
+        279.945
+      ],
+      "klasor": "B/Turkce/B-Turkce-39",
+      "calisma_sirasi": 224,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-26",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-26",
+      "answer_label_rects": [
+        [
+          337.32489013671875,
+          226.55584716796875,
+          346.765869140625,
+          237.34683227539062
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-26",
+      "B-Turkce-39"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-26",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 26,
+      "pdf_sayfasi": 8,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "İlk bölüm nitelikli eserleri över. “Fakat”tan sonra, devamında “Bunlar” ile anılacak değersiz eserler grubunun tanıtılması gerekir. Özensiz yazılmış eserlerin de bulunduğunu söyleyen cümle, okuru yalnız güncellik ve ilginçlikle oyalayan kitaplara geçişi sağlar.",
+      "kontrol_yontemi": "“Bunlar” zamirinin açık bir öncülü olması gerekir. Özensiz yapıtlar ifadesi hem bu öncülü verir hem ilk bölümle karşıtlık kurar.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "İlk bölüm nitelikli eserleri över. “Fakat”tan sonra, devamında “Bunlar” ile anılacak değersiz eserler grubunun tanıtılması gerekir. Özensiz yazılmış eserlerin de bulunduğunu söyleyen cümle, okuru yalnız güncellik ve ilginçlikle oyalayan kitaplara geçişi sağlar. Doğru seçenek C.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Nitelikli yapıt",
+        "Fakat→karşıt grup",
+        "Özensiz yapıtlar",
+        "Bunlar→bu kitaplar",
+        "C"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 8 | Türkçe Testi 26",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-39"
+    },
+    "narration": "Boşluğun iki yanını birlikte okuyalım. Önce nitelikli eserlerden söz edilmiş; fakat bağlacıyla karşıt bir gruba geçilecek. Boşluktan sonraki bunlar sözcüğü, okuru yalnız güncellik ve ilginçlikle oyalayan kitaplara gönderme yapıyor. Öyleyse boşlukta özensiz yazılmış eserler tanıtılmalı. C seçeneğini yerleştirince nitelikli eserlerden özensiz eserlere geçiş ve bunlar sözcüğünün göndergesi birlikte tamamlanır. Nitelikli eserlerden söz etmeyi sürdüren seçenekler bu bağı kurmaz. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Boşluğun iki yanını birlikte okuyalım. Önce nitelikli eserlerden söz edilmiş; fakat bağlacıyla karşıt bir gruba geçilecek. Boşluktan sonraki bunlar sözcüğü, okuru yalnız güncellik ve ilginçlikle oyalayan kitaplara gönderme yapıyor. Öyleyse boşlukta özensiz yazılmış eserler tanıtılmalı. C seçeneğini yerleştirince nitelikli eserlerden özensiz eserlere geçiş ve bunlar sözcüğünün göndergesi birlikte tamamlanır. Nitelikli eserlerden söz etmeyi sürdüren seçenekler bu bağı kurmaz. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Önce: nitelikli yapıtlar",
+        "Önce nitelikli eserlerden söz edilmiş"
+      ],
+      [
+        "Fakat → karşıt grup",
+        "fakat bağlacıyla karşıt bir gruba geçilecek"
+      ],
+      [
+        "Bunlar → özensiz yapıtlar",
+        "boşlukta özensiz yazılmış eserler tanıtılmalı"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "nitelikli",
+        "Önce nitelikli eserlerden söz edilmiş"
+      ],
+      [
+        "Fakat",
+        "fakat bağlacıyla karşıt bir gruba geçilecek"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-27",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-27",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 27,
+      "pdf_sayfasi": 8,
+      "basili_sayfa": 8,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        403.376
+      ],
+      "klasor": "A/Turkce/A-Turkce-27",
+      "calisma_sirasi": 87,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-38",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-27",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          329.61346435546875,
+          346.7659912109375,
+          340.4044494628906
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-38",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 38,
+      "pdf_sayfasi": 11,
+      "basili_sayfa": 11,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        460.507
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        452.507,
+        300.0,
+        783.84
+      ],
+      "klasor": "B/Turkce/B-Turkce-38",
+      "calisma_sirasi": 223,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-27",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-27",
+      "answer_label_rects": [
+        [
+          60.94698715209961,
+          709.7435302734375,
+          70.38799285888672,
+          720.5345458984375
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-27",
+      "B-Turkce-38"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-27",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 27,
+      "pdf_sayfasi": 8,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Yazar bir toplantıda güçlü ilhamlar yakalar ancak ertesi güne bıraktığında onları yazıya geçiremez. Yaşanan durum, ilhamı geldiği anda değerlendirmenin önemini gösterir.",
+      "kontrol_yontemi": "Metindeki dönüm noktası ilhamın varlığı değil, kayda geçirme fırsatının ertelenmesidir. Yoğun emek veya yalnız yaşamını anlatma ana çıkarım değildir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Yazar bir toplantıda güçlü ilhamlar yakalar ancak ertesi güne bıraktığında onları yazıya geçiremez. Yaşanan durum, ilhamı geldiği anda değerlendirmenin önemini gösterir. Doğru seçenek C.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "İlham geldi",
+        "Ertelendi",
+        "Sonra yakalanamadı",
+        "Anında değerlendirme"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 8 | Türkçe Testi 27",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-38"
+    },
+    "narration": "Yaşanan olayın sonucuna odaklanalım. Yazar dostlarıyla buluşunca yeni imgeler ve yazma isteği kazanıyor. Fakat o anda yazmıyor; düşüncelerini ertesi güne bırakıyor. Ertesi sabah aynı ilhamı yeniden yakalayamıyor. Bu olay, esin geldiğinde onu değerlendirmenin önemini gösterir. Parça başyapıt için gereken genel emek kurallarını veya bütün yazarların yalnız kendi hayatını anlattığını kanıtlamıyor. İlhamın geldiği anı değerlendirmeyi öneren C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Yaşanan olayın sonucuna odaklanalım. Yazar dostlarıyla buluşunca yeni imgeler ve yazma isteği kazanıyor. Fakat o anda yazmıyor; düşüncelerini ertesi güne bırakıyor. Ertesi sabah aynı ilhamı yeniden yakalayamıyor. Bu olay, esin geldiğinde onu değerlendirmenin önemini gösterir. Parça başyapıt için gereken genel emek kurallarını veya bütün yazarların yalnız kendi hayatını anlattığını kanıtlamıyor. İlhamın geldiği anı değerlendirmeyi öneren C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "İlham ve yazma isteği",
+        "yeni imgeler ve yazma isteği kazanıyor"
+      ],
+      [
+        "Yazmayı erteliyor",
+        "düşüncelerini ertesi güne bırakıyor"
+      ],
+      [
+        "Esini anında değerlendir",
+        "esin geldiğinde onu değerlendirmenin önemini gösterir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "imgeler,",
+        "yeni imgeler ve yazma isteği kazanıyor"
+      ],
+      [
+        "düşünceler",
+        "düşüncelerini ertesi güne bırakıyor"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-28",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-28",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 28,
+      "pdf_sayfasi": 8,
+      "basili_sayfa": 8,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        542.814
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        534.814,
+        576.0,
+        739.481
+      ],
+      "klasor": "A/Turkce/A-Turkce-28",
+      "calisma_sirasi": 88,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-37",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-28",
+      "answer_label_rects": [
+        [
+          495.4010009765625,
+          723.5614013671875,
+          504.7879943847656,
+          734.3524169921875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-37",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 37,
+      "pdf_sayfasi": 11,
+      "basili_sayfa": 11,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.284
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.284,
+        300.0,
+        276.95
+      ],
+      "klasor": "B/Turkce/B-Turkce-37",
+      "calisma_sirasi": 222,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-28",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-28",
+      "answer_label_rects": [
+        [
+          219.02297973632812,
+          261.03082275390625,
+          228.4099884033203,
+          271.8218078613281
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-28",
+      "B-Turkce-37"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-28",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 28,
+      "pdf_sayfasi": 8,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Paragraf atmosferin doğal sera işlevini, gazların ısı tutmasını ve bunun yaşam sıcaklığına katkısını açıklar. Dördüncü cümle ise kömür ve diğer fosil yakıtların karbondioksit miktarını artırmasına geçer. Bu cümle çıkarıldığında doğal işlevin açıklaması kesintisiz sürer.",
+      "kontrol_yontemi": "Üçüncü cümleden beşinciye geçildiğinde “Böylece bir battaniye işlevi gören sera gazları...” bağlantısı doğrudan kurulur.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "Cevap paragrafın örgüsüne ilişkindir; paragraftaki radyasyon mekanizması ve oranlar ayrıca bilimsel içerik kontrolüne ihtiyaç duyabilir.",
+      "anlatim_metni": "Paragraf atmosferin doğal sera işlevini, gazların ısı tutmasını ve bunun yaşam sıcaklığına katkısını açıklar. Dördüncü cümle ise kömür ve diğer fosil yakıtların karbondioksit miktarını artırmasına geçer. Bu cümle çıkarıldığında doğal işlevin açıklaması kesintisiz sürer. Doğru seçenek D.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Ana akış:doğal sera işlevi",
+        "IV:fosil yakıtla artış",
+        "IV çıkarılır"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 8 | Türkçe Testi 28",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-37"
+    },
+    "narration": "Paragraftaki ana akış, atmosferin doğal sera işlevinin açıklanmasıdır. İlk üç cümlede bu işlev tanıtılıyor; beşinci ve altıncı cümleler yaşam sıcaklığına katkısını anlatıyor. Dördüncü cümle ise fosil yakıtların yakılmasıyla karbondioksitin artmasına geçiyor. Bu, doğal işlevden farklı bir nedene yönelmiş açıklamadır. Dördüncüyü çıkarınca üçüncü cümledeki sera gazlarının işlevi, beşinci cümlede böylece sözüyle doğrudan sürer. Akışı bozan dördüncü cümledir. D seçeneğini işaretliyoruz.",
+    "segments": [
+      "Paragraftaki ana akış, atmosferin doğal sera işlevinin açıklanmasıdır. İlk üç cümlede bu işlev tanıtılıyor; beşinci ve altıncı cümleler yaşam sıcaklığına katkısını anlatıyor. Dördüncü cümle ise fosil yakıtların yakılmasıyla karbondioksitin artmasına geçiyor. Bu, doğal işlevden farklı bir nedene yönelmiş açıklamadır. Dördüncüyü çıkarınca üçüncü cümledeki sera gazlarının işlevi, beşinci cümlede böylece sözüyle doğrudan sürer. Akışı bozan dördüncü cümledir. D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Ana konu: doğal sera işlevi",
+        "atmosferin doğal sera işlevinin açıklanmasıdır"
+      ],
+      [
+        "IV: fosil yakıtla artış",
+        "fosil yakıtların yakılmasıyla karbondioksitin artmasına geçiyor"
+      ],
+      [
+        "III → V: açıklama sürer",
+        "beşinci cümlede böylece sözüyle doğrudan sürer"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "academic_note": "Paragrafın anlam ilişkileri çözüldü; kaynak metnin tarihsel, bilimsel veya biyografik iddiaları bağımsız doğrulanmış bilgi olarak sunulmadı.",
+    "source_word_marks": [
+      [
+        "atmosferi",
+        "atmosferin doğal sera işlevinin açıklanmasıdır"
+      ],
+      [
+        "karbondioksit",
+        "fosil yakıtların yakılmasıyla karbondioksitin artmasına geçiyor"
+      ],
+      [
+        "Böylece",
+        "beşinci cümlede böylece sözüyle doğrudan sürer"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-29",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-29",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 29,
+      "pdf_sayfasi": 9,
+      "basili_sayfa": 9,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        344.709
+      ],
+      "klasor": "A/Turkce/A-Turkce-29",
+      "calisma_sirasi": 89,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-12",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-29",
+      "answer_label_rects": [
+        [
+          158.67800903320312,
+          310.06536865234375,
+          167.66001892089844,
+          320.8563537597656
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-12",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 12,
+      "pdf_sayfasi": 4,
+      "basili_sayfa": 4,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        519.472
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        511.472,
+        576.0,
+        783.805
+      ],
+      "klasor": "B/Turkce/B-Turkce-12",
+      "calisma_sirasi": 197,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-29",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-29",
+      "answer_label_rects": [
+        [
+          435.0560302734375,
+          749.160888671875,
+          444.03802490234375,
+          759.951904296875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-29",
+      "B-Turkce-12"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-29",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 29,
+      "pdf_sayfasi": 9,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "“Bu durum” ifadesi, hemen önce anlatılan dolandırıcıların paraların kenarlarını yontup metal biriktirmesine gönderme yapar. Üretim hatası anlatılmamıştır. Tüccarların tedbir alması ise bu durumun neden olduğu sonraki sonuçtur; göndergenin kendisi değildir.",
+      "kontrol_yontemi": "Gönderme ileriye değil, önceki yontma eylemine bağlanır. Neden olan olay ile tedbir sonucu birbirinden ayrılır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "“Bu durum” ifadesi, hemen önce anlatılan dolandırıcıların paraların kenarlarını yontup metal biriktirmesine gönderme yapar. Üretim hatası anlatılmamıştır. Tüccarların tedbir alması ise bu durumun neden olduğu sonraki sonuçtur; göndergenin kendisi değildir. Doğru seçenek B.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Yontma eylemi",
+        "“Bu durum”",
+        "Tedbirler:sonuç",
+        "Yalnız II"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 9 | Türkçe Testi 29",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-12"
+    },
+    "narration": "Bu durum sözünün neyi gösterdiğini bulmak için hemen önceki cümleye dönelim. Dolandırıcılar paranın kenarlarını yontup değerli metal biriktiriyor. Bu durum sözü tam olarak bu yontma eylemini karşılıyor. Paranın üretiminde bir hata anlatılmamış. Tüccarların tedbir alması ise yontmanın yol açtığı sonuçtur; bu durum sözünün göndergesi değildir. Dolayısıyla yalnız ikinci ifade doğrudur. B seçeneğini işaretliyoruz.",
+    "segments": [
+      "Bu durum sözünün neyi gösterdiğini bulmak için hemen önceki cümleye dönelim. Dolandırıcılar paranın kenarlarını yontup değerli metal biriktiriyor. Bu durum sözü tam olarak bu yontma eylemini karşılıyor. Paranın üretiminde bir hata anlatılmamış. Tüccarların tedbir alması ise yontmanın yol açtığı sonuçtur; bu durum sözünün göndergesi değildir. Dolayısıyla yalnız ikinci ifade doğrudur. B seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Önce: parayı yontma",
+        "Dolandırıcılar paranın kenarlarını yontup değerli metal biriktiriyor"
+      ],
+      [
+        "Bu durum → yontma",
+        "Bu durum sözü tam olarak bu yontma eylemini karşılıyor"
+      ],
+      [
+        "Tedbir: sonraki sonuç",
+        "Tüccarların tedbir alması ise yontmanın yol açtığı sonuçtur"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "dolandırıcılar",
+        "Dolandırıcılar paranın kenarlarını yontup değerli metal biriktiriyor"
+      ],
+      [
+        "durum,",
+        "Bu durum sözü tam olarak bu yontma eylemini karşılıyor"
+      ],
+      [
+        "tüccarların",
+        "Tüccarların tedbir alması ise yontmanın yol açtığı sonuçtur"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-30",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-30",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 30,
+      "pdf_sayfasi": 9,
+      "basili_sayfa": 9,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        542.907
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        534.907,
+        300.0,
+        782.907
+      ],
+      "klasor": "A/Turkce/A-Turkce-30",
+      "calisma_sirasi": 90,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-11",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-30",
+      "answer_label_rects": [
+        [
+          60.946998596191406,
+          766.9256591796875,
+          69.7040023803711,
+          777.7166748046875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-11",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 11,
+      "pdf_sayfasi": 4,
+      "basili_sayfa": 4,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        320.043
+      ],
+      "klasor": "B/Turkce/B-Turkce-11",
+      "calisma_sirasi": 196,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-30",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-30",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          304.39532470703125,
+          346.0820007324219,
+          315.1863098144531
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-30",
+      "B-Turkce-11"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-30",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 30,
+      "pdf_sayfasi": 9,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "Anlamlı sıra ikinci, beşinci, birinci, dördüncü ve üçüncü cümledir. Önce normal basınç tanıtılır; “bu basınç” altında gazların durumu açıklanır. Ardından basıncın yavaş düşmesi anlatılır. “Ancak” ile ani düşüşe geçilir ve etkileri sıralanır. Baştan üçüncü, birinci cümledir.",
+      "kontrol_yontemi": "“Bu basınç” ifadesi normal basıncın ardından; “Ancak” ise yavaş düşüşün karşısına ani düşüş olarak yerleştirilir. Bağlantı sözcükleri sıra kontrolünü sağlar.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Anlamlı sıra ikinci, beşinci, birinci, dördüncü ve üçüncü cümledir. Önce normal basınç tanıtılır; “bu basınç” altında gazların durumu açıklanır. Ardından basıncın yavaş düşmesi anlatılır. “Ancak” ile ani düşüşe geçilir ve etkileri sıralanır. Baştan üçüncü, birinci cümledir. Doğru seçenek A.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "II→V→I→IV→III",
+        "Üçüncü:I",
+        "A"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 9 | Türkçe Testi 30",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-11"
+    },
+    "narration": "Sıralamayı gönderme sözleriyle kuralım. İkinci cümle normal hava basıncını tanıtır. Beşinci cümle bu basınç düzeyi diyerek ona bağlanır. Birinci cümle basıncın yavaş düşmesini anlatır. Ardından dördüncü cümlede ancak sözüyle ani düşüşe geçilir. Üçüncü cümlenin devamında sözü de bu ani değişimin etkilerini sürdürür. Böylece sıra iki, beş, bir, dört, üç olur. Baştan üçüncü sıraya gelen, bir numaralı cümledir. A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Sıralamayı gönderme sözleriyle kuralım. İkinci cümle normal hava basıncını tanıtır. Beşinci cümle bu basınç düzeyi diyerek ona bağlanır. Birinci cümle basıncın yavaş düşmesini anlatır. Ardından dördüncü cümlede ancak sözüyle ani düşüşe geçilir. Üçüncü cümlenin devamında sözü de bu ani değişimin etkilerini sürdürür. Böylece sıra iki, beş, bir, dört, üç olur. Baştan üçüncü sıraya gelen, bir numaralı cümledir. A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "II → V: bu basınç",
+        "Beşinci cümle bu basınç düzeyi diyerek ona bağlanır"
+      ],
+      [
+        "I → IV → III",
+        "Üçüncü cümlenin devamında sözü de bu ani değişimin etkilerini sürdürür"
+      ],
+      [
+        "Sıra: II,V,I,IV,III",
+        "sıra iki, beş, bir, dört, üç olur"
+      ],
+      [
+        "Üçüncü: I",
+        "Baştan üçüncü sıraya gelen, bir numaralı cümledir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "academic_note": "Paragrafın anlam ilişkileri çözüldü; kaynak metnin tarihsel, bilimsel veya biyografik iddiaları bağımsız doğrulanmış bilgi olarak sunulmadı.",
+    "source_word_marks": [
+      [
+        "basınç",
+        "Beşinci cümle bu basınç düzeyi diyerek ona bağlanır"
+      ],
+      [
+        "Devamında",
+        "Üçüncü cümlenin devamında sözü de bu ani değişimin etkilerini sürdürür"
+      ],
+      [
+        "baştan",
+        "Baştan üçüncü sıraya gelen, bir numaralı cümledir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-31",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-31",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 31,
+      "pdf_sayfasi": 9,
+      "basili_sayfa": 9,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.309,
+        80.316
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.316,
+        576.0,
+        347.316
+      ],
+      "klasor": "A/Turkce/A-Turkce-31",
+      "calisma_sirasi": 91,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-10",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-31",
+      "answer_label_rects": [
+        [
+          480.26605224609375,
+          331.3441162109375,
+          489.0410461425781,
+          342.1351013183594
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-10",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 10,
+      "pdf_sayfasi": 4,
+      "basili_sayfa": 4,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.934,
+        516.858
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        508.85799999999995,
+        300.0,
+        783.858
+      ],
+      "klasor": "B/Turkce/B-Turkce-10",
+      "calisma_sirasi": 195,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-31",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-31",
+      "answer_label_rects": [
+        [
+          203.89102172851562,
+          767.8863525390625,
+          212.66603088378906,
+          778.6773681640625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-31",
+      "B-Turkce-10"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-31",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 31,
+      "pdf_sayfasi": 9,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Beşinci cümlede günlük yaşamdan uzak ve donuk bir anlatımdan kaçındığı, altıncıda pazardaki bir kişinin bile anlayabileceği dili benimsediği söylenir. Bu iki cümle, karmaşık ve yabancı terimlerle dolu anlatımı üstün sayan anlayışın karşıtıdır.",
+      "kontrol_yontemi": "Beşinci cümle kaçındığı dilin, altıncı cümle seçtiği dilin niteliğini verir. Bilgi birikimi tek başına sade anlatım anlayışını göstermez.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Beşinci cümlede günlük yaşamdan uzak ve donuk bir anlatımdan kaçındığı, altıncıda pazardaki bir kişinin bile anlayabileceği dili benimsediği söylenir. Bu iki cümle, karmaşık ve yabancı terimlerle dolu anlatımı üstün sayan anlayışın karşıtıdır. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "V:donuk anlatımdan kaçınma",
+        "VI:herkesin anlayacağı dil",
+        "Sadelik"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 9 | Türkçe Testi 31",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-10"
+    },
+    "narration": "Sorudaki karmaşık ve yabancı sözcüklerle dolu anlatışın karşıtını arıyoruz. Beşinci cümlede sanatçının günlük yaşamdan uzak, donuk bir anlatıma yer vermediği söyleniyor. Altıncı cümlede ise pazardaki insanın bile anlayabileceği dili benimsediği belirtiliyor. İki cümle birlikte açıklığı ve anlaşılabilirliği savunuyor. Bilgi birikimi veya özgün anlatım tek başına bu karşıtlığı göstermez. Doğrudan sade ve anlaşılır dili anlatan beşinci ve altıncı cümlelerdir. E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Sorudaki karmaşık ve yabancı sözcüklerle dolu anlatışın karşıtını arıyoruz. Beşinci cümlede sanatçının günlük yaşamdan uzak, donuk bir anlatıma yer vermediği söyleniyor. Altıncı cümlede ise pazardaki insanın bile anlayabileceği dili benimsediği belirtiliyor. İki cümle birlikte açıklığı ve anlaşılabilirliği savunuyor. Bilgi birikimi veya özgün anlatım tek başına bu karşıtlığı göstermez. Doğrudan sade ve anlaşılır dili anlatan beşinci ve altıncı cümlelerdir. E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "V: donuk anlatım yok",
+        "günlük yaşamdan uzak, donuk bir anlatıma yer vermediği söyleniyor"
+      ],
+      [
+        "VI: herkes anlayabilir",
+        "pazardaki insanın bile anlayabileceği dili benimsediği belirtiliyor"
+      ],
+      [
+        "Açık ve anlaşılır dil",
+        "İki cümle birlikte açıklığı ve anlaşılabilirliği savunuyor"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "yaşamdan",
+        "günlük yaşamdan uzak, donuk bir anlatıma yer vermediği söyleniyor"
+      ],
+      [
+        "anlayabileceği",
+        "pazardaki insanın bile anlayabileceği dili benimsediği belirtiliyor"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-32",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-32",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 32,
+      "pdf_sayfasi": 9,
+      "basili_sayfa": 9,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        542.907
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        534.907,
+        576.0,
+        783.907
+      ],
+      "klasor": "A/Turkce/A-Turkce-32",
+      "calisma_sirasi": 92,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-09",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-32",
+      "answer_label_rects": [
+        [
+          337.32489013671875,
+          701.2706298828125,
+          346.306884765625,
+          712.0616455078125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-09",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 9,
+      "pdf_sayfasi": 4,
+      "basili_sayfa": 4,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        321.043
+      ],
+      "klasor": "B/Turkce/B-Turkce-09",
+      "calisma_sirasi": 194,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "B",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-32",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-32",
+      "answer_label_rects": [
+        [
+          60.94700622558594,
+          238.74029541015625,
+          69.92900848388672,
+          249.53128051757812
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-32",
+      "B-Turkce-09"
+    ],
+    "answer": "B",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-32",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 32,
+      "pdf_sayfasi": 9,
+      "dogru_secenek": "B",
+      "gerekceli_cozum": "Metin kapsamlı araştırmaya, gerçek olaylara dayanmasına, hareketli-özgün anlatıma ve önceki kaliteyi korumasına değinir. Ancak anlatılan kişinin daha önce bilinmeyen yönlerini ortaya çıkardığını söylemez. Bu nedenle B’ye ulaşılamaz.",
+      "kontrol_yontemi": "“İncelikli ve çok yönlü ele alma”, mutlaka yeni ve bilinmeyen biyografik bilgi bulma anlamına gelmez. Dört diğer seçenek için metinde açık dayanak vardır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Metin kapsamlı araştırmaya, gerçek olaylara dayanmasına, hareketli-özgün anlatıma ve önceki kaliteyi korumasına değinir. Ancak anlatılan kişinin daha önce bilinmeyen yönlerini ortaya çıkardığını söylemez. Bu nedenle B’ye ulaşılamaz. Doğru seçenek B.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Araştırma✓",
+        "Gerçeklik✓",
+        "Özgün anlatım✓",
+        "Kalite✓",
+        "Bilinmeyen yönler?"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 9 | Türkçe Testi 32",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-09"
+    },
+    "narration": "Seçenekleri parçada verilen bilgilere bağlayalım. Anı, belge ve tanıklıklardan yararlanması kapsamlı çalışmayı ve gerçek olaylara dayanmayı gösteriyor. Hareketli, değişken anlatımı özgünlüğünü; önceki kaliteyi koruması da yetkinliğini destekliyor. Ancak anlatılan kişinin daha önce bilinmeyen yönlerini ortaya çıkardığı söylenmiyor. Çok belge kullanmak, mutlaka yeni bir sırrı açığa çıkarmak anlamına gelmez. Metnin desteklemediği B seçeneğini işaretliyoruz.",
+    "segments": [
+      "Seçenekleri parçada verilen bilgilere bağlayalım. Anı, belge ve tanıklıklardan yararlanması kapsamlı çalışmayı ve gerçek olaylara dayanmayı gösteriyor. Hareketli, değişken anlatımı özgünlüğünü; önceki kaliteyi koruması da yetkinliğini destekliyor. Ancak anlatılan kişinin daha önce bilinmeyen yönlerini ortaya çıkardığı söylenmiyor. Çok belge kullanmak, mutlaka yeni bir sırrı açığa çıkarmak anlamına gelmez. Metnin desteklemediği B seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Belge + tanıklık → araştırma",
+        "Anı, belge ve tanıklıklardan yararlanması kapsamlı çalışmayı ve gerçek olaylara dayanmayı gösteriyor"
+      ],
+      [
+        "Özgün anlatım; yetkinlik",
+        "önceki kaliteyi koruması da yetkinliğini destekliyor"
+      ],
+      [
+        "Bilinmeyen yön bilgisi yok",
+        "daha önce bilinmeyen yönlerini ortaya çıkardığı söylenmiyor"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "tanıklıklar,",
+        "Anı, belge ve tanıklıklardan yararlanması kapsamlı çalışmayı ve gerçek olaylara dayanmayı gösteriyor"
+      ],
+      [
+        "yetkinliği",
+        "önceki kaliteyi koruması da yetkinliğini destekliyor"
+      ],
+      [
+        "bilinmeyen",
+        "daha önce bilinmeyen yönlerini ortaya çıkardığı söylenmiyor"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-33",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-33",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 33,
+      "pdf_sayfasi": 10,
+      "basili_sayfa": 10,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        72.376,
+        300.0,
+        340.043
+      ],
+      "klasor": "A/Turkce/A-Turkce-33",
+      "calisma_sirasi": 93,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-20",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-33",
+      "answer_label_rects": [
+        [
+          60.955989837646484,
+          305.43939208984375,
+          69.73099517822266,
+          316.2303771972656
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-20",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 20,
+      "pdf_sayfasi": 6,
+      "basili_sayfa": 6,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        522.307
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        514.307,
+        576.0,
+        782.307
+      ],
+      "klasor": "B/Turkce/B-Turkce-20",
+      "calisma_sirasi": 205,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-33",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-33",
+      "answer_label_rects": [
+        [
+          337.33404541015625,
+          747.3695678710938,
+          346.1090393066406,
+          758.1605834960938
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-33",
+      "B-Turkce-20"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-33",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 33,
+      "pdf_sayfasi": 10,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Milton’un görme engeli, Beethoven’ın işitme engeli, romancıların acıları ve bestecinin yaşadığı aşk örnekleri aynı düşünceyi destekler: sanatçılar eksikliklerini veya acılarını yaratıcı bir esin kaynağına dönüştürebilir.",
+      "kontrol_yontemi": "Örneklerin hepsi maddi yoksulluk değildir. Ortak payda para sıkıntısı değil, yaşamsal eksiklik ve acılardır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "Parçadaki biyografik neden–sonuç yorumları, okuduğunu anlama bağlamında ele alınmıştır; bunlar sanat eserlerinin tek bilimsel açıklaması olarak sunulmamıştır.",
+      "anlatim_metni": "Milton’un görme engeli, Beethoven’ın işitme engeli, romancıların acıları ve bestecinin yaşadığı aşk örnekleri aynı düşünceyi destekler: sanatçılar eksikliklerini veya acılarını yaratıcı bir esin kaynağına dönüştürebilir. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Örneklerin ortak yönü",
+        "Eksiklikler ve acılar",
+        "Esin kaynağı"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 10 | Türkçe Testi 33",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-20"
+    },
+    "narration": "Boşluğa gelecek düşünce, ardından verilen bütün örnekleri kapsamalı. Metin Milton ve Beethoven için bedensel engelleri, romancılar için acılı yaşamları, besteci için yaşadığı aşk acısını öne çıkarıyor. Yazarın bu örneklerle kurduğu ortak bağ, yaşamdaki güçlüklerin sanat için esin kaynağına dönüşmesidir. Yalnız maddi sıkıntıdan söz eden seçenek bu örneklerin tümünü karşılamaz. Metnin düşüncesini güçlükler ve acılar üzerinden birleştiren E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Boşluğa gelecek düşünce, ardından verilen bütün örnekleri kapsamalı. Metin Milton ve Beethoven için bedensel engelleri, romancılar için acılı yaşamları, besteci için yaşadığı aşk acısını öne çıkarıyor. Yazarın bu örneklerle kurduğu ortak bağ, yaşamdaki güçlüklerin sanat için esin kaynağına dönüşmesidir. Yalnız maddi sıkıntıdan söz eden seçenek bu örneklerin tümünü karşılamaz. Metnin düşüncesini güçlükler ve acılar üzerinden birleştiren E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Örnekler: güçlükler ve acılar",
+        "Metin Milton ve Beethoven için bedensel engelleri"
+      ],
+      [
+        "Yaşam → esin kaynağı",
+        "yaşamdaki güçlüklerin sanat için esin kaynağına dönüşmesidir"
+      ],
+      [
+        "Ortak düşünce: E",
+        "Metnin düşüncesini güçlükler ve acılar üzerinden birleştiren E seçeneğini işaretliyoruz"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "academic_note": "Paragrafın anlam ilişkileri çözüldü; kaynak metnin tarihsel, bilimsel veya biyografik iddiaları bağımsız doğrulanmış bilgi olarak sunulmadı.",
+    "source_word_marks": [
+      [
+        "Beethoven",
+        "Metin Milton ve Beethoven için bedensel engelleri"
+      ],
+      [
+        "yaşamdaki",
+        "yaşamdaki güçlüklerin sanat için esin kaynağına dönüşmesidir"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-34",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-34",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 34,
+      "pdf_sayfasi": 10,
+      "basili_sayfa": 10,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        512.007
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        504.007,
+        300.0,
+        783.673
+      ],
+      "klasor": "A/Turkce/A-Turkce-34",
+      "calisma_sirasi": 94,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-19",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-34",
+      "answer_label_rects": [
+        [
+          198.47598266601562,
+          767.9575805664062,
+          207.25099182128906,
+          778.7485961914062
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-19",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 19,
+      "pdf_sayfasi": 6,
+      "basili_sayfa": 6,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        80.376
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        72.376,
+        576.0,
+        352.043
+      ],
+      "klasor": "B/Turkce/B-Turkce-19",
+      "calisma_sirasi": 204,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-34",
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-34",
+      "answer_label_rects": [
+        [
+          474.85400390625,
+          336.327392578125,
+          483.6289978027344,
+          347.1183776855469
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-34",
+      "B-Turkce-19"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-34",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 34,
+      "pdf_sayfasi": 10,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "Yazar mevcut koşullarda geleneğin yok oluşunun önlenemediğini, yalnız geciktirilebileceğini söyler. Televizyonu yeterli görmez; festival ve düğünlerle geleneğin canlı tutulamayacağını belirtir. Şiirlerin düzenli kaydı hakkında bilgi vermez. Dolayısıyla medya ile canlanma, sosyal etkinliklerle gündemde kalma ve kayıt yapılmaması çıkarımları desteklenmez.",
+      "kontrol_yontemi": "İlk saptama ilk cümleyle eşleştirilir. İkinci ve üçüncü metindeki yetersizlik vurgusuna aykırıdır; dördüncü ise metinde hiç yer almaz.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Yazar mevcut koşullarda geleneğin yok oluşunun önlenemediğini, yalnız geciktirilebileceğini söyler. Televizyonu yeterli görmez; festival ve düğünlerle geleneğin canlı tutulamayacağını belirtir. Şiirlerin düzenli kaydı hakkında bilgi vermez. Dolayısıyla medya ile canlanma, sosyal etkinliklerle gündemde kalma ve kayıt yapılmaması çıkarımları desteklenmez. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "I:destekleniyor",
+        "II:desteklenmiyor",
+        "III:desteklenmiyor",
+        "IV:bilgi yok",
+        "II,III,IV"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 10 | Türkçe Testi 34",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-19"
+    },
+    "narration": "Söylenemeyen ifadeleri arıyoruz. Yazar mevcut koşullarda geleneğin yok oluşunu önleyemediğimizi, ancak geciktirebileceğimizi söylüyor; birinci ifade desteklenir. Televizyonu yeterli görmediğinden, medyayla canlanacağı sonucu çıkmaz. Festival ve düğünlerin geleneği canlı tutmaya yetmediğini de açıkça belirtir. Bu yüzden ikinci ve üçüncü çıkarımlar desteklenmez. Şiirlerin düzenli kaydedilip kaydedilmediği konusunda ise bilgi yoktur; dördüncü de söylenemez. İkinci, üçüncü ve dördüncüyü veren E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Söylenemeyen ifadeleri arıyoruz. Yazar mevcut koşullarda geleneğin yok oluşunu önleyemediğimizi, ancak geciktirebileceğimizi söylüyor; birinci ifade desteklenir. Televizyonu yeterli görmediğinden, medyayla canlanacağı sonucu çıkmaz. Festival ve düğünlerin geleneği canlı tutmaya yetmediğini de açıkça belirtir. Bu yüzden ikinci ve üçüncü çıkarımlar desteklenmez. Şiirlerin düzenli kaydedilip kaydedilmediği konusunda ise bilgi yoktur; dördüncü de söylenemez. İkinci, üçüncü ve dördüncüyü veren E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "I: mevcut koşullar yetersiz",
+        "birinci ifade desteklenir"
+      ],
+      [
+        "II,III: desteklenmiyor",
+        "ikinci ve üçüncü çıkarımlar desteklenmez"
+      ],
+      [
+        "IV: kayıt hakkında bilgi yok",
+        "Şiirlerin düzenli kaydedilip kaydedilmediği konusunda ise bilgi yoktur"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "şiirlerin",
+        "Şiirlerin düzenli kaydedilip kaydedilmediği konusunda ise bilgi yoktur"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-35",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-35",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 35,
+      "pdf_sayfasi": 10,
+      "basili_sayfa": 10,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        239.113
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        231.113,
+        576.0,
+        409.78
+      ],
+      "klasor": "A/Turkce/A-Turkce-35",
+      "calisma_sirasi": 95,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-17",
+      "kaynak_gorsel_bolumleri": [
+        [
+          319,
+          79,
+          569,
+          224
+        ],
+        [
+          319,
+          236.113,
+          569,
+          409.78
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-35",
+      "answer_label_rects": [
+        [
+          337.3251953125,
+          354.5024719238281,
+          346.7121887207031,
+          365.29345703125
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-17",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 17,
+      "pdf_sayfasi": 6,
+      "basili_sayfa": 6,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        239.113
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        231.113,
+        300.0,
+        409.78
+      ],
+      "klasor": "B/Turkce/B-Turkce-17",
+      "calisma_sirasi": 202,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-35",
+      "kaynak_gorsel_bolumleri": [
+        [
+          43,
+          79,
+          293,
+          224
+        ],
+        [
+          43,
+          236.113,
+          293,
+          409.78
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-35",
+      "answer_label_rects": [
+        [
+          60.94731521606445,
+          354.5022277832031,
+          70.33432006835938,
+          365.293212890625
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-35",
+      "B-Turkce-17"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-35",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 35,
+      "pdf_sayfasi": 10,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Yazarın toplumsal bir birey olduğu belirtildikten sonra, toplumuna tümüyle duyarsız kalamayacağı sonucu gelmelidir. Sonraki cümle, toplumsal amaç gütmese bile eserinde toplumu yansıtacağını açıklayarak bu sonucu destekler.",
+      "kontrol_yontemi": "Boşluktan sonraki “Öyle ki” ifadesi önceki iddiayı örnekleyip güçlendirir. Bütün yazarların toplumu yönlendirmeyi amaçladığı söylenmemektedir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Yazarın toplumsal bir birey olduğu belirtildikten sonra, toplumuna tümüyle duyarsız kalamayacağı sonucu gelmelidir. Sonraki cümle, toplumsal amaç gütmese bile eserinde toplumu yansıtacağını açıklayarak bu sonucu destekler. Doğru seçenek D.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Toplumun bireyi",
+        "Topluma bütünüyle duyarsız değil",
+        "Amaçlamasa da yansıtır",
+        "D"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 10 | Türkçe Testi 35",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-17"
+    },
+    "narration": "Ortak paragrafta boşluğun öncesiyle sonrasını bağlayalım. Öncesinde yazarın toplumun bir bireyi olduğu söyleniyor. Sonrasında sosyal amaç gütmese bile toplumunu eserine yansıttığı anlatılıyor. Bu iki düşüncenin arasına, yazarın toplumuna bütünüyle duyarsız kalamayacağı sonucu gelir. D seçeneğindeki bu yüzden sözü önceki gerekçeye bağlanır; sonraki örnek de bu sonucu açıklar. Kalıcılık ya da toplumun bütün beklentilerini karşılama hakkında bir zorunluluk çıkaramayız. D seçeneğini işaretliyoruz.",
+    "segments": [
+      "Ortak paragrafta boşluğun öncesiyle sonrasını bağlayalım. Öncesinde yazarın toplumun bir bireyi olduğu söyleniyor. Sonrasında sosyal amaç gütmese bile toplumunu eserine yansıttığı anlatılıyor. Bu iki düşüncenin arasına, yazarın toplumuna bütünüyle duyarsız kalamayacağı sonucu gelir. D seçeneğindeki bu yüzden sözü önceki gerekçeye bağlanır; sonraki örnek de bu sonucu açıklar. Kalıcılık ya da toplumun bütün beklentilerini karşılama hakkında bir zorunluluk çıkaramayız. D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Yazar: toplumun bireyi",
+        "yazarın toplumun bir bireyi olduğu söyleniyor"
+      ],
+      [
+        "Amaçlamasa da yansıtır",
+        "sosyal amaç gütmese bile toplumunu eserine yansıttığı anlatılıyor"
+      ],
+      [
+        "Tamamen duyarsız kalamaz",
+        "yazarın toplumuna bütünüyle duyarsız kalamayacağı sonucu gelir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "toplumun",
+        "yazarın toplumun bir bireyi olduğu söyleniyor"
+      ],
+      [
+        "toplumuna",
+        "yazarın toplumuna bütünüyle duyarsız kalamayacağı sonucu gelir"
+      ],
+      [
+        "toplumunu",
+        "sosyal amaç gütmese bile toplumunu eserine yansıttığı anlatılıyor"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-36",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-36",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 36,
+      "pdf_sayfasi": 10,
+      "basili_sayfa": 10,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        654.337
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        646.337,
+        576.0,
+        783.671
+      ],
+      "klasor": "A/Turkce/A-Turkce-36",
+      "calisma_sirasi": 96,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-18",
+      "kaynak_gorsel_bolumleri": [
+        [
+          319,
+          79,
+          569,
+          224
+        ],
+        [
+          319,
+          651.337,
+          569,
+          783.671
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-36",
+      "answer_label_rects": [
+        [
+          337.3251953125,
+          767.9354248046875,
+          346.1001892089844,
+          778.7264404296875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-18",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 18,
+      "pdf_sayfasi": 6,
+      "basili_sayfa": 6,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        522.235
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        514.235,
+        300.0,
+        651.902
+      ],
+      "klasor": "B/Turkce/B-Turkce-18",
+      "calisma_sirasi": 203,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "E",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-36",
+      "kaynak_gorsel_bolumleri": [
+        [
+          43,
+          79,
+          293,
+          224
+        ],
+        [
+          43,
+          519.235,
+          293,
+          651.902
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-36",
+      "answer_label_rects": [
+        [
+          60.947322845458984,
+          635.8331909179688,
+          69.72232818603516,
+          646.6242065429688
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-36",
+      "B-Turkce-18"
+    ],
+    "answer": "E",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-36",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 36,
+      "pdf_sayfasi": 10,
+      "dogru_secenek": "E",
+      "gerekceli_cozum": "“Yapıtını bir reçete hâline getirmek”, toplumsal sorunları yalnız göstermekle kalmayıp bunlara çözüm önerileri sunmak anlamına gelir. Reçete, burada tedavi/çözüm önerisi anlamında mecaz olarak kullanılmıştır.",
+      "kontrol_yontemi": "Bir kitabın tatsız olması veya belirli kitleye seslenmesi reçete mecazının çözüm boyutunu karşılamaz.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "“Yapıtını bir reçete hâline getirmek”, toplumsal sorunları yalnız göstermekle kalmayıp bunlara çözüm önerileri sunmak anlamına gelir. Reçete, burada tedavi/çözüm önerisi anlamında mecaz olarak kullanılmıştır. Doğru seçenek E.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Sorun",
+        "Reçete→çözüm önerisi",
+        "E"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 10 | Türkçe Testi 36",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-18"
+    },
+    "narration": "Altı çizili reçete sözünü paragrafın bağlamında düşünelim. Önce yazarın toplumun aksayan yönlerini dile getirmesi, yani sorunları göstermesi anlatılıyor. Eseri reçete hâline getirmek ise bunun bir adım ötesidir: gösterilen sorunlara çözüm önerileri sunmak. Buradaki reçete bir yemek tarifi ya da ilacın kendisi değildir; çözüm yolu sunmayı anlatan bir mecazdır. Yalnız toplumsal değerleri anlatmak aynı anlamı karşılamaz. Çeşitli sorunlara çözüm önerileri sunmayı belirten E seçeneğini işaretliyoruz.",
+    "segments": [
+      "Altı çizili reçete sözünü paragrafın bağlamında düşünelim. Önce yazarın toplumun aksayan yönlerini dile getirmesi, yani sorunları göstermesi anlatılıyor. Eseri reçete hâline getirmek ise bunun bir adım ötesidir: gösterilen sorunlara çözüm önerileri sunmak. Buradaki reçete bir yemek tarifi ya da ilacın kendisi değildir; çözüm yolu sunmayı anlatan bir mecazdır. Yalnız toplumsal değerleri anlatmak aynı anlamı karşılamaz. Çeşitli sorunlara çözüm önerileri sunmayı belirten E seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Önce: sorunu gösterme",
+        "yazarın toplumun aksayan yönlerini dile getirmesi"
+      ],
+      [
+        "Reçete → çözüm önerisi",
+        "gösterilen sorunlara çözüm önerileri sunmak"
+      ],
+      [
+        "Sorun + çözüm yolu",
+        "çözüm yolu sunmayı anlatan bir mecazdır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "yönlerini",
+        "yazarın toplumun aksayan yönlerini dile getirmesi"
+      ],
+      [
+        "sorunlara",
+        "gösterilen sorunlara çözüm önerileri sunmak"
+      ],
+      [
+        "çözüm",
+        "çözüm yolu sunmayı anlatan bir mecazdır"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-37",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-37",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 37,
+      "pdf_sayfasi": 11,
+      "basili_sayfa": 11,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        477.226
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        469.226,
+        300.0,
+        596.56
+      ],
+      "klasor": "A/Turkce/A-Turkce-37",
+      "calisma_sirasi": 97,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-35",
+      "kaynak_gorsel_bolumleri": [
+        [
+          43,
+          79,
+          293,
+          459
+        ],
+        [
+          43,
+          474.226,
+          293,
+          596.56
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-37",
+      "answer_label_rects": [
+        [
+          60.94700241088867,
+          561.7274169921875,
+          70.3340072631836,
+          572.5184326171875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-35",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 35,
+      "pdf_sayfasi": 10,
+      "basili_sayfa": 10,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        471.748
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        463.748,
+        576.0,
+        590.748
+      ],
+      "klasor": "B/Turkce/B-Turkce-35",
+      "calisma_sirasi": 220,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "D",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-37",
+      "kaynak_gorsel_bolumleri": [
+        [
+          319,
+          79,
+          569,
+          459
+        ],
+        [
+          319,
+          468.748,
+          569,
+          590.748
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-37",
+      "answer_label_rects": [
+        [
+          337.3340148925781,
+          556.2493896484375,
+          346.72100830078125,
+          567.0404052734375
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-37",
+      "B-Turkce-35"
+    ],
+    "answer": "D",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-37",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 37,
+      "pdf_sayfasi": 11,
+      "dogru_secenek": "D",
+      "gerekceli_cozum": "Dünya çapındaki saygınlık evrensel tanınmaya, söylem çözümlemeleri görünenin arkasını göstermeye, gülme ve öfkelenme karşıt duygulara, eleştiri ve denemeler düşünsel üretime dayanak oluşturur. Ancak geniş bir okur kitlesi tarafından beğenildiği belirtilmez.",
+      "kontrol_yontemi": "Saygınlık veya ödül, okur kitlesinin büyüklüğüyle aynı ölçüt değildir. D için doğrudan bir yaygın beğeni bilgisi aranır; bulunmaz.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Dünya çapındaki saygınlık evrensel tanınmaya, söylem çözümlemeleri görünenin arkasını göstermeye, gülme ve öfkelenme karşıt duygulara, eleştiri ve denemeler düşünsel üretime dayanak oluşturur. Ancak geniş bir okur kitlesi tarafından beğenildiği belirtilmez. Doğru seçenek D.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Saygınlık✓",
+        "Çözümleme✓",
+        "Zıt duygular✓",
+        "Düşünsel eser✓",
+        "Geniş okur kitlesi?"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 11 | Türkçe Testi 37",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-35"
+    },
+    "narration": "Ortak paragraftaki dayanaklara bakalım. Dünya çapında saygınlık, evrensel tanınmayı destekler. Söylem çözümlemeleri, görünürdeki sözlerin arkasını açığa çıkarmayı; gülme ve öfkelenme de birbirine zıt duyguları gösterir. Eleştiri ve deneme yazıları düşünsel eserlerdir. Ancak geniş bir okur kitlesinin bu yazarı beğendiği söylenmemiş. Saygınlık ve ödül kazanmak, geniş okur kitlesinin beğenisini tek başına kanıtlamaz. Parçadan çıkarılamayan D seçeneğini işaretliyoruz.",
+    "segments": [
+      "Ortak paragraftaki dayanaklara bakalım. Dünya çapında saygınlık, evrensel tanınmayı destekler. Söylem çözümlemeleri, görünürdeki sözlerin arkasını açığa çıkarmayı; gülme ve öfkelenme de birbirine zıt duyguları gösterir. Eleştiri ve deneme yazıları düşünsel eserlerdir. Ancak geniş bir okur kitlesinin bu yazarı beğendiği söylenmemiş. Saygınlık ve ödül kazanmak, geniş okur kitlesinin beğenisini tek başına kanıtlamaz. Parçadan çıkarılamayan D seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Saygınlık; söylem çözümleme",
+        "Dünya çapında saygınlık, evrensel tanınmayı destekler"
+      ],
+      [
+        "Gülme ve öfke; düşünsel eser",
+        "Eleştiri ve deneme yazıları düşünsel eserlerdir"
+      ],
+      [
+        "Geniş okur beğenisi yok",
+        "geniş bir okur kitlesinin bu yazarı beğendiği söylenmemiş"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "saygınlık",
+        "Dünya çapında saygınlık, evrensel tanınmayı destekler"
+      ],
+      [
+        "eleştiri",
+        "Eleştiri ve deneme yazıları düşünsel eserlerdir"
+      ],
+      [
+        "kitlesi",
+        "geniş bir okur kitlesinin bu yazarı beğendiği söylenmemiş"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-38",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-38",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 38,
+      "pdf_sayfasi": 11,
+      "basili_sayfa": 11,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        654.411
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        646.411,
+        300.0,
+        698.411
+      ],
+      "klasor": "A/Turkce/A-Turkce-38",
+      "calisma_sirasi": 98,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-36",
+      "kaynak_gorsel_bolumleri": [
+        [
+          43,
+          79,
+          293,
+          459
+        ],
+        [
+          43,
+          651.411,
+          293,
+          698.411
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-38",
+      "answer_label_rects": [
+        [
+          163.63699340820312,
+          682.508544921875,
+          173.0780029296875,
+          693.299560546875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-36",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 36,
+      "pdf_sayfasi": 10,
+      "basili_sayfa": 10,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        739.926
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        731.926,
+        576.0,
+        783.926
+      ],
+      "klasor": "B/Turkce/B-Turkce-36",
+      "calisma_sirasi": 221,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-38",
+      "kaynak_gorsel_bolumleri": [
+        [
+          319,
+          79,
+          569,
+          459
+        ],
+        [
+          319,
+          736.926,
+          569,
+          783.926
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-38",
+      "answer_label_rects": [
+        [
+          440.0150146484375,
+          768.0242919921875,
+          449.45599365234375,
+          778.8153076171875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-38",
+      "B-Turkce-36"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-38",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 38,
+      "pdf_sayfasi": 11,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "“Önemli” sözcüğü burada değerli ve dikkate değer anlamıyla doğrudan kullanılmıştır. Zenginleştirmek düşünceyi çoğaltma; çap dünya ölçeği; doğurmak bir alanı ortaya çıkarma; yazarın adını okumak ise eserleri kastedilen ad aktarmasıdır. Mecazlı kullanım bulunmayan üçüncü sözcüktür.",
+      "kontrol_yontemi": "Altı çizili sözcüklerin bağlamdaki karşılıkları temel anlamlarıyla karşılaştırılır. Yazarın kendisi değil eserlerinin okunması ad aktarmasıdır.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "“Önemli” sözcüğü burada değerli ve dikkate değer anlamıyla doğrudan kullanılmıştır. Zenginleştirmek düşünceyi çoğaltma; çap dünya ölçeği; doğurmak bir alanı ortaya çıkarma; yazarın adını okumak ise eserleri kastedilen ad aktarmasıdır. Mecazlı kullanım bulunmayan üçüncü sözcüktür. Doğru seçenek C.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "I:zenginleştirmek→mecaz",
+        "II:çap→mecaz",
+        "III:önemli→doğrudan",
+        "IV:doğurmak→mecaz",
+        "V:yazar–eser aktarması",
+        "C"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 11 | Türkçe Testi 38",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-36"
+    },
+    "narration": "Altı çizili sözcükleri bağlamlarıyla inceleyelim. Zenginleştirmek, düşünce dünyasını geliştirmek anlamında mecazdır. Çapında sözü dünya ölçeğini anlatır; geometrik çap kastedilmez. Doğurmuştur bir dili ortaya çıkarmak, çıkarmamız ise söylemden anlam veya sonuç elde etmek anlamındadır. Bunlar da somut ilk anlamlarıyla kullanılmamış. Üçüncü sözcük önemli ise doğrudan değerli, dikkate değer anlamındadır; mecazlı bir aktarım yapılmamış. Bu nedenle üçüncü sözcüğü veren C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Altı çizili sözcükleri bağlamlarıyla inceleyelim. Zenginleştirmek, düşünce dünyasını geliştirmek anlamında mecazdır. Çapında sözü dünya ölçeğini anlatır; geometrik çap kastedilmez. Doğurmuştur bir dili ortaya çıkarmak, çıkarmamız ise söylemden anlam veya sonuç elde etmek anlamındadır. Bunlar da somut ilk anlamlarıyla kullanılmamış. Üçüncü sözcük önemli ise doğrudan değerli, dikkate değer anlamındadır; mecazlı bir aktarım yapılmamış. Bu nedenle üçüncü sözcüğü veren C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "I,II: bağlamda mecaz",
+        "Çapında sözü dünya ölçeğini anlatır"
+      ],
+      [
+        "IV,V: üretme; anlam çıkarma",
+        "çıkarmamız ise söylemden anlam veya sonuç elde etmek anlamındadır"
+      ],
+      [
+        "III: önemli → doğrudan",
+        "Üçüncü sözcük önemli ise doğrudan değerli, dikkate değer anlamındadır"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "academic_correction": "Eski gerekçede V yazar-eser aktarması olarak açıklanmıştı. Özgün görselde V: çıkarmamız sözcüğüdür; anlam/sonuç elde etmek mecazıdır. Doğru seçenek C değişmedi.",
+    "source_word_marks": [
+      [
+        "çapında",
+        "Çapında sözü dünya ölçeğini anlatır"
+      ],
+      [
+        "çıkarmamız",
+        "çıkarmamız ise söylemden anlam veya sonuç elde etmek anlamındadır"
+      ],
+      [
+        "önemli",
+        "Üçüncü sözcük önemli ise doğrudan değerli, dikkate değer anlamındadır"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-39",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-39",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 39,
+      "pdf_sayfasi": 11,
+      "basili_sayfa": 11,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.318,
+        300.934
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        292.934,
+        576.0,
+        430.601
+      ],
+      "klasor": "A/Turkce/A-Turkce-39",
+      "calisma_sirasi": 99,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-33",
+      "kaynak_gorsel_bolumleri": [
+        [
+          319,
+          79,
+          569,
+          285
+        ],
+        [
+          319,
+          297.934,
+          569,
+          430.601
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-39",
+      "answer_label_rects": [
+        [
+          337.3280029296875,
+          339.32843017578125,
+          346.0849914550781,
+          350.1194152832031
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-33",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 33,
+      "pdf_sayfasi": 10,
+      "basili_sayfa": 10,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        300.889
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        292.889,
+        300.0,
+        430.223
+      ],
+      "klasor": "B/Turkce/B-Turkce-33",
+      "calisma_sirasi": 218,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "A",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-39",
+      "kaynak_gorsel_bolumleri": [
+        [
+          43,
+          79,
+          293,
+          285
+        ],
+        [
+          43,
+          297.889,
+          293,
+          430.223
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-39",
+      "answer_label_rects": [
+        [
+          60.947303771972656,
+          339.28350830078125,
+          69.70430755615234,
+          350.0744934082031
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-39",
+      "B-Turkce-33"
+    ],
+    "answer": "A",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-39",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 39,
+      "pdf_sayfasi": 11,
+      "dogru_secenek": "A",
+      "gerekceli_cozum": "“Bu toprakların en içli nağmeleri”, yerli kültürden beslenen duygulu şiirleri ifade eder. “Bu topraklar” kültürel aidiyeti, “içli nağmeler” içten ve duygulu söyleyişi taşır. Doğru seçenek bu iki anlamı birlikte karşılar.",
+      "kontrol_yontemi": "Yalnız heyecanlı söyleyiş demek yerel kültür boyutunu; yerelden evrensele demek ise metinde belirtilmeyen bir genişlemeyi ekler.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "“Bu toprakların en içli nağmeleri”, yerli kültürden beslenen duygulu şiirleri ifade eder. “Bu topraklar” kültürel aidiyeti, “içli nağmeler” içten ve duygulu söyleyişi taşır. Doğru seçenek bu iki anlamı birlikte karşılar. Doğru seçenek A.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Bu topraklar→öz kültür",
+        "İçli nağmeler→duygulu şiir",
+        "A"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 11 | Türkçe Testi 39",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-33"
+    },
+    "narration": "Söz öbeğinin iki parçasını birlikte yorumlayalım. Bu topraklar, içinde yaşanan kültürü ve yerli değerleri çağrıştırıyor. İçli nağmeler ise içten, duygu yüklü şiirsel söyleyişi anlatıyor. İkisini birleştirdiğimizde kendi kültürümüzü yansıtan duygulu şiirler anlamı ortaya çıkar. Yalnız heyecanlı söyleyiş demek kültürel yönü eksik bırakır. Söz, eserlerin bütün dünyada tanınmasını da söylemiyor. İki anlamı birlikte veren A seçeneğini işaretliyoruz.",
+    "segments": [
+      "Söz öbeğinin iki parçasını birlikte yorumlayalım. Bu topraklar, içinde yaşanan kültürü ve yerli değerleri çağrıştırıyor. İçli nağmeler ise içten, duygu yüklü şiirsel söyleyişi anlatıyor. İkisini birleştirdiğimizde kendi kültürümüzü yansıtan duygulu şiirler anlamı ortaya çıkar. Yalnız heyecanlı söyleyiş demek kültürel yönü eksik bırakır. Söz, eserlerin bütün dünyada tanınmasını da söylemiyor. İki anlamı birlikte veren A seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Bu topraklar → öz kültür",
+        "içinde yaşanan kültürü ve yerli değerleri çağrıştırıyor"
+      ],
+      [
+        "İçli nağmeler → duygu",
+        "içten, duygu yüklü şiirsel söyleyişi anlatıyor"
+      ],
+      [
+        "Kültür + duygulu şiir",
+        "kendi kültürümüzü yansıtan duygulu şiirler anlamı ortaya çıkar"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "duygu",
+        "içten, duygu yüklü şiirsel söyleyişi anlatıyor"
+      ],
+      [
+        "kültürümüzü",
+        "kendi kültürümüzü yansıtan duygulu şiirler anlamı ortaya çıkar"
+      ]
+    ]
+  },
+  {
+    "id": "A-Turkce-40",
+    "metadata": {
+      "soru_kimligi": "A-Turkce-40",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 40,
+      "pdf_sayfasi": 11,
+      "basili_sayfa": 11,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf",
+      "pdf_sha256": "6af4726b17530f6fcfa67861d545197e7699d443ed602ac75926820499d1a0f8",
+      "soru_baslangic_konumu_pt": [
+        320.315,
+        585.011
+      ],
+      "soru_kirpma_konumu_pt": [
+        319.0,
+        577.011,
+        576.0,
+        740.677
+      ],
+      "klasor": "A/Turkce/A-Turkce-40",
+      "calisma_sirasi": 100,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "B-Turkce-34",
+      "kaynak_gorsel_bolumleri": [
+        [
+          319,
+          79,
+          569,
+          285
+        ],
+        [
+          319,
+          582.011,
+          569,
+          780.677
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-40",
+      "answer_label_rects": [
+        [
+          337.32501220703125,
+          650.7108154296875,
+          346.7659912109375,
+          661.5018310546875
+        ]
+      ]
+    },
+    "partner_metadata": {
+      "soru_kimligi": "B-Turkce-34",
+      "kitapcik": "B",
+      "test": "Türkçe Testi",
+      "test_kodu": "Turkce",
+      "ders": "Türkçe",
+      "alt_bolum": null,
+      "basili_soru_numarasi": 34,
+      "pdf_sayfasi": 10,
+      "basili_sayfa": 10,
+      "pdf_dosyasi": "(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_BB.pdf",
+      "pdf_sha256": "1a13b1e4db228a018ece698ec9cd2b57118c42f4ec7b7f050b677e567a900124",
+      "soru_baslangic_konumu_pt": [
+        43.937,
+        633.811
+      ],
+      "soru_kirpma_konumu_pt": [
+        43.0,
+        625.811,
+        300.0,
+        783.811
+      ],
+      "klasor": "B/Turkce/B-Turkce-34",
+      "calisma_sirasi": 219,
+      "kaynak_gorsel_okundu": true,
+      "cozum_hazir": true,
+      "dogrulandi": true,
+      "anlatim_hazir": true,
+      "ses_uretildi": false,
+      "zamanli_cizim_hazir": false,
+      "video_uretildi": false,
+      "video_kontrol_edildi": false,
+      "akademik_durum": "dogrulandi",
+      "engel": "",
+      "dogru_secenek": "C",
+      "yayinici_anahtariyla_karsilastirildi": false,
+      "eslesen_soru": "A-Turkce-40",
+      "kaynak_gorsel_bolumleri": [
+        [
+          43,
+          79,
+          293,
+          285
+        ],
+        [
+          43,
+          630.811,
+          293,
+          783.811
+        ]
+      ],
+      "ortak_paragraf_dahil": true,
+      "ses_dosyasi_yerel": false,
+      "gorsel_montaj_uretildi": false,
+      "zamanli_cizim_taslagi_hazir": false,
+      "nihai_video_tamamlandi": false,
+      "ortak_anlatim_master_id": "A-Turkce-40",
+      "answer_label_rects": [
+        [
+          60.946998596191406,
+          699.5106201171875,
+          70.38800048828125,
+          710.3016357421875
+        ]
+      ]
+    },
+    "pair": [
+      "A-Turkce-40",
+      "B-Turkce-34"
+    ],
+    "answer": "C",
+    "original_solution": {
+      "soru_kimligi": "A-Turkce-40",
+      "kitapcik": "A",
+      "test": "Türkçe Testi",
+      "ders": "Türkçe",
+      "soru_numarasi": 40,
+      "pdf_sayfasi": 11,
+      "dogru_secenek": "C",
+      "gerekceli_cozum": "Parçada Tecer’in şiirlerini titizlikle işlediği, öğretmen ve oyun yazarı olduğu, halk şiiri geleneğini özgün biçimde yorumladığı ve önceki şairleri genç kuşağa tanıttığı söylenir. Memleket edebiyatının önemli temsilcilerinden biri olduğu belirtilir; ilk temsilci olduğu söylenmez.",
+      "kontrol_yontemi": "“En önemli temsilcilerinden biri” ile “ilk temsilci” ifadeleri farklıdır. Birincisi önem derecesi, ikincisi kronolojik öncelik bildirir.",
+      "akademik_durum": "dogrulandi",
+      "akademik_not": "",
+      "anlatim_metni": "Parçada Tecer’in şiirlerini titizlikle işlediği, öğretmen ve oyun yazarı olduğu, halk şiiri geleneğini özgün biçimde yorumladığı ve önceki şairleri genç kuşağa tanıttığı söylenir. Memleket edebiyatının önemli temsilcilerinden biri olduğu belirtilir; ilk temsilci olduğu söylenmez. Doğru seçenek C.",
+      "anlatim_turu": "seslendirme_metni",
+      "tahta_adimlari": [
+        "Önemli temsilci≠ilk temsilci",
+        "İlk olduğu bilgisi yok",
+        "C"
+      ],
+      "resmi_cevap_anahtariyla_karsilastirma": false,
+      "kaynak": "kitapciklar/(2026-08-25) - Atolye_Akademi_EgitimK-(SBS)_AA.pdf | PDF sayfa 11 | Türkçe Testi 40",
+      "video_durumu": "uretilmedi",
+      "dis_kaynaklar": [],
+      "eslesen_soru": "B-Turkce-34"
+    },
+    "narration": "Ortak paragrafı seçeneklerle karşılaştıralım. İlmek ilmek işlenen şiirler titizliği; öğretmen, şair ve oyun yazarı olması farklı çalışmalarını gösterir. Halk şiirini yeni bir söyleyişle işlemesi özgünlüğünü, eski şairleri gençlere tanıtması da edebiyata katkısını açıklar. Son cümlede memleketçi edebiyatın önemli temsilcilerinden biri olduğu yazıyor. Önemli temsilci olmak, ilk temsilci olmak demek değildir. Metinde ilk olduğu bilgisi bulunmadığından C seçeneğine ulaşılamaz. C seçeneğini işaretliyoruz.",
+    "segments": [
+      "Ortak paragrafı seçeneklerle karşılaştıralım. İlmek ilmek işlenen şiirler titizliği; öğretmen, şair ve oyun yazarı olması farklı çalışmalarını gösterir. Halk şiirini yeni bir söyleyişle işlemesi özgünlüğünü, eski şairleri gençlere tanıtması da edebiyata katkısını açıklar. Son cümlede memleketçi edebiyatın önemli temsilcilerinden biri olduğu yazıyor. Önemli temsilci olmak, ilk temsilci olmak demek değildir. Metinde ilk olduğu bilgisi bulunmadığından C seçeneğine ulaşılamaz. C seçeneğini işaretliyoruz."
+    ],
+    "notes": [
+      [
+        "Titizlik; farklı türler",
+        "İlmek ilmek işlenen şiirler titizliği"
+      ],
+      [
+        "Özgünlük; kuşaklara aktarma",
+        "eski şairleri gençlere tanıtması da edebiyata katkısını açıklar"
+      ],
+      [
+        "Önemli temsilci ≠ ilk",
+        "Önemli temsilci olmak, ilk temsilci olmak demek değildir"
+      ]
+    ],
+    "source_pair_visual_review": true,
+    "academic_review": true,
+    "highlights": [],
+    "source_word_marks": [
+      [
+        "ilmek",
+        "İlmek ilmek işlenen şiirler titizliği"
+      ],
+      [
+        "önemli",
+        "Önemli temsilci olmak, ilk temsilci olmak demek değildir"
+      ]
+    ]
+  }
+]
