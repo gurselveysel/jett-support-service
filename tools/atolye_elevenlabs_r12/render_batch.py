@@ -28,6 +28,7 @@ def render(q):
 if __name__=='__main__':
  num=int(sys.argv[1]) if len(sys.argv)>1 and sys.argv[1].isdigit() else 1
  qs=sorted((ROOT/f'Atolye_R12_Grup{num:02d}').glob('A/*/*/zaman_cizelgesi.json'))
+ if '--only-missing' in sys.argv:qs=[p for p in qs if not (p.parent/'cozum.mp4').exists()]
  if '--drafts' in sys.argv:
   for p in qs:
    r=SavedPairRenderer(p.parent);r.frame(r.p['audio_duration']-.2).save(ROOT/(p.parent.name+'_draft.png'))
