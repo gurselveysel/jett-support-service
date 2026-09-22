@@ -1,0 +1,181 @@
+name: Atolye TYT Batch03
+run-name: Atolye TYT - 40 unique Math solutions - batch03
+on:
+  push:
+    branches: [atolye-tyt-20260922]
+    paths: [.github/workflows/atolye-tyt-batch03.yml]
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: atolye-tyt-audio
+  cancel-in-progress: false
+jobs:
+  speech:
+    if: github.ref == 'refs/heads/atolye-tyt-20260922'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Ensure audio verification tools
+        run: |
+          if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install --no-install-recommends -y ffmpeg
+          fi
+      - name: Generate approved Turkish narrations within included credits
+        shell: python
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          import json, pathlib
+          class ProductionStop(Exception): pass
+          def produce(item):
+              import os, sys, json, pathlib, urllib.request, urllib.error, base64, hashlib, re, math
+              out = pathlib.Path('atolye-tyt-batch03')/item['id']
+              out.mkdir(parents=True,exist_ok=True)
+              voice = 'tZYpRZkmCNQcfmtDbhUg'
+              model_id = 'eleven_v3'
+              report = {'pair':item['pair'],
+                        'provider':'elevenlabs','voice_id':voice,'model_id':model_id,
+                        'commit':os.environ.get('GITHUB_SHA'), 'run_id':os.environ.get('GITHUB_RUN_ID'),
+                        'credential_present':False,'api_called':False,'tts_called':False,
+                        'audio_generated':False,'fallback_used':False,'video_completed':False,
+                        'auditory_review':False}
+              def save_report(status, **extra):
+                  report.update(status=status, **extra)
+                  (out/'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+                  print('ATOLYE_RESULT '+json.dumps(report,ensure_ascii=False))
+              def stop(status, **extra):
+                  save_report(status, **extra)
+                  raise ProductionStop(status)
+              key = os.environ.get('ELEVENLABS_API_KEY','').strip()
+              if not key:
+                  stop('blocked_missing_credential', required_secret='ELEVENLABS_API_KEY')
+              report['credential_present'] = True
+              # A rerun must never unknowingly spend credits twice. Use a fresh dispatch only after inspecting artifacts.
+              if int(os.environ.get('GITHUB_RUN_ATTEMPT','1')) > 1:
+                  stop('blocked_automatic_audio_regeneration', action='Inspect and reuse existing audio artifacts; fresh dispatch only if no audio was generated.')
+              text=item['narration']
+              class NoRedirect(urllib.request.HTTPRedirectHandler):
+                  def redirect_request(self, req, fp, code, msg, headers, newurl):
+                      return None
+              opener = urllib.request.build_opener(NoRedirect())
+              def call(path, payload=None):
+                  report['api_called'] = True
+                  req = urllib.request.Request('https://api.elevenlabs.io'+path,
+                      headers={'xi-api-key':key,'Content-Type':'application/json'},
+                      data=None if payload is None else json.dumps(payload,ensure_ascii=False).encode('utf-8'),
+                      method='GET' if payload is None else 'POST')
+                  try:
+                      with opener.open(req, timeout=180) as response:
+                          return json.loads(response.read(24000000)), response.headers.get('request-id')
+                  except urllib.error.HTTPError as error:
+                      try:
+                          detail=json.loads(error.read(4000)).get('detail',{})
+                          provider_code=detail.get('status') if isinstance(detail,dict) else None
+                          if not isinstance(provider_code,str) or not re.fullmatch(r'[A-Za-z0-9_.-]{1,100}',provider_code) or key in provider_code:
+                              provider_code=None
+                      except Exception:
+                          provider_code=None
+                      stop('provider_error', http_status=error.code, provider_code=provider_code,
+                           operation='tts' if payload is not None else path)
+                  except Exception as error:
+                      stop('transport_or_response_error', error_type=type(error).__name__,
+                           tts_outcome_uncertain=payload is not None)
+              voice_info,_=call('/v1/voices/'+voice)
+              if voice_info.get('voice_id') != voice:
+                  stop('blocked_voice_mismatch')
+              report['voice_accessible'] = True
+              models,_=call('/v1/models')
+              selected=next((m for m in models if m.get('model_id')==model_id),None)
+              if not selected or not selected.get('can_do_text_to_speech'):
+                  stop('blocked_model_unavailable')
+              report['model_accessible'] = True
+              subscription,_=call('/v1/user/subscription')
+              used=subscription.get('character_count')
+              limit=subscription.get('character_limit')
+              if type(used) is not int or type(limit) is not int or used<0 or limit<0:
+                  stop('blocked_quota_not_verifiable')
+              # No billing settings are changed. Stop unless paid overage is known to be disabled.
+              extension=subscription.get('max_credit_limit_extension')
+              overage_disabled=(type(extension) is int and extension==0) or subscription.get('can_extend_character_limit') is False
+              if not overage_disabled:
+                  stop('blocked_paid_overage_not_disabled', action='No audio request made; billing settings were not changed.')
+              rates=selected.get('model_rates') or {}
+              cost_factor=rates.get('character_cost_multiplier',selected.get('token_cost_factor'))
+              if not isinstance(cost_factor,(int,float)) or isinstance(cost_factor,bool) or not math.isfinite(cost_factor) or cost_factor<=0:
+                  stop('blocked_model_cost_not_verifiable')
+              required=math.ceil(len(text)*max(1.0,float(cost_factor)))
+              remaining=limit-used
+              report.update(narration_characters=len(text), required_credits_conservative=required,
+                            quota_checked=True, paid_overage_disabled=True, remaining_included_credits=remaining)
+              if remaining < required:
+                  stop('blocked_insufficient_included_credits', required_credits=required, remaining_included_credits=max(0,remaining))
+              maximum=selected.get('maximum_text_length_per_request')
+              tier_limit=selected.get('max_characters_request_free_user' if subscription.get('tier')=='free' else 'max_characters_request_subscribed_user')
+              limits=[x for x in [maximum,tier_limit] if isinstance(x,int) and x>0]
+              if limits and len(text)>min(limits):
+                  stop('blocked_text_exceeds_model_limit', model_character_limit=min(limits))
+              payload={'text':text,'model_id':model_id,'language_code':'tr',
+                       'voice_settings':{'stability':0.5,'speed':0.94}}
+              (out/'narration.txt').write_text(text,encoding='utf-8')
+              report['narration_sha256']=hashlib.sha256(text.encode('utf-8')).hexdigest()
+              report['tts_called']=True
+              save_report('tts_request_started')
+              result,request_id=call('/v1/text-to-speech/'+voice+'/with-timestamps?output_format=mp3_44100_128',payload)
+              try:
+                  audio=base64.b64decode(result['audio_base64'],validate=True)
+                  if len(audio)<10000:
+                      stop('invalid_audio_size')
+                  (out/'speech.mp3').write_bytes(audio)
+                  report.update(audio_generated=True, bytes=len(audio), sha256=hashlib.sha256(audio).hexdigest())
+                  (out/'alignment.json').write_text(json.dumps({'alignment':result.get('alignment'),'normalized_alignment':result.get('normalized_alignment')},ensure_ascii=False,indent=2),encoding='utf-8')
+                  alignment=result.get('normalized_alignment') or result.get('alignment')
+                  if not alignment:
+                      stop('audio_saved_but_alignment_missing', action='Reuse saved audio; do not regenerate for drawing.')
+                  chars=alignment['characters']
+                  starts=alignment['character_start_times_seconds']
+                  ends=alignment['character_end_times_seconds']
+                  assert len(chars)==len(starts)==len(ends)>0
+                  assert all(isinstance(c,str) and len(c)==1 for c in chars)
+                  assert all(math.isfinite(float(s)) and math.isfinite(float(e)) and 0<=float(s)<=float(e) for s,e in zip(starts,ends))
+                  assert all(float(starts[i])<=float(starts[i+1]) for i in range(len(starts)-1))
+                  joined=''.join(chars)
+                  def segments(pattern):
+                      return [{'text':m.group().strip(),'start':starts[m.start()],'end':ends[m.end()-1]} for m in re.finditer(pattern,joined) if m.group().strip()]
+                  words=segments(r'\S+')
+                  phrases=segments(r'[^.!?\n]+[.!?]?')
+                  speech={'provider':'elevenlabs','voice_id':voice,'model_id':model_id,
+                          'duration_alignment':max(ends),'word_timestamps':words,'phrase_timestamps':phrases,
+                          'text':text,'request_id':request_id,'timing_source':'provider_character_alignment'}
+                  (out/'speech.json').write_text(json.dumps(speech,ensure_ascii=False,indent=2),encoding='utf-8')
+                  save_report('audio_saved_pending_decode', word_count=len(words),phrase_count=len(phrases),
+                              last_alignment_second=max(ends), character_alignment_validated=True)
+              except Exception as error:
+                  stop('audio_processing_error',error_type=type(error).__name__,action='Inspect saved files before any new TTS request.')
+              import subprocess
+              probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(out/'speech.mp3')]))
+              duration=float(probe['format']['duration'])
+              assert math.isfinite(duration) and duration>1
+              assert any(s['codec_type']=='audio' for s in probe['streams'])
+              assert report['last_alignment_second']<=duration+0.5
+              subprocess.run(['ffmpeg','-v','error','-xerror','-i',str(out/'speech.mp3'),'-f','null','-'],check=True,capture_output=True)
+              save_report('audio_generated_and_decoded',duration_seconds=duration,audio_decode_pass=True,auditory_review=False)
+
+          items=[{'id': 'TYT-A-Temel_Matematik-01', 'pair': ['TYT-A-Temel_Matematik-01', 'TYT-B-Temel_Matematik-14'], 'narration': 'En büyük iki basamaklı doğal sayı doksan dokuzdur. Önce bu sayının verilen koşulu sağlayıp sağlamadığını kontrol edelim. Doksan dokuz, üçün karesi çarpı on birdir. Farklı asal bölenleri yalnız üç ve on birdir; iki farklı asal böleni vardır. En büyük aday koşulu sağladığı için daha küçük sayılara bakmaya gerek yoktur. Rakamları toplamı dokuz artı dokuzdan on sekizdir. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-02', 'pair': ['TYT-A-Temel_Matematik-02', 'TYT-B-Temel_Matematik-15'], 'narration': 'Ardışık doğal sayılar aralarında asaldır. Bu yüzden en büyük ortak bölenleri bir, en küçük ortak katları ise çarpımlarıdır. Verilen eşitlikten çarpımın iki yüz on olduğunu buluruz. Çarpımı iki yüz on olan ardışık doğal sayılar on dört ve on beştir. Sayıların toplamı yirmi dokuzdur. Soruda bu toplamın rakamları toplamı istendiği için ikiyle dokuzu toplar, on bir buluruz. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-03', 'pair': ['TYT-A-Temel_Matematik-03', 'TYT-B-Temel_Matematik-13'], 'narration': 'Kalanlar bölenlerden hep iki eksiktir. Soru sayısına iki eklersek sayı dörde, beşe ve altıya kalansız bölünür. Bu üç sayının en küçük ortak katı altmıştır. Üç yüz ile dört yüz arasındaki uygun soru sayısı için, iki fazlası üç yüz altmış olmalıdır. Soru sayısı üç yüz elli sekizdir. Dörde kalanı iki, beşe kalanı üç, altıya kalanı dörttür. Rakamları toplamı on altıdır. Doğru cevap C seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-04', 'pair': ['TYT-A-Temel_Matematik-04', 'TYT-B-Temel_Matematik-11'], 'narration': 'Beşe bölümden kalan yüzler basamağı olduğundan iks bir, iki, üç veya dörttür. Dokuza bölümden kalan ze olduğuna göre iks artı ye dokuzun katıdır; bu aralıkta yalnız dokuz olabilir. Rakamlar farklı olduğu için ze, ikse eşit olamaz; beş fazlası olmalıdır. Dörde bölümünden iki kalan sayı çift olduğundan uygun ikililer bir altı ve üç sekizdir. Ye dokuz eksi ikstir. Adaylarımız yüz seksen altı ve üç yüz altmış sekiz olur. Dörde bölümden iki kalan yalnız yüz seksen altıdır. Rakamları toplamı bir artı sekiz artı altıdan on beştir. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-05', 'pair': ['TYT-A-Temel_Matematik-05', 'TYT-B-Temel_Matematik-12'], 'narration': 'Pay ve paydada birbirinin eşleniği olan iki ifade çarpılıyor. İki kare farkı özdeşliğini kullanalım. Paydaki kök iki eksi bir ile kök iki artı birin çarpımı iki eksi birden birdir. Dört çarpanıyla pay dört olur. Paydada kök ikinin karesinden kök altının karesi çıkarılır; sonuç eksi dörttür. Dört bölü eksi dört, eksi birdir. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-06', 'pair': ['TYT-A-Temel_Matematik-06', 'TYT-B-Temel_Matematik-10'], 'narration': 'A kümesi eksi üçü dışarıda, yediyi içeride bırakır. B kümesi bir ve altındaki sayılarla üçten büyük sayılardan oluşur. Kesişimin sol parçası eksi üçten büyük ve bire eşit ya da küçüktür. Buradaki tam sayılar eksi iki, eksi bir, sıfır ve birdir. Sağ parçada üç alınmaz, yedi alınır; dört, beş, altı ve yedi vardır. Bütün ortak tam sayıları topladığımızda yirmi elde ederiz. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-07', 'pair': ['TYT-A-Temel_Matematik-07', 'TYT-B-Temel_Matematik-23'], 'narration': 'Bir haftada beş hafta içi, iki hafta sonu günü vardır. En az okunan sayfa sayısı beş çarpı otuz artı iki çarpı yirmi beşten iki yüzdür. En çok sayfa sayısı beş çarpı kırk artı iki çarpı otuz beşten iki yüz yetmiştir. Uç değerler de alınabilir. İki yüz ile iki yüz yetmişin orta noktası iki yüz otuz beş, yarı farkı otuz beştir. Bu yüzden iks eksi iki yüz otuz beşin mutlak değeri, otuz beşten küçük veya eşittir. Doğru cevap B seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-08', 'pair': ['TYT-A-Temel_Matematik-08', 'TYT-B-Temel_Matematik-24'], 'narration': 'P ile başlayan günler pazartesi, perşembe ve pazardır. Sorunun yedi günlük modelinde üç gün yüzde yirmi zarar, dört gün yüzde yirmi beş kâr vardır. Yüzde yirmi zarar, değeri beşte dörtle; yüzde yirmi beş kâr, dörtte beşle çarpmaktır. Üç karşılıklı çarpan sadeleşir ve haftalık çarpan beş bölü dört kalır. Dört haftada başlangıçtaki iki üzeri sekizi, beş bölü dördün dördüncü kuvvetiyle çarparız. Dördün dördüncü kuvveti iki üzeri sekiz olduğu için sadeleşir; beş üzeri dört kalır. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-09', 'pair': ['TYT-A-Temel_Matematik-09', 'TYT-B-Temel_Matematik-22'], 'narration': 'Bir çorba veya bir tatlı veya bir yemek seçilecekse yalnız bir ürün alınır. Ayrı seçeneklerin sayılarını toplarız; iks on birdir. Her gruptan birer ürün seçilecekse bağımsız seçimleri çarparız. Üç çarpı dört çarpı dört, kırk sekizdir. İstenen toplam on bir artı kırk sekizden elli dokuz olur. Veya için toplama, ve için çarpma ayrımını koruyalım. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-10', 'pair': ['TYT-A-Temel_Matematik-10', 'TYT-B-Temel_Matematik-21'], 'narration': 'Kemal’in bulunduğu üç kişilik grupta Kemal ile Elif kesin olarak yer almalıdır. Ali bu grupta olamaz. Altı kişiden Kemal, Elif ve Ali dışında üç kişi kalır. Üçüncü üyeyi bu üç kişiden biri olarak seçebiliriz. Kemal’in grubunu belirlediğimizde geriye kalan üç kişi diğer gruptur. Gruplar adlandırılmadığı için ayrıca ikiyle çarpmayız. Üç farklı gruplama vardır. Doğru cevap A seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-11', 'pair': ['TYT-A-Temel_Matematik-11', 'TYT-B-Temel_Matematik-20'], 'narration': 'Tek sayılar arasında ilerlemek için sayıya iki eklenmelidir. Bu bir işlem olduğu için dikdörtgen kutuda gösterilir. Bu açıdan beklenen seçenek C’dir. Fakat özgün şemada toplamaya ekleme, sayı yirmiden büyük mü kontrolünden önce yapılıyor. On dokuzdan sonra yirmi bire geçilir ve yirmi bir de toplamaya eklenir. Şema bu haliyle yüz yerine yüz yirmi bir üretir. Kontrolün toplama işleminden önce yapılması veya uygun biçimde yeniden düzenlenmesi gerekir. Seçenekle birlikte bu hatayı da belirtmeliyiz. Beklenen seçenek C; fakat şema, açıkladığımız düzeltme yapılmadan istenen toplamı vermez.'}, {'id': 'TYT-A-Temel_Matematik-12', 'pair': ['TYT-A-Temel_Matematik-12', 'TYT-B-Temel_Matematik-19'], 'narration': 'İlk karışımda altı gram, ikinci karışımda da altı gram tuz bulunur. Toplam tuz on iki gramdır. Karışımlar birleştirildiğinde toplam kütle elli gram olur. Algoritma da miktarla ağırlıklandırılmış yüzdeyi hesaplıyor. Yüzde hesabında on ikiyi elliye bölüp yüzle çarparız; yirmi dört buluruz. Algoritmadaki formül de doğrudan yirmi dört değerini verir. Doğru cevap A seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-13', 'pair': ['TYT-A-Temel_Matematik-13', 'TYT-B-Temel_Matematik-18'], 'narration': 'Her döngüde mevcut iki basamaklı sayıdan kendi rakamları toplamı çıkarılır. İlk adımda altmış yediden on üç çıkar, elli dört kalır. Elli dörtten beş artı dört çıkarınca kırk beş olur. Aynı işlemi yeni sayının rakamlarıyla sürdürürsek otuz altı ve ardından yirmi yedi elde ederiz. Yirmi yediden dokuz çıkarınca on sekiz olur. İlk kez yirmiden küçük bir sayıya ulaştığımız için algoritma durur ve on sekizi yazdırır. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-14', 'pair': ['TYT-A-Temel_Matematik-14', 'TYT-B-Temel_Matematik-17'], 'narration': 'Bağlantılı bir çizgede bütün kenarlardan birer kez geçip başlangıca dönmek için her köşeye bağlı kenar sayısı çift olmalıdır. Birinci çizgede sağ ve sol köşelere üçer kenar bağlıdır. Bu iki tek derece, başlangıca dönülen kapalı turu engeller. İkinci çizgede dereceler dört ve ikilerden oluşur; üçüncüde de sağ ve sol dört, diğer köşeler iki derecelidir. İki çizgede de kapalı Euler turu vardır. Doğru cevap C seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-15', 'pair': ['TYT-A-Temel_Matematik-15', 'TYT-B-Temel_Matematik-16'], 'narration': 'Grafikte yüz on değerinin üzerinde dört nokta vardır; bu, en yüksek frekanstır. Mod yüz ondur. On üç veri sıralandığında ortadaki yedinci değerdir. Yüzden önce dört veri, yüzde üç veri bulunur; yedinci değer yüzdür. Medyan yüz olur. En büyük değer yüz yirmi, en küçük değer seksendir. Farkları kırktır. Mod, medyan ve açıklıkla ilgili üç ifade de doğrudur. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-16', 'pair': ['TYT-A-Temel_Matematik-16', 'TYT-B-Temel_Matematik-09'], 'narration': 'Grafikte iki, üç ve dörtten birer; beşten üç; altı ve yediden ikişer kart var. Toplam on kartın üzerindeki sayıların toplamı ellidir. Aritmetik ortalama beştir. Mutlak sapma için her karttaki sayının beşten uzaklığını alır, adetleriyle çarparız. İki, üç ve dört için uzaklıklar üç, iki, birdir. Üç beşin uzaklığı sıfır, iki altının toplamı iki, iki yedinin toplamı dörttür. On iki bölü ondan bir virgül iki bulunur. Doğru cevap B seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-17', 'pair': ['TYT-A-Temel_Matematik-17', 'TYT-B-Temel_Matematik-08'], 'narration': 'Ardışık grupların alt sınırları elli dokuz ve altmış altıdır. Aralarındaki fark yedidir; grup genişliği altı değildir. Birinci ifade yanlıştır. İlk gruptaki dört kişi kesinlikle yetmişin altındadır. İkinci gruptaki altı kişinin tamamı da yetmişten küçük olabilir. En çok on kişi mümkündür. Seksen yedi ile doksan üç arasındaki üç kişi kesinlikle seksen birden büyüktür. Seksen ile seksen altı grubundan hiç kimsenin büyük olmaması mümkündür. En az üç kişi vardır; iki ve üç doğrudur. Doğru cevap C seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-18', 'pair': ['TYT-A-Temel_Matematik-18', 'TYT-B-Temel_Matematik-07'], 'narration': 'Doğrusal fonksiyonu a iks artı be şeklinde yazalım. Sıfır ve birdeki değerlerinin toplamından a artı iki be eşittir dört elde edilir. İkideki değerle eksi birdeki değerin farkında be terimleri gider; üç a altıya eşittir. A iki, ilk eşitlikten be birdir. Fonksiyon iki iks artı birdir. Eksi ikideki değeri eksi üç, dörtteki değeri dokuzdur. Çarpımları eksi yirmi yedidir. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-19', 'pair': ['TYT-A-Temel_Matematik-19', 'TYT-B-Temel_Matematik-06'], 'narration': 'Fonksiyonun çıktısı sıcaklıktır ve en büyük sıcaklık yedi derecedir. Yirmi dört, zaman eksenindeki bir değerdir. Birinci ifade yanlıştır. Grafik yedinci saatte en düşük noktadan başlayıp on altıncı saatte tepeye kadar yükseliyor. İkinci ifade doğrudur. Üç derece başlangıçta görülür; yükselirken ve daha sonra düşerken de grafik üç derece düzeyinden geçer. Tek bir zaman olduğunu söyleyen üçüncü ifade yanlıştır. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-20', 'pair': ['TYT-A-Temel_Matematik-20', 'TYT-B-Temel_Matematik-04'], 'narration': 'Önce çarpanları açalım. İks artı iki ile iks eksi dördün çarpımı, iks kare eksi iki iks eksi sekizdir. Tam kareye tamamlayınca iki çarpı iks eksi birin karesi eksi on sekiz bulunur. Kare en az sıfırdır; en küçük değer iks birde alınır. İlk iki ifade doğrudur. Bir parabolün simetri ekseninin iki yanındaki farklı girdileri aynı çıktıyı verebilir. Ayrıca eksi on sekizden küçük değer alınamaz. Gerçel sayılarda bire bir ve örten değildir. Doğru cevap B seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-21', 'pair': ['TYT-A-Temel_Matematik-21', 'TYT-B-Temel_Matematik-05'], 'narration': 'Karekökün tanımlı olması için iks artı bir sıfırdan büyük veya eşit olmalıdır. Tanım kümesi eksi bir ve sonrasıdır. Karekök negatif olamaz. Önündeki eksi nedeniyle bu terim sıfır veya negatiftir; iki eklediğimizde fonksiyon en fazla iki olur. İks eksi birken iki değeri alınır. İks büyüdükçe karekök büyür ve fonksiyon aşağı doğru sınırsız azalır. Görüntü kümesi eksi sonsuzdan iki dahil olacak biçimdedir. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-22', 'pair': ['TYT-A-Temel_Matematik-22', 'TYT-B-Temel_Matematik-03'], 'narration': 'İks eksenine göre yansıtma, fonksiyon değerlerinin işaretini değiştirir. Kök iks, eksi kök ikse dönüşür. Sağa üç birim ötelemede iks yerine iks eksi üç yazılır. Yukarı dört birim ötelemede fonksiyonun dışına dört eklenir. Fonksiyonun sıfırı için çıktıyı sıfıra eşitleriz. Kök içindeki iks eksi üç on altıdır; iks on dokuz bulunur. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-23', 'pair': ['TYT-A-Temel_Matematik-23', 'TYT-B-Temel_Matematik-02'], 'narration': 'Grafikte tepe noktası ikiye dokuzdur. Bu yüzden fonksiyonu a çarpı iks eksi ikinin karesi artı dokuz biçiminde yazabiliriz. Grafik ye eksenini birde kesiyor. İks sıfır yazınca dört a artı dokuz bir olur; a eksi ikidir. Katsayılar toplamı fonksiyonun birdeki değeridir. İks yerine bir yazarsak eksi iki artı dokuzdan yedi buluruz. Doğru cevap C seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-24', 'pair': ['TYT-A-Temel_Matematik-24', 'TYT-B-Temel_Matematik-01'], 'narration': 'Karekök grafiğinin başlangıç noktası dörde ikidir. İks a olduğunda kök sıfır olur ve çıktı eksi cedir. Bu yüzden a dört, ce eksi ikidir. Sekize altı noktası da grafiktedir. Sekiz eksi dördün karekökü iki olduğundan iki be artı iki altıdır; be iki bulunur. A artı be artı ce toplamı dörttür. Karekökün katsayısı pozitif olduğu için fonksiyon bütün tanım kümesinde kesin artandır. Farklı girdiler farklı çıktılar verir; bire birdir. Üç ifade de doğrudur. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-25', 'pair': ['TYT-A-Temel_Matematik-25', 'TYT-B-Temel_Matematik-37'], 'narration': 'Pergelin sivri ucuyla kalem ucu arasındaki uzaklık, çizilen çemberin yarıçapıdır. Çap yirmi altı olduğuna göre bu uzaklık on üçtür. Pergel kolları sekiz ve on beş olan üçgende aralarındaki açı için kosinüs teoremini uygularız. Açının karşısındaki kenar on üçtür. Altmış dört artı iki yüz yirmi beşten yüz altmış dokuzu çıkarınca yüz yirmi kalır. İki yüz kırka bölünce kosinüs bir bölü ikidir. Dar açı altmış derecedir. Doğru cevap C seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-26', 'pair': ['TYT-A-Temel_Matematik-26', 'TYT-B-Temel_Matematik-36'], 'narration': 'A ile B’nin koordinat farkları sekiz ve altıdır. Pisagor bağıntısıyla haritadaki uzaklık on birim bulunur; bu on birim gerçekte yedi kilometredir. A ile C’nin koordinat farkları beş ve on ikidir. Uzaklık, beş on iki on üç üçgeninden on üç birimdir. Bir harita birimi yedi bölü on kilometre olduğundan on üçü bu ölçekle çarparız. A ile C arası dokuz virgül bir kilometredir. Doğru cevap B seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-27', 'pair': ['TYT-A-Temel_Matematik-27', 'TYT-B-Temel_Matematik-40'], 'narration': 'İki üçgen de a de kenarını paylaşıyor. İki kenar ve aralarındaki açıyla alanı, çarpımlarının yarısı olarak hesaplayabiliriz. A be de alanını a de ce alanına böldüğümüzde ortak a de ve bir bölü iki çarpanları sadeleşir. Sinüs kırk beş kök iki bölü iki, sinüs otuz bir bölü ikidir. İşlemden iki kök iki bölü üç elde edilir; seçeneklerde mümkün olan oran budur. Doğru cevap C seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-28', 'pair': ['TYT-A-Temel_Matematik-28', 'TYT-B-Temel_Matematik-39'], 'narration': 'Orta nokta iks ekseninde olduğu için ye koordinatı sıfırdır. Uç noktaların ye koordinatlarının ortalamasını sıfıra eşitleriz. Em eksi üç ile eksi ikinin toplamı sıfır olmalıdır. Buradan em beş bulunur. Em beşi yerine koyunca A’nın iks koordinatı altı, B’ninki dört olur. Orta nokta beşe sıfırdır. Orijine uzaklığı beş birimdir. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-29', 'pair': ['TYT-A-Temel_Matematik-29', 'TYT-B-Temel_Matematik-38'], 'narration': 'İlk doğrunun eğimi üç bölü iki, ikincinin eğimi eksi dört bölü adır. A sıfır olsaydı ikinci doğru dikey olurdu; ilk doğru yatay olmadığı için diklik sağlanmazdı. Dik kesişen ve düşey olmayan doğruların eğimleri çarpımı eksi birdir. Eksi altı bölü a, eksi bire eşit olduğundan a altıdır. A noktası ilk doğrunun üzerinde olduğundan dört a eksi iki be sıfırdır. A altıyken be on iki çıkar. İkinci doğruyu da sağlar; çarpımları yetmiş ikidir. Doğru cevap C seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-30', 'pair': ['TYT-A-Temel_Matematik-30', 'TYT-B-Temel_Matematik-35'], 'narration': 'Araçlar aynı anda başlayıp aynı anda varıyor ve hızları eşit. Bu yüzden aldıkları doğrusal yollar eşit uzunluktadır. Ye eksenindeki noktaya sıfıra ce diyelim. Uzaklıkların karelerini eşitlersek her iki taraftaki yatay uzaklık karesi on altı olur ve sadeleşir. Nokta, yükseklikleri üç ve yedi olan başlangıçların tam ortası düzeyindedir. Denklemden ce beş bulunur; istenen ordinat beştir. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-31', 'pair': ['TYT-A-Temel_Matematik-31', 'TYT-B-Temel_Matematik-34'], 'narration': 'Nokta aralıklarını bir birim alalım. Gri üçgenin yatay tabanı üç, yüksekliği altı aralıktır. Alanı dokuz küçük kare alanıdır. Mavi üçgeni altı aralık genişlik, beş aralık yükseklikte dikdörtgene tamamlayalım. Dışarıdaki üç dik üçgenin alanları beş, sekiz ve üçtür. Otuzdan bunları çıkarınca on dört kare kalır. Gri üçgenin dokuz karesi iki yüz yirmi beş birimkareyse bir kare yirmi beş birimkaredir. Mavi üçgenin on dört karesi üç yüz elli birimkare eder. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-32', 'pair': ['TYT-A-Temel_Matematik-32', 'TYT-B-Temel_Matematik-33'], 'narration': 'İç teğet çemberine aynı dış noktadan çizilen teğet parçaları eşittir. Hipotenüsteki dört ve altı parçaları dik kenarlara taşınır. A’dan gelen iki parça da te olsun. Dik üçgende hipotenüs dört artı altıdan ondur. Pisagor uygulanınca te kare artı on te eksi yirmi dört sıfır olur; pozitif kök iki bulunur. Te iki olduğu için dik kenarlar altı ve sekizdir. Hipotenüs onla birlikte çevre yirmi dört birimdir. Doğru cevap A seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-33', 'pair': ['TYT-A-Temel_Matematik-33', 'TYT-B-Temel_Matematik-32'], 'narration': 'Üçgenin yüksekliğine he, iki tablonun ortak en alt düzeyine ka diyelim. Dik duran üçgenin ağırlık merkezi tabandan yüksekliğin üçte biri kadar yukarıdadır; ka artı he bölü üç seksendir. Ters duran üçgenin alt tepesinden çevrel merkeze uzaklığı yarıçap erdir. Ka artı er yüzdür. İki eşitliği çıkarınca er eksi he bölü üç yirmi olur. Tabanın yarısı otuzdur. Çevrel merkezin tepeye ve taban köşesine uzaklıklarını eşitlemek, eri he kare artı dokuz yüz bölü iki he verir. Denklemden he otuz veya doksan çıkar. He otuzda merkez taban üzerinde olur; şekilde içeride gösterildiğinden he doksandır. Taban altmış, yükseklik doksan olduğu için alan iki bin yedi yüz santimetrekaredir. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-34', 'pair': ['TYT-A-Temel_Matematik-34', 'TYT-B-Temel_Matematik-28'], 'narration': 'Kesişen doğrularda ters açılar eşittir. Buna göre be e’ye, ce fe’ye, a da de’ye eşittir. Verilen e eşittir fe ile be ve ce de eşit olur. Paralel doğrular arasında iç ters açılardan beta e’ye eşittir. Ce de e’ye eşit olduğundan birinci ifade daima doğrudur. Alfa, ce’ye yani e’ye eşittir. Buna karşılık a ve de, yüz seksen eksi iki e’dir. Bunların e’ye eşitliği ancak özel olarak e altmışken olur. İki ve üç daima doğru değildir. Doğru cevap A seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-35', 'pair': ['TYT-A-Temel_Matematik-35', 'TYT-B-Temel_Matematik-27'], 'narration': 'A be de açısına iks dersek verilen eşitlikle de ce be açısı da ikstir. De be ce açısına ye diyelim. Be de ce üçgeninde iç açıları toplarız. İks artı ye artı yüz on iki, yüz seksene eşittir. Sorulan a be ce açısı, be köşesindeki iks ve ye açılarının toplamıdır. Yüz seksenden yüz on ikiyi çıkarırız; altmış sekiz derece bulunur. Doğru cevap A seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-36', 'pair': ['TYT-A-Temel_Matematik-36', 'TYT-B-Temel_Matematik-26'], 'narration': 'A be parçası yatayla altmış derece yapıyor. Be noktasından A’ya doğru bakınca yön tersine döner. Be köşesindeki yüz on dereceden altmışı ayırdığımızda, be ce parçasının yatayın sol yönüyle yaptığı dar açı elli derecedir. Ce de parçası be ce’ye diktir. Bu yüzden sağa yatay doğrultuyla kırk derece yapar. Saat yönünde kırk derece döndürülürse masa yüzeyine paralel olur. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-37', 'pair': ['TYT-A-Temel_Matematik-37', 'TYT-B-Temel_Matematik-25'], 'narration': 'A’dan be ce doğrusu üzerine dikme indirelim. A ce on altı ve ce açısı otuz derece olduğundan, otuzun karşısındaki yükseklik sekizdir. A be de ikizkenar üçgeninde tepeden indirilen yükseklik tabanı da ikiye böler. Be de on iki olduğu için iki parça altışar santimetredir. Oluşan dik üçgende dik kenarlar altı ve sekiz, hipotenüs ikstir. Pisagor’dan iks on santimetre bulunur. Doğru cevap C seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-38', 'pair': ['TYT-A-Temel_Matematik-38', 'TYT-B-Temel_Matematik-31'], 'narration': 'Dik üçgende hipotenüsün orta noktası üç köşeye eşit uzaklıktadır. Bu yüzden a de ile be de eşittir. A be de ikizkenar üçgeninde A’daki açı, B’deki altmış beş dereceye eşittir. A’nın toplam dik açısından çıkarınca de a ce yirmi beş derece olur. Katlama, a de doğrusu ile yapılan açıyı korur. Be üssü a de açısı altmış beştir. Bunun içindeki de a ce yirmi beş derecesini çıkarınca alfa kırk derece kalır. Doğru cevap E seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-39', 'pair': ['TYT-A-Temel_Matematik-39', 'TYT-B-Temel_Matematik-30'], 'narration': 'De ve ge, üçgenin iki kenarının orta noktalarıdır. Bu noktaları birleştiren de ge parçası a ce’ye paraleldir ve onun yarısı uzunluğundadır. De ge ile e fe paralel, ka’daki açılar da ters açıdır. Bu yüzden ka de ge ve ka e fe üçgenleri benzerdir. Ge ka, ka fe’nin iki katı olduğundan de ge de e fe’nin iki katıdır. E fe dört santimetre olduğuna göre de ge sekiz santimetredir. Orta tabanın iki katı olan a ce ise on altı santimetre bulunur. Doğru cevap D seçeneğidir.'}, {'id': 'TYT-A-Temel_Matematik-40', 'pair': ['TYT-A-Temel_Matematik-40', 'TYT-B-Temel_Matematik-29'], 'narration': 'Katlamada uzunluklar korunur; a ce ile a üssü ce eşittir ve ikisi de zedir. A, a üssü ve C’nin oluşturduğu üçgen ikizkenardır. Bu üçgenin taban açıları elli beşer, tepe açısı yetmiş derecedir. Yetmişin karşısındaki iks, elli beşin karşısındaki zeden büyüktür. Diğer üçgende a üssü açısı yüz yirmi beş, B açısı otuz ve C açısı yirmi beştir. Yirmi beşin karşısındaki ye, otuzun karşısındaki zeden küçüktür. Sıralama ye, ze, iks olur. Doğru cevap B seçeneğidir.'}]
+          for item in items:
+              try:
+                  produce(item)
+              except ProductionStop:
+                  raise SystemExit(2)
+              except Exception as error:
+                  print('BATCH_STOP '+json.dumps({'id':item['id'],'error_type':type(error).__name__,'action':'Inspect saved artifacts before any new TTS request.'}))
+                  raise SystemExit(3)
+
+      - name: Preserve generated audio and provider timestamps
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: atolye-tyt-batch03-${{ github.run_id }}
+          path: atolye-tyt-batch03/
+          if-no-files-found: warn
+          retention-days: 30
